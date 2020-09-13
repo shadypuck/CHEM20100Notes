@@ -1,0 +1,74 @@
+\documentclass[../main.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{-1}
+
+\begin{document}
+
+
+
+
+\chapter{Course Prep}
+\section{Chapter 2: Atomic Structure}
+\emph{From \cite{bib:MiesslerFischerTarr}.}
+\subsection{Problems}
+\begin{enumerate}[label={\textbf{2.\arabic*}}]
+    \setcounter{enumi}{7}
+    \item The details of several steps in the particle-in-a-box model in this chapter have been omitted. Work out the details of the following steps:
+    \begin{enumerate}[label={\textbf{\alph*.}}]
+        \item Show that if $\Psi=A\sin rx+B\cos sx$ ($A$, $B$, $r$, and $s$ are constants) is a solution to the wave equation for the one-dimensional box, then
+        \begin{equation*}
+            r = s = \sqrt{2mE}\left( \frac{2\pi}{h} \right)
+        \end{equation*}
+        \begin{proof}[Solution]
+            \allowdisplaybreaks
+            \begin{align*}
+                \frac{-h^2}{8\pi^2m}\cdot\pdv[2]{\Psi(x)}{x}\left( A\sin rx+B\cos sx \right) &= E\Psi(x)\\
+                \frac{-h^2}{8\pi^2m}\cdot\pdv[2]{x}\left( A\sin rx+B\cos sx \right) &= E(A\sin rx+B\cos sx)\\
+                \frac{-h^2}{8\pi^2m}\cdot\pdv{x}\left( Ar\cos rx-Bs\sin sx \right) &= E(A\sin rx+B\cos sx)\\
+                \frac{-h^2}{8\pi^2m}\cdot\left( -Ar^2\sin rx-Bs^2\cos sx \right) &= E(A\sin rx+B\cos sx)\\
+                \frac{Ar^2h^2}{8\pi^2m}\sin rx+\frac{Bs^2h^2}{8\pi^2m}\cos sx &= AE\sin rx+BE\cos sx\\
+                0 &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( \frac{Bs^2h^2}{8\pi^2m}-BE \right)\cos sx
+                \intertext{Choose $x=0$.}
+                &= \frac{Bs^2h^2}{8\pi^2m}-BE\\
+                E &= \frac{s^2h^2}{8\pi^2m}\\
+                \frac{8\pi^2mE}{h^2} &= s^2\\
+                s &= \sqrt{\frac{8\pi^2mE}{h^2}}\\
+                \Aboxed{s &= \sqrt{2mE}\frac{2\pi}{h}}
+                \intertext{With this result \dots}
+                0 &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( \frac{Bs^2h^2}{8\pi^2m}-BE \right)\cos sx\\
+                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( B\left( \frac{s^2h^2}{8\pi^2m} \right)-BE \right)\cos sx\\
+                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( BE-BE \right)\cos sx\\
+                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx\\
+                \intertext{Choose $x=\frac{\pi}{2r}$.}
+                &= \frac{Ar^2h^2}{8\pi^2m}-AE\\
+                \Aboxed{r &= \sqrt{2mE}\frac{2\pi}{h}}
+            \end{align*}
+        \end{proof}
+        \setcounter{enumii}{3}
+        \item Show that substituting the value of $r$ given in part c into $\Psi=A\sin rx$ and applying the normalizing requirement gives $A=\sqrt{2/a}$.
+        \begin{proof}[Solution]
+            \begin{align*}
+                1 &= \int_\text{all space}\Psi\Psi^*\dd{\tau}\\
+                &= \int_0^a \left( A\sin\frac{n\pi x}{a} \right)\left( A\sin\frac{n\pi x}{a} \right)\dd{x}\\
+                &= \int_0^a A^2\sin^2\frac{n\pi x}{a}\dd{x}
+                \intertext{Use $\sin^2u=\frac{1-\cos2u}{2}$.}
+                &= A^2\int_0^a \frac{1-\cos\frac{2n\pi x}{a}}{2}\dd{x}\\
+                &= \frac{A^2}{2}\left( \int_0^a \dd{x}-\int_0^a \cos\frac{2n\pi x}{a}\dd{x} \right)\\
+                &= \frac{A^2}{2}\left( [x]_0^a-\left[ \frac{a}{2n\pi}\sin\frac{2n\pi x}{a} \right]_0^a \right)\\
+                &= \frac{A^2}{2}\left( (a-0)-\left( \frac{a}{2n\pi}\sin 2n\pi-\frac{a}{2n\pi}\sin 0 \right) \right)\\
+                &= \frac{A^2}{2}\left( a-\left( \frac{a}{2n\pi}\sin 2n\pi \right) \right)
+                \intertext{Since $n$ is an integer, $\sin 2n\pi=0$.}
+                &= \frac{aA^2}{2}\\
+                \frac{2}{a} &= A^2\\
+                \Aboxed{A &= \sqrt{\frac{2}{a}}}
+            \end{align*}
+        \end{proof}
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}

@@ -1,0 +1,26 @@
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[style=apa]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{amsmath,amsthm}
+\usepackage{physics,mathtools}
+
+\fancypagestyle{main}{
+    \fancyhf{}
+    \fancyfoot[R]{Labalme \thepage}
+    \fancyhead[L]{\leftmark}
+    \fancyhead[R]{CHEM 20100-20200}
+}
+\fancypagestyle{plain}{
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+\addbibresource{main.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
+
+\renewcommand{\chaptername}{Topic}
+\renewcommand{\contentsname}{Topics}
+
+\usepackage{subfiles}

@@ -1,0 +1,34 @@
+\documentclass{report}
+
+\input{preamble.tex}
+
+\title{CHEM 20100 (Inorganic Chemistry I) Notes}
+\author{Steven Labalme}
+
+\begin{document}
+
+
+
+
+\maketitle
+
+
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+\pagenumbering{arabic}
+\pagestyle{main}
+\subfile{Topic0/Topic0.tex}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\printbibliography[heading=bibintoc]
+
+
+
+
+\end{document}
