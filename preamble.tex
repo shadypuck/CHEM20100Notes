@@ -1,24 +1,40 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{marginnote}
+\usepackage{scrextend}
+\usepackage[bottom]{footmisc}
 \usepackage[style=apa]{biblatex}
-\usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{amsmath,amsthm}
 \usepackage{physics,mathtools}
+\usepackage{mhchem,chemfig}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
 
 \fancypagestyle{main}{
     \fancyhf{}
     \fancyfoot[R]{Labalme \thepage}
     \fancyhead[L]{\leftmark}
-    \fancyhead[R]{CHEM 20100-20200}
+    \fancyhead[R]{CHEM 20100}
 }
 \fancypagestyle{plain}{
     \fancyhead{}
     \renewcommand{\headrulewidth}{0pt}
 }
 
+\MakeOuterQuote{"}
+
+\reversemarginpar
+
+\deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
+\deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
+
 \addbibresource{main.bib}
 \DefineBibliographyStrings{english}{bibliography={References}}
+
+\colorlet{grx}{green!75!cyan!40!black!20}
 
 \renewcommand{\chaptername}{Topic}
 \renewcommand{\contentsname}{Topics}
