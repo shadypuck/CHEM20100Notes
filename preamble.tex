@@ -6,8 +6,8 @@
 \usepackage[bottom]{footmisc}
 \usepackage[style=apa]{biblatex}
 \usepackage{enumitem}
-\usepackage{amsmath,amsthm}
-\usepackage{physics,mathtools}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics,mathtools,siunitx,bm}
 \usepackage{mhchem,chemfig}
 \usepackage{tikz}
 \usepackage{subcaption}
@@ -34,7 +34,10 @@
 \addbibresource{main.bib}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
-\colorlet{grx}{green!75!cyan!40!black!20}
+\setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\colorlet{grx}{green!75!cyan!40!black!90}
+\colorlet{gry}{green!75!cyan!40!black!20}
 
 \renewcommand{\chaptername}{Topic}
 \renewcommand{\contentsname}{Topics}

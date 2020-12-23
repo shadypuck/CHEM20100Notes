@@ -54,7 +54,7 @@
             \centering
             \begin{tikzpicture}
                 \footnotesize
-                \filldraw [semithick,fill=grx]
+                \filldraw [semithick,fill=gry]
                     (0,0.3) ellipse (3mm and 2mm)
                     (1.2,0.3) ellipse (3mm and 2mm)
                 ;
@@ -62,7 +62,7 @@
                     (0,-0.3) ellipse (3mm and 2mm)
                     (1.2,-0.3) ellipse (3mm and 2mm)
                 ;
-                \draw [semithick,fill=grx] (2.6,0.05)
+                \draw [semithick,fill=gry] (2.6,0.05)
                     to[out=0,in=180,out looseness=0.5] (3.1,0.12)
                     to[out=0,in=180,in looseness=0.5] (3.6,0.05)
                     to[out=0,in=-90] (3.7,0.15)
@@ -105,7 +105,7 @@
                     (0.08,0.01) ellipse (3mm and 2mm)
                     (1.28,0.01) ellipse (3mm and 2mm)
                 ;
-                \filldraw [semithick,fill=grx]
+                \filldraw [semithick,fill=gry]
                     (0,0.3) ellipse (3mm and 2mm)
                     (1.2,0.3) ellipse (3mm and 2mm)
                     (0,-0.3) ellipse (3mm and 2mm)
@@ -118,7 +118,7 @@
                 \draw [semithick]
                     (3.18,0.01) ellipse (6mm and 2mm)
                 ;
-                \draw [semithick,fill=grx] (2.6,0.05)
+                \draw [semithick,fill=gry] (2.6,0.05)
                     to[out=0,in=180,out looseness=0.5] (3.1,0.12)
                     to[out=0,in=180,in looseness=0.5] (3.6,0.05)
                     to[out=0,in=-90] (3.7,0.15)
@@ -127,7 +127,7 @@
                     to[out=-90,in=180] cycle
                 ;
                 \begin{scope}[yscale=-1]
-                    \draw [semithick,fill=grx] (2.6,0.05)
+                    \draw [semithick,fill=gry] (2.6,0.05)
                         to[out=0,in=180,out looseness=0.5] (3.1,0.12)
                         to[out=0,in=180,in looseness=0.5] (3.6,0.05)
                         to[out=0,in=-90] (3.7,0.15)
@@ -212,6 +212,147 @@
 
 \section{Chapter 2: Atomic Structure}
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
+\subsection{Notes}
+\begin{itemize}
+    \item \marginnote{12/22:}\textbf{Coinage metals}: Copper, silver, and gold, i.e., the transition metals in IUPAC Group 11.
+    \item \textbf{Chalcogens}: Oxygen, sulfur, selenium, tellurium, and polonium, i.e., the nonmetals in Group 16.
+    \item The energies of visible light emitted by the hydrogen atom are given by\footnote{Refer to \textcite{bib:APChemNotes}, specifically Figure 7.6 and the accompanying discussion.}
+    \begin{equation*}
+        E = R_H\left( \frac{1}{2^2}-\frac{1}{n_h^2} \right)
+    \end{equation*}
+    where $n_h$ is an integer greater than 2 and $R_H$ is the Rydberg constant for hydrogen (\ce{H}).
+    \begin{itemize}
+        \item Note that $
+            R_H = \SI{1.097e7}{\per\meter}
+            = \SI{2.179e-18}{\joule}
+            = \SI{13.61}{eV}
+        $.
+        \item This equation was first discovered by Johann Balmer in 1885.
+        \item Infrared and ultraviolet emissions can be described by replacing $2^2$ with integers $n_l^2$ in the above equation on the condition that $n_l<n_h$\footnote{$n_l$ denotes the \underline{l}ower final energy level while $n_h$ denotes the \underline{h}igher initial energy level.}.
+    \end{itemize}
+    \item The energy of the light emitted is related to its wavelength, frequency, and wavenumber by the equations
+    \begin{equation*}
+        E = h\nu = \frac{hc}{\lambda} = hc\bar{\nu}
+    \end{equation*}
+    where $h$ is Planck's constant ($\SI{6.626e-34}{\joule\second}$), $c$ is the speed of light ($\SI{2.998e8}{\meter\per\second}$), and $\nu$, $\lambda$, and $\bar{\nu}$ are the frequency, wavelength, and \textbf{wavenumber}, respectively, of the light.
+    \item \textbf{Wavenumber}: The number of waves that exist between two points along the light's path a given distance apart. \emph{Measured in} waves per centimeter (SI: $\si{\per\centi\meter}$).
+    \begin{itemize}
+        \item Wavenumber is proportional to energy. This is why $\si{\per\meter}$ or $\si{\per\centi\meter}$ can be used as an energy unit.
+    \end{itemize}
+    \item \textbf{Principal quantum number}: One of the quantities $n$ in Balmer's equation.
+    \item Bohr's atomic theory first explained the phenomenon of Balmer's equation, positing that "electrons may absorb light of certain specific energies and be excited to orbits of higher energy; they may also emit light of specific energies and fall to orbits of lower energy" \parencite[11-12]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item Bohr rewrote the Rydberg constant in terms of other quantities:
+        \begin{equation*}
+            R = \frac{2\pi^2\mu Z^2e^4}{(4\pi\varepsilon_0)^2h^2}
+        \end{equation*}
+        where\dots
+        \begin{itemize}
+            \item $\mu$ is the reduced mass of the electron/nucleus combination $\frac{1}{\mu}=\frac{1}{m_e}+\frac{1}{m_\text{nucleus}}$, where $m_e=\SI{9.11e-31}{\kilo\gram}$ is the mass of the electron and $m_\text{nucleus}$ is the mass of the nucleus.
+            \item $Z$ is the nuclear charge.
+            \item $e=\SI{1.602e-19}{\coulomb}$ is the charge of the electron.
+            \item $h$ is Planck's constant.
+            \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
+        \end{itemize}
+        \item Importantly, note that the Rydberg constant for hydrogen $R_H$ is not universal, and changes for the atom at hand based on factors like the mass of the nucleus.
+    \end{itemize}
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[yscale=17]
+            \footnotesize
+            \foreach \y in {1,...,6} {
+                \draw [thick] (0,{-1/(\y*\y)}) -- ++(10.5,0) node[right]{$\y$};
+            }
+            \foreach \y in {7,...,11} {
+                \draw [thick] (0,{-1/(\y*\y)}) -- ++(10.5,0);
+            }
+            \fill (0,{-1/121}) rectangle (10.5,0) node[right]{$\infty$};
+    
+            \foreach \x in {1,...,5} {
+                \draw [semithick,grx,-latex] ({0.05+\x*0.25},{-1/(\x+1)^2}) -- ({0.05+\x*0.25},-1);
+            }
+            \node [anchor=west,text width=1cm,align=center] at (1.4,{(-1/1-1/4)/2}) {Lyman series (UV)};
+            \foreach \x in {2,...,5} {
+                \draw [semithick,grx,-latex] ({3.05+\x*0.25},{-1/(\x+1)^2}) -- ({3.05+\x*0.25},{-1/4});
+            }
+            \node [anchor=west,text width=4cm] at (4.4,{(-1/4-1/9)/2}) {Balmer series\\ (visible transitions shown)};
+            \foreach \x in {3,...,5} {
+                \draw [semithick,grx,-latex] ({6.05+\x*0.25},{-1/(\x+1)^2}) -- ({6.05+\x*0.25},{-1/9});
+            }
+            \node [anchor=west] at (7.4,{(-1/9-1/16)/2}) {Paschen series (IR)};
+        \end{tikzpicture}
+        \caption{Hydrogen atom energy levels.}
+        \label{fig:energyLevelH}
+    \end{figure}
+    \item \textbf{Balmer series}: The four main electron transitions in hydrogen that release electromagnetic radiation in the visible spectrum.
+    \item \textbf{Lyman series}: The five main electron transitions in hydrogen that release electromagnetic radiation in the ultraviolet spectrum.
+    \item \textbf{Paschen series}: The three main electron transitions in hydrogen that release electromagnetic radiation in the infrared spectrum.
+    \item "The inverse square dependence of energy on $n$ results in energy levels that are far apart in energy at small $n$ and become much closer in energy at larger $n$" \parencite[12]{bib:MiesslerFischerTarr}
+    \begin{itemize}
+        \item Individual electrons can have more energy than they would possess in the infinite energy level, but at and above this point, the nucleus and electron are considered to be separate entities.
+    \end{itemize}
+    \item \textbf{Heisenberg's uncertainty principle}: "There is a relationship between the inherent uncertainties in the location and momentum of an electron" \parencite[14]{bib:MiesslerFischerTarr}.
+    \begin{equation*}
+        \Delta x\, \Delta p_x \geq \frac{h}{4\pi}
+    \end{equation*}
+    \begin{itemize}
+        \item The above equation describes the $x$-component of the uncertainty, where $\Delta x$ is the uncertainty in the position of the electron and $\Delta p_x$ is the uncertainty in the momentum of the electron in the $x$-direction.
+    \end{itemize}
+    \item Because of the uncertainty principle, we cannot treat electrons as particles with precisely described motion; instead, we must describe them in \textbf{orbitals}.
+    \item \textbf{Orbital}: A region that describes the probable locations of an electron.
+    \item \textbf{Electron density}: "The probability of finding the electron at a particular point in space" \parencite[14]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item This can be calculated in principle.
+    \end{itemize}
+    \item Schr\"{o}dinger and Heisenberg published (in 1926 and 1927, respectively) papers on atomic wave mechanics. Although they used very different mathematical techniques, their theories can be shown to be equivalent. However, we will introduce Schr\"{o}dinger's more commonly used differential equations.
+    \item "The Schr\"{o}dinger equation describes the wave properties of an electron in terms of its position, mass, total energy, and potential energy" \parencite[14]{bib:MiesslerFischerTarr}.
+    \begin{equation*}
+        H\Psi = E\Psi
+    \end{equation*}
+    \begin{itemize}
+        \item In its simplest form, it is given by the above, where $H$ is the \textbf{Hamiltonian operator}, $E$ is the energy of the electron, and $\Psi$ is the \textbf{wave function}.
+    \end{itemize}
+    \item \textbf{Wave function}: A function that describes an electron wave in space, i.e., an atomic orbital.
+    \item Energy values are another way of describing the quantization introduced with the Bohr model --- different orbitals, characterized by different wave functions, each have characteristic energies.
+    \item \textbf{Operator}: "An instruction or set of instructions that states what to do with the function that follows it" \parencite[14]{bib:MiesslerFischerTarr}.
+    \item \textbf{Hamiltonian operator}: An operator including derivatives that transforms the wave function into a constant (the energy) times $\Psi$. \emph{Also known as} $\bm{\hat{H}}$.
+    \begin{equation*}
+        H = \frac{-h^2}{8\pi^2m}\left( \pdv[2]{x}+\pdv[2]{y}+\pdv[2]{z} \right)-\frac{Ze^2}{4\pi\varepsilon_0\sqrt{x^2+y^2+z^2}}
+    \end{equation*}
+    \begin{itemize}
+        \item In the form used for calculating the energy levels of one-electron systems, it is given by the above, where\dots
+        \begin{itemize}
+            \item $h$ is Planck's constant.
+            \item $m$ is the mass of the electron.
+            \item $e$ is the charge of the electron.
+            \item $\sqrt{x^2+y^2+z^2}=r$ is the distance from the nucleus.
+            \item $Z$ is the charge of the nucleus.
+            \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
+        \end{itemize}
+        \item The first part describes the kinetic energy of the electron, its energy of motion.
+        \item The second part describes the potential energy of the electron, the result of the electrostatic attraction between it and the nucleus. It is commonly designated as $V(x,y,z)$.
+    \end{itemize}
+    \item "Because $n$ varies from 1 to $\infty$, and every atomic orbital is described by a unique $\Psi$, there is no limit to the number of solutions of the Schr\"{o}dinger equation for an atom. Each $\Psi$ describes the wave properties of a given electron in a particular orbital" \parencite[15]{bib:MiesslerFischerTarr}.
+    \item Electron density is proportional to $\Psi^2$.
+    \item Necessary conditions for a physically realistic solution for $\Psi$:
+    \begin{enumerate}
+        \item $\Psi$ must be single-valued: There cannot be two probabilities for an electron at any position in space.
+        \item $\Psi$ and its first derivatives must be continuous: The probability must be defined at all positions in space and cannot change abruptly from one point to the next.
+        \item $\Psi$ must approach zero as $r\to\infty$: For large distances from the nucleus, the probability must grow smaller and smaller (the atom must be finite).
+        \item The integral
+        \begin{equation*}
+            \int\limits_\text{all space}\Psi_A{\Psi_A}^*\dd{\tau} = 1
+        \end{equation*}
+        The total probability of an electron being somewhere in space must be 1. Applying this stipulation is called \textbf{normalizing} the wave function\footnote{${\Psi_A}^*$ denotes the complex conjugate of $\Psi_A$. This is necessary because wave functions may have imaginary values. However, in many cases, the wave functions are real and the integrand reduces to $\Psi_A^2$.}.
+        \item The integral
+        \begin{equation*}
+            \int\limits_\text{all space}\Psi_A{\Psi_B}^*\dd{\tau} = 0
+        \end{equation*}
+        $\Psi_A$ and $\Psi_B$ are different orbitals within the same atom, and this stipulation reflects the fact that all orbitals in the same atom must be \textbf{orthogonal} to each other.
+    \end{enumerate}
+\end{itemize}
+
+
 \subsection{Problems}
 \begin{enumerate}[label={\textbf{2.\arabic*}}]
     \setcounter{enumi}{7}
