@@ -11,6 +11,7 @@
 \usepackage{mhchem,chemfig}
 \usepackage{tikz}
 \usepackage{subcaption}
+\usepackage{colortbl,multirow}
 \usepackage[hidelinks]{hyperref}
 
 \fancypagestyle{main}{
@@ -36,10 +37,15 @@
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
 
-\colorlet{grx}{green!75!cyan!40!black!90}
-\colorlet{gry}{green!75!cyan!40!black!20}
+\usetikzlibrary{decorations.pathreplacing}
+\colorlet{grx}{green!25!cyan!40!black!95}
+\colorlet{gry}{green!25!cyan!40!black!50}
+\colorlet{grz}{green!25!cyan!40!black!20}
+\colorlet{grt}{green!75!cyan!40!black!15}
 
 \renewcommand{\chaptername}{Topic}
 \renewcommand{\contentsname}{Topics}
+
+\newcommand{\e}[1][]{\text{e}^{#1}}
 
 \usepackage{subfiles}
