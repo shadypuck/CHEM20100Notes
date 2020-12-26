@@ -502,9 +502,27 @@
         \item $n$ is the primary quantum number affecting the overall energy.
         \item $l$ determines the type of shape. See Table \ref{tab:WaveFunctionsAngular-H}.
         \item $m_l$ determines the "orientation of the angular momentum vector in a magnetic field, or the position of the orbital in space" \parencite[18]{bib:MiesslerFischerTarr}. See Table \ref{tab:WaveFunctionsAngular-H}.
-        \item $m_s$ determines the electron spin\footnote{Note that the spin of an electron is a purely quantum mechanical property, and should not be related back to classical mechanics.} in the orbital, or "the orientation of the electron's magnetic moment in a magnetic field, either in the direction of the field ($+\frac{1}{2}$) or opposed to it ($-\frac{1}{2}$)" \parencite[18]{bib:MiesslerFischerTarr}.
+        \item $m_s$ determines the electron spin\footnote{Note that the spin of an electron is purely quantum mechanical, and should not be related back to classical mechanics.} in the orbital, or "the orientation of the electron's magnetic moment in a magnetic field, either in the direction of the field ($+\frac{1}{2}$) or opposed to it ($-\frac{1}{2}$)" \parencite[18]{bib:MiesslerFischerTarr}.
         \item $n$, $l$, and $m_l$ specify an orbital; $m_s$ specifies one of the two electrons in the orbital.
     \end{itemize}
+    \item A note on $i=\sqrt{-1}$ in Table \ref{tab:WaveFunctionsAngular-H}:
+    \begin{itemize}
+        \item Any linear combination of solutions to the wave equation is another solution.
+        \item Because it is more convenient to work with real functions as opposed to complex functions, we make use of the above fact to decomplexify the solutions, as in the following examples.
+        \begin{align*}
+            \Psi_{2p_x} &= \frac{1}{\sqrt{2}}(\Psi_{+1}+\Psi_{-1})\\
+            &= \frac{1}{\sqrt{2}}\left( \frac{1}{\sqrt{2\pi}}\e[i\phi]\cdot\frac{\sqrt{3}}{2}\sin\theta\cdot[R(r)]+\frac{1}{\sqrt{2\pi}}\e[-i\phi]\cdot\frac{\sqrt{3}}{2}\sin\theta\cdot[R(r)] \right)\\
+            &= \left( \frac{1}{\sqrt{\pi}}\frac{\sqrt{3}}{2}[R(r)]\sin\theta \right)\frac{\e[i\phi]+\e[-i\phi]}{2}\\
+            &= \frac{1}{2}\sqrt{\frac{3}{\pi}}[R(r)]\sin\theta\cos\phi
+        \end{align*}
+        \begin{align*}
+            \Psi_{2p_y} &= \frac{-i}{\sqrt{2}}(\Psi_{+1}-\Psi_{-1})\footnotemark\\
+            &= \left( \frac{1}{\sqrt{\pi}}\frac{\sqrt{3}}{2}[R(r)]\sin\theta \right)\frac{\e[i\phi]-\e[-i\phi]}{2i}\\
+            &= \frac{1}{2}\sqrt{\frac{3}{\pi}}[R(r)]\sin\theta\sin\phi
+        \end{align*}
+        \footnotetext{Errata: \textcite{bib:MiesslerFischerTarr} incorrectly normalizes this expression with $i/\sqrt{2}$.}
+    \end{itemize}
+    \pagebreak
     \begin{table}[h!]
         \centering
         \renewcommand{\arraystretch}{1.6}
@@ -673,11 +691,10 @@
             \draw [very thick,decorate,decoration=brace,xshift=-2.3cm,yshift=3.8cm] (0,2.7) -- (0,0);
             \draw [very thick,decorate,decoration=brace,xshift=-2.3cm,yshift=8.7cm] (0,2.7) -- (0,0);
         \end{tikzpicture}
-        \caption{Hydrogen atom wave functions: Angular f
-        unctions.}
+        \caption{Hydrogen atom wave functions: Angular functions.}
         \label{tab:WaveFunctionsAngular-H}
     \end{table}
-    \begin{table}[h!]
+    \begin{table}[h!]\marginnote{12/23:}
         \centering
         \renewcommand{\arraystretch}{1.6}
         \setlength{\tabcolsep}{5mm}
@@ -690,7 +707,7 @@
             
             $1s$ & $1$ & $0$ & $R_{1s}=2\left[ \dfrac{Z}{a_0} \right]^{3/2}\e[-\sigma]$\rule{0pt}{7mm}\\[3.5mm]
             \rowcolor{grt}
-            $2s$ & $2$ & $0$ & $R_{2s}=2\left[ \dfrac{Z}{2a_0} \right]^{3/2}(2-\sigma)\e[-\sigma/2]$\rule{0pt}{7mm}\\[3.5mm]
+            $2s$ & $2$ & $0$ & $R_{2s}=\left[ \dfrac{Z}{2a_0} \right]^{3/2}(2-\sigma)\e[-\sigma/2]$\footnotemark\rule{0pt}{7mm}\\[3.5mm]
             $2p$ &     & $1$ & $R_{2p}=\dfrac{1}{\sqrt{3}}\left[ \dfrac{Z}{2a_0} \right]^{3/2}\sigma\e[-\sigma/2]$\rule{0pt}{7mm}\\[3.5mm]
             \rowcolor{grt}
             $3s$ & $3$ & $0$ & $R_{3s}=\dfrac{2}{27}\left[ \dfrac{Z}{3a_0} \right]^{3/2}(27-18\sigma+2\sigma^2)\e[-\sigma/3]$\rule{0pt}{7mm}\\[3.5mm]
@@ -703,26 +720,332 @@
         \caption{Hydrogen atom wave functions: Radial functions.}
         \label{tab:WaveFunctionsRadial-H}
     \end{table}
-    \item A note on $i=\sqrt{-1}$ in Table \ref{tab:WaveFunctionsAngular-H}:
-    \begin{itemize}
-        \item Any linear combination of solutions to the wave equation is another solution.
-        \item Because it is more convenient to work with real functions as opposed to complex functions, we make use of the above fact to decomplexify the solutions, as in the following examples.
-        \begin{align*}
-            \Psi_{2p_x} &= \frac{1}{\sqrt{2}}(\Psi_{+1}+\Psi_{-1})\\
-            &= \frac{1}{\sqrt{2}}\left( \frac{1}{\sqrt{2\pi}}\e[i\phi]\cdot\frac{\sqrt{3}}{2}\sin\theta\cdot[R(r)]+\frac{1}{\sqrt{2\pi}}\e[-i\phi]\cdot\frac{\sqrt{3}}{2}\sin\theta\cdot[R(r)] \right)\\
-            &= \left( \frac{1}{\sqrt{\pi}}\frac{\sqrt{3}}{2}[R(r)]\sin\theta \right)\frac{\e[i\phi]+\e[-i\phi]}{2}\\
-            &= \frac{1}{2}\sqrt{\frac{3}{\pi}}[R(r)]\sin\theta\cos\phi
-        \end{align*}
-        \begin{align*}
-            \Psi_{2p_y} &= \frac{i}{\sqrt{2}}(\Psi_{+1}-\Psi_{-1})\\
-            &= \left( \frac{1}{\sqrt{\pi}}\frac{\sqrt{3}}{2}[R(r)]\sin\theta \right)\frac{\e[i\phi]-\e[-i\phi]}{2i}\\
-            &= \frac{1}{2}\sqrt{\frac{3}{\pi}}[R(r)]\sin\theta\sin\phi
-        \end{align*}
-    \end{itemize}
     \item Note that $d_{z^2}$ actually uses the function $2z^2-x^2-y^2$, so we should write $d_{2z^2-x^2-y^2}$ but we shorthand for convenience.
     \item Since the functions in the polar and Cartesian coordinates columns of Table \ref{tab:WaveFunctionsAngular-H} are real, $\Psi=\Psi^*$ and $\Psi\Psi^*=\Psi^2$.
+    \item \marginnote{12/25:}$\Psi$ may be expressed in terms of Cartesian coordinates $(x,y,z)$ or in terms of spherical coordinates $(r,\theta,\phi)$.
+    \begin{figure}[h!]\marginnote{12/25:}
+        \centering
+        \begin{tikzpicture}[x={(-0.27cm,-0.47cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
+            \footnotesize
+            \draw (0,0,0) -- (2.5,0,0) node[below left]{$x$};
+            \draw (0,0,0) -- (0,2.5,0) node[right]{$y$};
+            \draw (0,0,0) -- (0,0,4) node[above]{$z$};
+    
+            \fill (xyz spherical cs:radius=4,latitude=60,longitude=50) circle (2pt);
+            \draw [semithick] (0,0,0) -- node[below,xshift=1mm]{$r$} (xyz spherical cs:radius=4,latitude=60,longitude=50) -- (xyz spherical cs:radius=2,longitude=50) -- cycle;
+            \draw [grx,semithick] plot[domain=50:90,smooth,variable=\phii] (xyz spherical cs:radius=1,longitude=\phii);
+            \node [below=-2pt] at (xyz spherical cs:radius=1,longitude=70) {$\phi$};
+            \draw [grx,semithick] plot[domain=60:90,smooth,variable=\thta] (xyz spherical cs:radius=1,latitude=\thta,longitude=50);
+            \node [above=1pt] at (xyz spherical cs:radius=1,latitude=70,longitude=50) {$\theta$};
+        \end{tikzpicture}
+        \caption{Spherical coordinates.}
+        \label{fig:sphericalCoords}
+    \end{figure}
+    \begin{itemize}
+        \item Using spherical coordinates comes with the advantage that $r$ is the distance from the nucleus (see Figure \ref{fig:sphericalCoords}).\\
+        \footnotetext{Errata: This differs from the corresponding equation in \textcite{bib:MiesslerFischerTarr} because the textbook is wrong.}
+        \item Know the following volume element conversions\footnote{Refer to \textcite{bib:CAAGThomasNotes}, specifically Figure 16.9 and the accompanying discussion.}.
+        \begin{equation*}
+            \dd{V} = \dd{x}\dd{y}\dd{z}
+            = r^2\sin\theta\dd{\theta}\dd{\phi}\dd{r}
+        \end{equation*}
+        \item The volume of the thin shell between $r$ and $r+\dd{r}$ is as follows\footnote{Errata: \textcite{bib:MiesslerFischerTarr} flips the bounds over which $\theta$ and $\phi$ should be evaluated, but I use the right ones.}, and is useful for describing the electron density as a function of distance from the nucleus.
+        \begin{align*}
+            \int_0^{2\pi}\int_0^\pi1\, r^2\sin\theta\dd{\theta}\dd{\phi}\dd{r} &= \int_0^{2\pi}2r^2\dd{\phi}\dd{r}\\
+            &= 4\pi r^2\dd{r}
+        \end{align*}
+        \item $\Psi$ can be factored into a \textbf{radial component} $R$ and two \textbf{angular components} $\Theta$ and $\Phi$, which are sometimes combined into a single component $Y$:
+        \begin{equation*}
+            \Psi(r,\theta,\phi) = R(r)\Theta(\theta)\Phi(\phi) = R(r)Y(\theta,\phi)
+        \end{equation*}
+        \begin{itemize}
+            \item Refer to Table \ref{tab:WaveFunctionsAngular-H} for examples of $\Theta$ and $\Phi$, and Table \ref{tab:WaveFunctionsRadial-H} for examples of $R$.
+            \item Note that in Table \ref{tab:WaveFunctionsAngular-H}, the shaded orbital lobes correspond to where the wave function is negative. Distinguishing regions of opposite signs is useful for bonding purposes.
+        \end{itemize}
+        \item The radial component can also be manipulated to give the \textbf{radial probability function} $4\pi r^2R^2$.
+        \begin{itemize}
+            \item $R$ is the radial function, so $R^2$ is the probability function (think $\Psi=RY$, so $\Psi^2=R^2Y^2$).
+        \end{itemize}
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \renewcommand{\arraystretch}{3}
+        \begin{tabular}{ccc}
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=1.5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,2)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.12) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.4,.8,1.2,1.6,2} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth] (\x,{2*e^(-\x)});
+                \end{tikzpicture}
+                \caption{$1s$.}
+                \label{fig:radialFunctionsa}
+            \end{subfigure}\\
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=3]
+                    \draw (30,-0.2)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,-0.2) -- ++(0,-0.06) node[below]{$\x$};
+                    }
+                    \foreach \y in {-.2,0,.2,.4,.6,.8} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+                    \draw [dashed] (0,0) -- (30,0);
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth] (\x,{2^0.5/4*(2-\x)*e^(-\x/2)});
+                \end{tikzpicture}
+                \caption{$2s$.}
+                \label{fig:radialFunctionsb}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=3]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.06) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.2,.4,.6,.8,1} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth] (\x,{1/24^0.5*\x*e^(-\x/2)});
+                \end{tikzpicture}
+                \caption{$2p$.}
+                \label{fig:radialFunctionsc}
+            \end{subfigure}\\
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=6]
+                    \draw (30,-0.1)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,-0.1) -- ++(0,-0.03) node[below]{$\x$};
+                    }
+                    \foreach \y in {-.1,0,.1,.2,.3,.4} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+                    \draw [dashed] (0,0) -- (30,0);
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{2/(81*3^0.5)*(27-18*\x+2*\x*\x)*e^(-\x/3)});
+                \end{tikzpicture}
+                \caption{$3s$.}
+                \label{fig:radialFunctionsd}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=6]
+                    \draw (30,-0.1)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,-0.1) -- ++(0,-0.03) node[below]{$\x$};
+                    }
+                    \foreach \y in {-.1,0,.1,.2,.3,.4} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+                    \draw [dashed] (0,0) -- (30,0);
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{(8/3)^0.5/81*(6-\x)*\x*e^(-\x/3)});
+                \end{tikzpicture}
+                \caption{$3p$.}
+                \label{fig:radialFunctionse}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=6]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.03) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{(8/15)^0.5/81*\x*\x*e^(-\x/3)});
+                \end{tikzpicture}
+                \caption{$3d$.}
+                \label{fig:radialFunctionsf}
+            \end{subfigure}
+        \end{tabular}
+        \caption{Radial wave functions.}
+        \label{fig:radialFunctions}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \renewcommand{\arraystretch}{3}
+        \begin{tabular}{ccc}
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=200,smooth] (\x,{\x*\x*(2*e^(-\x))^2});
+                \end{tikzpicture}
+                \caption{$1s$.}
+                \label{fig:radialProbabilitya}
+            \end{subfigure}\\
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{\x*\x*(2^0.5/4*(2-\x)*e^(-\x/2))^2});
+                \end{tikzpicture}
+                \caption{$2s$.}
+                \label{fig:radialProbabilityb}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{\x*\x*(1/24^0.5*\x*e^(-\x/2))^2});
+                \end{tikzpicture}
+                \caption{$2p$.}
+                \label{fig:radialProbabilityc}
+            \end{subfigure}\\
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{\x*\x*(2/(81*3^0.5)*(27-18*\x+2*\x*\x)*e^(-\x/3))^2});
+                \end{tikzpicture}
+                \caption{$3s$.}
+                \label{fig:radialProbabilityd}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{\x*\x*((8/3)^0.5/81*(6-\x)*\x*e^(-\x/3))^2});
+                \end{tikzpicture}
+                \caption{$3p$.}
+                \label{fig:radialProbabilitye}
+            \end{subfigure}&
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[xscale=0.12,yscale=5]
+                    \draw (30,0)
+                        -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
+                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                    ;
+                    \foreach \x in {0,5,...,30} {
+                        \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
+                    }
+                    \foreach \y in {0,.1,.2,.3,.4,.5,.6} {
+                        \draw (0,\y) -- ++(-1.5,0) node[left]{$\y$};
+                    }
+    
+                    \draw [grx,thick] plot[domain=0:30,samples=100,smooth,/pgf/fpu,/pgf/fpu/output format=fixed] (\x,{\x*\x*((8/15)^0.5/81*\x*\x*e^(-\x/3))^2});
+                \end{tikzpicture}
+                \caption{$3d$.}
+                \label{fig:radialProbabilityf}
+            \end{subfigure}
+        \end{tabular}
+        \caption{Radial probability functions.}
+        \label{fig:radialProbability}
+    \end{figure}
+    \item \textbf{Radial component}: The part of $\Psi$ that describes "electron density at different distances from the nucleus" \parencite[20]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item Determined by quantum numbers $n$ and $l$.
+        \item Plotted for the $n=1,2,3$ orbitals in Figure \ref{fig:radialFunctions}.
+    \end{itemize}
+    \item \textbf{Angular components}: The parts of $\Psi$ that describe "the shape of the orbital and its orientation in space" \parencite[20]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item Determined by quantum number $l$ and $m_l$.
+    \end{itemize}
+    \item \textbf{Radial probability function}: The function describing "the probability of finding the electron at a given distance from the nucleus, summed over all angles, with the $4\pi r^2$ factor the result of integrating over all angles" \parencite[21]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item Plotted for the $n=1,2,3$ orbitals in Figure \ref{fig:radialProbability}.
+    \end{itemize}
+    \item \textbf{Bohr radius}: "The value of $r$ at the maximum of $\Psi^2$ for a hydrogen $1s$ orbital (the most probable distance from the hydrogen nucleus for the $1s$ electron), and it is also the radius of the $n=1$ orbit according to the Bohr model" \parencite[23]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item See Figure \ref{fig:radialProbabilitya}.
+        \item Its value is $a_0=\SI{52.9}{\pico\meter}$.
+        \item It is a common unit in quantum mechanics.
+        \item It is used to scale the functions in Figures \ref{fig:radialFunctions} and \ref{fig:radialProbability} to give reasonable axis units\footnote{Errata?: Should the $y$-axis in Figure \ref{fig:radialProbability} be $a_0^3r^2R^2$?}.
+    \end{itemize}
+    \item Figure \ref{fig:radialProbability} shows that the electron density falls off rapidly after the absolute maximum in every case.
+    \begin{itemize}
+        \item However, it falls off more quickly for lower energy levels.
+    \end{itemize}
+    \item The electron density at the nucleus is always zero.
+    \begin{itemize}
+        \item Mathematically, this is because $4\pi r^2R^2$ naturally equals zero when $r=0$.
+    \end{itemize}
+    \item "Because chemical reactions depend on the shape and extent of orbitals at large distances from the nucleus, the radial probability functions help show which orbitals are most likely to be involved in reactions" \parencite[23]{bib:MiesslerFischerTarr}.
 \end{itemize}
-\newpage
 
 
 \subsection{Problems}
