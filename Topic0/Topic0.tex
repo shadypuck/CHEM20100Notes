@@ -482,7 +482,7 @@
         \small
         \begin{tabular}{lllp{4.7cm}}
             \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{gry}\hline
-            \rowcolor{green!25!cyan!40!black!95}
+            \rowcolor{grx}
             \textcolor{white}{\textbf{Symbol}} & \textcolor{white}{\textbf{Name}} & \textcolor{white}{\textbf{Values}} & \textcolor{white}{\textbf{Role}}\\
             $n$ & Principal & $1,2,3,\dots$ & Determines the major part of the energy.\\
             \rowcolor{grt}
@@ -742,7 +742,8 @@
         \label{fig:sphericalCoords}
     \end{figure}
     \begin{itemize}
-        \item Using spherical coordinates comes with the advantage that $r$ is the distance from the nucleus (see Figure \ref{fig:sphericalCoords}).\\
+        \item Using spherical coordinates comes with the advantage that $r$ is the distance from the nucleus (see Figure \ref{fig:sphericalCoords}).
+        \pagebreak
         \footnotetext{Errata: This differs from the corresponding equation in \textcite{bib:MiesslerFischerTarr} because the textbook is wrong.}
         \item Know the following volume element conversions\footnote{Refer to \textcite{bib:CAAGThomasNotes}, specifically Figure 16.9 and the accompanying discussion.}.
         \begin{equation*}
@@ -777,7 +778,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=1.5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,2)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,2)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.12) node[below]{$\x$};
@@ -796,7 +797,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=3]
                     \draw (30,-0.2)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,-0.2) -- ++(0,-0.06) node[below]{$\x$};
@@ -816,7 +817,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=3]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,1)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.06) node[below]{$\x$};
@@ -835,7 +836,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=6]
                     \draw (30,-0.1)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,-0.1) -- ++(0,-0.03) node[below]{$\x$};
@@ -855,7 +856,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=6]
                     \draw (30,-0.1)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,-0.1) -- ++(0,-0.03) node[below]{$\x$};
@@ -875,7 +876,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=6]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Radial function $a_0^{\frac{3}{2}}R(r)$} ++(0,0.5)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.03) node[below]{$\x$};
@@ -903,7 +904,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -922,7 +923,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -941,7 +942,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -960,7 +961,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -979,7 +980,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -998,7 +999,7 @@
                 \begin{tikzpicture}[xscale=0.12,yscale=5]
                     \draw (30,0)
                         -- node[below=7mm]{\small$r/a_0$} ++(-30,0)
-                        -- node[rotate=90,above=7mm]{\small Probability $a_0r^2R^2$} ++(0,0.6)
+                        -- node[rotate=90,left=1cm,anchor=center]{\small Probability $a_0r^2R^2$} ++(0,0.6)
                     ;
                     \foreach \x in {0,5,...,30} {
                         \draw (\x,0) -- ++(0,-0.045) node[below]{$\x$};
@@ -1045,6 +1046,158 @@
         \item Mathematically, this is because $4\pi r^2R^2$ naturally equals zero when $r=0$.
     \end{itemize}
     \item "Because chemical reactions depend on the shape and extent of orbitals at large distances from the nucleus, the radial probability functions help show which orbitals are most likely to be involved in reactions" \parencite[23]{bib:MiesslerFischerTarr}.
+    \item \marginnote{12/26:}\textbf{Nodal surface}: A surface within an orbital having zero electron density.
+    \begin{itemize}
+        \item The wave function is zero at these because it is changing sign.
+        \begin{itemize}
+            \item Knowing where the wave function is positive and negative can be useful when working with molecular orbitals.
+        \end{itemize}
+    \end{itemize}
+    \item To find nodal surfaces, we must find places where
+    \begin{equation*}
+        0 = \Psi^2 = \Psi = R(r)Y(\theta,\phi)
+    \end{equation*}
+    or where
+    \begin{align*}
+        0 &= R(r)&
+            0 &= Y(\theta,\phi)
+    \end{align*}
+    \item "The total number of nodes in any orbital is $n-1$ if the conical nodes of some $d$ and $f$ orbitals count as two nodes" \parencite[23]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item The conical node of the $d_{z^2}$ orbital (see Table \ref{tab:WaveFunctionsAngular-H}) is mathematically one surface, but we must count it as two (perhaps think of it as a top and bottom section) to fit the pattern.
+    \end{itemize}
+    \item \textbf{Angular node}: A node that results when $Y=0$.
+    \begin{itemize}
+        \item There are $l$ angular nodes in any orbital.
+    \end{itemize}
+    \item \textbf{Radial node}: A node that results when $R=0$. \emph{Also known as} \textbf{spherical nodes}.
+    \begin{itemize}
+        \item There are $n-l-1$ radial nodes in any orbital.
+    \end{itemize}
+    \item Note that on the basis of relativity, electron density at nodes may not be zero but may in fact be a very small finite value.
+    \begin{itemize}
+        \item Alternatively, if we think of an electron wave like a wave in a violin string, which also has places of zero vibration where the string still exists, nodes may just be places where electron waves have zero amplitude, not places where they don't exist.
+        \item A further possible explanation is that electrons can `teleport' between two places without ever passing in between.
+    \end{itemize}
+    \item We now look at a few examples of finding nodes in orbitals.
+    \item Nodal structure of $p_z$:
+    \begin{itemize}
+        \item From Table \ref{tab:WaveFunctionsAngular-H}, the angular factor of this orbital in Cartesian coordinates is
+        \begin{equation*}
+            Y = \frac{1}{2}\sqrt{\frac{3}{\pi}}\frac{z}{r}
+        \end{equation*}
+        \item When we set this equal to zero, we find that the above is only equal to zero when $z=0$.
+        \item Indeed, $z=0$, i.e., the $xy$-plane, is an angular node in the $p_z$ orbital, as we can see in Table \ref{tab:WaveFunctionsAngular-H}.
+        \item Additionally, we can tell from the above equation that the wave function is positive when $z>0$ and negative when $z<0$; this is also reflected in Table \ref{tab:WaveFunctionsAngular-H}.
+    \end{itemize}
+    \item Nodal structure of $d_{x^2-y^2}$:
+    \begin{itemize}
+        \item The angular factor:
+        \begin{equation*}
+            Y = \frac{1}{4}\sqrt{\frac{15}{\pi}}\frac{x^2-y^2}{r^2}
+        \end{equation*}
+        \item This is only equal to zero when
+        \begin{align*}
+            0 &= x^2-y^2\\
+            y^2 &= x^2\\
+            y &= \pm x
+        \end{align*}
+        \item This translates to Table \ref{tab:WaveFunctionsAngular-H}, where we can see that the planes $x=y$ and $x=-y$, i.e., those that contain the $z$-axis and make $\ang{45}$ angles with the $x$- and $y$-axes, are nodes.
+        \item Additionally, the function is positive where $x>y$ and negative where $x<y$, and we can see this in Table \ref{tab:WaveFunctionsAngular-H}.
+    \end{itemize}
+    \item Be aware of lines/surfaces of constant electron density.
+    \item When filling orbitals in polyelectronic atoms, "we start with the lowest $n$, $l$, and $m_l$ values (1, 0, and 0, respectively) and either of the $m_s$ values (we will arbitrarily use $+\frac{1}{2}$ first)" \parencite[26]{bib:MiesslerFischerTarr}. We then utilize the three following rules.
+    \begin{itemize}
+        \item See them used to fill a $p$ orbital in Table \ref{tab:orbitalFilling}.
+    \end{itemize}
+    \item \textbf{Aufbau principle}: The buildup of electrons in atoms results from continually increasing the quantum numbers. \emph{Etymology} \textbf{aufbau} from German "building up."
+    \begin{itemize}
+        \item "Electrons are placed in orbitals to give the lowest total electronic energy to the atom. This means that the lowest values of $n$ and $l$ are filled first. Because the orbitals within each subshell ($p$, $d$, etc.) have the same energy, the orders for values of $m_l$ and $m_s$ are indeterminate" \parencite[26]{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \textbf{Pauli exclusion principle}: Each electron in an atom must have a unique set of quantum numbers.
+    \begin{itemize}
+        \item Note that this is experimentally derived, and does not follow from the Schr\"{o}dinger equation.
+    \end{itemize}
+    \item \textbf{Hund's rule} (of maximum multiplicity): Electrons must be placed in orbitals to give the maximum total spin (the maximum number of parallel spins).
+    \begin{itemize}
+        \item This is a consequence of the Aufbau principle, as two electrons in the same orbital have higher energy than two in different orbitals due to electrostatic repulsions.
+    \end{itemize}
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.4}
+        \setlength{\tabcolsep}{4mm}
+        \small
+        \begin{tabular}{cccc}
+            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{gry}\hline
+            \rowcolor{grx}
+            \textcolor{white}{\textbf{Number of electrons}} & \textcolor{white}{\textbf{Arrangement}} & \textcolor{white}{\textbf{Unpaired $\e[-]$}} & \textcolor{white}{\textbf{Multiplicity}}\\
+            1 & \porbital{black}{white}{white}{white}{white}{white} & 1 & 2\\
+            \rowcolor{grt}
+            2 & \porbital{black}{grt}{black}{grt}{grt}{grt} & 2 & 3\\
+            3 & \porbital{black}{white}{black}{white}{black}{white} & 3 & 4\\
+            \rowcolor{grt}
+            4 & \porbital{black}{black}{black}{grt}{black}{grt} & 2 & 3\\
+            5 & \porbital{black}{black}{black}{black}{black}{white} & 1 & 2\\
+            \rowcolor{grt}
+            6 & \porbital{black}{black}{black}{black}{black}{black} & 0 & 1\\
+            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+        \end{tabular}
+        \caption{Hund's rule and multiplicity.}
+        \label{tab:orbitalFilling}
+    \end{table}
+    \item \textbf{Spin multiplicity}: The number of unpaired electrons plus 1.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[node distance=2mm]
+            \footnotesize
+            \node (p11) {${\color{black}\uparrow}\ {\color{black}\downarrow}$}
+                (p11.south east) edge (p11.south west)
+            ;
+            \node (p21) [right=of p11] {${\color{white}\uparrow}\ {\color{white}\downarrow}$}
+                (p21.south east) edge (p21.south west)
+            ;
+            \node (p31) [right=of p21] {${\color{white}\uparrow}\ {\color{white}\downarrow}$}
+                (p31.south east) edge (p31.south west)
+            ;
+    
+            \node (p12) [below=2cm of p11] {${\color{black}\uparrow}\ {\color{white}\downarrow}$}
+                (p12.south east) edge (p12.south west)
+            ;
+            \node (p22) [right=of p12] {${\color{black}\downarrow}\ {\color{white}\uparrow}$}
+                (p22.south east) edge (p22.south west)
+            ;
+            \node (p32) [right=of p22] {${\color{white}\uparrow}\ {\color{white}\downarrow}$}
+                (p32.south east) edge (p32.south west)
+            ;
+    
+            \node (p13) [below=2cm of p12] {${\color{black}\uparrow}\ {\color{white}\downarrow}$}
+                (p13.south east) edge (p13.south west)
+            ;
+            \node (p23) [right=of p13] {${\color{black}\uparrow}\ {\color{white}\downarrow}$}
+                (p23.south east) edge (p23.south west)
+            ;
+            \node (p33) [right=of p23] {${\color{white}\uparrow}\ {\color{white}\downarrow}$}
+                (p33.south east) edge (p33.south west)
+            ;
+    
+            \draw [semithick] ([xshift=4mm]p32.south east) -- ++(2mm,0);
+            \draw [semithick,stealth-stealth] ([xshift=5mm]p31.south east) -- node[fill=white]{$\Pi_c$} ([xshift=5mm,yshift=1mm]p32.south east);
+            \draw [semithick,stealth-stealth] ([xshift=5mm,yshift=-1mm]p32.south east) -- node[fill=white]{$\Pi_e$} ([xshift=5mm]p33.south east);
+    
+            \draw [semithick,-latex] ([xshift=-8mm,yshift=-6mm]p12.south west) -- node[left]{Energy} ++(0,1.2);
+        \end{tikzpicture}
+        \caption{Coulombic energy of repulsion and exchange energy.}
+        \label{fig:coulombExchange}
+    \end{figure}
+    \item \textbf{Coulombic energy of repulsion}: The potential energy of two negatively charged electrons that occupy the same orbital (as opposed to separate orbitals). \emph{Denoted by} $\bm{\Pi_c}$.
+    \begin{itemize}
+        \item Note that all polyelectronic species are subject to \emph{some} Coulombic repulsions, but the contribution is significantly higher for paired electrons.
+    \end{itemize}
+    \item \textbf{Exchange energy}: The potential energy of two electrons that have opposite spins (as opposed to the same spin). \emph{Denoted by} $\bm{\Pi_e}$.
+    \begin{itemize}
+        \item This arises from purely quantum mechanical considerations.
+        \item Basically, there are three possible ways to arrange two electrons in degenerate orbitals (see Figure \ref{fig:coulombExchange}). The exchange energy between two of the states reflects the fact that electrons with opposite spins are distinguishable, but electrons with identical spins can be exchanged (can switch places) and no observer would be the wiser. This event, when it happens, is called \textbf{one exchange of parallel electrons}; the fact that it can happen lowers the energy of the system with electrons of identical spin simply by virtue of creating more possible states that each electron can occupy.
+    \end{itemize}
 \end{itemize}
 
 

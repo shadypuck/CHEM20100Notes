@@ -37,7 +37,7 @@
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
 
-\usetikzlibrary{decorations.pathreplacing,3d,fpu}
+\usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning}
 \colorlet{grx}{green!25!cyan!40!black!95}
 \colorlet{gry}{green!25!cyan!40!black!50}
 \colorlet{grz}{green!25!cyan!40!black!20}
@@ -47,5 +47,19 @@
 \renewcommand{\contentsname}{Topics}
 
 \newcommand{\e}[1][]{\text{e}^{#1}}
+
+\newcommand{\porbital}[6]{
+    \tikz[node distance=2mm]{
+        \node (p1) {${\color{#1}\uparrow}\ {\color{#2}\downarrow}$}
+            (p1.south east) edge (p1.south west)
+        ;
+        \node (p2) [right=of p1] {${\color{#3}\uparrow}\ {\color{#4}\downarrow}$}
+            (p2.south east) edge (p2.south west)
+        ;
+        \node (p3) [right=of p2] {${\color{#5}\uparrow}\ {\color{#6}\downarrow}$}
+            (p3.south east) edge (p3.south west)
+        ;
+    }
+}
 
 \usepackage{subfiles}
