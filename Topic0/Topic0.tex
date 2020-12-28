@@ -14,9 +14,9 @@
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
 \subsection{Notes}
 \begin{itemize}
-    \item \marginnote{12/21:}\textbf{Inorganic chemistry}: The chemistry of everything that is not organic chemistry (the chemistry of hydrocarbon compounds and their derivatives).
+    \item \marginnote{12/21:}\textbf{Inorganic chemistry}: The chemistry of everything that is not organic chemistry, which is the chemistry of hydrocarbon compounds and their derivatives.
     \item \textbf{Organometallic chemistry}: The chemistry of compounds containing metal-carbon bonds and the catalysis of many organic reactions.
-    \item There is also both \textbf{bioinorganic chemistry} and \textbf{environmental chemistry} \parencite[1]{bib:MiesslerFischerTarr}, as well as \textbf{analytical chemistry}, \textbf{physical chemistry}, \textbf{petroleum chemistry}, \textbf{polymer chemistry} \parencite[4]{bib:MiesslerFischerTarr}.
+    \item There is also both \textbf{bioinorganic chemistry} and \textbf{environmental chemistry} \parencite[1]{bib:MiesslerFischerTarr}, as well as \textbf{analytical chemistry}, \textbf{physical chemistry}, \textbf{petroleum chemistry}, and \textbf{polymer chemistry} \parencite[4]{bib:MiesslerFischerTarr}.
     \begin{itemize}
         \item Note, though, that there are no strict dividing lines between subfields of chemistry nowadays, and most professionals work in multiple fields.
     \end{itemize}
@@ -313,7 +313,7 @@
         \item In its simplest form, it is given by the above, where $H$ is the \textbf{Hamiltonian operator}, $E$ is the energy of the electron, and $\Psi$ is the \textbf{wave function}.
     \end{itemize}
     \item \textbf{Wave function}: A function that describes an electron wave in space, i.e., an atomic orbital.
-    \item Energy values are another way of describing the quantization introduced with the Bohr model --- different orbitals, characterized by different wave functions, each have characteristic energies.
+    \item Energy values are another way of describing the quantization introduced with the Bohr model; different orbitals, characterized by different wave functions, each have characteristic energies.
     \item \textbf{Operator}: "An instruction or set of instructions that states what to do with the function that follows it" \parencite[14]{bib:MiesslerFischerTarr}.
     \item \textbf{Hamiltonian operator}: An operator including derivatives that transforms the wave function into a constant (the energy) times $\Psi$. \emph{Also known as} $\bm{\hat{H}}$.
     \begin{equation*}
@@ -476,29 +476,29 @@
         \end{itemize}
     \end{itemize}
     \item Atomic orbitals, mathematically, are discrete solutions of the three-dimensional Schr\"{o}dinger equations.
-    \begin{table}[h!]
-        \centering
-        \renewcommand{\arraystretch}{1.4}
-        \small
-        \begin{tabular}{lllp{4.7cm}}
-            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{gry}\hline
-            \rowcolor{grx}
-            \textcolor{white}{\textbf{Symbol}} & \textcolor{white}{\textbf{Name}} & \textcolor{white}{\textbf{Values}} & \textcolor{white}{\textbf{Role}}\\
-            $n$ & Principal & $1,2,3,\dots$ & Determines the major part of the energy.\\
-            \rowcolor{grt}
-            $l$ & Angular momentum\footnotemark & $0,1,2,\dots,n-1$ & Describes angular dependence and contributes to the energy.\\
-            $m_l$ & Magnetic & $0,\pm 1,\pm 2,\dots,\pm l$ & Describes orientation in space (angular momentum in the $z$-direction).\\
-            \rowcolor{grt}
-            $m_s$ & Spin & $\pm\frac{1}{2}$ & Describes orientation of the electron spin (magnetic moment) in space.\\
-            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
-        \end{tabular}
-        \caption{Quantum numbers and their properties.}
-        \label{tab:quantumNumbers}
-    \end{table}
-    \footnotetext{\emph{Also known as} \textbf{azimuthal} (quantum number).}
     \begin{itemize}
         \item These orbital equations include four quantum numbers (see Table \ref{tab:quantumNumbers}).
         \item Orbitals with $l$ values $0,1,2,3,4,\dots$ are known by the labels $s,p,d,f,g,\dots$(continuing alphabetically), respectively, derived from early terms for different families of spectroscopic lines.
+        \begin{table}[H]
+            \centering
+            \renewcommand{\arraystretch}{1.4}
+            \small
+            \begin{tabular}{lllp{4.7cm}}
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{gry}\hline
+                \rowcolor{grx}
+                \textcolor{white}{\textbf{Symbol}} & \textcolor{white}{\textbf{Name}} & \textcolor{white}{\textbf{Values}} & \textcolor{white}{\textbf{Role}}\\
+                $n$ & Principal & $1,2,3,\dots$ & Determines the major part of the energy.\\
+                \rowcolor{grt}
+                $l$ & Angular momentum\footnotemark & $0,1,2,\dots,n-1$ & Describes angular dependence and contributes to the energy.\\
+                $m_l$ & Magnetic & $0,\pm 1,\pm 2,\dots,\pm l$ & Describes orientation in space (angular momentum in the $z$-direction).\\
+                \rowcolor{grt}
+                $m_s$ & Spin & $\pm\frac{1}{2}$ & Describes orientation of the electron spin (magnetic moment) in space.\\
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \end{tabular}
+            \caption{Quantum numbers and their properties.}
+            \label{tab:quantumNumbers}
+        \end{table}
+        \footnotetext{\emph{Also known as} \textbf{azimuthal} (quantum number).}
         \item $n$ is the primary quantum number affecting the overall energy.
         \item $l$ determines the type of shape. See Table \ref{tab:WaveFunctionsAngular-H}.
         \item $m_l$ determines the "orientation of the angular momentum vector in a magnetic field, or the position of the orbital in space" \parencite[18]{bib:MiesslerFischerTarr}. See Table \ref{tab:WaveFunctionsAngular-H}.
@@ -1103,7 +1103,7 @@
             y &= \pm x
         \end{align*}
         \item This translates to Table \ref{tab:WaveFunctionsAngular-H}, where we can see that the planes $x=y$ and $x=-y$, i.e., those that contain the $z$-axis and make $\ang{45}$ angles with the $x$- and $y$-axes, are nodes.
-        \item Additionally, the function is positive where $x>y$ and negative where $x<y$, and we can see this in Table \ref{tab:WaveFunctionsAngular-H}.
+        \item Additionally, the function is positive where $|x|>|y|$ and negative where $|x|<|y|$\footnote{Errata: \textcite{bib:MiesslerFischerTarr} incorrectly use $x>y$ and $x<y$.}, and we can see this in Table \ref{tab:WaveFunctionsAngular-H}.
     \end{itemize}
     \item Be aware of lines/surfaces of constant electron density.
     \item When filling orbitals in polyelectronic atoms, "we start with the lowest $n$, $l$, and $m_l$ values (1, 0, and 0, respectively) and either of the $m_s$ values (we will arbitrarily use $+\frac{1}{2}$ first)" \parencite[26]{bib:MiesslerFischerTarr}. We then utilize the three following rules.
@@ -1122,6 +1122,7 @@
     \begin{itemize}
         \item This is a consequence of the Aufbau principle, as two electrons in the same orbital have higher energy than two in different orbitals due to electrostatic repulsions.
     \end{itemize}
+    \pagebreak
     \begin{table}[h!]
         \centering
         \renewcommand{\arraystretch}{1.4}
@@ -1198,6 +1199,277 @@
         \item This arises from purely quantum mechanical considerations.
         \item Basically, there are three possible ways to arrange two electrons in degenerate orbitals (see Figure \ref{fig:coulombExchange}). The exchange energy between two of the states reflects the fact that electrons with opposite spins are distinguishable, but electrons with identical spins can be exchanged (can switch places) and no observer would be the wiser. This event, when it happens, is called \textbf{one exchange of parallel electrons}; the fact that it can happen lowers the energy of the system with electrons of identical spin simply by virtue of creating more possible states that each electron can occupy.
     \end{itemize}
+    \item \marginnote{12/27:}Energies with oxygen:
+    \begin{itemize}
+        \item Three possible configurations: \porbital{black}{black}{black}{black}{white}{white}, \porbital{black}{black}{black}{white}{white}{black}, and \porbital{black}{black}{black}{white}{black}{white}.
+        \item In the first one, we have two pairs of electrons (so $2\Pi_c$) and two possible exchanges (one for each pair of electrons with like spin, so $2\Pi_e$).
+        \item In the second one, we have one pair of electrons (so $1\Pi_c$) and two possible exchanges (one for each pair of electrons with like spin, so $2\Pi_e$).
+        \item In the third one, we have one pair of electrons (so $1\Pi_c$) and three possible exchanges (1-2, 1-3, and 2-3, so $3\Pi_e$).
+        \item Thus, the energies from greatest to least are 1, 2, 3, and indeed the three rules suggest that the third one is how we should put four electrons into a $p$ orbital.
+    \end{itemize}
+    \item \textbf{Degenerate} (orbitals): Orbitals with the same energy.
+    \item Energy minimization is the driving force determining the ground state, and this usually means that lower subshells are filled before higher ones.
+    \begin{itemize}
+        \item However, in some transition elements, subshells are so close in energy ($4s$ and $3d$, for example) that the sum of the Coulombic and exchange terms can exceed the energy difference between subshells.
+    \end{itemize}
+    \item \textbf{Klechkowsky's rule}: "The order of filling of the orbitals proceeds from the lowest available value for the sum $n+l$. When two combinations have the same value, the one with the smaller value of $n$ is filled first" \parencite[29]{bib:MiesslerFischerTarr}.
+    \item The periodic table can also be used to predict orbital filling.
+    \begin{itemize}
+        \item Both Klechkowsky's rule and the periodic table method are imperfect, but they work for the majority of atoms and provide starting points for the others.
+    \end{itemize}
+    \item \textcite{bib:MiesslerFischerTarr} includes a table listing ground state electron configurations for every atom, including variant ones.
+    \item \textbf{Shielding}: "Each electron acts as a shield for electrons farther from the nucleus, reducing the attraction between the nucleus and the more distant electrons" \parencite[30]{bib:MiesslerFischerTarr}.
+    \item As $Z$ increases, orbital energies decrease (electrons are pulled closer to the nucleus).
+    \item When ranking higher energy orbitals, $l$ must be considered in addition to $n$ (e.g., to know that $4s$ fills before $3d$)\footnote{See \textcite{bib:APChemNotes}, specifically Figure 7.12.}.
+    \item \textbf{Slater's rules}: Four rules that approximately determine the magnitude of the effective nuclear charge $Z^*=Z-S$, where $Z$ is the nuclear charge and $S$ is the shielding constant.
+    \begin{enumerate}
+        \item Write the atom's electronic structure in order of increasing quantum numbers $n$ and $l$, grouped as follows:
+        \begin{equation*}
+            (1s)\ (2s,2p)\ (3s,3p)\ (3d)\ (4s,4p)\ (4d)\ (4f)\ (5s,5p)\ (5d)\ (\text{and so on})
+        \end{equation*}
+        \item Electrons in groups to the right in this list do not shield electrons to their left.
+        \item We may now determine $S$. For $ns$ and $np$ valence electrons:
+        \begin{enumerate}[label={\alph*.}]
+            \item Each electron in the same group contributes $0.35$ to the value of $S$ for each other electron in the group, with one exception: A $1s$ electron contributes $0.30$ to $S$ for another $1s$ electron.
+            \item Each electron in $n-1$ groups contributes $0.85$ to $S$.
+            \item Each electron in $n-2$ or lower groups contributes $1.00$ to $S$.
+        \end{enumerate}
+        \item For $nd$ and $nf$ valence electrons:
+        \begin{enumerate}[label={\alph*.}]
+            \item Each electron in the same group contributes $0.35$ to the value of $S$ for each other electron in the group\footnote{This is the same as Rule 3a.}.
+            \item Each electron in groups to the left contributes $1.00$ to $S$.
+        \end{enumerate}
+    \end{enumerate}
+    \item Slater's rules for nickel:
+    \begin{itemize}
+        \item Rule 1: The electron configuration is written $(1s^2)(2s^2,2p^6)(3s^2,3p^6)(3d^8)(4s^2)$.
+        \item For a $3d$ electron:
+        \begin{itemize}
+            \item Rule 4a: Each other electron in the $(3d^8)$ group contributes $0.35$ to $S$, so the total contribution is $7\times 0.35=2.45$.
+            \item Rule 4b: Each electron in groups to the left of $(3d^8)$ contributes $1.00$ to $S$, so the total contribution is $18\times 1.00 = 18.00$.
+            \item Thus, $S=2.45+18.00=20.45$, so $Z^*=28-20.45=7.55$.
+        \end{itemize}
+        \item For a $4s$ electron:
+        \begin{itemize}
+            \item Rule 3a: The other electron in the $(4s^2)$ group contributes $0.35$ to $S$.
+            \item Rule 3b: Each electron in the $n-1$ groups $(3s^2,3p^6)(3d^8)$ contributes $0.85$ to $S$, so the total contribution is $16\times 0.85=13.60$.
+            \item Rule 3c: Each other electron to the left contributes $1.00$ to $S$, so the total contribution is $10\times 1.00=10.00$.
+            \item Thus, $S=0.35+13.60+10.00=23.95$, so $Z^*=28-23.95=4.05$.
+        \end{itemize}
+        \item Note that the fact that the $4s$ electrons are held less tightly than the $3d$ electrons is reflected in the fact that when \ce{Ni -> Ni^2+ + 2e-}, the two electrons removed are the $4s$ electrons.
+    \end{itemize}
+    \item Slater's rules are justified by electron probability curves (see Figure \ref{fig:radialProbability}) and experimental data.
+    \item Rich provided another explanation of orbital filling (refer to Figure \ref{fig:transitionEnergyLevels} throughout the following discussion).
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            scale=0.8,
+            element/.style={pos=#1,below,text width=5mm,align=center}
+        ]
+            \footnotesize
+            \draw [thick] (0,0) node[left]{$-\frac{1}{2}$}
+                to[out=-70,in=160] (1,-0.7)
+                --
+                    node[element=0]{1\\\ce{Sc}}
+                    node[element=0.11]{1\\\ce{Ti}}
+                    node[element=0.22]{1\\\ce{V}}
+                    node[element=0.33]{1\\\ce{Cr}}
+                    node[element=0.44]{1\\\ce{Mn}}
+                    node[element=0.56]{1\\\ce{Fe}}
+                    node[pos=0.67,above]{1}
+                    node[pos=0.78,below]{1}
+                    node[pos=0.89,below]{1}
+                    node[pos=1,below]{1}
+                (10,-3)
+                to[out=-20,in=120] (11,-3.7)
+            ;
+            \draw [thick,yshift=1.5cm,name path=4sh] (0,0) node[left]{$+\frac{1}{2}$}
+                to[out=-70,in=160] (1,-0.7)
+                --
+                    node[pos=0,below]{1}
+                    node[pos=0.11,below]{1}
+                    node[pos=0.22,below]{1}
+                    node[pos=0.44,below]{1}
+                    node[pos=0.56,below]{1}
+                    node[pos=0.67,below]{1}
+                    node[pos=0.78,below]{1}
+                    node[pos=1,above]{1}
+                (10,-3)
+                to[out=-20,in=120] (11,-3.7)
+            ;
+            \draw [thick,name path=3dl] (0,3.2) node[left]{$-\frac{1}{2}$}
+                to[out=-70,in=150] (1,2)
+                --
+                    node[pos=0,above]{1}
+                    node[pos=0.11,above]{2}
+                    node[pos=0.22,above]{3}
+                    node[pos=0.33,below]{5}
+                    node[pos=0.44,below]{5}
+                    node[pos=0.56,above]{5}
+                    node[element=0.67,below]{5\\\ce{Co}}
+                    node[element=0.78,below]{5\\\ce{Ni}}
+                    node[element=0.89,below]{5\\\ce{Cu}}
+                    node[element=1,below]{5\\\ce{Zn}}
+                (10,-4.7)
+                to[out=-30,in=120] (10.7,-5.6)
+            ;
+            \draw [thick,xshift=1cm,yshift=1.7cm] (0,3.2) node[left]{$+\frac{1}{2}$}
+                to[out=-70,in=150] (1,2)
+                --
+                    node[pos=0.44,above]{1}
+                    node[pos=0.56,above]{2}
+                    node[pos=0.67,above]{3}
+                    node[pos=0.78,below]{5}
+                    node[pos=0.89,above]{5}
+                (10,-4.7)
+                to[out=-30,in=120] (10.4,-5.3)
+            ;
+    
+            \fill [name intersections={of=4sh and 3dl}] (intersection-1) circle (2pt);
+            \path (0,0) -- node{\small$4s$} (0,1.5);
+            \path (0,3.2) -- node{\small$3d$} (1,4.9);
+    
+            \draw [very thick,-latex] (-1.5,0.7) node[below]{$E$} -- ++(0,1);
+        \end{tikzpicture}
+        \caption{Schematic energy levels for transition elements.}
+        \label{fig:transitionEnergyLevels}
+    \end{figure}
+    \begin{itemize}
+        \item Each orbital can be conceived as two half-orbitals, separated energetically by a variable electron pairing energy of the form $a\Pi_c+b\Pi_e$ where $a,b\in\mathbb{Z}^+$.
+        \begin{itemize}
+            \item Take \ce{Fe}, for example. If one of the $3d$ electrons with $m_s=-\frac{1}{2}$ were changed to have $m_s=+\frac{1}{2}$ (i.e., paired with another electron), we would expect the energy of the system to increase by $\Pi_c+4\Pi_e$.
+        \end{itemize}
+        \item Each of these half orbitals naturally decreases in energy (is pulled closer to the nucleus) as $Z$ increases.
+        \item Since orbitals in lower energy levels have shorter most probable distances to the nucleus, they are stabilized more as $Z$ increases (this is why the slope of the $3d$ half orbitals is steeper).
+        \item Electrons are placed into the lowest energy positions possible.
+        \begin{itemize}
+            \item Thus, the $4s$ orbital usually fills up first, but there are exceptions since, for example, the $3d$ half orbital with $m_s=-\frac{1}{2}$ crosses over the $4s$ half orbital with $m_s=+\frac{1}{2}$ between \ce{V} and \ce{Cr} (at the dot) as opposed to somewhere after \ce{Cr}.
+        \end{itemize}
+        \item Note that as electrons are sequentially added, Figure \ref{fig:transitionEnergyLevels} shows them generally having the same spin, in accordance with Hund's rule.
+        \item For ions, the crossover points shift left.
+        \begin{itemize}
+            \item This is because the removal of the electron causes $Z^*$ to increase dramatically for all electrons, but more for $(n-1)d$ orbitals than $ns$ orbitals.
+        \end{itemize}
+        \item "This approach to electron configurations of transition metals does not depend on the stability of half-filled shells or other additional factors" \parencite[36]{bib:MiesslerFischerTarr}.
+        \item Introductory chem: Electrons in the highest energy level are always removed first when ionizing transition metals. This chem: "Regardless of which electron is lost to form a transition metal ion, the lowest energy electron configuration of the resulting ion will always exhibit the vacancy in the $ns$ orbital" \parencite[36]{bib:MiesslerFischerTarr}.
+        \item Similar but more complex diagrams can treat other situations in higher energy levels and subshells.
+    \end{itemize}
+    \item Since the periodic table arranges\footnote{Errata: \textcite{bib:MiesslerFischerTarr} misspells arrangement as "arrangment" (p. 36).} atoms on the basis of similar electronic configurations, a given atom's position provides information about its properties.
+    \item \textbf{Ionization energy}: The energy required to remove an electron from a gaseous atom or ion. \emph{Also known as} \textbf{ionization potential}.
+    \begin{equation*}
+        \ce{{A^{n+}}_{(g)} + \Delta U -> {A^{(n+1)+}}_{(g)} + e-}
+    \end{equation*}
+    \begin{itemize}
+        \item When $n=0$, $\Delta U$ is the first ionization energy $\text{IE}_1$. When $n=1$, $\Delta U$ is the second ionization energy $\text{IE}_2$. The pattern continues.
+        \item Ionization energy trends\footnote{Refer to \textcite{bib:APChemNotes}, specifically Figure 7.19 as well as Exercise on $Z_\text{eff}$.}:
+        \begin{itemize}
+            \item Increases across a period (the major change).
+            \item Decreases down a group (a minor change; occurs because an increase in quantum number is associated with a much higher energy, and electrons with more energy need less to make it to the infinite energy level).
+            \item The trend breaks at boron and oxygen due to core shielding and $\Pi_c$, respectively.
+            \item Such trends are most pronounced in the main group elements; in the transition metals, the lanthanides, and the actinides, "the effects of shielding and increasing nuclear charge [are] more nearly in balance" \parencite[37]{bib:MiesslerFischerTarr}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Electron affinity}: The energy required to remove an electron from a negative ion. \emph{Also known as} \textbf{zeroth ionization energy}.
+    \begin{equation*}
+        \ce{{A^-_{(g)}} + \Delta U -> A_{(g)} + e-}
+    \end{equation*}
+    \begin{itemize}
+        \item Electron affinity is often thought of as the energy released by adding an electron to a neutral atom, but taking this perspective facilitates comparisons with ionization energy.
+        \item This reaction is endothermic, except for the noble gases and the alkaline earth elements.
+        \item Trends are similar to those for ionization energy, but "for one larger $Z$ value (one more electron for each species\footnote{Think isoelectricity (see Figure \ref{fig:IE-EA}).}) and with much smaller absolute numbers" \parencite[37]{bib:MiesslerFischerTarr}.
+        \begin{itemize}
+            \item The magnitude decreases because outer electrons in anions are better shielded.
+        \end{itemize}
+    \end{itemize}
+    \pagebreak
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[xscale=0.75]
+            \footnotesize
+            \draw (0.5,7.5) -- node[left=1.4cm,rotate=90,anchor=center]{\small Energy (kJ/mol)} (0.5,-1) -- node[below=7mm]{\small Number of electrons in reactant} (12.5,-1);
+            \foreach \x in {1,...,12} {
+                \draw (\x,-1) -- ++(0,-0.2) node[below]{$\x$};
+            }
+            \foreach \qty [count=\y from 0] in {0,1000,...,7000} {
+                \draw (0.5,\y) -- ++({-0.8/3},0) node[left]{$\qty$};
+            }
+            \draw [dashed] (0.5,0) -- (12.5,0);
+    
+            \foreach \species/\ea/\loc [count=\x from 2,remember=\x as \lastx (initially 2),remember=\ea as \lastea (initially 0.073)] in {
+                H/  0.073/below,
+                He/-0.048/below,
+                Li/ 0.06 /below,
+                Be/-0.048/below,
+                B/  0.027/below,
+                C/  0.122/above,
+                N/ -0.007/below,
+                O/  0.141/above,
+                F/  0.328/above,
+                Ne/-0.116/below,
+                Na/ 0.053/below}
+            {
+                \filldraw [fill=white] (\x,\ea) ellipse (6/3pt and 1.5pt) node[\loc]{\ce{{\species}-}};
+                \begin{scope}[on background layer]
+                    \draw [grx,thick] (\lastx,\lastea) -- (\x,\ea);
+                \end{scope}
+            }
+            \foreach \species/\ie/\loc [count=\x,remember=\x as \lastx (initially 1),remember=\ie as \lastie (initially 1.312)] in {
+                H/ 1.312/below,
+                He/2.372/above,
+                Li/0.52 /below,
+                Be/0.9  /above,
+                B/ 0.801/below,
+                C/ 1.087/above,
+                N/ 1.402/above,
+                O/ 1.314/below,
+                F/ 1.681/above,
+                Ne/2.081/above,
+                Na/0.496/below,
+                Mg/0.738/above}
+            {
+                \filldraw [fill=white] (\x,\ie) ellipse (6/3pt and 1.5pt) node[\loc]{\ce{\species}};
+                \begin{scope}[on background layer]
+                    \draw [grx,thick,densely dashed] (\lastx,\lastie) -- (\x,\ie);
+                \end{scope}
+            }
+            \foreach \species/\ie/\loc [count=\x,remember=\x as \lastx (initially 1),remember=\ie as \lastie (initially 5.251)] in {
+                He/5.251/below,
+                Li/7.298/right,
+                Be/1.757/below,
+                B/ 2.427/above,
+                C/ 2.353/below,
+                N/ 2.856/above,
+                O/ 3.388/above,
+                F/ 3.374/below,
+                Ne/3.952/above,
+                Na/4.562/above,
+                Mg/1.451/below,
+                Al/1.817/above}
+            {
+                \filldraw [fill=white] (\x,\ie) ellipse (6/3pt and 1.5pt) node[\loc]{\ce{{\species}+}};
+                \begin{scope}[on background layer]
+                    \draw [gry,thick] (\lastx,\lastie) -- (\x,\ie);
+                \end{scope}
+            }
+    
+            \draw [grx,thick] (5,5.8) -- ++(1,0) node[black,right]{\small Electron affinity};
+            \draw [grx,thick,densely dashed] (5,6.3) -- ++(1,0) node[black,right]{\small First ionization energy};
+            \draw [gry,thick] (5,6.8) -- ++(1,0) node[black,right]{\small Second ionization energy};
+        \end{tikzpicture}
+        \caption{First and second ionization energies and electron affinities.}
+        \label{fig:IE-EA}
+    \end{figure}
+    \item Atomic radius decreases across periods and increases down groups.
+    \item \textbf{Nonpolar covalent radius}: The radius of an atom as determined from bond lengths in nonpolar molecules.
+    \item \textbf{Van der Waals radius}: The radius of an atom as determined from collisions with other atoms.
+    \begin{itemize}
+        \item Because compounds vary so much, it is hard to use either of these or any method to definitively determine atomic radius.
+    \end{itemize}
+    \item \textbf{Pauling's approach}: A method for determining ionic radii based on the assumption that the ratio of the radii of isoelectronic atoms equals the ratio of their effective nuclear charges.
+    \begin{itemize}
+        \item This is not entirely accurate. Modern cation \textbf{crystal radii} differ by $+\SI{14}{\pico\meter}$, and such anion radii differ by $-\SI{14}{\pico\meter}$.
+    \end{itemize}
+    \item Factors that influence ionic size: "the coordination number of the ion, the covalent character of the bonding, distortions of regular crystal geometries, and delocalization of electrons (metallic or semiconducting character\dots)" \parencite[40]{bib:MiesslerFischerTarr}.
 \end{itemize}
 
 
