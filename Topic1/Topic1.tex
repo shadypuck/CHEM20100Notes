@@ -1,0 +1,119 @@
+\documentclass[../main.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+
+\begin{document}
+
+
+
+
+\chapter{Review of VSEPR Theory}
+\begin{itemize}
+    \item \marginnote{1/11:}Homework questions will be similar to exam questions, so although you probably \emph{can} find answers online, you shouldn't.
+    \item Submit Psets to \href{mailto:chem201hw@gmail.com}{chem201hw@gmail.com}.
+    \item Watch modules before office hours and bring questions.
+    \item If you have a question outside of office hours, post it on Slack.
+    \item It's a difficult class, but he is open to and welcomes our feedback (via Slack, again).
+    \item You do need to read from \textcite{bib:MiesslerFischerTarr}, too; his class is not a replacement for this textbook.
+    \begin{itemize}
+        \item He is a big fan of \textcite{bib:Cotton}.
+        \item There is an extra, new textbook to look for!
+    \end{itemize}
+    \item Convince yourself not to be afraid of time-independent quantum mechanics (we won't go too deep, but know wave functions and the like).
+    \item Exams will probably be open book/open note.
+    \item Inorganic chemistry contains too much information to rationalize empirically, so we need a system (the development of this system will be the focus of this course).
+    \item Reviews history of chemistry from \textcite{bib:MiesslerFischerTarr} Chapter 1.
+    \item What is Nickel's electron configuration?
+    \begin{itemize}
+        \item When Nickel is a free atom, the $[\text{Ar}]4s^23d^8$ electron configuration is the lowest energy.
+        \item When Nickel is chemically bound, the $[\text{Ar}]3d^{10}$ electron configuration is the lowest energy because it is energetically unfavorable to have a large 4s orbital pushing the bounds of the atom.
+        \item What is a \textbf{term symbol}?
+    \end{itemize}
+    \item Homework: Refresh Chapter 2 in \textcite{bib:MiesslerFischerTarr}.
+    \item \textbf{Covalent bond}: The sharing of pairs of electrons\dots?
+    \item G. N. Lewis predicts in 1916 (before Rutherford) that the atom has a positive \textbf{kernel} surrounded by a shell containing up to 8 electrons.
+    \begin{itemize}
+        \item Also orbital penetration.
+        \item He recommends that we read the full paper: \textcite{bib:Lewis}.
+    \end{itemize}
+    \item The easiest way to approach a new Lewis structure:
+    \begin{enumerate}
+        \item Draw a valid Lewis structure for a molecule.
+        \item Place electron pairs in the valence shell as far away from each other as possible. Use the $\sigma$-bond framework first.
+        \item Add $\pi$-bonds to complete the molecule.
+    \end{enumerate}
+    \item Through the VSEPR approach, think of a molecule as arranged around a central atom $A$ by $m$ atoms or groups of atoms $X$ and $n$ lone electron pairs $E$.
+    \item \textbf{Steric number}: The sum $n+m$ of groups and electron pairs around the central atom.
+    \item Steric numbers correspond to geometries.
+    \item VSEPR is ok but it doesn't capture reality too well.
+    \item Consider trimethyl boron (\ce{BMe3}).
+    \begin{itemize}
+        \item Trigonal planar ($D_{3h}$).
+    \end{itemize}
+    \item Octahedral: $O_h$.
+    \item Bent: $C_{2v}$.
+    \item \textbf{Order of the repulsive forces}: lone pair - lone pair $>$ lone pair - bonding pair $>$ bonding pair - bonding pair.
+    \item In \ce{SF4} (see-saw), will the lone pair be axial or equatorial?
+    \begin{itemize}
+        \item Equatorial --- $2\times\ang{120}$ and $2\times\ang{90}$ vs. $3\times\ang{90}$.
+    \end{itemize}
+    \item In \ce{BrF3}\dots
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{Br(-F)(-[2]F)(-[6]F)(>:[:160]\Charge{160=\:}{})(<[:-150]\charge{-150=\:}{})}
+            \caption{$4\times\ang{90}$.}
+            \label{fig:VSEPR-BrF3a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{Br(-F)(-[2]\Charge{90=\:}{})(-[6]\Charge{90=\:}{})(>:[:160]F)(<[:-150]F)}
+            \caption{$6\times\ang{90}$.}
+            \label{fig:VSEPR-BrF3b}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{Br(-\Charge{0=\:}{})(-[2]F)(-[6]\Charge{90=\:}{})(>:[:160]F)(<[:-150]F)}
+            \caption{Cis lone pairs.}
+            \label{fig:VSEPR-BrF3c}
+        \end{subfigure}
+        \caption{VSEPR structure of \ce{BrF3}.}
+        \label{fig:VSEPR-BrF3}
+    \end{figure}
+    \begin{itemize}
+        \item T-shaped --- $4\times\ang{90}$ vs. $6\times\ang{90}$ or lone pairs in cis-position.
+    \end{itemize}
+    \item In ions such as \ce{ICl4-}, we get square planar ($D_{4h}$).
+    \item With mixed substituents (such as \ce{PF2Cl3})\dots
+    \begin{figure}[h!]
+        \centering
+        \chemfig{P(-Cl)(-[2]F)(-[6]F)(>:[:160]Cl)(<[:-150]Cl)}
+        \caption{Lewis structure of \ce{PF2Cl3}.}
+        \label{fig:Lewis-PF2Cl3}
+    \end{figure}
+    \begin{itemize}
+        \item We need \textbf{Bent's rule}, which tells us that atoms share electrons from $p$- or $d$-orbitals to a greater extent than they do from $s$-orbitals.
+        \item Thus, when phosphorous excites $3s^23p^3$ to $3s^13p_x^13p_y^1ep_z^13d_{z^2}^2$ and then rehybridizes to create three $sp^2$ orbitals (each composed of $s+p_x+p_y$) and two "$pd$" hybrid orbitals (each composed of $p_z+d_{z^2}$), the equatorial $sp^2$ orbitals bond to the more \textbf{electropositive} chlorines and the axial "$pd$" hybrid orbitals bond to the remaining more electronegative fluorines.
+    \end{itemize}
+    \item \textbf{Bent's rule}: Atomic $s$-character concentrates in orbitals directed toward electropositive substituents.
+    \item \textbf{Electropositive} (species): A species that has relatively lower electronegativity than another.
+    \item For molecules with multiple bonds, ignore $\pi$-bonds.
+    \item Linear: $D_{\infty h}$.
+    \item Problems with VSEPR:
+    \begin{itemize}
+        \item \ce{XeF6} with 14 bonding electrons (7 pairs) is supposed to be pentagonal bipyramidal, but is actually octahedral (a known problem for \ce{14e-} systems).
+        \item Heavy main group elements with no hybridization.
+        \begin{itemize}
+            \item \ce{H-C#C-H} is linear, but \ce{H-Si#Si-H} is not.
+            \item No $\sigma$-bond exists in the latter species --- it's all $\pi$-bonding interactions.
+        \end{itemize}
+    \end{itemize}
+    \item You maybe don't have to watch the modules and textbook \emph{and} attend class.
+\end{itemize}
+
+
+
+
+\end{document}
