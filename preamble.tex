@@ -1,5 +1,6 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{chngcntr}
 \usepackage{csquotes}
 \usepackage{marginnote}
 \usepackage{scrextend}
@@ -9,9 +10,9 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{physics,mathtools,siunitx,bm}
 \usepackage{mhchem,chemfig}
-\usepackage{tikz}
+\usepackage{tikz,graphicx}
 \usepackage{subcaption,float}
-\usepackage{colortbl,multirow}
+\usepackage{colortbl,multirow,tabularx}
 \usepackage[hidelinks]{hyperref}
 
 \fancypagestyle{main}{
@@ -60,6 +61,17 @@
             (p3.south east) edge (p3.south west)
         ;
     }
+}
+
+\newenvironment{tchart}[3]
+{
+    \renewcommand{\arraystretch}{#1}
+    \tabularx{\linewidth}{X|X}
+    \multicolumn{1}{c|}{\textbf{#2}} & \multicolumn{1}{c}{\textbf{#3}}\\
+    \hline
+}{
+    \endtabularx
+    \renewcommand{\arraystretch}{1}
 }
 
 \usepackage{subfiles}

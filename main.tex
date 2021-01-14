@@ -29,8 +29,11 @@
 \subfile{Topic0/Topic0.tex}
 
 \renewcommand{\thechapter}{\Roman{chapter}}
-
+\counterwithout*{section}{chapter}
+\setcounter{section}{0}
 \subfile{Topic1/Topic1.tex}
+
+\subfile{Topic2/Topic2.tex}
 
 \printbibliography[heading=bibintoc]
 
