@@ -1,6 +1,5 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
-\usepackage{chngcntr}
 \usepackage{csquotes}
 \usepackage{marginnote}
 \usepackage{scrextend}
@@ -43,6 +42,10 @@
 \colorlet{gry}{green!25!cyan!40!black!50}
 \colorlet{grz}{green!25!cyan!40!black!20}
 \colorlet{grt}{green!75!cyan!40!black!15}
+\tikzset{
+    dashbondg/.style={draw=grt,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt},
+    dashbond/.style={draw=white,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt}
+}
 
 \renewcommand{\chaptername}{Topic}
 \renewcommand{\contentsname}{Topics}
