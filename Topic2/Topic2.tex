@@ -3,6 +3,7 @@
 \pagestyle{main}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
 \renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{1}
 
 \begin{document}
 
@@ -284,7 +285,7 @@
         \renewcommand{\arraystretch}{1.4}
         \footnotesize
         \begin{tabular}{l|llllll}
-            \normalsize$C_{2v}$ & $\bm{E}$ & $\bm{C_3}$ & $\bm{{C_3}^2}$ & $\bm{\sigma_v}$ & $\bm{\sigma_v'}$ & $\bm{\sigma_v''}$\\
+            \normalsize$C_{3v}$ & $\bm{E}$ & $\bm{C_3}$ & $\bm{{C_3}^2}$ & $\bm{\sigma_v}$ & $\bm{\sigma_v'}$ & $\bm{\sigma_v''}$\\
             \hline
             $\bm{E}$            & $E$ & $C_3$ & ${C_3}^2$ & $\sigma_v$ & $\sigma_v'$ & $\sigma_v''$\\
             $\bm{C_3}$          & $C_3$ & ${C_3}^2$ & $E$ & $\sigma_v''$ & $\sigma_v$ & $\sigma_v'$\\
@@ -298,8 +299,8 @@
             \draw [blue,thick] (-6.78,1.76) rectangle (-3.9,0.3);
             \draw [red!50!blue,thick] (-6.81,1.79) rectangle (-2.9,-0.15);
         \end{tikzpicture}
-        \caption{Group multiplication table for the $C_{2v}$ point group.}
-        \label{fig:groupMultiplication-C2v}
+        \caption{Group multiplication table for the $C_{3v}$ point group.}
+        \label{tab:groupMultiplication-C3v}
     \end{table}
     \begin{itemize}
         \item If $h=6$ (as in the $C_{3v}$ group), subgroup order can be $h={\color{red!50!blue}3},{\color{blue}2},{\color{red}1}$. Why only these?
@@ -318,7 +319,7 @@
 \section{Module 6: Representations}
 \begin{itemize}
     \item Items of the same point group have the same vibration modes.
-    \item \textbf{Representation} (of a group): Any collection of quantities (or symbols) which obey the multiplication tabble of a group. \emph{Also known as} $\Gamma$.
+    \item \textbf{Representation} (of a group): Any collection of quantities (or symbols) which obey the multiplication table of a group. \emph{Also known as} $\Gamma$.
     \item For our purposes, these quantities are the matrices that show how certain characteristic of a molecule behave under the symmetry operations of the group.
     \item Operations (on a point $(x,y,z)$ in Cartesian coordinates):
     \begin{itemize}
@@ -374,7 +375,7 @@
         \end{itemize}
         \item Improper rotation: $S_n(\theta)=\sigma_hC_n(\theta)$.
     \end{itemize}
-    \item \textbf{Reducible representations}:
+    \item \textbf{Reducible representations} ($\Gamma$):
     \begin{itemize}
         \item A representation of a symmetry operation of a group.
         \item Can be expressed in terms of a representation of lower dimension.
@@ -383,7 +384,7 @@
         \item Are composed of the direct sum of irreducible representations.
         \item Infinite possibilities.
     \end{itemize}
-    \item \textbf{Irreducible representations}:
+    \item \textbf{Irreducible representations} ($\Gamma_i$):
     \begin{itemize}
         \item A fundamental representation of a symmetry operation of a group.
         \item Cannot be expressed in terms of a representation of lower dimension.
@@ -392,6 +393,427 @@
         \item Small finite number dictated by point group.
     \end{itemize}
     \item Good example of reducible/irreducible representations?
+    \item A representation shows how certain characteristics of an object (a basis) behave under the symmetry operation of the group.
+    \item \textbf{Conjugate elements}: Two elements $X$ and $Y$ for which there exists an element $Z$ in the group such that
+    \begin{equation*}
+        Z^{-1}\cdot X\cdot Z = Y
+    \end{equation*}
+    \begin{itemize}
+        \item Every element is conjugated with itself (let $Z=E$).
+        \item If $X$ is conjugated with $Y$, then $Y$ is conjugated with $X$.
+        \item If $X$ is conjugated with $Y$ and $W$, then $Y$ and $W$ are also conjugate.
+    \end{itemize}
+    \item \textbf{Class}: A complete set of elements of a group that are conjugate to one another.
+    \begin{itemize}
+        \item Geometric meaning: operations in the same class can be converted into one another by changing the axis system through application of some symmetry operation of the group.
+    \end{itemize}
+    \item Find the conjugates to $C_3$ in the $C_{3v}$ point group (refer to Table \ref{tab:groupMultiplication-C3v} throughout the following discussion).
+    \begin{itemize}
+        \item Let $X=C_3$, let $Z$ iterate through the six symmetry elements ($E,C_3,{C_3}^2,\sigma_v,\sigma_v',\sigma_v''$), and let $Z^{-1}$ iterate through the corresponding inverses ($E,{C_3}^2,C_3,\sigma_v,\sigma_v',\sigma_v''$).
+        \item Thus, we have
+        \begin{gather*}
+            E\cdot C_3\cdot E = C_3\\
+            {C_3}^2\cdot C_3\cdot C_3 = C_3\\
+            C_3\cdot C_3\cdot {C_3}^2 = C_3\\
+            \sigma_v\cdot C_3\cdot\sigma_v = {C_3}^2\\
+            \sigma_v'\cdot C_3\cdot\sigma_v' = {C_3}^2\\
+            \sigma_v''\cdot C_3\cdot\sigma_v'' = {C_3}^2
+        \end{gather*}
+        \item It follows from the above that $C_3$ and $C_3$ are conjugates, and $C_3$ and ${C_3}^2$ are conjugates.
+        \item Thus, $C_3$ and ${C_3}^2$ are in the same class.
+        \item We can use a similar method to prove that $\sigma_v$, $\sigma_v'$, and $\sigma_v''$ are all in the same class within the $C_{3v}$ point group.
+        \item Likewise $E$ is in a class by itself.
+        \item Thus, for the $C_{3v}$ point group, $E$ forms a class of order 1, $C_3,{C_3}^2$ form a class of order 2, and $\sigma_v,\sigma_v',\sigma_v''$ form a class of order 3.
+    \end{itemize}
+    \item \textbf{Similarity transformation}: The transformation
+    \begin{equation*}
+        v^{-1}\cdot A\cdot v = A'
+    \end{equation*}
+    \begin{itemize}
+        \item $A$ is a representation for some type of symmetry operation.
+        \item $v$ is a similarity transform operator.
+        \item $v^{-1}$ is the inverse of the similarity transform operator.
+        \item $A'$ is the product.
+        \item $A$ and $A'$ are conjugates, and we say that $A'$ is the similarity transform of $A$ by $v$.
+    \end{itemize}
+    \item \textbf{Block-diagonal} (matrix): A matrix with nonzero values only in square blocks along the diagonal from the top left to the bottom right.
+    \begin{equation*}
+        \begin{bmatrix}
+            2 & 3 & 0 & 0 & 0\\
+            1 & 2 & 0 & 0 & 0\\
+            0 & 0 & 1 & 1 & 0\\
+            0 & 0 & 1 & 1 & 0\\
+            0 & 0 & 0 & 0 & 2\\
+        \end{bmatrix}
+    \end{equation*}
+    \begin{itemize}
+        \item The above matrix is an example of a block-diagonal matrix.
+    \end{itemize}
+    \item Irreducible representations are the ones where the matrices have the most block-diagonalized form that they can.
+\end{itemize}
+
+
+
+\section{Module 7: Characters and Character Tables}
+\begin{itemize}
+    \item \marginnote{1/19:}Nocera Lecture 3 notes (on Canvas) explain how reducible and irreducible transformations are related to each other through the similarity transformations.
+    \item For \ce{H2O}, each atom has 3 Cartesian coordinates, so our transformation matrix\footnote{Some values in it are negative because of the cosine/sine definition of a rotation matrix for $\theta=\ang{180}$.} is 9-square.
+    \begin{itemize}
+        \item However, we can also apply a smaller matrix to the molecule as a whole and invoke symmetry to find the position of the individual atoms.
+    \end{itemize}
+    \item \textbf{Characters} (of a representation): The traces (i.e., sums of the diagonal matrix elements) of the representation matrices for each operation. \emph{Also known as} $\bm{\chi}$.
+    \begin{itemize}
+        \item The character is an invariant for each type of symmetry operation (e.g., regardless of the axis about which a $C_n$ operation is performed, the trace of the corresponding matrix will be the same).
+    \end{itemize}
+    \item Common characters:
+    \begin{itemize}
+        \item $C_n$ character: $\chi=2\cos\theta+1$.
+        \item $\sigma_v,\sigma_d$ character: $\chi=1$.
+        \item $S_2\equiv i$ character: $\chi=-3$.
+        \item $S_n$ character: $\chi=2\cos\theta-1$.
+        \item $\perp C_2$ axes character: $\chi=-1$.
+    \end{itemize}
+    \item \textbf{Character table}: The collection of characters for a given irreducible representation, under the operations of a group.
+    \begin{figure}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tikzpicture}
+            \small
+            \node {
+                \begin{tabular}{l|cccc|l|l}
+                    $C_{2v}$ & $E$ & $C_2$ & $\sigma_v(xz)$ & $\sigma_v'(yz)$ & linear  & quadratic\\
+                    \hline
+                    $A_1$    & $1$ & $1$   & $1$            & $1$             & $z$     & $x^2,y^2,z^2$\\
+                    $A_2$    & $1$ & $1$   & $-1$           & $-1$            & $R_z$   & $xy$\\
+                    $B_1$    & $1$ & $-1$  & $1$            & $-1$            & $x,R_y$ & $xz$\\
+                    $B_2$    & $1$ & $-1$  & $-1$           & $1$             & $y,R_x$ & $yz$\\
+                \end{tabular}
+            };
+    
+            \footnotesize
+            \draw [decorate,decoration=brace] (-3.9,1.2) -- node[above,text width=1cm,align=center]{Group Symbol} ++(0.6,0);
+            \draw [decorate,decoration=brace] (-2.9,1.2) -- node[above]{Symmetry Elements} ++(3.9,0);
+            \draw [decorate,decoration={brace,mirror}] (-3.9,0.6) -- node[left,text width=1.5cm,align=center]{Irreducible Representations} ++(0,-1.7);
+            \draw [decorate,decoration={brace,mirror}] (-2.9,-1.3) -- node[below]{Characters} ++(3.9,0);
+            \draw [decorate,decoration={brace,mirror}] (1.3,-1.3) -- node[below]{Basis Functions} ++(2.6,0);
+        \end{tikzpicture}
+        \caption{A character table.}
+        \label{fig:characterTable}
+    \end{figure}
+    \begin{itemize}
+        \item Character tables for all point groups are listed in Appendix C of \textcite{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \textbf{Mulliken symbols} are used to classify irreducible representations based on degeneracy and symmetry.
+    \begin{itemize}
+        \item A or B: singly degenerate (the maximum block size in the block-diagonalized irreducible transformation matrix is $1\times 1$).
+        \item E: Doubly degenerate (the maximum block size in the block-diagonalized irreducible transformation matrix is $2\times 2$).
+        \item T: Triply degenerate (the maximum block size in the block-diagonalized irreducible transformation matrix is $3\times 3$).
+        \item A: symmetric ($+$) with respect to $C_n$.
+        \item B: anti-symmetric ($-$) with respect to $C_n$.
+        \item Subscript g: symmetric ($+$) with respect to $i$. \emph{Etymology} short for gerade (German for symmetric).
+        \item Subscript u: anti-symmetric ($-$) with respect to $i$. \emph{Etymology} short for ungerade (German for unsymmetric).
+        \begin{itemize}
+            \item If the molecule has a center of inversion, we label irreducible representations with $g$ or $u$.
+        \end{itemize}
+        \item Subscript 1: symmetric ($+$) with respect to $\perp C_2$ or $\sigma_v$.
+        \item Subscript 2: anti-symmetric ($-$) with respect to $\perp C_2$ or $\sigma_v$.
+        \item Superscript $'$: symmetric ($+$) under $\sigma_h$ (if no $i$).
+        \item Superscript $''$: anti-symmetric ($-$) under $\sigma_h$ (if no $i$).
+    \end{itemize}
+    \item Don't mistake the operation $E$ for the Mulliken symbol $E$!
+    \item To assign Mulliken symbols, use the character table.
+    \begin{itemize}
+        \item Assigning the main letter:
+        \begin{itemize}
+            \item If $E\text{-character}=1$ and $C_n\text{-character}=1$: $A$.
+            \item If $E\text{-character}=1$ and $C_n\text{-character}=-1$: $B$.
+            \item If $E\text{-character}=2$: $E$.
+            \item If $E\text{-character}=3$: $T$.
+        \end{itemize}
+        \item Assigning a subscript $g$ or $u$:
+        \begin{itemize}
+            \item If $i\text{-character}=1$: $g$.
+            \item If $i\text{-character}=-1$: $u$.
+            \item This subscript can be assigned to $A,B,E,T$ representations.
+        \end{itemize}
+        \item Assigning a superscript $'$ or $''$:
+        \begin{itemize}
+            \item If $\sigma_h\text{-character}=1$: $'$.
+            \item If $\sigma_h\text{-character}=-1$: $''$.
+            \item This subscript can be assigned to $A,B$ representations.
+        \end{itemize}
+        \item Assigning a subscript $1$ or $2$:
+        \begin{itemize}
+            \item If $\perp C_2\text{ or }\sigma_v\text{-character}=1$: $1$.
+            \item If $\perp C_2\text{ or }\sigma_v\text{-character}=-1$: $2$.
+            \item This subscript can be assigned to $A,B$ representations.
+        \end{itemize}
+    \end{itemize}
+    \item $\sigma$, $\pi$, and $\delta$ bonds come from the Mulliken symbols!
+    \begin{itemize}
+        \item Infinity tables use Greek rather than Latin letters.
+    \end{itemize}
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.2}
+        \small
+        \begin{tabular}{l|ccc|l|l}
+            $D_3$ & $E$ & $2C_3(z)$ & $3C_2'$ & \multicolumn{1}{c|}{linear} & \multicolumn{1}{c}{quadratic}\\
+            \hline
+            $A_1$ & $1$ & $1$ & $1$ & & $x^2+y^2,z^2$\\
+            $A_2$ & $1$ & $1$ & $-1$ & $z,R_z$ & \\
+            $E$ & $2$ & $-1$ & $0$ & $(x,y)(R_x,R_y)$ & $(x^2-y^2,xy)(xz,yz)$.
+        \end{tabular}
+        \caption{Character table for the $D_3$ point group.}
+        \label{tab:characterTable-D3}
+    \end{table}
+    \item In character tables, we need to multiply each symmetry operation by the number of types there are (see Table \ref{tab:characterTable-D3}).
+    \item Basis functions show us how different functions transform under different symmetry operations.
+    \item In the $C_{2v}$ point group:
+    \begin{itemize}
+        \item The $p_x$ orbital has $B_1$ symmetry.
+        \item $p_x$ transforms as $B_1$.
+        \item $p_x$ has the same symmetry as $B_1$.
+        \item $p_x$ forms a basis for the $B_1$ irreducible representation.
+        \item $p_x$ is $B_1$ because (see Table \ref{tab:WaveFunctionsAngular-H} and Figure \ref{fig:characterTable}) it does not change under $E$, it inverts under $C_2$, it does not change under $\sigma_v(xz)$, and it inverts under $\sigma_v'(yz)$.
+    \end{itemize}
+    \item We can apply the same procedure to other more complex functions.
+    \begin{itemize}
+        \item For example, in the $C_{2v}$ point group, we know that (with respect to orbitals):
+        \begin{itemize}
+            \item $p_y$ is $B_2$.
+            \item $p_z$ is $A_1$.
+            \item $d_{z^2}$ is $A_1$.
+            \item $d_{x^2-y^2}$ is $A_1$.
+            \item $d_{yz}$ is $B_2$.
+            \item $d_{xy}$ is $A_2$.
+            \item $d_{xz}$ is $B_1$.
+            \item We can even go into the cubic functions describing the $f$ orbitals and assign them Mulliken symbols.
+        \end{itemize}
+    \end{itemize}
+    \item Essentially, the right hand side of a character table tells you how atomic orbitals will transform under certain symmetry operations.
+    \item Properties of a character table:
+    \begin{enumerate}
+        \item The characters of all matrices belonging to the operations in the same class are identical in a given irreducible representation.
+        \begin{itemize}
+            \item As such, we form \textbf{classes} of operations.
+            \item We most commonly form a \textbf{rotational class} and a \textbf{reflection class}.
+        \end{itemize}
+        \item The number of irreducible representations in a group is equal to the number of classes of that group.
+        \item There is always a totally symmetric representation for any group.
+        \begin{itemize}
+            \item I.e., a representation where every character is $1$.
+        \end{itemize}
+        \item The sum of the squares of the dimensionality of all the irreducible representations is equal to the order of the group. Mathematically,
+        \begin{equation*}
+            h = \sum_i[\chi_i(E)]^2
+        \end{equation*}
+        \begin{itemize}
+            \item For example, the dimensionalities (characters under $E$) of the $D_3$ point group (see Table \ref{tab:characterTable-D3}) are 1, 1, and 2, and the order is, indeed, $6=1^2+1^2+2^2$.
+        \end{itemize}
+        \item The sum of the squares of the characters multiplied by the number of operations in the class equals the order of the group. Mathematically,
+        \begin{equation*}
+            h = \sum_{R_c}g_c[\chi_i(R_c)]^2
+        \end{equation*}
+        \begin{itemize}
+            \item For example, with respect to the $D_3$ point group (see Table \ref{tab:characterTable-D3}),
+            \begin{align*}
+                6 &= (1)(1)^2+(2)(1)^2+(3)(1)^2\\
+                &= (1)(1)^2+(2)(1)^2+(3)(-1)^2\\
+                &= (1)(2)^2+(2)(-1)^2+(3)(0)^2
+            \end{align*}
+        \end{itemize}
+        \item The sum of the products of the corresponding characters of any two different irreducible representations of the same group is zero. Mathematically,
+        \begin{equation*}
+            \sum_{R_c}g_c\chi_i(R_c)\chi_f(R_c) = 0
+        \end{equation*}
+        \begin{itemize}
+            \item Basically, this means that if we treat irreducible representations as vectors in $h$-space, they are orthogonal.
+            \item For example, with respect to the $D_3$ point group (see Table \ref{tab:characterTable-D3}),
+            \begin{align*}
+                0 &= 1(1)(1)+2(1)(1)+3(1)(-1)\\
+                &= 1(1)(2)+2(1)(-1)+3(1)(0)\\
+                &= 1(1)(2)+2(1)(-1)+3(-1)(0)
+            \end{align*}
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+
+
+\section{Module 8: Using Character Tables}
+\begin{itemize}
+    \item A reducible representation of a group is any representation $\Gamma$ of the form
+    \begin{equation*}
+        \Gamma = \sum_ia_i\Gamma_i
+    \end{equation*}
+    where each $\Gamma_i$ is an irreducible representation of the group and $a_i$ is a real scalar.
+    \begin{itemize}
+        \item Basically, a reducible representation is any nontrivial linear combination of irreducible representations.
+        \item For example, with respect to the $C_{2v}$ point group (see Figure \ref{fig:characterTable}), $\Gamma=(7,1,5,3)=4A_1+2B_1+B_2$ is a reducible representation.
+    \end{itemize}
+    \item We may "factor" reducible representations by inspection, or by the\dots
+    \item Decomposition/reduction formula for a reducible representation:
+    \begin{equation*}
+        a_i = \frac{1}{h}\sum_QN\cdot\chi(R)_Q\cdot\chi_i(R)_Q
+    \end{equation*}
+    \begin{itemize}
+        \item $a_i$ is the number of times the irreducible representation appears in $\Gamma_1$.
+        \item $h$ is the order of the group.
+        \item $N$ is the number of operations in class $Q$.
+        \item $\chi(R)_Q$ is the character of the reducible representation.
+        \item $\chi_i(R)_Q$ is the character of the irreducible representation.
+        \item This formula cannot be applied to $D_{\infty h}$ and $C_{\infty v}$.
+    \end{itemize}
+    \item Let's look at decomposing $\Gamma=(7,1,5,3)$ into its component irreducible point groups using the above formula.
+    \begin{align*}
+        a_{A_1} &= \frac{1}{4}(1\cdot 7\cdot 1+1\cdot 1\cdot 1 +1\cdot 5\cdot 1 +1\cdot 3\cdot 1 ) = 4\\
+        a_{A_2} &= \frac{1}{4}(1\cdot 7\cdot 1+1\cdot 1\cdot 1 +1\cdot 5\cdot -1+1\cdot 3\cdot -1) = 0\\
+        a_{B_1} &= \frac{1}{4}(1\cdot 7\cdot 1+1\cdot 1\cdot -1+1\cdot 5\cdot 1 +1\cdot 3\cdot -1) = 2\\
+        a_{B_2} &= \frac{1}{4}(1\cdot 7\cdot 1+1\cdot 1\cdot -1+1\cdot 5\cdot -1+1\cdot 3\cdot 1 ) = 1
+    \end{align*}
+    \item You can also find \href{http://symmetry.jacobs-university.de/}{websites} that will apply the formula for you.
+    \item Basis $\to$ reducible representation $\to$ irreducible representations workflow:
+    \begin{enumerate}
+        \item Assign a point group.
+        \item Choose a basis function (bond, vibration, orbital, angle, etc.).
+        \item Apply operations.
+        \begin{itemize}
+            \item The following shortcuts allow us to skip matrix math in certain situations.
+            \begin{itemize}
+                \item If the basis stays the same: $+1$.
+                \item If the basis is reversed: $-1$.
+                \item If it is a more complicated change: $0$.
+            \end{itemize}
+        \end{itemize}
+        \item Generate a reducible representation.
+        \item Reduce to irreducible representation.
+    \end{enumerate}
+    \item We now look at an example of applying the above method to \ce{H2O}.
+    \begin{itemize}
+        \item \ce{H2O} is of the $C_{2v}$ point group.
+        \item The $9\times 9$ identity matrix represents the identity operation on the 3 atoms in \ce{H2O}, each described by 3 Cartesian coordinates. Thus, $\chi(E)=9$.
+        \item The following matrix represents the $C_2$ symmetry operation. Thus, $\chi(C_2)=-1$.
+        \begin{center}
+            \begin{tikzpicture}
+                \node {$
+                    \begin{bmatrix}
+                        x'\\
+                        y'\\
+                        z'\\
+                        x'\\
+                        y'\\
+                        z'\\
+                        x'\\
+                        y'\\
+                        z'\\
+                    \end{bmatrix}
+                    =
+                    \begin{bmatrix}
+                        -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+                        0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+                        0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+                        0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & 0\\
+                        0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 0\\
+                        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+                        0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 & 0\\
+                        0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
+                        0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                        x\\
+                        y\\
+                        z\\
+                        x\\
+                        y\\
+                        z\\
+                        x\\
+                        y\\
+                        z\\
+                    \end{bmatrix}
+                $};
+        
+                \draw [decorate,decoration=brace] (-4.3,-1.9) -- node[left]{\ce{H_b}} ++(0,1.2);
+                \draw [decorate,decoration=brace] (-4.3,-0.6) -- node[left]{\ce{H_a}} ++(0,1.2);
+                \draw [decorate,decoration=brace] (-4.3,0.7) -- node[left]{\ce{O}} ++(0,1.2);
+        
+                \draw [decorate,decoration={brace,mirror}] (4.3,-1.9) -- node[right]{\ce{H_b}} ++(0,1.2);
+                \draw [decorate,decoration={brace,mirror}] (4.3,-0.6) -- node[right]{\ce{H_a}} ++(0,1.2);
+                \draw [decorate,decoration={brace,mirror}] (4.3,0.7) -- node[right]{\ce{O}} ++(0,1.2);
+            \end{tikzpicture}
+        \end{center}
+        \begin{itemize}
+            \item Note that atoms moved during the transformation do not contribute to the character of the transformation matrix.
+        \end{itemize}
+        \item Since under $\sigma_v(xz)$ only \ce{O} is unshifted, we need only consider its part of the transformation matrix (as follows) when looking for the character. Thus, $\chi(\sigma_v(xz))=1$.
+        \begin{equation*}
+            \begin{bmatrix}
+                x'\\
+                y'\\
+                z'\\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                1 & 0 & 0\\
+                0 & -1 & 0\\
+                0 & 0 & 1\\
+            \end{bmatrix}
+            \begin{bmatrix}
+                x\\
+                y\\
+                z\\
+            \end{bmatrix}
+        \end{equation*}
+        \item Since under $\sigma_v(yz)$ no atom is shifted, we need to consider each (identical) part of the transformation matrix (as follows) when looking for the character. Thus, $\chi(\sigma_v(yz))=3$.
+        \begin{equation*}
+            \begin{bmatrix}
+                x'\\
+                y'\\
+                z'\\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                -1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & 1\\
+            \end{bmatrix}
+            \begin{bmatrix}
+                x\\
+                y\\
+                z\\
+            \end{bmatrix}
+        \end{equation*}
+        \item Thus, the characters of our final reducible representation is $\Gamma_{3N}=(9,-1,1,3)$.
+        \begin{itemize}
+            \item This representation represents fully unrestricted motion of all 3 ambiguities of freedom.
+        \end{itemize}
+    \end{itemize}
+    \item Another example: \ce{XeOF4}.
+    \begin{figure}[h!]
+        \centering
+        \chemfig{Xe(>:[:30]F_c)(=[2]O)(>:[:150]F_d)(<[:-150]F_a)<[:-30]F_b}
+        \caption{\ce{XeOF4}.}
+        \label{fig:XeOF4}
+    \end{figure}
+    \begin{itemize}
+        \item Point group: $C_{4v}$.
+        \item Basis function: \ce{F} atoms.
+        \item Let's see what happens to the fluorine atoms under the $C_{4v}$ operations (remember that if a basis element (a fluroine atom) stays the same, it contributes $+1$ to the character of an operation, and if it moves, it contributes $0$ to the character).
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+                $E$ & all unchanged & $4$\\
+                $C_4$ & all move & $0$\\
+                $C_2$ & all move & $0$\\
+                $2\sigma_v$ & 2 move, 2 unchanged & $2$\\
+                $2\sigma_d$ & all move & $0$\\
+            \end{tabular}
+            \caption{Changes in the fluorine atoms of \ce{XeOF4} under the $C_{4v}$ symmetry operations.}
+            \label{tab:XeOF4-operationResults}
+        \end{table}
+        \item Thus, $\Gamma=(4,0,0,2,0)$.
+        \item With the $C_{4v}$ character table and the decomposition formula, we can discover that $\Gamma=A_1+B_1+E$.
+    \end{itemize}
 \end{itemize}
 
 
@@ -456,7 +878,7 @@
         \item If not, find the highest order $C_n$ axis for the molecule.
         \item Does the molecule have any $C_2$ axes perpendicular to the principal $C_n$ axis? If it does, there will be $n$ of such $C_2$ axes, and the molecule is in the $D$ set of groups. If not, it is in the $C$ or $S$ set.
         \item Does the molecule have a mirror plane ($\sigma_h$) perpendicular to the principal $C_n$ axis? If so, it is classified as $C_{nh}$ or $D_{nh}$. If not, continue with Step 5.
-        \item Does the molecule have any mirror planes that contain the principal $C_n$ axis ($\sigma_v$ or $\sigma_d$)? If so, it is classified as $C_{nv}$ or $D_{nd}$. Iff not, but it is in the $D$ set, it is classified as $D_n$. If the molecule is in the $C$ or $S$ set, continue with Step 6.
+        \item Does the molecule have any mirror planes that contain the principal $C_n$ axis ($\sigma_v$ or $\sigma_d$)? If so, it is classified as $C_{nv}$ or $D_{nd}$. If not, but it is in the $D$ set, it is classified as $D_n$. If the molecule is in the $C$ or $S$ set, continue with Step 6.
         \item Is there an $S_{2n}$ axis collinear with the principal $C_n$ axis? If so, it is classified as $S_{2n}$. If not, the molecule is classified as $C_n$.
     \end{enumerate}
     \item Groups of high symmetry:

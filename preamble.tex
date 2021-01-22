@@ -6,6 +6,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage[style=apa]{biblatex}
 \usepackage{enumitem}
+\usepackage{xr}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{physics,mathtools,siunitx,bm}
 \usepackage{mhchem,chemfig}
@@ -36,6 +37,8 @@
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\externaldocument{main}
 
 \usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals}
 \colorlet{grx}{green!25!cyan!40!black!95}
