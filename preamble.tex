@@ -33,12 +33,13 @@
 \deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
 \deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
 
-\addbibresource{main.bib}
+\addbibresource{../main.bib}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
 
-\externaldocument{main}
+\setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
+\setcharge{extra sep=3pt}
 
 \usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals}
 \colorlet{grx}{green!25!cyan!40!black!95}
@@ -49,9 +50,6 @@
     dashbondg/.style={draw=grt,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt},
     dashbond/.style={draw=white,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt}
 }
-
-\renewcommand{\chaptername}{Topic}
-\renewcommand{\contentsname}{Topics}
 
 \newcommand{\e}[1][]{\text{e}^{#1}}
 

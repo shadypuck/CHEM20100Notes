@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../notes.tex]{subfiles}
 
 \pagestyle{main}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
@@ -12,7 +12,6 @@
 \chapter{Course Prep}
 \section{Chapter 1: Introduction to Inorganic Chemistry}
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
-\subsection{Notes}
 \begin{itemize}
     \item \marginnote{12/21:}\textbf{Inorganic chemistry}: The chemistry of everything that is not organic chemistry, which is the chemistry of hydrocarbon compounds and their derivatives.
     \item \textbf{Organometallic chemistry}: The chemistry of compounds containing metal-carbon bonds and the catalysis of many organic reactions.
@@ -168,9 +167,9 @@
     \begin{figure}[h!]
         \centering
         \footnotesize
-        \chemfig[atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt]{H-[:-25,,,,dash pattern=on 2pt off 2pt]B(<[:-155]H)(-[7]H?)-[1]H-[7]B?(-[:25,,,,dash pattern=on 2pt off 2pt]H)<[:-25]H}
+        \chemfig{H<:[:-25]B(<[:-155]H)(-[7]H?)-[1]H-[7]B?(>:[:25]H)<[:-25]H}
         \hspace{5em}
-        \chemfig[atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt]{H_3C-[:-25,,,,dash pattern=on 2pt off 2pt]Al(<[:-155]H_3C)(-[7]\chembelow{C}{\hspace{4pt}H_3}?)-[1]\chemabove{C}{\hspace{4pt}H_3}-[7]Al?(-[:25,,,,dash pattern=on 2pt off 2pt]CH_3)<[:-25]CH_3}
+        \chemfig{H_3C<:[:-25]Al(<[:-155]H_3C)(-[7]\chembelow{C}{\hspace{4pt}H_3}?)-[1]\chemabove{C}{\hspace{4pt}H_3}-[7]Al?(>:[:25]CH_3)<[:-25]CH_3}
         \caption{Inorganic compounds containing bridging hydrogens and alkyl groups.}
         \label{fig:bridgingH-CH3}
     \end{figure}
@@ -212,7 +211,6 @@
 
 \section{Chapter 2: Atomic Structure}
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
-\subsection{Notes}
 \begin{itemize}
     \item \marginnote{12/22:}\textbf{Coinage metals}: Copper, silver, and gold, i.e., the transition metals in IUPAC Group 11.
     \item \textbf{Chalcogens}: Oxygen, sulfur, selenium, tellurium, and polonium, i.e., the nonmetals in Group 16.
@@ -234,7 +232,7 @@
     \begin{equation*}
         E = h\nu = \frac{hc}{\lambda} = hc\bar{\nu}
     \end{equation*}
-    where $h$ is Planck's constant ($\SI{6.626e-34}{\joule\second}$), $c$ is the speed of light ($\SI{2.998e8}{\meter\per\second}$), and $\nu$, $\lambda$, and $\bar{\nu}$ are the frequency, wavelength, and \textbf{wavenumber}, respectively, of the light.
+    where $h$ is Planck's constant ($\SI{6.626e-34}{\joule\second}$), $c$ is the speed of light ($\SI{2.998e8}{\meter\per\second}$), $\nu$ is the frequency of the light, $\lambda$ is the wavelength of the light, and $\bar{\nu}$ is the \textbf{wavenumber} of the light.
     \item \textbf{Wavenumber}: The number of waves that exist between two points along the light's path a given distance apart. \emph{Measured in} waves per centimeter (SI: $\si{\per\centi\meter}$).
     \begin{itemize}
         \item Wavenumber is proportional to energy. This is why $\si{\per\meter}$ or $\si{\per\centi\meter}$ can be used as an energy unit.
@@ -255,6 +253,7 @@
             \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
         \end{itemize}
         \item Importantly, note that the Rydberg constant for hydrogen $R_H$ is not universal, and changes for the atom at hand based on factors like the mass of the nucleus.
+        \item Also note that some of the terms cancel or can be written in terms of others, making the above equation equivalent to the one given in Chapter 7 of \textcite{bib:APChemNotes}.
     \end{itemize}
     \begin{figure}[h!]
         \centering
@@ -365,7 +364,7 @@
             \Psi(x) = A\sin rx+B\cos sx
         \end{equation*}
         where $A,B,r,s$ are constants.
-        \item As seen in Problem \ref{prb:2.8a}, substituting the above general solution into the wave equation allows us to solve for
+        \item As seen in Problem 2.8a, substituting the above general solution into the wave equation allows us to solve for
         \begin{equation*}
             r = s = \sqrt{2mE}\frac{2\pi}{h}
         \end{equation*}
@@ -385,7 +384,7 @@
         \begin{itemize}
             \item "These are the energy levels predicted by the particle-in-a-box model for any particle in a one dimensional box of length $a$. The energy levels are quantized according to quantum numbers $n=1,2,3,\dots$" \parencite[17]{bib:MiesslerFischerTarr}.
         \end{itemize}
-        \item As seen in Problem \ref{prb:2.8d}, substituting $r=n\pi/a$ into $\Psi(x)$ and applying the normalizing requirement allows us to solve for the total solution
+        \item As seen in Problem 2.8d, substituting $r=n\pi/a$ into $\Psi(x)$ and applying the normalizing requirement allows us to solve for the total solution
         \begin{equation*}
             \Psi(x) = \sqrt{\frac{2}{a}}\sin\frac{n\pi x}{a}
         \end{equation*}
@@ -470,7 +469,7 @@
             \caption{Particle in a box: Wave functions and their squares at different energy levels.}
             \label{fig:particleInABox}
         \end{figure}
-        \item The predicted probability densities for an electron at different energy levels (see Figure \ref{fig:particleInABox}) showcase a difference between classical mechanics' and quantum mechanics' predictions about the behavior of this particle: Classical predicts an equal probability at any point in the box, but the wave nature of the particle (as described by quantum) predicts varied probabilities in different locations.
+        \item The predicted probability densities for an electron at different energy levels (see Figure \ref{fig:particleInABox}) showcase a difference between classical mechanics' and quantum mechanics' predictions about the behavior of this particle: Classical predicts an equal probability at any point in the box, but the (quantum) wave nature of the particle predicts varied probabilities in different locations.
         \begin{itemize}
             \item "The greater the square of the electron amplitude, the greater the probability of the electron being located at the specified coordinate when at the quantized energy defined by $\Psi$" \parencite[17]{bib:MiesslerFischerTarr}.
         \end{itemize}
@@ -1471,63 +1470,6 @@
     \end{itemize}
     \item Factors that influence ionic size: "the coordination number of the ion, the covalent character of the bonding, distortions of regular crystal geometries, and delocalization of electrons (metallic or semiconducting character\dots)" \parencite[40]{bib:MiesslerFischerTarr}.
 \end{itemize}
-
-
-\subsection{Problems}
-\begin{enumerate}[label={\textbf{2.\arabic*}},ref={2.\arabic*}]
-    \setcounter{enumi}{7}
-    \item \label{prb:2.8}\marginnote{9/13:}The details of several steps in the particle-in-a-box model in this chapter have been omitted. Work out the details of the following steps:
-    \begin{enumerate}[label={\textbf{\alph*.}},ref={\theenumi\alph*}]
-        \item \label{prb:2.8a}Show that if $\Psi=A\sin rx+B\cos sx$ ($A$, $B$, $r$, and $s$ are constants) is a solution to the wave equation for the one-dimensional box, then
-        \begin{equation*}
-            r = s = \sqrt{2mE}\left( \frac{2\pi}{h} \right)
-        \end{equation*}
-        \begin{proof}[Solution]
-            \allowdisplaybreaks
-            \begin{align*}
-                \frac{-h^2}{8\pi^2m}\cdot\pdv[2]{\Psi(x)}{x} &= E\Psi(x)\\
-                \frac{-h^2}{8\pi^2m}\cdot\pdv[2]{x}\left( A\sin rx+B\cos sx \right) &= E(A\sin rx+B\cos sx)\\
-                \frac{-h^2}{8\pi^2m}\cdot\pdv{x}\left( Ar\cos rx-Bs\sin sx \right) &= E(A\sin rx+B\cos sx)\\
-                \frac{-h^2}{8\pi^2m}\cdot\left( -Ar^2\sin rx-Bs^2\cos sx \right) &= E(A\sin rx+B\cos sx)\\
-                \frac{Ar^2h^2}{8\pi^2m}\sin rx+\frac{Bs^2h^2}{8\pi^2m}\cos sx &= AE\sin rx+BE\cos sx\\
-                0 &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( \frac{Bs^2h^2}{8\pi^2m}-BE \right)\cos sx
-                \intertext{Choose $x=0$.}
-                &= \frac{Bs^2h^2}{8\pi^2m}-BE\\
-                E &= \frac{s^2h^2}{8\pi^2m}\\
-                \frac{8\pi^2mE}{h^2} &= s^2\\
-                s &= \sqrt{\frac{8\pi^2mE}{h^2}}\\
-                \Aboxed{s &= \sqrt{2mE}\frac{2\pi}{h}}
-                \intertext{With this result \dots}
-                0 &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( \frac{Bs^2h^2}{8\pi^2m}-BE \right)\cos sx\\
-                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( B\left( \frac{s^2h^2}{8\pi^2m} \right)-BE \right)\cos sx\\
-                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx+\left( BE-BE \right)\cos sx\\
-                &= \left( \frac{Ar^2h^2}{8\pi^2m}-AE \right)\sin rx\\
-                \intertext{Choose $x=\frac{\pi}{2r}$.}
-                &= \frac{Ar^2h^2}{8\pi^2m}-AE\\
-                \Aboxed{r &= \sqrt{2mE}\frac{2\pi}{h}}
-            \end{align*}
-        \end{proof}
-        \setcounter{enumii}{3}
-        \item \label{prb:2.8d}Show that substituting the value of $r$ given in part c into $\Psi=A\sin rx$ and applying the normalizing requirement gives $A=\sqrt{2/a}$.
-        \begin{proof}[Solution]
-            \begin{align*}
-                1 &= \int_\text{all space}\Psi\Psi^*\dd{\tau}\\
-                &= \int_0^a \left( A\sin\frac{n\pi x}{a} \right)\left( A\sin\frac{n\pi x}{a} \right)\dd{x}\\
-                &= \int_0^a A^2\sin^2\frac{n\pi x}{a}\dd{x}
-                \intertext{Use $\sin^2u=\frac{1-\cos2u}{2}$.}
-                &= A^2\int_0^a \frac{1-\cos\frac{2n\pi x}{a}}{2}\dd{x}\\
-                &= \frac{A^2}{2}\left( \int_0^a \dd{x}-\int_0^a \cos\frac{2n\pi x}{a}\dd{x} \right)\\
-                &= \frac{A^2}{2}\left( [x]_0^a-\left[ \frac{a}{2n\pi}\sin\frac{2n\pi x}{a} \right]_0^a \right)\\
-                &= \frac{A^2}{2}\left( (a-0)-\left( \frac{a}{2n\pi}\sin 2n\pi-\frac{a}{2n\pi}\sin 0 \right) \right)\\
-                &= \frac{A^2}{2}\left( a-\left( \frac{a}{2n\pi}\sin 2n\pi \right) \right)
-                \intertext{Since $n$ is an integer, $\sin 2n\pi=0$.}
-                &= \frac{aA^2}{2}\\
-                \frac{2}{a} &= A^2\\
-                \Aboxed{A &= \sqrt{\frac{2}{a}}}
-            \end{align*}
-        \end{proof}
-    \end{enumerate}
-\end{enumerate}
 
 
 
