@@ -19,17 +19,17 @@
                 \vspace{1em}
                 \chemfig{\charge{45=\:}{Se}(-\charge{0=\:,90=\:,-90=\:}{Cl})(-[2]\charge{0=\:,90=\:,180=\:}{Cl})(-[4]\charge{-90=\:,90=\:,180=\:}{Cl})-[6]\charge{0=\:,-90=\:,180=\:}{Cl}}
                 \hspace{3cm}
-                \chemfig{Se(-\Charge{0=\:}{})(-[2]Cl)(-[6]Cl)(>:[:160]Cl)(<[:-150]Cl)}
+                \chemfig{Se(-[:105]Cl)(-[:-105]Cl)(>:[:160]Cl)(<[:-150]Cl)}
                 \vspace{1em}
             \end{center}
             \item \ce{I3-}
             \begin{center}
                 \vspace{1em}
                 \chemleft{[}
-                    \chemfig{\charge{90=\:,180=\:,270=\:}{I}-\charge{90=\:,270=\:}{I}-\charge{90=\:,0=\:,-90=\:}{I}}
+                    \chemfig{\charge{90=\:,180=\:,270=\:}{I}-\charge{90=\:,225=\:,315=\:}{I}-\charge{90=\:,0=\:,-90=\:}{I}}
                 \chemright{]^{-}}
                 \hspace{3cm}
-                \chemfig{I-[1]\charge{45=\:,135=\:}{I}-[7]I}
+                \chemfig{I-I-I}
                 \vspace{1em}
             \end{center}
             \item \ce{PSCl3}
@@ -47,7 +47,7 @@
                     \chemfig{\charge{45=\:,-135=\:}{I}(-\charge{-90=\:,0=\:,90=\:}{F})(-[2]\charge{0=\:,90=\:,180=\:}{F})(-[4]\charge{90=\:,180=\:,270=\:}{F})-[6]\charge{0=\:,180=\:,270=\:}{F}}
                 \chemright{]^{-}}
                 \hspace{3cm}
-                \chemfig{I(>:[:30]F)(-[2]\charge{90=\:}{})(>:[:150]F)(<[:-150]F)(-[6]\charge{-90=\:}{})<[:-30]F}
+                \chemfig{I(>:[:30]F)(>:[:150]F)(<[:-150]F)<[:-30]F}
                 \vspace{1em}
             \end{center}
             \item \ce{PH2-}
@@ -57,7 +57,7 @@
                     \chemfig{H-\charge{90=\:,270=\:}{P}-H}
                 \chemright{]^{-}}
                 \hspace{3cm}
-                \chemfig{H-[1]\charge{45=\:,135=\:}{P}-[7]H}
+                \chemfig{H-[1]P-[7]H}
                 \vspace{1em}
             \end{center}
             \item \ce{TeF4^2-}
@@ -67,7 +67,7 @@
                     \chemfig{\charge{45=\:,-135=\:}{Te}(-\charge{-90=\:,0=\:,90=\:}{F})(-[2]\charge{0=\:,90=\:,180=\:}{F})(-[4]\charge{90=\:,180=\:,270=\:}{F})-[6]\charge{0=\:,180=\:,270=\:}{F}}
                 \chemright{]^{2-}}
                 \hspace{3cm}
-                \chemfig{Te(>:[:30]F)(-[2]\charge{90=\:}{})(>:[:150]F)(<[:-150]F)(-[6]\charge{-90=\:}{})<[:-30]F}
+                \chemfig{Te(>:[:30]F)(>:[:150]F)(<[:-150]F)<[:-30]F}
                 \vspace{1em}
             \end{center}
             \item \ce{N3-}
@@ -85,7 +85,7 @@
                 \vspace{1em}
                 \chemfig{Se(=\charge{45=\:,-45=\:}{O})(-[:72]\charge{0=\:,90=\:,180=\:}{Cl})(-[:144]\charge{90=\:,180=\:,270=\:}{Cl})(-[:216]\charge{0=\:,-90=\:,180=\:}{Cl})(-[:288]\charge{0=\:,-90=\:,180=\:}{Cl})}
                 \hspace{3cm}
-                \chemfig{Se(=O)(-[2]Cl)(-[6]Cl)(>:[:160]Cl)(<[:-150]Cl)}
+                \chemfig{Se(=O)(-[:105]Cl)(-[:-105]Cl)(>:[:160]Cl)(<[:-150]Cl)}
                 \vspace{1em}
             \end{center}
             \item \ce{PH4+}
@@ -107,7 +107,7 @@
                 \vspace{1em}
                 \chemfig{I(=\charge{45=\:,-45=\:}{O})(-[:60]\charge{90=\:,180=\:}{O}H)(-[:120]H\charge{0=\:,90=\:}{O})(-[:180]H\charge{90=\:,-90=\:}{O})(-[:240]H\charge{0=\:,-90=\:}{O})(-[:300]\charge{-90=\:,180=\:}{O}H)}
                 \hspace{3cm}
-                \chemfig{I(>:[:30]OH)(=[2]O)(>:[:150]HO)(<[:-150]HO)(-[6]OH)<[:-30]OH}
+                \chemfig{I(>:[:-10]OH)(=[2]O)(>:[:-170]HO)(<[:-130]HO)(-[6]OH)<[:-50]OH}
                 \vspace{1em}
             \end{center}
             \item \ce{SOCl2}
@@ -115,17 +115,17 @@
                 \vspace{1em}
                 \chemfig{\charge{45=\:}{S}(=[2]\charge{45=\:,135=\:}{O})(-[5]\charge{90=\:,180=\:,270=\:}{Cl})(-[7]\charge{-90=\:,0=\:,90=\:}{Cl})}
                 \hspace{3cm}
-                \chemfig{S(=[:-30]O)(<[:-110]Cl)(>:[:-150]Cl)-[2]\charge{90=\:}{}}
+                \chemfig{S(=[:-30]O)(<[:-110]Cl)(>:[:-150]Cl)}
                 \vspace{1em}
             \end{center}
-            \item \ce{ClOF4-}
+            \item \ce{ClOF4-}\footnote{Note that it is unclear whether the equatorial fluorines will be bent away from the lone pair and toward the oxygen, or the other way around. Hence, I arbitrarily chose to show them pointed away from the lone pair.}
             \begin{center}
                 \vspace{1em}
                 \chemleft{[}
                     \chemfig{\charge{180=\:}{Cl}(=\charge{45=\:,-45=\:}{O})(-[:72]\charge{0=\:,90=\:,180=\:}{F})(-[:144]\charge{90=\:,180=\:,270=\:}{F})(-[:216]\charge{0=\:,-90=\:,180=\:}{F})(-[:288]\charge{0=\:,-90=\:,180=\:}{F})}
                 \chemright{]^{-}}
                 \hspace{3cm}
-                \chemfig{Cl(>:[:30]F)(-[2]\charge{90=\:}{})(>:[:150]F)(<[:-150]F)(=[6]O)<[:-30]F}
+                \chemfig{Cl(>:[:-10]F)(>:[:-170]F)(<[:-130]F)(=[6]O)<[:-50]F}
                 \vspace{1em}
             \end{center}
             \item \ce{XeO2F2}
@@ -133,7 +133,7 @@
                 \vspace{1em}
                 \chemfig{\charge{45=\:}{Xe}(=\charge{45=\:,-45=\:}{O})(-[2]\charge{0=\:,90=\:,180=\:}{F})(=[4]\charge{135=\:,-135=\:}{O})-[6]\charge{0=\:,-90=\:,180=\:}{F}}
                 \hspace{3cm}
-                \chemfig{Xe(-\Charge{0=\:}{})(-[2]F)(-[6]F)(=[:160]O)(=[:-150]O)}
+                \chemfig{Xe(-[:105]F)(-[:-105]F)(=[:160]O)(=[:-150]O)}
                 \vspace{1em}
             \end{center}
         \end{enumerate}
@@ -146,13 +146,13 @@
                 \chemfig{\charge{30=\:,150=\:,-90=\:}{I}(-[2]\charge{0=\:,90=\:,180=\:}{F})(-[5]\charge{90=\:,180=\:,270=\:}{F})(-[7]\charge{-90=\:,0=\:,90=\:}{F})}
             \chemright{]^{2-}}
             \hspace{3cm}
-            \chemfig{I(>:[:30]F)(-[2]\charge{90=\:}{})(>:[:150]\charge{150=\:}{})(<[:-150]F)(-[6]F)<[:-30]\charge{-30=\:}{}}
+            \chemfig{I(-[:-15]F)(-[:-165]F)(-[6]F)}
             \vspace{1em}
         \end{center}
         \setcounter{enumii}{28}
         \item Sketch the most likely structure of \ce{PCl3Br2} and explain your reasoning.
         \begin{center}
-            \chemfig{P(-Cl)(-[2]Cl)(-[6]Cl)(>:[:160]Br)(<[:-150]Br)}
+            \chemfig{P(-Cl)(-[:75]Cl)(-[:-75]Cl)(>:[:160]Br)(<[:-150]Br)}
         \end{center}
         \begin{proof}[Answer]
             Bromine is more electropositive than chlorine. Thus, by Bent's rule, the bromines will bond to the hybrid orbitals with greater $s$-character (the equatorial $sp^2$ ones) first.
@@ -171,8 +171,7 @@
             \end{proof}
             \item \ce{I3-}
             \begin{proof}[Answer]
-                Not low or high symmetry. Has a $C_2$ axis. No perpendicular $C_2$ axes. No $\sigma_h$. Has two perpendicular $\sigma_v$ planes.\par
-                Therefore, \ce{I3-} is of the $C_{2v}$ point group.
+                \ce{I3-} is of the $D_{\infty h}$ point group.
             \end{proof}
             \item \ce{PSCl3}
             \begin{proof}[Answer]
@@ -238,7 +237,7 @@
         \item The molecule pictured below.
         \begin{center}
             \vspace{1em}
-            \chemfig{[:-30]**[90,270]6(-(-H_3C)-O-Cu([:0]**[-90,90]6(-O---(-CH_3)-O-))-O--)}
+            \chemfig{[:-30]**[90,270]6(-(-)-O-Cu([:0]**[-90,90]6(-O---(-)-O-))-O--)}
             \vspace{1em}
         \end{center}
         \begin{proof}[Answer]
@@ -278,8 +277,8 @@
         \end{proof}
         \item Tennis ball (including the seam)
         \begin{proof}[Answer]
-            Not low or high symmetry. Has a $C_2$ axis. No perpendicular $C_2$ axes. No $\sigma_h$. Has two perpendicular $\sigma_v$ planes.\par
-            Therefore, a tennis ball is of the $C_{2v}$ point group.
+            Not low or high symmetry. Has a $C_2$ axis. Has 2 perpendicular $C_2$ axes. No $\sigma_h$. Has two perpendicular $\sigma_d$ planes.\par
+            Therefore, a tennis ball is of the $D_{2d}$ point group.
         \end{proof}
         \item \emph{trans}-\ce{[CrCl2(H2O)4]+}
         \begin{proof}[Answer]
@@ -294,7 +293,7 @@
         \item \emph{trans}-\ce{Pt(NH3)2Cl2}
         \begin{proof}[Answer]
             Not low or high symmetry. Has a $C_2$ axis. Has 2 perpendicular $C_2$ axes. Has $\sigma_h$.\par
-            Therefore, \ce{TeF4^2-} is of the $D_{2h}$ point group.
+            Therefore, \emph{trans}-\ce{Pt(NH3)2Cl2} is of the $D_{2h}$ point group.
         \end{proof}
         \item \ce{SF5Cl}
         \begin{proof}[Answer]
@@ -314,7 +313,7 @@
     \newpage
     \item In the octahedral ion \ce{FeF6^3-}, what symmetry elements are destroyed if two \emph{trans} \ce{F} ions are moved away from the \ce{Fe^3+} center in an equidistant fashion?
     \begin{proof}[Answer]
-        If the described change is made, the point group changes from $O_h$ to $D_{4h}$. In this change, every $C_3$ and $S_6$ axis, two of the three $C_4$ axes, and every $\sigma_d$ that does not contain the axis along which the \ce{F} ions are stretched are destroyed.
+        If the described change is made, the point group changes from $O_h$ to $D_{4h}$. In this change, every $C_3$ and $S_6$ axis, two of the three $C_4$ axes, four $C_2$ axes, and every $\sigma_d$ that does not contain the axis along which the \ce{F} ions are stretched are destroyed.
     \end{proof}
 \end{enumerate}
 
