@@ -473,7 +473,7 @@
         \item $S_n$ character: $\chi=2\cos\theta-1$.
         \item $\perp C_2$ axes character: $\chi=-1$.
     \end{itemize}
-    \item \textbf{Character table}: The collection of characters for a given irreducible representation, under the operations of a group.
+    \item \textbf{Character table}: The collection of characters for a given irreducible representation, under the operations of a group. \emph{Also known as} \textbf{$\bm{\chi}$ table}.
     \begin{figure}[h!]
         \centering
         \renewcommand{\arraystretch}{1.2}
@@ -746,7 +746,7 @@
         \begin{itemize}
             \item Note that atoms moved during the transformation do not contribute to the character of the transformation matrix.
         \end{itemize}
-        \item Since under $\sigma_v(xz)$ only \ce{O} is unshifted, we need only consider its part of the transformation matrix (as follows) when looking for the character. Thus, $\chi(\sigma_v(xz))=1$.
+        \item Since under $\sigma_v(xz)$ only \ce{O} is unshifted, we need only consider its part of the transformation matrix (as follows) when looking for the character. Thus, $\chi(\sigma_v(xz))=1$\footnote{Note also that $a_{11}=1$ since the $x$-vector (a basis) is unchanged under $\sigma_v(xz)$, $a_{22}=-1$ since the $y$-vector is reversed under $\sigma_v(xz)$, and $a_{33}=1$ since the $z$ vector is unchanged under $\sigma_v(xz)$.}.
         \begin{equation*}
             \begin{bmatrix}
                 x'\\
@@ -847,6 +847,126 @@
         \item \ce{HFC=C=CHF} is of the $C_2$ point group.
         \item \ce{H2C=CF2} is of the $C_{2v}$ point group.
         \item \ce{C2H6} eclipsed has $D_{3h}$ symmetry, staggered has $D_{3d}$ symmetry, and others have $D_3$ symmetry.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 9: Molecular Vibrations}
+\begin{itemize}
+    \item \marginnote{1/25:}If you have a nonlinear triatomic molecule (like \ce{H2O}), we have $3\text{ atoms}\times 3\text{ DOF}=9\text{ DOF}$.
+    \begin{itemize}
+        \item This accounts for any possible perturbations of our molecules.
+    \end{itemize}
+    \item We can break this down into three types of motion:
+    \begin{itemize}
+        \item Translational motion along the $x$-, $y$-, and $z$-axes (3 DOFs).
+        \item Rotational motion about the $x$-, $y$-, and $z$-axes (3 more DOFs).
+        \item The remaining degrees of freedom are vibrational.
+    \end{itemize}
+    \item Every \emph{nonlinear} molecule has 3 translational and 3 rotational DOFs.
+    \begin{itemize}
+        \item The number of vibrations is $3N-6$, where $N$ is the number of atoms.
+    \end{itemize}
+    \item Every \emph{linear} molecule has 3 translational and 2 rotational DOFs.
+    \begin{itemize}
+        \item The number of vibrations is $3N-5$, where $N$ is the number of atoms.
+    \end{itemize}
+    \item \textbf{Vibrational mode}: A perturbation of molecular structure that keeps the center of mass of the molecule in one place.
+    \item For \ce{H2O}, there are three vibrational modes: antisymmetric stretch (one \ce{H} moves away from the \ce{O} as the other moves in, and then the process reverses), symmetric stretch (both \ce{H}'s move away from the \ce{O} and then move back in), and scissoring bend (the bond angle changes).
+    \item For molecules in general, there are these three and an additional three: wagging (in \ce{H2O}, the \ce{H}'s rotate out of the plane of the molecule and then back), twisting (in \ce{H2O}, both \ce{H}'s rotate out of the plane of the molecule, but one in one direction and one in the other), and rocking (in \ce{H2O}, both \ce{H}'s rotate about the \ce{O} within the plane of the molecule preserving the bond angle, and then go back).
+    \item What vibrational modes a molecule can and cannot have is governed by its point group and group theory.
+    \item Each normal mode of vibration forms a basis for an irreducible representation of the point group of the molecule.
+    \item Workflow to identify the vibrational properties of a molecule:
+    \begin{enumerate}
+        \item Find number/symmetry of vibrational modes.
+        \item Assign the symmetry of known vibrations.
+        \item What does the vibration look like?
+        \item Find if a vibrational mode is IR or Raman Active.
+    \end{enumerate}
+    \item To find vibrational modes, follow the 5-step Basis $\to$ reducible representation $\to$ irreducible representation workflow and then subtract translational and rotational motion.
+    \begin{itemize}
+        \item For example, with \ce{H2O}, as before, we have $C_{2v}$ point group, $3N$ basis, $\Gamma_{3N}=(9,-1,1,3)$, and $\Gamma_{3N}=3A_1+A_2+2B_1+3B_2$.
+        \item We now need to use the basis functions in the $C_{2v}$ character table to determine the translational and rotational degrees of freedom. From Figure \ref{fig:characterTable}, the $x,y,z$-translational modes come from the $B_1$, $B_2$, and $A_1$ $\Gamma_i$'s, respectively. Thus, the total translational mode, sufficient to describe all possible translations in 3 DOFs, is $\text{trans}=A_1+B_1+B_2$. Similarly, we can determine that the total rotational mode is $\text{rot}=A_2+B_1+B_2$.
+        \item Thus, we can determine that the total vibrational mode is $\Gamma_{3N}-\text{trans}-\text{rot}=2A_1+B_2$.
+        \item When \ce{H2O} scissors or symmetrically stretches, it maintains its $C_{2v}$ symmetry. Thus, both of these vibrations are represented by the totally symmetric irreducible representation $A_1$ (hence the $2A_1$ component).
+        \item As to asymmetric stretch, there exist points in time where \ce{H2O} lowers its symmetry from $C_{2v}$ to $C_s$, losing its $C_2$ and $\sigma_v(xz)$ symmetry elements but maintaining $E$ and $\sigma_v(yz)$. This shift is encapsulated by the $B_2$ irreducible representation.
+        \item We can see all of these modes in \ce{H2O}'s infrared absorption spectrum.
+        \begin{itemize}
+            \item Note that this spectrum does not tell us the energy of vibrations (we can model this with quantum mechanics), or if it is IR or Raman active (which modes will appear in the respective spectrum).
+        \end{itemize}
+    \end{itemize}
+    \item Determine the number and symmetry types for the translations, vibrations, and rotations of \ce{PF5}.
+    \begin{itemize}
+        \item Point group: $D_{3h}$.
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{l|cccccc|l|l}
+                $D_{3h}$ & $E$ & $2C_3$ & $3C_2$ & $\sigma_h$ & $2S_c$ & $3\sigma_v$ & linear & quadratic\\
+                \hline
+                $A_1'$ & 1 & 1 & 1 & 1 & 1 & 1 & & $x^2+y^2,z^2$\\
+                $A_2'$ & 1 & 1 & $-1$ & 1 & 1 & $-1$ & $R_z$ & \\
+                $E'$ & 2 & $-1$ & 0 & 2 & $-1$ & 0 & $(x,y)$ & $(x^2-y^2,xy)$\\
+                $A_1''$ & 1 & 1 & 1 & $-1$ & $-1$ & $-1$ & & \\
+                $A_2''$ & 1 & 1 & $-1$ & $-1$ & $-1$ & 1 & $z$ & \\
+                $E''$ & 2 & $-1$ & 0 & $-2$ & 1 & 0 & $(R_x,R_y)$ & $(xz,yz)$\\
+            \end{tabular}
+            \caption{Character table for the $D_{3h}$ point group.}
+            \label{tab:characterTable-D3h}
+        \end{table}
+        \item We could write out all 18 $x,y,z$-vectors, or we can use a shortcut: To construct $\Gamma_{3N}$, we can, for each symmetry element, multiply the number of atoms atoms unmoved under the operation by the corresponding character the representation that accounts for $x,y,z$-movements.
+        \begin{equation*}
+            \Gamma_{3N} = (\Gamma_{x,y,z})\cdot(\text{\# unmoved atoms})
+        \end{equation*}
+        Applying this shortcut, we have $\Gamma_{x,y,z}=E'+A_2''=(3,0,-1,1,-2,1)$. We also have $\text{\# unmoved atoms}=(6,3,2,4,1,4)$. Thus, $\Gamma_{3N}=(18,0,-2,4,-2,4)$.
+        \item We can now reduce it into $\Gamma_{3N}=2A_1'+A_2'+4E'+3A_2''+2E''$.
+        \begin{itemize}
+            \item Note that we still have our 18 degrees of freedom because each $E$ is double degenerate, meaning that $4E'$ counts for 8 degrees of freedom and $2E''$ counts for 4 degrees of freedom.
+        \end{itemize}
+        \item This combined with the fact that $\Gamma_\text{trans}=\Gamma_{x,y,z}=E'+A_2''$ and $\Gamma_\text{rot}=A_2'+E''$ implies that $\Gamma_\text{vibs}=2A_1'+3E'+2A_2''+E''$.
+        \begin{itemize}
+            \item For a similar reason to the note above, we can count $12=3N-6$ degrees of freedom (vibrational modes) in $\Gamma_\text{vibs}$.
+        \end{itemize}
+        \item Although degenerate modes count for multiple DOFs, the multiple modes they count for are of the same type.
+        \begin{itemize}
+            \item In an ideal world, those modes corresponding to $E$ would be twice as intense as the others.
+            \item From the definition of $\Gamma_\text{vibs}$ and the above discussion, we know that \ce{PF5} has $2+3+2+1=8$ distinct vibrational modes.
+        \end{itemize}
+    \end{itemize}
+    \item There are (broadly) two types of vibrations: \textbf{stretches} ($\nu$) and \textbf{bends} ($\delta$).
+    \begin{itemize}
+        \item These two types appear in different energies in IR and Raman spectra.
+    \end{itemize}
+    \item To differentiate between stretching and bending modes: Look at how the stretching modes transform. Each stretch happens along a single vector from central atom to ligand. Thus, if we let these vectors be our basis and look at how many vectors stay the same ($+1$) or change ($-1$) under each operation, we will have a reducible representation that can be decomposed. Its components will be the stretching modes and $\Gamma_\text{vibs}-\Gamma_\nu$ will equal $\Gamma_\delta$.
+    \begin{itemize}
+        \item Applied to \ce{PF5}, we have $\Gamma_\nu=(5,2,1,3,0,3)=2A_1'+E'+A_2''$.
+        \item Thus, both $A_1'$ representations, one $E'$ representation, and one $A_2''$ representation correspond to stretching modes. Consequently, the other two $E'$ representations, the other $A_2''$ representation, and the $E''$ representation correspond to bending modes.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 10: IR and Raman Active Vibrations}
+\begin{itemize}
+    \item Today, we will learn what we need to know for PSet 2. Tomorrow, we will introduce a more rigorous, quantum mechanical foundation.
+    \item Molecular vibrations can be experimentally observed by \textbf{infrared spectroscopy} or \textbf{Raman spectroscopy}.
+    \item \textbf{Infrared spectroscopy}: A method of measuring the change in dipole moment during a vibration\footnote{Refer to \textcite{bib:APChemNotes}, specifically the discussion of spectroscopy in Chapter 13.}. \emph{Also known as} \textbf{IR spectroscopy}.
+    \item \textbf{Raman spectroscopy}: A method of measuring the change in the polarizability during a vibration. We impinge upon a sample of a substance with an incident light (a powerful laser). Most of the light that scatters will be a \textbf{Raleigh scatter}, but some will be a \textbf{Raman scatter} (a new wavelength).
+    \item \textbf{Raleigh scatter}: The same wavelength is emitted as was impinged by the incident light because the laser was elastically scattered. The electrons fell the same number of energy levels that they rose after absorbing the light.
+    \item \textbf{Raman scatter}: A new wavelength is emitted, different than the one impinged by the incident light. The electrons fell fewer (\textbf{Stokes Raman scattering}) or more (\textbf{Anti-Stokes Raman scattering}) energy levels than they rose after absorbing the light.
+    \item \textbf{IR active} (vibration): A vibration that transforms with the same symmetry as the $\vec{x}$, $\vec{y}$, and $\vec{z}$ vectors (see the $\chi$ tables).
+    \item \textbf{Raman active} (vibration): A vibration having the same symmetry as the quadratic $x,y,z$ terms, i.e., $x^2,z^2,yz$, etc.
+    \item For molecules possessing inversion centers, IR and Raman activity will be mutually exclusive.
+    \item Activity data comes from character tables.
+    \begin{itemize}
+        \item All vibration representations that have a linear term are IR active, while those that have a quadratic term are Raman active.
+    \end{itemize}
+    \item Continuing with the \ce{PF5} example\dots
+    \begin{itemize}
+        \item Table \ref{tab:characterTable-D3h} tells us that $E'$ and $A_2''$ vibrations are IR active, and $A_1'$, $E'$, and $E''$ are Raman active.
+        \item Thus, since $\Gamma_\text{vibs}=2A_1'+3E'+2A_2''+E''$, there are $3+2=5$ IR active bonds (corresponding to $3\cdot 2+2=8$ vibrations) and $2+3+1=6$ Raman active bonds (corresponding to $2+3\cdot 2+1\cdot 2=10$ vibrations).
     \end{itemize}
 \end{itemize}
 
