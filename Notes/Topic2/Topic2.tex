@@ -604,12 +604,12 @@
         \begin{itemize}
             \item I.e., a representation where every character is $1$.
         \end{itemize}
-        \item The sum of the squares of the dimensionality of all the irreducible representations is equal to the order of the group. Mathematically,
+        \item The sum of the squares of the \textbf{dimensionality} of all the irreducible representations is equal to the order of the group. Mathematically,
         \begin{equation*}
             h = \sum_i[\chi_i(E)]^2
         \end{equation*}
         \begin{itemize}
-            \item For example, the dimensionalities (characters under $E$) of the $D_3$ point group (see Table \ref{tab:characterTable-D3}) are 1, 1, and 2, and the order is, indeed, $6=1^2+1^2+2^2$.
+            \item For example, the dimensionalities of the $D_3$ point group (see Table \ref{tab:characterTable-D3}) are 1, 1, and 2, and the order is, indeed, $6=1^2+1^2+2^2$.
         \end{itemize}
         \item The sum of the squares of the characters multiplied by the number of operations in the class equals the order of the group. Mathematically,
         \begin{equation*}
@@ -637,6 +637,7 @@
             \end{align*}
         \end{itemize}
     \end{enumerate}
+    \item \textbf{Dimensionality}: The character of the identity operation $E$. \emph{Also known as} \textbf{dimension}.
 \end{itemize}
 
 
@@ -931,6 +932,108 @@
         \end{itemize}
         \item $T_h$: Adds $i$ to $T_d$. Example: \ce{W[N(CH3)2]6}.
     \end{itemize}
+    \item \marginnote{1/24:}When we have a block-diagonalized reducible representation, the irreducible representations can be obtained from the individual blocks.
+    \begin{itemize}
+        \item This is because we will find that an analogous set of blocks satisfies the multiplication table for the group.
+    \end{itemize}
+    \item For the $C_{2v}$ point group, we have the following reducible representation that can be applied to each coordinate.
+    \begin{align*}
+        E &:
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1\\
+        \end{bmatrix}&
+        C_2 &:
+        \begin{bmatrix}
+            -1 & 0 & 0\\
+            0 & -1 & 0\\
+            0 & 0 & 1\\
+        \end{bmatrix}&
+        \sigma_v(xz) &:
+        \begin{bmatrix}
+            1 & 0 & \\
+            0 & -1 & 0\\
+            0 & 0 & 1\\
+        \end{bmatrix}&
+        \sigma_v(yz) &:
+        \begin{bmatrix}
+            -1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1\\
+        \end{bmatrix}
+    \end{align*}
+    \begin{itemize}
+        \item The above matrices are block diagonalized. Thus, the sets of $a_{11}$, $a_{22}$ and $a_{33}$ form three irreducible representations (and we can confirm that these obey the $C_{2v}$ group multiplication table).
+        \begin{align*}
+            E &:
+            \begin{bmatrix}
+                1\\
+            \end{bmatrix}&
+                C_2 &:
+                \begin{bmatrix}
+                    -1\\
+                \end{bmatrix}&
+                    \sigma_v(xz) &:
+                    \begin{bmatrix}
+                        1\\
+                    \end{bmatrix}&
+                        \sigma_v(yz) &:
+                        \begin{bmatrix}
+                            -1\\
+                        \end{bmatrix}\\
+            E &:
+            \begin{bmatrix}
+                1\\
+            \end{bmatrix}&
+                C_2 &:
+                \begin{bmatrix}
+                    -1\\
+                \end{bmatrix}&
+                    \sigma_v(xz) &:
+                    \begin{bmatrix}
+                        -1\\
+                    \end{bmatrix}&
+                        \sigma_v(yz) &:
+                        \begin{bmatrix}
+                            1\\
+                        \end{bmatrix}\\
+            E &:
+            \begin{bmatrix}
+                1\\
+            \end{bmatrix}&
+                C_2 &:
+                \begin{bmatrix}
+                    1\\
+                \end{bmatrix}&
+                    \sigma_v(xz) &:
+                    \begin{bmatrix}
+                        1\\
+                    \end{bmatrix}&
+                        \sigma_v(yz) &:
+                        \begin{bmatrix}
+                            1\\
+                        \end{bmatrix}
+        \end{align*}
+        \item Three of the $C_{2v}$ irreducible representations can be found in this way. The fourth can be found w/ linear algebra and the character table properties (or by inspection).
+    \end{itemize}
+    \item If one matrix in the reducible representation cannot be blocked past having a $2\times 2$ chunk, per se, then the others must also have that $2\times 2$ chunk (so that we have an irreducible $2\times 2$ representation).
+    \item "Matching the symmetry operations of a molecule with those listed in the top row of the character table will confirm any point group assignment" \parencite[99]{bib:MiesslerFischerTarr}.
+    \item \textbf{Symmetric}: Character of $1$.
+    \item \textbf{Antisymmetric}: Character of $-1$.
+    \item Mulliken symbol rules:
+    \begin{enumerate}
+        \item "Letters are assigned according to the dimension of the irreducible representation" \parencite[99]{bib:MiesslerFischerTarr}.
+        \begin{itemize}
+            \item Assign $A$ if the dimension is 1 and the representation is symmetric to the principal rotation operation ($\chi(C_n)=1$).
+            \item Assign $B$ if the dimension is 1 and the representation is antisymmetric to the principal rotation operation ($\chi(C_n)=-1$), or if $\chi(S_{2n})=-1$ even if $\chi(C_n)=1$.
+            \item Assign $E$ if the dimension is 2.
+            \item Assign $T$ if the dimension is 3.
+        \end{itemize}
+        \item "Subscript 1 designates a representation symmetric to a $C_2$ rotation perpendicular to the principal axis, and subscript 2 designates a representation antisymmetric to the $C_2$. If there are no perpendicular $C_2$ axes, 1 designates a representation symmetric to a vertical plane, and 2 designates a representation antisymmetric to a vertical plane" \parencite[100]{bib:MiesslerFischerTarr}.
+        \item "Subscript $g$ designates representations symmetric to inversion, and subscript $u$ designates representations antisymmetric to inversion" \parencite[100]{bib:MiesslerFischerTarr}.
+        \item "Single primes are symmetric to $\sigma_h$ and double primes are antisymmetric to $\sigma_h$ when a distinction between representations is needed ($C_{3h}$, $C_{5h}$, $D_{3h}$, $D_{5h}$)" \parencite[100]{bib:MiesslerFischerTarr}.
+    \end{enumerate}
 \end{itemize}
 
 
