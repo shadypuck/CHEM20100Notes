@@ -1,0 +1,207 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{2}
+
+\begin{document}
+
+
+
+
+\chapter{Introduction to Structure and Bonding}
+\section{Module 11: Quantum chemistry 101}
+\begin{itemize}
+    \item \marginnote{1/27:}We will have a normal class on Friday and hold review sessions at different times where we can ask questions.
+    \item Suggested readings: Nocera Lecture 6, Nocera Lecture 7, MIT OCW quantum mechanics\footnote{Many chemistry courses go too deep into the math and physics of quantum mechanics, which obfuscates the chemistry and confuses us in Dr. Talapin's opinion.}.
+    \item In chemistry, most problems are solved with the time-independent Schr\"{o}dinger equation $\hat{H}\Psi=E\Psi$.
+    \begin{itemize}
+        \item $\Psi$ is the wavefunction; it contains information on movement of the electron and its position.
+        \item $|\Psi(x,y,z)|^2\propto P(x,y,z)$.
+        \item $E$ is an eigenvalue of $\hat{H}$.
+    \end{itemize}
+    \item If we are working with the time-dependent Schr\"{o}dinger equation, we have another variable besides $x,y,z$, namely $t$. This allows us to calculate the probability that an electron is in a certain position at a given time.
+    \item The Hamiltonian operator $\hat{H}=\hat{T}+\hat{V}$ describes the total energy.
+    \begin{itemize}
+        \item $\hat{T}$ is the kinetic energy operator. $\hat{T}=\frac{\hat{p}^2}{2m}$, where $\hat{p}_x=-i\hbar\dv{x}$ is the momentum operator.
+        \item $\hat{V}$ is the potential energy operator. It typically describes the Coulombic attraction between the nucleus and the electron, which is approximately $\frac{1}{r}$ where $r$ is the distance from the nucleus to the electron.
+    \end{itemize}
+    \item For a free electron in one dimension, the Schr\"{o}dinger equation reduces to
+    \begin{align*}
+        -\frac{\hbar^2}{2m}\dv[2]{\Psi}{x} &= E\Psi\\
+        \dv[2]{\Psi}{x} &= -\frac{2mE}{\hbar^2}\Psi
+    \end{align*}
+    \item Dirac's bra-ket notation $\ev{A}{\Psi}\equiv\int_V\Psi^*\hat{H}\Psi\dd{x}\dd{y}\dd{z}$.
+    \begin{itemize}
+        \item The \textbf{bra vector} (the first term inside the brackets) and \textbf{ket vector} (the last term inside the brackets) correspond to complex conjugates of the wave function.
+    \end{itemize}
+    \item \textbf{LCAO method}: A way of finding the wavefunction of a molecule; of solving the Schr\"{o}dinger equation after applying simplifications. Short for \underline{l}inear \underline{c}ombination of atomic wavefunctions, i.e., the \underline{a}tomic \underline{o}rbitals $\phi$.
+    \begin{equation*}
+        \Psi = \sum_ic_i\phi_i
+    \end{equation*}
+    \begin{itemize}
+        \item Each $c_i$ is a coefficient, and the atomic orbitals form the basis set.
+        \item Basically, we think of the wave function of a molecule as a linear combination of its atomic orbitals.
+        \item $\phi$ is normalized, thus $\int\phi_i^2\dd{\tau}=1$ where $\dd{\tau}=\partial x\, \partial y\, \partial z$.
+        \item Continuing, we can calculate the expected value of $\hat{H}$:
+        \begin{equation*}
+            E = \frac{\int\Psi\hat{H}\Psi\dd{\tau}}{\int\Psi^2\dd{\tau}}
+        \end{equation*}
+        \item Shortcomings: Does not count for electron correlation and a few other things.
+    \end{itemize}
+    \item Electronic structure of \ce{H2} molecule.
+    \begin{itemize}
+        \item \ce{H2}'s structure is \ce{H-H}.
+        \item $\Psi=a\phi_1+b\phi_2$, where $\phi_{1,2}$ are two atomic hydrogen $1s$ orbitals.
+        \item The electron density function is: $\phi^2=a^2\phi_1^2+b^2\phi_2^2+2ab\phi_1\phi_2$.
+        \item By symmetry of \ce{H-H} molecule, $a=\pm b$.
+        \begin{itemize}
+            \item Symmetry of the coefficients should reflect symmetry of the atoms.
+            \item Hydrogen atoms are indistinguishable, so since the electron can't identify which atom it corresponds to, the math shouldn't either.
+        \end{itemize}
+        \item If $S=\int_\tau\phi_1\phi_2\dd{\tau}$ or $\bra{\phi_1}\ket{\phi_2}$ is the overlap integral between two hydrogen $1s$ orbitals, we have bonding and antibonding orbitals:
+        \begin{align*}
+            \Psi_b &= \frac{1}{\sqrt{2(1+s)}}(\phi_1+\phi_2)&
+                \Psi_a &= \frac{1}{\sqrt{2(1-s)}}(\phi_1-\phi_2)
+        \end{align*}
+        \begin{itemize}
+            \item The first orbital is $\sigma_g$ bonding.
+            \item The second orbital is $\sigma_u^*$ antibonding.
+            \item Introducing the normalizing requirement gives us the above coefficients.
+        \end{itemize}
+        \item In the H\"{u}ckel theory:
+        \begin{align*}
+            \alpha &= \ev{\hat{H}_\text{eff}}{\phi_1} = \ev{\hat{H}_\text{eff}}{\phi_2}&
+                \beta &= \mel{\phi_1}{\hat{H}_\text{eff}}{\phi_2}
+        \end{align*}
+        \begin{itemize}
+            \item If we calculate the expectation integrals, we will arrive at the above.
+            \item $\hat{H}_\text{eff}$ is some effective Hamiltonian.
+            \item The $\alpha$ integral is the \textbf{Coulomb integral}.
+            \item The $\beta$ integral is the \textbf{interaction integral}.
+        \end{itemize}
+        \item In the \textbf{H\"{u}ckel approximation} (the simplest approximation of quantum mechanics), we define integrals as parameters that we can extract from empirical data:
+        \begin{itemize}
+            \item $H_{ii}=\alpha$.
+            \item $H_{ij}=0$ for $\phi_i$ not adjacent to $\phi_j$.
+            \item $H_{ij}=\beta$ for $\phi_i$ adjacent to $\phi_j$.
+            \item $S_{ii}=1$.
+            \item $S_{ij}=0$.
+        \end{itemize}
+        \item Expectation values for energy are
+        \begin{equation*}
+            E_{a,b} = \frac{\ev{\hat{H}_\text{eff}}{\Psi_{a,b}}}{\bra{\Psi_{a,b}}\ket{\Psi_{a,b}}}
+        \end{equation*}
+        so
+        \begin{align*}
+            E_a &= \frac{\alpha-\beta}{1-s}&
+                E_b &= \frac{\alpha+\beta}{1+s}
+        \end{align*}
+        \begin{itemize}
+            \item Note that $\beta<0$ for atomic $s$-orbitals and $\beta>0$ for $p$-orbitals for $\sigma$-bonds.
+            \item Also, in the H\"{u}ckel one-electron model, the integrals $\alpha$ and $\beta$ remain unsolved.
+        \end{itemize}
+        \item Note: As always, the bonding orbitals are less stabilized than the antibonding orbitals are destabilized.
+        \begin{itemize}
+            \item This is a consequence of overlap, e.g., for a dimer, the $1\pm S$ term in $E_{+/-}=\frac{\alpha\pm\beta}{1\pm S}$.
+            \item This is why \ce{He2} does not exist.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Overlap integral}: An integral proportional to the degree of spatial overlap between two orbitals. It is the product of wave functions centered on different lattice sites. Varies from 0 (no overlap) to 1 (perfect overlap). \emph{Also known as} $\bm{S}$.
+    \item \textbf{Coulomb integral}: An integral giving the kinetic and potential energy of an electron in an atomic orbital experiencing interactions with all the other electrons and all the positive nuclei. \emph{Also known as} $\bm{\alpha}$.
+    \item \textbf{Interaction integral} (on two orbitals 1,2): An integral giving the energy of an electron in the region of space where orbitals 1 and 2 overlap. The value is finite for orbitals on adjacent atoms, and assumed to be zero otherwise. \emph{Also known as} $\bm{\beta_{12}}$, \textbf{resonance integral}, \textbf{exchange integral}.
+    \item Symmetry and quantum mechanics:
+    \begin{itemize}
+        \item Say we have $\hat{H}\Psi=E\Psi$ where $\hat{H}$ is the Hamiltonian and $R$ is a symmetry operator (e.g., $C_2$ or $\sigma_v$).
+        \item Note that the Hamiltonian commutes with the symmetry operator: $R\hat{H}=\hat{H}R$.
+        \item Since a symmetry operation does not change the energy of a molecule (it just moves it), $\hat{H}R\Psi_i=E_iR\Psi_i$.
+        \item It follows that $R$ does not change the form of the wave function, i.e., $R\Psi_i=\pm 1\Psi_i$. This reflects the fact that $R$ cannot change the probability $P[e(x,y,z)]=|\Psi(x,y,z)|^2$ of finding an electron somewhere.
+        \item Thus, the eigenfunctions of the Schr\"{o}dinger equation generate a representation of the group.
+        \item Non-degenerate wave functions are $A$ or $B$ type.
+        \item Double-degenerate wave functions are $E$ type.
+        \item Triple-degenerate wave functions are $T$ type.
+    \end{itemize}
+    \item Back to the LCAO method:
+    \begin{align*}
+        E_i &= \frac{\int\Psi_i^*H\Psi_i\dd{V}}{\int\Psi_i^*\Psi_i\dd{V}}&
+            \Psi_i &= \sum_ic_i\phi_i
+    \end{align*}
+    \begin{itemize}
+        \item If we have a sizeable molecule with a couple dozen atoms, every molecular orbital (wave function) will be the sum of a couple dozen atomic orbitals.
+        \item This generates a set of $i$ linear homogenous equations, numbering in the hundreds or thousands that need to be solved.
+        \item This is clearly too computationally expensive, so we need a trick.
+    \end{itemize}
+    \item An example where symmetry arguments help a lot:
+    \begin{itemize}
+        \item If $f$ is odd ($f(x)=-f(-x)$), then we know that $\int_{-\infty}^\infty f(x)\dd{x}=0$.
+    \end{itemize}
+    \item Group theory allows us to generalize this method to broader symmetry operations.
+    \item Three important theorems:
+    \begin{enumerate}
+        \item The characters of the representation of a direct product are equal to the products of the characters of the representations based on the individual sets of functions.
+        \begin{itemize}
+            \item For example, in the $T_d$ point group, $T_1=(3,0,-1,1,-1)$, and $T_2=(3,0,-1,-1,1)$. By the theorem, $T_1\times T_2=(9,0,1,-1,-1)$.
+        \end{itemize}
+        \item A representation of a direct product, $\Gamma_c=\Gamma_a\times\Gamma_b$, will contain the totally symmetric representation only if the irreducible representations of $a$ and $b$ contain at least one common irreducible representation.
+        \begin{itemize}
+            \item Continuing with the above example, $T_1\times T_2$ can be decomposed into $A_2+E+T_1+T_2$. Thus, by this theorem, if we take the product $\Gamma_c=E\times T_1\times T_2$, the representation will contain the totally symmetric representation $A_1$ (since $\Gamma_b=E$ and $\Gamma_a=T_1\times T_2$ both contain $E$). Indeed, $E\times T_1\times T_2=(18,0,2,0,0)$.
+        \end{itemize}
+        \item The value of any integral relating to a molecule $\int_V\Psi\dd{\tau}$ will be zero unless the integrand is invariant under all operations of the symmetry point group to which the molecule belongs. That is $\Gamma_\Psi$ must contain the totally symmetric irreducible representation.
+        \begin{itemize}
+            \item This example will concern the $D_{4d}$ point group. We want to evaluate the integral $\int_V\Psi_a\mu_z\Psi_b\dd{\tau}$ where $\Gamma_{\Psi_a}=A_1$, $\Gamma_{\mu_z}=B_2$, and $\Gamma_{\Psi_b}=E_1$.
+            \item By Theorem 1, we can easily determine the representation $\Psi_a\times\mu_z$. We can then decompose it.
+            \item Noting that it does not contain the $E_1$ irreducible representation (the only representation in $\Psi_b$), we can learn from Theorem 2 that $\Psi_a\mu_z\Psi_b$ does not contain the $A_1$ irreducible representation.
+            \item Therefore, by Theorem 3, $\int_V\Psi\dd{\tau}=\int_V\Psi_a\mu_z\Psi_b\dd{\tau}=0$.
+        \end{itemize}
+    \end{enumerate}
+    \item We use these three theorems to tell us what integrals will be zero in a much less computationally intensive fashion. We can then evaluate the remaining nonzero integrals.
+    \item We can take direct products by hand, but there are also tables of direct products of irreducible representations.
+\end{itemize}
+
+
+
+\section{Module 12: IR and Raman active vibrations (part 2)}
+\begin{itemize}
+    \item \textbf{Fermi's golden rule}: The rate of an optical transition from a single initial state to a final state is given by the transition rate for a single state.
+    \begin{equation*}
+        \Gamma_{i\to f} = \frac{2\pi}{\hbar}E_0^2|\mel{f}{H'}{i}|^2\delta(E_f-E_i-h\nu)
+    \end{equation*}
+    \begin{itemize}
+        \item By state, we typically mean energy level.
+        \item The transition rate is the probability of a transition happening.
+        \item If it's an optical transition, conservation of energy implies that the energy difference between the initial and final state will equal the energy of the photon that the molecule absorbs or emits.
+        \item $E_0^2$ is the light intensity.
+        \item $h\nu$ is the photon energy.
+        \item $\mel{f}{H'}{i}=\int\Psi_f^*H'\Psi_i\dd{\tau}$ is the square of the matrix element (the strength of the coupling between the states).
+        \item $\delta(E_f-E_i-h\nu)$ is the resonance condition (energy conservation).
+        \item In the dipole approximation, $H'=-e\vec{r}\cdot\vec{E}$.
+        \item This is derived with time-dependent perturbation theory.
+        \begin{itemize}
+            \item The matrix element $M=\mel{f}{H'}{i}=\int\Psi_f^*(\vec{r})H'\Psi_i(\vec{r})\dd[3]{\vec{r}}$.
+            \item Perturbation: $H'=-\vec{p}_e\cdot\vec{E}_\text{photon}$. Dipole moment: $\vec{p}_e=-e\vec{r}$. Light wave: $\vec{E}_\text{photon}(r)=\vec{E}_0\e[\pm i\vec{k}\cdot\vec{r}]$, $H'(\vec{r})=e\vec{E}_0\cdot\vec{r}\e[\pm i\vec{k}\cdot\vec{r}]$.
+            \item This implies that in one dimension, $|M|\propto\int\Psi_f^*(\vec{r})x\Psi_i(\vec{r})\dd[3]{\vec{r}}$.
+            \item We include other variables in higher dimensions.
+        \end{itemize}
+    \end{itemize}
+    \item For IR absorption, the intensity $I$ satisfies $I\propto\int\Psi_\text{e.s.}\hat{\mu}_e\Psi_\text{g.s.}\dd{\tau}$.
+    \begin{itemize}
+        \item $\Psi_\text{e.s.}$ is the excited state wavefunction, $\Psi_\text{g.s.}$ is the ground state wavefunction, and $\hat{\mu}_e$ is the dipole operator.
+        \item We now apply the three theorems:
+        \item It is always true in vibration spectroscopy that $\Gamma_\text{g.s.}=A_1$. This is because in the ground state, the molecule is completely relaxed (nothing is perturbed).
+        \item Thus, we can already reduce to $\Gamma_\text{e.s.}\cdot\Gamma_\mu\cdot\Gamma_\text{g.s.}=\Gamma_\text{e.s.}\cdot\Gamma_\mu\cdot 1$.
+        \item Now $\Gamma_\mu$ transforms as $x,y,z$ unit vectors. In $D_{3h}$, this implies that $\Gamma_\mu=E'+A_2''$.
+        \item Therefore, $I\propto\Gamma_\text{vibs}\cdot(E'+A_2'')$.
+        \item For \ce{PF5}, since $\Gamma_\text{vibs}=2A_1'+3E'+2A_2''+E''$ has $E'$ and $A_2''$ in common with $\Gamma_\mu$, only $3E'$ and $2A_2''$ are IR active.
+        \begin{itemize}
+            \item Additionally, with elements in common, $\Gamma_\text{vibs}\cdot\Gamma_\mu$ will contain $A_1$ by Theorem 2, and thus, the integrals $\int\Psi_\text{e.s.}x\Psi_\text{g.s.}\dd{\tau}$, $\int\Psi_\text{e.s.}y\Psi_\text{g.s.}\dd{\tau}$, and $\int\Psi_\text{e.s.}z\Psi_\text{g.s.}\dd{\tau}$ are all nonzero. Some linear combination of them will be proportional to $I$.
+        \end{itemize}
+    \end{itemize}
+    \item The exam will include material from today's class, but not Friday's class.
+    \item PSets 1 and 2 will cover all material on the exam?
+\end{itemize}
+
+
+
+
+\end{document}
