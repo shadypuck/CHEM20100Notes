@@ -15,11 +15,13 @@
 \begin{itemize}
     \item \marginnote{1/13:}He will upload lecture slides in advance in the future.
     \item An object is symmetric if one part is the same as other parts.
-    \item The symmetry of discrete objects is described using \textbf{Point Symmetry}.
+    \item The symmetry of discrete objects is described using \textbf{point symmetry}.
     \item \textbf{Point groups} ($\sim 32$ for molecules) provide us with a way to indicate the symmetry unambiguously.
-    \item Point groups have symmetry about a single point at the center of mass of the system.
+    \begin{itemize}
+        \item These have symmetry about a single point at the center of mass of the system.
+    \end{itemize}
     \item Extended objects (e.g., crystals) have \textbf{translational symmetry} described by \textbf{Space groups}\footnote{Not covered in this course.} (230 total).
-    \item Reading: \textcite{bib:MiesslerFischerTarr} Chapter 4 and \url{https://en.wikipedia.org/wiki/Molecular_symmetry}.
+    \item Readings: \textcite{bib:MiesslerFischerTarr} Chapter 4 and \url{https://en.wikipedia.org/wiki/Molecular_symmetry}.
     \item \textbf{Symmetry elements}: Geometric entities about which a \textbf{symmetry operation} can be performed. In a point group, all symmetry elements must pass through the center of mass (the point).
     \item \textbf{Symmetry operation}: The action that produces an object identical to the initial object.
 \end{itemize}
@@ -226,7 +228,7 @@
             \item $\sigma_v\cdot C_2=\sigma_v'=C_2\cdot\sigma_v$.
             \item The above property (order \emph{does not} matter) shows that $C_{2v}$ is an \textbf{Abelian group}.
         \end{itemize}
-        \item \ce{NH3} is of the $C_{2v}$ point group.
+        \item \ce{NH3} is of the $C_{3v}$ point group.
         \begin{itemize}
             \item Symmetry operations: $E$, ${C_3}^+$, ${C_3}^-$, $\sigma_v$, $\sigma_v'$, and $\sigma_v''$.
             \item $\sigma_v''\cdot C_3=\sigma_v$, but $C_3\cdot\sigma_v''={C_3}^-={C_3}^2$.
@@ -449,7 +451,7 @@
     \begin{itemize}
         \item The above matrix is an example of a block-diagonal matrix.
     \end{itemize}
-    \item Irreducible representations are the ones where the matrices have the most block-diagonalized form that they can.
+    \item Irreducible representations are the corresponding blocks within a set of block-diagonalized matrices representing each operation in a group.
 \end{itemize}
 
 
@@ -491,10 +493,10 @@
             };
     
             \footnotesize
-            \draw [decorate,decoration=brace] (-3.9,1.2) -- node[above,text width=1cm,align=center]{Group Symbol} ++(0.6,0);
-            \draw [decorate,decoration=brace] (-2.9,1.2) -- node[above]{Symmetry Elements} ++(3.9,0);
-            \draw [decorate,decoration={brace,mirror}] (-3.9,0.6) -- node[left,text width=1.5cm,align=center]{Irreducible Representations} ++(0,-1.7);
-            \draw [decorate,decoration={brace,mirror}] (-2.9,-1.3) -- node[below]{Characters} ++(3.9,0);
+            \draw [decorate,decoration=brace] (-4,1.2) -- node[above,text width=1cm,align=center]{Group Symbol} ++(0.6,0);
+            \draw [decorate,decoration=brace] (-3,1.2) -- node[above]{Symmetry Elements} ++(3.9,0);
+            \draw [decorate,decoration={brace,mirror}] (-4,0.6) -- node[left,text width=1.5cm,align=center]{Irreducible Representations} ++(0,-1.7);
+            \draw [decorate,decoration={brace,mirror}] (-3,-1.3) -- node[below]{Characters} ++(3.9,0);
             \draw [decorate,decoration={brace,mirror}] (1.3,-1.3) -- node[below]{Basis Functions} ++(2.6,0);
         \end{tikzpicture}
         \caption{A character table.}
@@ -520,7 +522,7 @@
         \item Superscript $'$: symmetric ($+$) under $\sigma_h$ (if no $i$).
         \item Superscript $''$: anti-symmetric ($-$) under $\sigma_h$ (if no $i$).
     \end{itemize}
-    \item Don't mistake the operation $E$ for the Mulliken symbol $E$!
+    \item Don't mistake the operation $E$ for the Mulliken symbol $E$.
     \item To assign Mulliken symbols, use the character table.
     \begin{itemize}
         \item Assigning the main letter:
@@ -575,7 +577,7 @@
         \item $p_x$ transforms as $B_1$.
         \item $p_x$ has the same symmetry as $B_1$.
         \item $p_x$ forms a basis for the $B_1$ irreducible representation.
-        \item $p_x$ is $B_1$ because (see Table \ref{tab:WaveFunctionsAngular-H} and Figure \ref{fig:characterTable}) it does not change under $E$, it inverts under $C_2$, it does not change under $\sigma_v(xz)$, and it inverts under $\sigma_v'(yz)$.
+        \item $p_x$ is $B_1$ because (see Table \ref{tab:WaveFunctionsAngular-H} and Figure \ref{fig:characterTable}) it does not change under $E$, it inverts under $C_2$, it does not change under $\sigma_v(xz)$, and it inverts under $\sigma_v'(yz)$ (note that the $C_2$ axis is the $z$-axis, not the $x$-axis).
     \end{itemize}
     \item We can apply the same procedure to other more complex functions.
     \begin{itemize}
@@ -596,7 +598,6 @@
     \begin{enumerate}
         \item The characters of all matrices belonging to the operations in the same class are identical in a given irreducible representation.
         \begin{itemize}
-            \item As such, we form \textbf{classes} of operations.
             \item We most commonly form a \textbf{rotational class} and a \textbf{reflection class}.
         \end{itemize}
         \item The number of irreducible representations in a group is equal to the number of classes of that group.
@@ -650,7 +651,7 @@
     \end{equation*}
     where each $\Gamma_i$ is an irreducible representation of the group and $a_i$ is a real scalar.
     \begin{itemize}
-        \item Basically, a reducible representation is any nontrivial linear combination of irreducible representations.
+        \item Basically, a reducible representation is any linear combination of irreducible representations.
         \item For example, with respect to the $C_{2v}$ point group (see Figure \ref{fig:characterTable}), $\Gamma=(7,1,5,3)=4A_1+2B_1+B_2$ is a reducible representation.
     \end{itemize}
     \item We may "factor" reducible representations by inspection, or by the\dots
@@ -974,7 +975,7 @@
     \item To differentiate between stretching and bending modes: Look at how the stretching modes transform. Each stretch happens along a single vector from central atom to ligand. Thus, if we let these vectors be our basis and look at how many vectors stay the same ($+1$) or change ($-1$) under each operation, we will have a reducible representation that can be decomposed. Its components will be the stretching modes and $\Gamma_\text{vibs}-\Gamma_\nu$ will equal $\Gamma_\delta$.
     \begin{itemize}
         \item Applied to \ce{PF5}, we have $\Gamma_\nu=(5,2,1,3,0,3)=2A_1'+E'+A_2''$.
-        \item Thus, both $A_1'$ representations, one $E'$ representation, and one $A_2''$ representation correspond to stretching modes. Consequently, the other two $E'$ representations, the other $A_2''$ representation, and the $E''$ representation correspond to bending modes.
+        \item Thus, both $A_1'$ representations, one $E'$ representation, and one $A_2''$ representation correspond to stretching modes (or [spectroscopic] bands; note that the $E'$ band will be twice as large). Consequently, the other two $E'$ representations, the other $A_2''$ representation, and the $E''$ representation correspond to bending modes.
     \end{itemize}
 \end{itemize}
 
@@ -982,7 +983,7 @@
 
 \section{Module 10: IR and Raman Active Vibrations (part 1)}
 \begin{itemize}
-    \item Today, we will learn what we need to know for PSet 2. Tomorrow, we will introduce a more rigorous, quantum mechanical foundation.
+    \item Today, we will learn what we need to know for PSet 2. Wednesday, we will introduce a more rigorous, quantum mechanical foundation.
     \item Molecular vibrations can be experimentally observed by \textbf{infrared spectroscopy} or \textbf{Raman spectroscopy}.
     \item \textbf{Infrared spectroscopy}: A method of measuring the change in dipole moment during a vibration\footnote{Refer to \textcite{bib:APChemNotes}, specifically the discussion of spectroscopy in Chapter 13.}. \emph{Also known as} \textbf{IR spectroscopy}.
     \item \textbf{Raman spectroscopy}: A method of measuring the change in the polarizability during a vibration. We impinge upon a sample of a substance with an incident light (a powerful laser). Most of the light that scatters will be a \textbf{Raleigh scatter}, but some will be a \textbf{Raman scatter} (a new wavelength).
@@ -1011,11 +1012,11 @@
     \begin{itemize}
         \item For example, the $C_3$ rotation axis of \ce{CHCl3} is \textbf{coincident} with the \ce{C-H} bond axis.
     \end{itemize}
-    \item Snowflakes, which are often planar and have hexagonal symmetry, have a twofold ($C_2$), threefold ($C_3$), and sixfold ($C_6$) axis through their center and perpendicular to their plane.
+    \item Snowflakes, which are often planar and have hexagonal symmetry, have a twofold ($C_2$), threefold ($C_3$), and sixfold ($C_6$) axis through their center and perpendicular to their plane (see Figure \ref{fig:snowflakeRotation}).
     \begin{itemize}
         \item Rotations ${C_3}^2$ and ${C_6}^5$ are also symmetry operations.
     \end{itemize}
-    \begin{figure}[h!]\marginnote{1/19:}
+    \begin{figure}[h!]
         \centering
         \begin{subfigure}[b]{0.3\linewidth}
             \centering
@@ -1054,7 +1055,7 @@
         \caption{Rotations of a snowflake design.}
         \label{fig:snowflakeRotation}
     \end{figure}
-    \item \marginnote{1/18:}"When necessary, the $C_2$ axes perpendicular to the principal axis are designated with primes; a single prime (${C_2}'$) indicates that the axis passes through several atoms of the molecule, whereas a double prime (${C_2}''$) indicates that it passes between the outer atoms" \parencite[77]{bib:MiesslerFischerTarr}.
+    \item "When necessary, the $C_2$ axes perpendicular to the principal axis are designated with primes; a single prime (${C_2}'$) indicates that the axis passes through several atoms of the molecule, whereas a double prime (${C_2}''$) indicates that it passes between the outer atoms" \parencite[77]{bib:MiesslerFischerTarr}.
     \item \marginnote{1/19:}Even though $S_2\equiv i$ and $S_1\equiv\sigma$, the $i$ and $\sigma$ notations are preferred because of the group theory requirement of maximizing the number of unique classes of symmetry operations associated with a molecule.
     \item \textbf{Point group}: A set of symmetry operations that describes a molecule's overall symmetry.
     \item Alternative steps for assigning point groups:
