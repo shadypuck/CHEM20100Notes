@@ -819,6 +819,38 @@
 
 
 
+\section{Nocera Lecture 3}
+\emph{From \textcite{bib:NoceraLectures}.}
+\begin{itemize}
+    \item \marginnote{1/25:}Corresponding blocks within block-diagonalized matrices obey the same multiplication properties as the block-diagonalized matrices, themselves.
+    \item One basis may not uncover all irreducible representations.
+    \begin{itemize}
+        \item For example, we can use a Cartesian basis to uncover the $A_1$ and $E$ irreducible representations of the $D_3$ point group (see Table \ref{tab:characterTable-D3}) and the basis function $R_z$ ($E:R_z\to R_z$, $C_3:R_z\to R_z$, $\sigma_v:R_z\to \bar{R}_z$) to uncover the $A_2$ irreducible representation.
+    \end{itemize}
+    \item We can also construct a character table algebraically. Continuing with the $D_3$ example\dots
+    \begin{itemize}
+        \item There is one totally symmetric representation $\Gamma_i=(1,1,1)$.
+        \item $h=6=\sum_i[\chi_i(E)]^2$. Since each $\chi_i(E)$ can only be 1, 2, or 3, we know that $\chi_1(E)=\chi_2(E)=1$ and $\chi_3(E)=2$.
+        \item This combines with orthogonality to reveal that
+        \begin{align*}
+            0 &= \sum_{R_c}g_c\chi_1(R_c)\chi_2(R_c)\\
+            &= 1\cdot 1\cdot 1+2\cdot 1\cdot\chi_2(C_3)+3\cdot 1\cdot\chi_2(\sigma_v)\\
+            &= 1+2\chi_2(C_3)+3\chi_2(\sigma_v)
+        \end{align*}
+        i.e., $\Gamma_i=(1,1,-1)$.
+        \item To determine the last representation, we can use two rules and solve as a system of equations.
+        \begin{align*}
+            0 &= \sum_{R_c}g_c\chi_1(R_c)\chi_3(R_c)&
+                6 &= \sum_{R_c}g_c[\chi_3(R_c)]^2\\
+            &= 2+2\chi_3(C_3)+3\chi_3(\sigma_v)&
+                &= 4+2[\chi_3(C_3)]^2+3[\chi_3(\sigma_v)]^2
+        \end{align*}
+        From this, we can determine that $\chi_3(C_3)=-1$ and $\chi_3(\sigma_v)=0$. Therefore, $\Gamma_i=(2,-1,0)$.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{TA Review Session 1}
 \begin{itemize}
     \item \marginnote{1/22:}We also don't need to show the equatorial electron pair in the shape picture.
@@ -1159,38 +1191,6 @@
         \item "In general, a molecule or object is chiral if it has no symmetry operations (other than $E$), or if it has only proper rotation axes" \parencite[100]{bib:MiesslerFischerTarr}.
     \end{itemize}
     \item Raman spectroscopy makes use of higher energy radiation than IR, exciting molecules to higher electronic states that are envisioned as short-lived "virtual" states.
-\end{itemize}
-
-
-
-\section{Nocera Lecture 3}
-\emph{From \textcite{bib:NoceraLecture3}.}
-\begin{itemize}
-    \item \marginnote{1/25:}Corresponding blocks within block-diagonalized matrices obey the same multiplication properties as the block-diagonalized matrices, themselves.
-    \item One basis may not uncover all irreducible representations.
-    \begin{itemize}
-        \item For example, we can use a Cartesian basis to uncover the $A_1$ and $E$ irreducible representations of the $D_3$ point group (see Table \ref{tab:characterTable-D3}) and the basis function $R_z$ ($E:R_z\to R_z$, $C_3:R_z\to R_z$, $\sigma_v:R_z\to \bar{R}_z$) to uncover the $A_2$ irreducible representation.
-    \end{itemize}
-    \item We can also construct a character table algebraically. Continuing with the $D_3$ example\dots
-    \begin{itemize}
-        \item There is one totally symmetric representation $\Gamma_i=(1,1,1)$.
-        \item $h=6=\sum_i[\chi_i(E)]^2$. Since each $\chi_i(E)$ can only be 1, 2, or 3, we know that $\chi_1(E)=\chi_2(E)=1$ and $\chi_3(E)=2$.
-        \item This combines with orthogonality to reveal that
-        \begin{align*}
-            0 &= \sum_{R_c}g_c\chi_1(R_c)\chi_2(R_c)\\
-            &= 1\cdot 1\cdot 1+2\cdot 1\cdot\chi_2(C_3)+3\cdot 1\cdot\chi_2(\sigma_v)\\
-            &= 1+2\chi_2(C_3)+3\chi_2(\sigma_v)
-        \end{align*}
-        i.e., $\Gamma_i=(1,1,-1)$.
-        \item To determine the last representation, we can use two rules and solve as a system of equations.
-        \begin{align*}
-            0 &= \sum_{R_c}g_c\chi_1(R_c)\chi_3(R_c)&
-                6 &= \sum_{R_c}g_c[\chi_3(R_c)]^2\\
-            &= 2+2\chi_3(C_3)+3\chi_3(\sigma_v)&
-                &= 4+2[\chi_3(C_3)]^2+3[\chi_3(\sigma_v)]^2
-        \end{align*}
-        From this, we can determine that $\chi_3(C_3)=-1$ and $\chi_3(\sigma_v)=0$. Therefore, $\Gamma_i=(2,-1,0)$.
-    \end{itemize}
 \end{itemize}
 
 
