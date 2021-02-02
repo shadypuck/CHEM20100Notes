@@ -443,6 +443,339 @@
 
 
 
+\section{Module 13: Why Molecular Orbitals?}
+\begin{itemize}
+    \item Note that in the point group flow chart, there is no $D_{nv}$; only $D_{nd}$.
+    \item We will not need LCAO for the exam tomorrow.
+    \item The exam covers Modules 1-12.
+    \item \textcite{bib:Lewis} first proposed that bonds came form interpenetrability of electron density.
+    \item The next step came from Linus Pauling, who proposed valence bond theory.
+    \begin{itemize}
+        \item In order to account for polarity of the bond, he created a term that described the probability that both electrons bond to one atom.
+    \end{itemize}
+    \item A new approach then emerged from Robert Mulliken, Friedrich Hund, and Clemens C.J. Roothaan. All three men worked at UChicago!
+    \begin{itemize}
+        \item Mulliken is mainly credited for the development of MO theory.
+        \item Roothaan retired, found retirememt boring, moved to Palo Alto and was key in the development of computer processors.
+    \end{itemize}
+    \item Molecular orbital theory:
+    \begin{itemize}
+        \item Atomic orbitals of different atoms combine to create molecular orbitals.
+        \item The number of atomic orbitals equals the number of molecular orbitals.
+        \item Electrons in these molecular orbitals are shared by the molecule as a whole.
+        \item Molecular orbitals can be constructed from LCAO.
+        \begin{itemize}
+            \item For diatomic molecules: $\Psi=c_a\Psi_a+c_b\Psi_b$.
+        \end{itemize}
+    \end{itemize}
+    \item There is no such think as a chemical bond (this model is only intuitively helpful), only molecular orbitals!
+    \item \textbf{Bonding} (orbital): An orbital that has most of the electron density between the two nuclei.
+    \item \textbf{Anti-bonding} (orbital): An orbital that has a node between the two nuclei.
+    \item \textbf{Nonbonding} (orbital): An orbital that is essentially the same as if it was only one nuclei.
+    \item We find the energy of electronic states using theoretical calculations that we test with photoelectron spectroscopy\footnote{Refer to \textcite{bib:APChemNotes}, specifically Figure 7.20 and the accompanying discussion.}.
+    \item \textbf{Photoelectron spectroscopy}: A photo-ionization and energy-dispersive analysis of the emitted photoelectrons to study the composition and electronic state of a sample. \emph{Also known as} \textbf{PES}.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \draw [very thick,grx] (0,0) -- node[pos=0.3,circle,fill]{} node[pos=0.7,circle,fill]{} ++(2,0) node[right,black]{Core Level};
+                \draw [very thick,gry] (0,3) -- ++(2,0) node[right,black]{Vacuum Level};
+                
+                \draw [thick,-stealth] (-2.5,2) -- node[above=1mm,black]{$h\nu$} (-1,0.8);
+            \end{tikzpicture}
+            \caption{Initial state.}
+            \label{fig:PES-atomica}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \draw [very thick,grx] (0,0) node[left,black]{Core Level} -- node[pos=0.3,circle,draw,thin]{} node[pos=0.3,circle,fill,yshift=3.7cm]{} node[pos=0.7,circle,fill]{} ++(2,0);
+                \draw [very thick,gry] (0,3) node[left,black]{Vacuum Level} -- ++(2,0);
+    
+                \draw [->]  (2.5,0) -- node[right]{BE} ++(0,3);
+                \draw [->]  (2.5,3.1) -- node[right]{KE} ++(0,0.6);
+                \draw [<->] (3.3,0) -- node[right]{$h\nu$} ++(0,3.7);
+            \end{tikzpicture}
+            \caption{Final state.}
+            \label{fig:PES-atomicb}
+        \end{subfigure}
+        \caption{Photoelectron spectroscopy at an atomic level.}
+        \label{fig:PES-atomic}
+    \end{figure}
+    \begin{itemize}
+        \item A sample (solid, liquid, or gas) is impinged upon by to a focused beam of X-rays (say of $\SI{1.5}{\kilo\volt}$).
+        \item When the sample is exposed to the X-rays, electrons fly out of the sample. The KE of these electrons can be measured.
+        \item Essentially, $h\nu$ takes an electron from the core level to above the vacuum level. We know $h\nu$ and we measure $KE_\text{electron}$, allowing us to calculate the bonding energy of the electron: $h\nu=I_\text{BE}+E_\text{kinetic}$ (see Figure \ref{fig:PES-atomic}).
+    \end{itemize}
+    \item \textbf{X-ray photoelectron spectroscopy}: Using soft (200-2000 eV) x-ray excitation (photons in the x-ray energy range) to examine core levels. \emph{Also known as} \textbf{XPS}.
+    \item \textbf{Ultraviolet photoelectron spectroscopy}: Using vacuum UV (10-45 eV) radiation (photons is in UV energy range) from discharge lamps to examine valence levels. \emph{Also known as} \textbf{UPS}.
+    \item If we apply PES to \ce{O2}, we get counts that correspond to molecular orbitals $\pi_g^*$, $\pi_u$, $\sigma_g$, and $\sigma_u^*$.
+    \item Photoelectron spectrum of \ce{H2O}:
+    \begin{itemize}
+        \item Pauling's theory suggest that the lone pairs should have equal energy greater than the equal energy of the bonds.
+        \item However, PES reveals that the lone pairs have two different energies. This is a nail in the coffin of Pauling's valence bond theory.
+    \end{itemize}
+    \item PES of \ce{CH4}:
+    \begin{itemize}
+        \item There are two states; one with degeneracy 3 and one with degeneracy 1.
+        \item We have 3 bonds of one energy and 1 with another.
+        \item Another nail in the coffin.
+    \end{itemize}
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-picturea.png}
+            \caption{HOMO actual.}
+            \label{fig:MO-picturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-pictureb.png}
+            \caption{LUMO actual.}
+            \label{fig:MO-pictureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-picturec.png}
+            \caption{Atomic structure actual.}
+            \label{fig:MO-picturec}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-pictured.png}
+            \caption{HOMO prediction.}
+            \label{fig:MO-pictured}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-picturee.png}
+            \caption{LUMO prediction.}
+            \label{fig:MO-picturee}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/MO-picturef.png}
+            \caption{Atomic structure prediction.}
+            \label{fig:MO-picturef}
+        \end{subfigure}
+        \caption{Correspondence between MO predictions and scanning tunnelling microscopy.}
+        \label{fig:MO-picture}
+    \end{figure}
+    \item Can one "see" molecular orbitals? With a scanning tunneling microscope, we can "see" pentatene (5 linearly fused benzene rings). The correspondence between the pictures and MO theory's predictions is impressive (see Figure \ref{fig:MO-picture}).
+\end{itemize}
+
+
+
+\section{Module 14: Constructing Molecular Orbitals (Part 1)}
+\begin{itemize}
+    \item Bonding: $\Psi_\sigma=\Psi_+=\frac{1}{\sqrt{2}}(\psi_{1s_a}+\psi_{1s_b})$.
+    \item Anti-bonding: $\Psi_{\sigma^*}=\Psi_-=\frac{1}{\sqrt{2}}(\psi_{1s_a}-\psi_{1s_b})$.
+    \begin{itemize}
+        \item Addition doesn't necessarily correlate to bonding and subtraction to anti-bonding.
+    \end{itemize}
+    \item With simple orbitals, we can combine orbitals by inspection.
+    \begin{itemize}
+        \item However, we will learn to build molecular orbitals for much more complicated molecular orbitals, such as those of ferrocene (\ce{Fe(C5H5)2}).
+    \end{itemize}
+    \item Degree of orbital overlap/mixing depends on:
+    \begin{enumerate}
+        \item Energy of the orbitals (the closer the energy, the more mixing; when the energies differ greatly, the reduction energy due to bonding is insignificant).
+        \item Spatial proximity (the atoms must be close enough that there is \emph{reasonable} orbital overlap, but not so close that repulsive forces interfere).
+        \item Symmetry (atomic orbitals mix if they have similar symmetries; regions with the same sign of $\Psi$ overlap).
+    \end{enumerate}
+    \item The strength of the bond depends upon the degree of orbital overlap.
+    \item For heteronuclear molecules:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.8]
+                \footnotesize
+                \draw [ultra thick]
+                    (-2.3,0) -- node[below=1.62cm]{\ce{A}} (-1.5,0)
+                    (1.5,0) -- node[below=1.62cm]{\ce{A}} (2.3,0)
+                    (-0.4,-2) -- node[below]{\ce{A-A}} (0.4,-2)
+                    (-0.4,3) -- (0.4,3)
+                ;
+    
+                \draw [grx,thick,densely dashed]
+                    (-1.5,0) -- (-0.4,-2)
+                    (-1.5,0) -- (-0.4,3)
+                    (1.5,0) -- (0.4,-2)
+                    (1.5,0) -- (0.4,3)
+                ;
+            \end{tikzpicture}
+            \caption{Equal energies.}
+            \label{fig:orbitalEnergyCombinationsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.8]
+                \footnotesize
+                \draw [ultra thick]
+                    (-2.3,0.8) -- node[below=2.25cm]{\ce{A}} (-1.5,0.8)
+                    (1.5,-0.3) -- node[below=1.37cm]{\ce{B}} (2.3,-0.3)
+                    (-0.4,-2) -- node[below]{\ce{A-B}} (0.4,-2)
+                    (-0.4,3) -- (0.4,3)
+                ;
+    
+                \draw [grx,thick,densely dashed]
+                    (-1.5,0.8) -- (-0.4,-2)
+                    (-1.5,0.8) -- (-0.4,3)
+                    (1.5,-0.3) -- (0.4,-2)
+                    (1.5,-0.3) -- (0.4,3)
+                ;
+            \end{tikzpicture}
+            \caption{Unequal energies.}
+            \label{fig:orbitalEnergyCombinationsb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.8]
+                \footnotesize
+                \draw [ultra thick]
+                    (-2.3,2) -- node[below=3.2cm]{\ce{A}} (-1.5,2)
+                    (1.5,-1) -- node[below=0.8cm]{\ce{B}} (2.3,-1)
+                    (-0.4,-2) -- node[below]{\ce{A-B}} (0.4,-2)
+                    (-0.4,3) -- (0.4,3)
+                ;
+    
+                \draw [grx,thick,densely dashed]
+                    (-1.5,2) -- (-0.4,-2)
+                    (-1.5,2) -- (-0.4,3)
+                    (1.5,-1) -- (0.4,-2)
+                    (1.5,-1) -- (0.4,3)
+                ;
+            \end{tikzpicture}
+            \caption{Very unequal energies.}
+            \label{fig:orbitalEnergyCombinationsc}
+        \end{subfigure}
+        \caption{Combining orbitals of varying energies.}
+        \label{fig:orbitalEnergyCombinations}
+    \end{figure}
+    \begin{itemize}
+        \item The bonding orbital(s) will reside predominantly on the atom of lower orbital energy (the more electronegative atom).
+        \item The anti-bonding orbital(s) will reside predominantly on the atom with greater orbital energy (the less electronegative atom).
+    \end{itemize}
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            xscale=0.52,yscale=0.15,
+            pointr/.style={circle,draw,fill=white,thin,inner sep=2pt,label={[xshift=-2pt,yshift=-2pt]85:\ce{#1}}},
+            pointa/.style={circle,draw,fill=white,thin,inner sep=2pt,label={[xshift=4pt,yshift=-2pt]90:\ce{#1}}}
+        ]
+            \small
+            \draw (0,0) -- (20,0) -- (20,-50) -- node[below=7mm]{Atomic number} (0,-50) -- node[rotate=90,left=1.3cm,anchor=center]{Potential energy (eV)} cycle;
+            \footnotesize
+            \foreach \x in {0,5,...,20} {
+                \draw (\x,-50) -- ++(0,-1.3) node[below]{$\x$};
+            }
+            \foreach \y in {0,-10,...,-50} {
+                \draw (0,\y) -- ++(-0.4,0) node[left]{$\y$};
+            }
+    
+            \foreach \val/\atom [count=\x from 2,remember=\x as \lastx (initially 1),remember=\val as \lastval (initially -13.61),remember=\atom as \lastatom (initially H)] in {-24.59/He} {
+                \draw [thick] (\lastx,\lastval) node[pointr=\lastatom]{} -- (\x,\val);
+            }
+            \node [pointr=He] at (2,-24.59) {};
+            \foreach \val/\atom [count=\x from 4,remember=\x as \lastx (initially 3),remember=\val as \lastval (initially -5.39),remember=\atom as \lastatom (initially Li)] in {-9.32/Be,-14.05/B,-19.43/C,-25.56/N,-32.38/O,-40.17/F,-48.47/Ne} {
+                \draw [thick] (\lastx,\lastval) node[pointr=\lastatom]{} -- (\x,\val);
+            }
+            \node [pointr=Ne] at (10,-48.47) {};
+            \foreach \val/\atom [count=\x from 6,remember=\x as \lastx (initially 5),remember=\val as \lastval (initially -8.30),remember=\atom as \lastatom (initially B)] in {-10.66/C,-13.18/N,-15.85/O,-18.65/F,-21.59/Ne} {
+                \draw [thick] (\lastx,\lastval) node[pointr=\lastatom]{} -- (\x,\val);
+            }
+            \node [pointr=Ne] at (10,-21.59) {};
+            \foreach \val/\atom [count=\x from 12,remember=\x as \lastx (initially 11),remember=\val as \lastval (initially -5.14),remember=\atom as \lastatom (initially Na)] in {-7.65/Mg,-11.32/Al,-15.89/Si,-18.84/P,-22.71/S,-25.23/Cl,-29.24/Ar} {
+                \draw [thick] (\lastx,\lastval) node[pointa=\lastatom]{} -- (\x,\val);
+            }
+            \node [pointa=Ar] at (18,-29.24) {};
+            \foreach \val/\atom [count=\x from 14,remember=\x as \lastx (initially 13),remember=\val as \lastval (initially -5.98),remember=\atom as \lastatom (initially Al)] in {-7.78/Si,-9.65/P,-11.62/S,-13.67/Cl,-15.82/Ar} {
+                \draw [thick] (\lastx,\lastval) node[pointa=\lastatom]{} -- (\x,\val);
+            }
+            \node [pointa=Ar] at (18,-15.82) {};
+
+            \draw [semithick,grx,-stealth] (3,-17) node[right,black]{$1s$} -- (1.7,-19);
+            \draw [semithick,grx,-stealth] (5,-26) node[left,black]{$2s$} -- (6.3,-22);
+            \draw [semithick,grx,-stealth] (10,-11) node[right,black]{$2p$} -- (8.6,-17);
+            \draw [semithick,grx,-stealth] (13,-22) node[left,black]{$3s$} -- (14.3,-17.5);
+            \draw [semithick,grx,-stealth] (18.5,-9) node[right,black]{$3p$} -- (17.6,-14.3);
+        \end{tikzpicture}
+        \caption{Orbital potential energies.}
+        \label{fig:orbitalPotentialEnergies}
+    \end{figure}
+    \item The energies of atomic orbitals (measured by PES) have been tabulated (see Figure \ref{fig:orbitalPotentialEnergies}).
+    \item If you want to measure orbital energies in the range of -10 eV (i.e., upper valence orbitals; see Table 5.2 in \textcite{bib:MiesslerFischerTarr}), use UPS. If you want to look at energy states that are very deep, very core (i.e., $1s$ in \ce{Fe}), use XPS.
+    \item Symmetry and orbital diagrams (suggested reading \textcite{bib:reinforceMOTheory}):
+    \begin{itemize}
+        \item \textbf{State conservation principle}: The number of molecular orbitals is equal to the number of incipient (atomic) orbitals.
+        \item Orbitals of the same symmetry mix.
+        \item Orbital interactions can be bonding, nonbonding, or antibonding.
+        \item There are three basic types of orbital overlap: $\sigma$ (end-on interaction), $\pi$ (side-by-side approach) and $\delta$ (off-axis approach).
+        \begin{itemize}
+            \item $\sigma$ orbitals are symmetric to rotation about the line connecting nuclei.
+            \item $\pi$ orbitals change sign of the wave function with $C_2$ rotation about the bond axis.
+            \item Orbitals also denoted $g$ are symmetric to inversion.
+            \item Orbitals also denoted $u$ are antisymmetric to inversion.
+        \end{itemize}
+        \item Orbitals with the correct symmetry and most similar energy mix to the greatest extent.
+    \end{itemize}
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.63\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/constructingMOsa.png}
+            \caption{$\sigma_s$.}
+            \label{fig:constructingMOsa}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[h!]\ContinuedFloat
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/constructingMOsb.png}
+            \caption{$\pi_s$.}
+            \label{fig:constructingMOsb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/constructingMOsc.png}
+            \caption{$\pi_p$.}
+            \label{fig:constructingMOsc}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/constructingMOsd.png}
+            \caption{$\delta_s$.}
+            \label{fig:constructingMOsd}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/constructingMOse.png}
+            \caption{$\delta_p$.}
+            \label{fig:constructingMOse}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/constructingMOsf.png}
+            \caption{$\delta_d$.}
+            \label{fig:constructingMOsf}
+        \end{subfigure}
+        \caption{Constructing $s$, $p$, and $d$ molecular orbitals.}
+        \label{fig:constructingMOs}
+    \end{figure}
+    \item There are six MO constructions to be aware of: $s$-$s$, $p$-$p$ ($\sigma$ and $\pi$), and $d$-$d$ ($\sigma$, $\pi$, and $\delta$). See Figure \ref{fig:constructingMOs}.
+    \begin{itemize}
+        \item There are similar orbitals in simple diatomic molecules.
+    \end{itemize}
+    \item As the mixing of $\sigma_g$ orbitals gets stronger, the $2p$ state drops in energy faster than the $2s$ state, causing the $2p$ state to have lower energy than the $2s$ state after a while.
+\end{itemize}
+
+
 
 \section{Chapter 5: Molecular Orbitals}
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
