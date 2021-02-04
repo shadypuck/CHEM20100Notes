@@ -456,7 +456,7 @@
     \item A new approach then emerged from Robert Mulliken, Friedrich Hund, and Clemens C.J. Roothaan. All three men worked at UChicago!
     \begin{itemize}
         \item Mulliken is mainly credited for the development of MO theory.
-        \item Roothaan retired, found retirememt boring, moved to Palo Alto and was key in the development of computer processors.
+        \item Roothaan retired, found retirement boring, moved to Palo Alto and was key in the development of computer processors.
     \end{itemize}
     \item Molecular orbital theory:
     \begin{itemize}
@@ -851,7 +851,7 @@
         \item Choose basis functions (orbitals).
         \item Apply operations.
         \item Generate a reducible representations and SALCs (the latter if applicable).
-        \item Reduce to irreeducible representations.
+        \item Reduce to irreducible representations.
         \item Combine central and peripheral orbitals by their symmetry.
         \item Fill MOs with $\e[-]$'s. Draw orbitals.
         \item Generate SALCs of peripheral atoms (if applicable).
@@ -974,9 +974,9 @@
                 \footnotesize
                 \draw [ultra thick,gry] (2,-40.17) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$2s(A_1)$} ++(0.5,0);
                 \draw [ultra thick,gry]
-                    (2,-18.65) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_z(A_1)$} ++(0.5,0)
-                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=7mm]{$p_y(B_2)$} ++(0.5,0)
-                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$p_x(B_1)$} ++(0.5,0)
+                    (2,-15.85) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_z(A_1)$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=7mm]{$p_x(B_1)$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$p_y(B_2)$} ++(0.5,0)
                 ;
                 \draw [ultra thick,gry]
                     (-3.1,-13.61) -- node{\Large$\upharpoonleft$} node[below=2mm]{$A_1$} ++(0.5,0)
@@ -996,11 +996,11 @@
                     (-2.6,-13.61) -- (-0.55,-44)
                     (-2,-13.61) -- (-0.55,-34)
                     (-2,-13.61) -- (-0.55,-1)
-                    (2,-18.65) -- (0.55,-7)
-                    (2,-18.65) -- (0.55,-28)
-                    (2,-18.65) -- (0.55,-18.65)
-                    (2.6,-18.65) -- (0.55,-34)
-                    (2.6,-18.65) -- (0.55,-1)
+                    (2,-15.85) -- (0.55,-7)
+                    (2,-15.85) -- (0.55,-28)
+                    (2,-15.85) -- (0.55,-15.85)
+                    (2.6,-15.85) -- (0.55,-34)
+                    (2.6,-15.85) -- (0.55,-1)
                     (2,-40.17) -- (0.55,-28)
                     (2,-40.17) -- (0.55,-44)
                 ;
@@ -1008,7 +1008,8 @@
             \caption{\ce{H2O} orbital diagram.}
             \label{fig:orbitalDiagram-H2O}
         \end{figure}
-        \item We can now compare this with the results from photoelectron spectroscopy and see that our predictions are correct. \begin{figure}[h!]
+        \item We can now compare this with the results from photoelectron spectroscopy and see that our predictions are correct.
+        \begin{figure}[h!]
             \centering
             \includegraphics[width=0.6\linewidth]{../ExtFiles/PES-H2O.png}
             \caption{Photoelectron spectrum for \ce{H2O}.}
@@ -1116,6 +1117,133 @@
         \item $\pi_u$, $b_2$: Energy is constant.
         \item Now all orbitals with electrons have been accounted for. Since 2 energies go down, 1 goes up, and 1 stays the same as bond angle decreases, we know that bond angle will decrease to an equilibrium.
     \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 17: Constructing Molecular Orbitals (Part 4, \ce{NH3} Molecule)}
+\begin{itemize}
+    \item \marginnote{2/3:}\ce{NH3} example:
+    \begin{itemize}
+        \item Point group: $C_{3v}$.
+        \item Basis functions: \ce{H_{$1s$}}, \ce{N_{$2s$}}, \ce{N_{$2p_x$}}, \ce{N_{$2p_y$}}, and \ce{N_{$2p_z$}}.
+        \item Apply operations (pick any one operation from each class)/construct reducible representations:
+        \begin{align*}
+            \Gamma_{\ce{H}} &= (3,0,1) = A_1+E\\
+            \Gamma_{\ce{N_{$2s$}}} &= A_1\\
+            \Gamma_{\ce{N_{$2p_x$}}} &= E\\
+            \Gamma_{\ce{N_{$2p_y$}}} &= E\\
+            \Gamma_{\ce{N_{$2p_z$}}} &= A_1
+        \end{align*}
+        \begin{itemize}
+            \item \ce{N_{$2p_x$}} and \ce{N_{$2p_y$}} are doubly degenerate --- their transformation cannot be decoupled and they transform together.
+        \end{itemize}
+        \item Look at the relevant energies and plot them against each other.
+        \item 3 $A_1$ type atomic orbitals form 3 $a_1$ type MOs.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[
+                yscale=0.2,
+                every node/.prefix style={black}
+            ]
+                \footnotesize
+                \draw [ultra thick,gry] (2,-25.56) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$2s(A_1)$} ++(0.5,0);
+                \draw [ultra thick,gry]
+                    (2,-13.18) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_x(E)$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=7mm]{$p_y(E)$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$p_z(A_1)$} ++(0.5,0)
+                ;
+                \draw [ultra thick,gry]
+                    (-3.7,-13.61) -- node{\Large$\upharpoonleft$} node[below=2mm]{$A_1$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0)
+                    ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0)
+                ;
+        
+                \draw [ultra thick] (-0.55,-35) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.1,0);
+                \draw [ultra thick] (-0.55,-26) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) node[below=2mm,xshift=0.05cm]{$e$} ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0);
+                \draw [ultra thick] (-0.55,-19) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.1,0);
+                \draw [ultra thick] (-0.55,-9) -- ++(0.5,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.5,0);
+                \draw [ultra thick] (-0.55,-5) -- node[below]{$a_1$} ++(1.1,0);
+        
+                \draw [grx,densely dashed]
+                    (-3.2,-13.61) -- (-0.55,-35)
+                    (-3.2,-13.61) -- (-0.55,-19)
+                    (-3.2,-13.61) -- (-0.55,-5)
+                    (-2,-13.61) -- (-0.55,-26)
+                    (-2,-13.61) -- (-0.55,-9)
+                    (2,-13.18) -- (0.55,-9)
+                    (2,-13.18) -- (0.55,-26)
+                    (3.2,-13.18) -- (0.55,-5)
+                    (3.2,-13.18) -- (0.55,-19)
+                    (2,-25.56) -- (0.55,-19)
+                    (2,-25.56) -- (0.55,-35)
+                ;
+            \end{tikzpicture}
+            \caption{\ce{NH3} orbital diagram.}
+            \label{fig:orbitalDiagram-NH3}
+        \end{figure}
+        \begin{itemize}
+            \item Since $2s(A_1)$ and $1s(A_1)$ are so far away energetically, their combination will have very low energy.
+            \item On the other hand, since the $1s(A_1)$ and $p_z(A_1)$ are close in energy, they have a lot of overlap.
+            \item We can't analytically calculate orbital energies at this level. Take an educated guess on the homework and explain your reasoning. Note that here, $e$ orbitals are more stabilizing because they are bigger and have larger overlap. Also, $\sigma$ bonds are stronger than $\pi$ bonds because there is a higher degree of overlap.
+        \end{itemize}
+        \item To see what these orbitals look like, we need to apply the projection operator.
+        \begin{itemize}
+            \item We need to construct one $A_1$ orbital and two $E$ orbitals.
+            \item Modifying from the example from last time, we have $P^{A_1}\approx\phi_1+\phi_2+\phi_3$ and $P^E\approx 2\phi_1-\phi_2-\phi_3$.
+            \item For the last $E$ SALC, we apply the projection to each hydrogen atom (we can choose any basis function) giving us, in addition to the other projections, $P^E\approx 2\phi_2-\phi_3-\phi_1$ and $P^E\approx 2\phi_3-\phi_1-\phi_2$. By subtracting these two, we get $\Psi_E=\frac{1}{\sqrt{2}}(\phi_2-\phi_3)$. Do we choose this linear combination because it's orthogonal to the other two? Because it's structure is different and simple (you \emph{can} do it with any linear combination, but it will make the analysis much more complicated if you do it with a trickier linear combination).
+        \end{itemize}
+        \item We need to renormalize our SALCs so that the integral of their square over all space is 1. To normalize, we must guarantee that the sum of the squares of the coefficients is 1. For $P^{A_1}$ for example, $1^2+1^2+1^2=3$, so we must scale the whole thing by $\frac{1}{\sqrt{3}}$.
+        \item In the PES spectrum, we see three peaks, one being approximately twice as wide as the others (corresponding to the double degenerate state).
+        \item Walsh diagrams (rely on the pictures that we draw of orbitals):
+        \begin{itemize}
+            \item $1a_1'$ energy decreases, $1e'$ energy increases, $a_2''$ energy decreases rather dramatically.
+            \item If we promote electrons to the excited state, the relevant Walsh diagrams will change, and this will cause the molecule to change shape.
+        \end{itemize}
+    \end{itemize}
+    \item Also try to sketch the MOs in the homework.
+\end{itemize}
+
+
+
+\section{Module 18: Constructing Molecular Orbitals (Part 5, \ce{H2C=CH2} Molecule)}
+\begin{itemize}
+    \item \ce{H2C=CH2} example:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/orbitalDiagram-C2H4a.png}
+            \caption{Carbene fragment.}
+            \label{fig:orbitalDiagram-C2H4a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.7\linewidth]{../ExtFiles/orbitalDiagram-C2H4b.png}
+            \caption{Full molecule.}
+            \label{fig:orbitalDiagram-C2H4b}
+        \end{subfigure}
+        \caption{\ce{H2C=CH2} orbital diagram.}
+        \label{fig:orbitalDiagram-C2H4}
+    \end{figure}
+    \begin{itemize}
+        \item Two different approaches ($D_{2h}$): \ce{C_1 + C_2} then \ce{H_{1-4}}, or two carbene fragments (\ce{CH2}).
+        \begin{itemize}
+            \item We can read about the first approach in the linked JCE article (\emph{cite}).
+        \end{itemize}
+        \item $C_{2v}$ for the \ce{CH2} fragment.
+        \item When we make the MO diagram, we have two unpaired electrons, one in each of the upper two orbitals. These will be used for bonding to the other carbene fragment.
+        \item We will then combine the MO diagrams and will need to reassign orbital names because ethene isn't $C_{2v}$; it's $D_{2h}$.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 19: Isolobal Principle}
+\begin{itemize}
+    \item \textbf{Isolobal} (fragment): A fragment with similar (not identical) numbers, symmmetry properties, approximate energies, and shapes of the frontier orbitals and the number of electrons in them.
+    \item This allows us to show, for example, that a carbene fragment and a $d^7$ metal complex have similar properties.
+    \item Two \ce{CH3} fragments will tend to couple into ethane. But so will two isolobal \ce{Mn(CO)5} fragments!
 \end{itemize}
 
 
