@@ -1294,6 +1294,235 @@
     \end{itemize}
     \item "As the distance between two atoms is decreased, their orbitals overlap, with significant probability for electrons from both atoms being found in the region of overlap" \parencite[117]{bib:MiesslerFischerTarr}.
     \item Electrostatic forces between nuclei and electrons in bonding molecular orbitals hold atoms together.
+    \item \marginnote{2/5:}Precise calculations show that the coefficient of the $\sigma^*$ hydrogen antibonding orbital is slightly larger than that of the $\sigma$ orbital, but we typically neglect this distinction.
+    \begin{itemize}
+        \item This technically implies that $\Delta E_{\sigma^*}>\Delta E_\sigma$, i.e., that the increase in energy from electrons in atomic orbitals moving into the $\sigma^*$ antibonding molecular orbital is greater in magnitude than the decrease in energy from electrons in atomic orbitals moving into the $\sigma$ bonding molecular orbital.
+    \end{itemize}
+    \item \textbf{$\bm{\sigma}$ orbital}: A molecular orbital that is symmetric to rotation about the line connecting the nuclei.
+    \item \textbf{Orbital asterisk}: Denotes antibonding orbitals for those molecules where bonding and antibonding orbital descriptions are unambiguous (i.e., smaller molecules).
+    \item When two regions of like sign overlap, the sum of the orbitals exhibits increased electron probability in the overlap region, and vice versa for regions of opposite sign.
+    \item When the $z$-axes are drawn pointing in the same direction, their difference is $\sigma$ and their sum is $\sigma^*$.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \begin{scope}[xshift=-1.2cm]
+                    \filldraw [draw=black,fill=grt] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [rotate=180] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [->] (-1,0) -- (1,0);
+                \end{scope}
+                \begin{scope}[xshift=1.2cm]
+                    \filldraw [draw=black,fill=grt] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [rotate=180] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [->] (-1,0) -- (1,0);
+                \end{scope}
+            \end{tikzpicture}
+            \caption{Same direction.}
+            \label{fig:z-axisDirectiona}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \begin{scope}[xshift=-1.2cm]
+                    \filldraw [draw=black,fill=grt] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [rotate=180] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [->] (-1,0) -- (1,0);
+                \end{scope}
+                \begin{scope}[xshift=1.2cm,rotate=180]
+                    \filldraw [draw=black,fill=grt] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [rotate=180] (0,0)
+                        to[out=90,in=90,out looseness=0.5] (0.8,0)
+                        to[out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [->] (-1,0) -- (1,0);
+                \end{scope}
+            \end{tikzpicture}
+            \caption{Opposite directions.}
+            \label{fig:z-axisDirectionb}
+        \end{subfigure}
+        \caption{Choice of $z$-axis direction.}
+        \label{fig:z-axisDirection}
+    \end{figure}
+    \begin{itemize}
+        \item Notice how in Figure \ref{fig:z-axisDirectionb}, we can simply push the orbitals together (add them) to have regions of like sign overlap and form a bonding orbital.
+        \item However, in Figure \ref{fig:z-axisDirectiona}, with a more standard coordinate system, we have to flip the signs of one of the orbitals before merging them (multiply it by $-1$ and add it to the other orbital/subtract it from the other orbital) to create a bonding orbital. If we add them as they are, we will get an antibonding orbital.
+    \end{itemize}
+    \item \textbf{$\bm{\pi}$ orbital}: A molecular orbital with a change in sign of the wave function under $C_2$ rotation about the $z$-axis (the bond axis).
+    \begin{itemize}
+        \item $\pi$ and $\pi^*$ orbitals arise from the interactions between $p_x$ and $p_y$ atomic orbitals.
+    \end{itemize}
+    \item MOs that form from $p_z$ orbitals are $\sigma$ and $\sigma^*$ orbitals.
+    \item "When orbitals overlap equally with both the same and opposite signs\dots the bonding and antibonding effects cancel, and no molecular orbital results" \parencite[121]{bib:MiesslerFischerTarr}.
+    \item $d$ orbitals can also be involved in bonding in heavier elements such as the transition metals.
+    \begin{itemize}
+        \item Two $d_{z^2}$ orbitals participate in $\sigma$ bonding.
+        \item Two $d_{xz}$ or $d_{yz}$ orbitals participate in $\pi$ bonding.
+        \item Two $d_{x^2-y^2}$ or $d_{xz}$ orbitals participate in \textbf{$\bm{\delta}$ bonding}.
+    \end{itemize}
+    \item \textbf{$\delta$ orbital}: A molecular orbital with a change in sign of the wave function under $C_4$ rotation about that $z$-axis.
+    \begin{itemize}
+        \item $\delta$ and $\delta^*$ orbitals arise from the interactions of atomic orbitals meeting in parallel planes and combining side to side.
+    \end{itemize}
+    \item "Sigma orbitals have no nodes that include teh line connecting the nuclei, pi orbitals have one node that includes the line connecting the nuclei, and delta orbitals have two nodes that include the line connecting the nuclei" \parencite[121]{bib:MiesslerFischerTarr}.
+    \item Note that $p_x$ and $d_{xz}$ orbitals (for example) could, in theory, interact.
+    \item Additional thoughts on Figure \ref{fig:orbitalEnergyCombinations}:
+    \begin{itemize}
+        \item Similarity in energy is correlated with similarity in structure.
+        \item When orbital energies are similar (Figure \ref{fig:orbitalEnergyCombinationsa}), there is a large difference between the atomic orbitals and the molecular orbitals, resulting in a great potential for stabilization through bonding.
+    \end{itemize}
+    \item Molecular orbitals help us understand the structure of \ce{Li2}, \ce{Be2}, and other diatomic molecules that violate the octet rule.
+    \begin{itemize}
+        \item They also explain experimental phenomena that clash with VSEPR theory --- for example, the Lewis structure of \ce{O2} predicts a diamagnetic molecule, but in reality, \ce{O2} is paramagnetic with two unpaired electrons.
+    \end{itemize}
+    \item See Figure \ref{fig:molecularOrbitals-first10} for the molecular orbitals in the homonuclear diatomic molecules formed by the first 10 elements, neglecting interactions between atomic orbitals of differing energy levels.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \draw [white] (-6,0) -- (6,0);
+            \node at (4,6.3) {\includegraphics[width=0.24\linewidth]{../ExtFiles/molecularOrbitals-first10.png}};
+    
+            \draw [ultra thick]
+                (-2.4,0) -- node[above]{$1s$} ++(0.4,0) coordinate (1sl)
+                (2,0) coordinate (1sr) -- node[above]{$1s$} ++(0.4,0)
+                (-2.4,3) -- node[above]{$2s$} ++(0.4,0) coordinate (2sl)
+                (2,3) coordinate (2sr) -- node[above]{$2s$} ++(0.4,0)
+                (-3.4,9) -- ++(0.4,0) ++(0.1,0) -- node[above]{$2p$} ++(0.4,0) ++(0.1,0) -- ++(0.4,0) coordinate (2pl)
+                (2,9) coordinate (2pr) -- ++(0.4,0) ++(0.1,0) -- node[above]{$2p$} ++(0.4,0) ++(0.1,0) -- ++(0.4,0)
+            ;
+            \draw [ultra thick]
+                (-0.25,-0.1) coordinate (og1l) -- node[below]{$\sigma_g$}   ++(0.5,0) coordinate (og1r)
+                (-0.25,0.2)  coordinate (ou1l) -- node[above]{$\sigma_u^*$} ++(0.5,0) coordinate (ou1r)
+                (-0.25,2)    coordinate (og2l) -- node[above]{$\sigma_g$}   ++(0.5,0) coordinate (og2r)
+                (-0.25,4.3)  coordinate (ou2l) -- node[above]{$\sigma_u^*$} ++(0.5,0) coordinate (ou2r)
+                (-0.25,6)    coordinate (og3l) -- node[above]{$\sigma_g$}   ++(0.5,0) coordinate (og3r)
+                (-0.25,12.5) coordinate (ou3l) -- node[above]{$\sigma_u^*$} ++(0.5,0) coordinate (ou3r)
+                (-0.55,7) coordinate (pul) -- node[above]{$\pi_u$} ++(0.5,0) ++(0.1,0) -- node[above]{$\pi_u$} ++(0.5,0) coordinate (pur)
+                (-0.55,11) coordinate (pgl) -- node[above]{$\pi_g^*$} ++(0.5,0) ++(0.1,0) -- node[above]{$\pi_g^*$} ++(0.5,0) coordinate (pgr)
+            ;
+    
+            \draw [thick,grx,densely dashed]
+                (1sl) -- (og1l)
+                (1sr) -- (og1r)
+                (1sl) -- (ou1l)
+                (1sr) -- (ou1r)
+                (2sl) -- (og2l)
+                (2sr) -- (og2r)
+                (2sl) -- (ou2l)
+                (2sr) -- (ou2r)
+                (2pl) -- (og3l)
+                (2pr) -- (og3r)
+                (2pl) -- (ou3l)
+                (2pr) -- (ou3r)
+                (2pl) -- (pul)
+                (2pr) -- (pur)
+                (2pl) -- (pgl)
+                (2pr) -- (pgr)
+            ;
+    
+    
+            \draw [semithick]
+                (-3.5,-0.4) ellipse (8mm and 4mm)
+                (-4,0.4) circle (2.5mm)
+            ;
+            \filldraw [semithick,draw,fill=grt] (-3,0.4) circle (2.5mm);
+            \fill
+                (-4,-0.4) circle (1pt)
+                (-3,-0.4) circle (1pt)
+                (-4,0.4) circle (1pt)
+                (-3,0.4) circle (1pt)
+            ;
+    
+            \draw [semithick]
+                (-3.5,2) ellipse (8mm and 4mm)
+                (-4,4.3) circle (2.5mm)
+            ;
+            \filldraw [semithick,draw,fill=grt] (-3,4.3) circle (2.5mm);
+            \fill
+                (-4,2) circle (1pt)
+                (-3,2) circle (1pt)
+                (-4,4.3) circle (1pt)
+                (-3,4.3) circle (1pt)
+            ;
+    
+            \draw [semithick]
+                (-3.5,6) ellipse (4.7mm and 2.4mm)
+                (-2.4,12.5) circle (2.5mm)
+                (-3.8,12.5) ellipse (2.5mm and 5mm)
+            ;
+            \filldraw [semithick,draw,fill=grt]
+                (-4.2,6) ellipse (2.4mm and 2.5mm)
+                (-2.8,6) ellipse (2.4mm and 2.5mm)
+                (-4.6,12.5) circle (2.5mm)
+                (-3.2,12.5) ellipse (2.5mm and 5mm)
+            ;
+            \fill
+                (-4.2,12.5) circle (1pt)
+                (-2.8,12.5) circle (1pt)
+            ;
+    
+            \draw [semithick]
+                (-3.5,7.85) ellipse (8mm and 4mm)
+                (-4,11) ellipse (4mm and 2.5mm)
+                (-3,10.2) ellipse (4mm and 2.5mm)
+            ;
+            \filldraw [semithick,draw,fill=grt]
+                (-3.5,6.95) ellipse (8mm and 4mm)
+                (-3,11) ellipse (4mm and 2.5mm)
+                (-4,10.2) ellipse (4mm and 2.5mm)
+            ;
+            \fill
+                (-4,7.4) circle (1pt)
+                (-3,7.4) circle (1pt)
+                (-4,10.6) circle (1pt)
+                (-3,10.6) circle (1pt)
+            ;
+        \end{tikzpicture}
+        \caption{Molecular orbitals for the first 10 elements.}
+        \label{fig:molecularOrbitals-first10}
+    \end{figure}
+    \item Bond order:
+    \begin{equation*}
+        \text{B.O.} = \frac{1}{2}(\text{number of electrons in bonding orbitals}-\text{number of electrons in antibonding orbitals})
+    \end{equation*}
+    \begin{itemize}
+        \item Generally, we need only consider valence electrons to calculate the bond order: For example, \ce{O2} has $\text{B.O.}=2$ whether or not you factor valence electrons into the calculation.
+    \end{itemize}
+    \item Core electrons are generally assumed to reside mostly on the original atom and negligibly participate in bonding and antibonding interactions.
+    \begin{itemize}
+        \item This is reflected by how much lower the $1s$ MOs are in Figure \ref{fig:molecularOrbitals-first10} than the others, and by how slight the difference is between bonding and antibonding.
+    \end{itemize}
+    \item "When two molecular orbitals of the same symmetry have similar energies, they interact to lower the energy of the lower orbital and raise the energy of the higher orbital" \parencite[124]{bib:MiesslerFischerTarr}.
+    \item \textbf{$\bm{\sigma_g}$ symmetry}: Symmetry to infinite rotation and inversion.
+    \begin{itemize}
+        \item Possessed by the $\sigma_g(2s)$ and $\sigma_g(2p)$ orbitals in Figure \ref{fig:molecularOrbitals-first10}, for example.
+    \end{itemize}
+    \item Molecular orbitals with the same symmetry and similar energies can \textbf{mix}, lowering the energy of the lower orbital and raising the energy of the higher orbital.
+    \begin{itemize}
+        \item For example, the $\sigma_g(2s)$ and $\sigma_g(2p)$ orbitals in Figure \ref{fig:molecularOrbitals-first10} can mix, lowering the energy of the $2s$ one and raising the energy of the $2p$ one.
+    \end{itemize}
 \end{itemize}
 
 
