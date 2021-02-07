@@ -279,7 +279,7 @@
             \Psi_5(E_2) &= \Psi_5'(E_{2a})+\Psi_6'(E_{2b}) = 2\phi_1-\phi_2-\phi_3+2\phi_4-\phi_5+\phi_6\\
             \Psi_6(E_2) &= \Psi_5'(E_{2a})-\Psi_6'(E_{2b}) = \phi_2-\phi_3+\phi_5-\phi_6
         \end{align*}
-        \item We can now normalize: If $\Psi_i=\sum_jc_j\phi_j$, the normalizing constant is
+        \item We can now normalize: If $\Psi_i=\sum_jc_j\phi_j$ where $\gcd(c_1,\dots,c_n)=1$, the normalizing constant is
         \begin{equation*}
             N = \frac{1}{\sqrt{\sum_jc_j^2}}
         \end{equation*}
@@ -1149,7 +1149,7 @@
                 \footnotesize
                 \draw [ultra thick,gry] (2,-25.56) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$2s(A_1)$} ++(0.5,0);
                 \draw [ultra thick,gry]
-                    (2,-13.18) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_x(E)$} ++(0.5,0)
+                    (2,-13.18) -- node{\Large$\upharpoonleft$} node[below=2mm]{$p_x(E)$} ++(0.5,0)
                     ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=7mm]{$p_y(E)$} ++(0.5,0)
                     ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$p_z(A_1)$} ++(0.5,0)
                 ;
@@ -1244,6 +1244,36 @@
     \item \textbf{Isolobal} (fragment): A fragment with similar (not identical) numbers, symmmetry properties, approximate energies, and shapes of the frontier orbitals and the number of electrons in them.
     \item This allows us to show, for example, that a carbene fragment and a $d^7$ metal complex have similar properties.
     \item Two \ce{CH3} fragments will tend to couple into ethane. But so will two isolobal \ce{Mn(CO)5} fragments!
+\end{itemize}
+
+
+
+\section{Module 20: Orbital Hybridization}
+\begin{itemize}
+    \item \textbf{Hybridization}: The concept of mixing atomic orbitals into new hybrid orbitals (with different energies, shapes, etc. than the component atomic orbitals) suitable for the pairing of electrons to form chemical bonds.
+    \item Hybridization accomplishes the work of MO theory in steps: Creating new orbitals and then bonding atoms with them, as opposed to defining new orbitals and filling them.
+    \item This was the dominant approach in chemistry before MO theory, and is still widely used in organic chemistry.
+    \item For light elements, the energy gaps between orbitals aren't very large and this method is legitimate to some degree.
+    \begin{itemize}
+        \item For carbon, it's acceptable.
+        \item For silicon and lead (in the same group), this is not a good approach; it will give you incorrect predictions (e.g., around bond angles and lengths).
+    \end{itemize}
+    \item Steps to determine the hybridization of a bond:
+    \begin{enumerate}
+        \item Assign a point group.
+        \item Choose basis function ($\sigma$ bonds).
+        \item Apply operations.
+        \item Reduce to irreducible representations.
+        \item Compare symmetry of irreducible representations to central atom MOs.
+    \end{enumerate}
+    \item \ce{BF3} example:
+    \begin{itemize}
+        \item Point group: $D_{3h}$.
+        \item $\Gamma_\sigma=(3,0,1,3,0,1)$.
+        \item $\Gamma_\sigma=A_1'+E'$.
+        \item For boron, $\ce{B}(s)=A_1'$, $\ce{B}(p_x)=E'$, $\ce{B}(p_y)=E'$, and $\ce{B}(p_z)=A_2''$. Thus, since one orbital matches up on $s$ and two match up on $p$ (specifically, $p_x,p_y$), the hybrid orbitals will be $sp^2$ (hybrid of $s,p_x,p_y$).
+    \end{itemize}
+    \item It is not generally justifiable to say that atomic orbitals in \emph{individual} atoms mix before bonding.
 \end{itemize}
 
 
