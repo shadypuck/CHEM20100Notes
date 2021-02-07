@@ -1,0 +1,366 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{6}
+
+\begin{document}
+
+
+
+
+\chapter{Band Theory in Solids}
+\section{Module 21: Electronic Structure of Solids (1D Solids)}
+\begin{itemize}
+    \item \marginnote{2/5:}Solid silicon's symmetry space group would be $Fd\overline{3}m$.
+    \item Suggested reading: \textcite{bib:bandTheory}.
+    \item To consider solids, let's first consider an infinite chain of hydrogen atoms.
+    \begin{itemize}
+        \item This should separate into \ce{H2} molecules (\textbf{Peierl's instability}).
+        \item However, other substances can have chains of $p_z$ orbitals, such as platinum atoms.
+    \end{itemize}
+    \item An imaginary zoo of hydrogen molecules (we use the limit of a cycle of hydrogen atoms to approximate an infinitely long chain):
+    \begin{itemize}
+        \item \ce{H2} has a bonding and antibonding MO.
+        \item Cyclic \ce{H3+} is the most abundant ion in the universe (recently discovered by UChicago). One bonding and two antibonding orbitals.
+        \item We can keep adding hydrogen atoms to our rings.
+        \item For an infinitely long cycle of hydrogen atoms, we will have an infinite number of states close together that resembles a band in solids.
+    \end{itemize}
+    \item Back to the chain of \ce{H} atoms:
+    \begin{itemize}
+        \item The basis function on each lattice point is a \ce{H_{$1s$}} orbital.
+        \item The appropriate SALC $\psi$ is
+        \begin{equation*}
+            \psi_k = \sum_n\e[ikna]\phi_n
+        \end{equation*}
+        \item In this formalism, $k$ is an index labeling irreducible representations of the translation group. $\psi$ transforms just like $a$, $e_1$, and $e_2$ (e.g., in the $C_5$ point symmetry group).
+        \item This process of symmetry adaptation is called "forming Bloch functions."
+    \end{itemize}
+    \item Elementary band theory for extended solids:
+    \begin{itemize}
+        \item Energy bands in solids arise from overlapping atomic orbitals, which become the \textbf{crystal orbitals} that make up the bands.
+        \item Recipe: Use LCAO (tight binding) approach.
+        \item A crystal is a regular periodic array with translational symmetry.
+        \item Periodic boundary conditions require $\psi(x+Na)=\psi(x)$, i.e., each wavefunction must be symmetry equivalent to the one in the neighboring cells.
+        \item For a 1D solid with lattice constant $a$ and atom index $n$, \textbf{Bloch's theorem} tells us that the above SALC $\psi_k$ is a solution to the Schr\"{o}dinger equation.
+    \end{itemize}
+    \item If we calculate $\psi_0$ and $\psi_{\pi/a}$, we get the most and least bonding states possible, respectively (the least bonding state is the most antibonding state and has the highest energy).
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \draw (-2,0) -- (2,0);
+                \foreach \x in {-1.5,-0.5,0.5,1.5} {
+                    \filldraw [semithick,draw,fill=grt] (\x,0) circle (2.5mm);
+                }
+            \end{tikzpicture}
+            \caption{$k=0$.}
+            \label{fig:bandBonding-sa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \draw (-2,0) -- (2,0);
+                \foreach \x in {-1.5,0.5} {
+                    \filldraw [semithick,draw,fill=grt] (\x,0) circle (2.5mm);
+                    \filldraw [semithick,draw,fill=white] ({\x+1},0) circle (2.5mm);
+                }
+            \end{tikzpicture}
+            \caption{$k=\frac{\pi}{a}$.}
+            \label{fig:bandBonding-sb}
+        \end{subfigure}
+        \caption{$s$ orbital bonding states.}
+        \label{fig:bandBonding-s}
+    \end{figure}
+    \begin{align*}
+        \psi_0 &= \phi_0+\phi_1+\phi_2+\phi_3+\cdots\\
+        \psi_{\pi/a} &= \phi_0-\phi_1+\phi_2-\phi_3+\cdots
+    \end{align*}
+    \item At this point, we can construct a band between these two states.
+    \emph{picture}
+    \begin{itemize}
+        \item The band is \emph{almost} infinite; it's on the order of Avogadro's number.
+        \item We have as many $k$ values as translations in the crystal or as many unit cells in a crystal.
+    \end{itemize}
+    ...
+    \item \textbf{First Brillouin zone}: The region that covers all possible energy states that the crystal can have.
+    \begin{itemize}
+        \item It is $-\frac{\pi}{a}<k<\frac{\pi}{a}$; which is the range of all possible values that the sine function will give.
+    \end{itemize}
+    \item There is one energy level for each value of $k$, but $E(k)=E(-k)$.
+    \item The energy is proportional to the electron momentum.
+    \item Calculation of 1D band structure:
+    \begin{itemize}
+        \item We have $N$ atoms such that $\psi_k=\sum_{n=0}^N\e[inka]\phi_n$.
+        \item The crystal Schr\"{o}dinger equation is $\hat{H}\Psi(k)=E(k)\Psi(k)$.
+        \item Thus, the electron energies are given by
+        \begin{equation*}
+            E(k) = \frac{\ev{\hat{H}}{\psi}}{\braket{\psi}}
+        \end{equation*}
+        \item Recall that in Dirac's bra-ket notation, $\ev{\hat{H}}{\psi}\equiv\int\psi^*\hat{H}\psi\dd{\tau}$; for normalized atomic orbitals and ignoring overlap integrals:
+        \begin{equation*}
+            \braket{\phi_m}{\phi_n} =
+            \begin{cases}
+                1 & m=n\\
+                0 & m\neq n
+            \end{cases}
+        \end{equation*}
+        \item Also recall that
+        \begin{equation*}
+            \braket{\psi} = \sum_{m,n}\e[i(n-m)ka]\braket{\phi_m}{\phi_n} = N
+        \end{equation*}
+        \item Thus, we can calculate for on-site ($m=n$):
+        \begin{equation*}
+            \ev{\hat{H}}{\psi(k)} = \sum_n\ev{\hat{H}}{\phi_n} = N\alpha
+        \end{equation*}
+        And for resonance ($m\neq n$), where we need only consider the two nearest neighbors:
+        \begin{equation*}
+            \mel{\e[-inka]\phi_n}{\hat{H}}{\e[i(n\pm 1)ka]\phi_{n\pm 1}} = \beta\e[\pm ika]
+        \end{equation*}
+        \item Putting everything together, we have
+        \begin{equation*}
+            E(k) = \frac{\ev{\hat{H}}{\psi}}{\braket{\psi}} = \frac{N\alpha+N\beta(\e[ika]+\e[-ika])}{N} = \alpha+2\beta\cos(ka)
+        \end{equation*}
+    \end{itemize}
+    \item \textbf{Zone center}: The ? where all atomic orbitals are in phase (all bonding $\sigma$). \emph{Also known as} $\bm{\Gamma}$.
+    \item \textbf{Zone border}: The ? where all atomic orbitals are out of phase (all antibonding $\sigma^*$). \emph{Also known as} $\bm{X}$.
+    \item Large numbers of MOs form bands of states.
+    \item \textbf{Band structure}: The plot of $E$ as a function of $k$.
+    \begin{itemize}
+        \item The one we've derived so far is an s-shape curve.
+    \end{itemize}
+    \item The $p$-orbitals are opposite --- they form a bonding state with inverted phases.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \foreach \x in {-1,0,1} {
+                    \draw [densely dashed] (\x,-0.3) -- ++(0,0.6);
+                }
+                \foreach \x in {-1.5,-0.5,0.5,1.5} {
+                    \filldraw [semithick,draw,fill=grt] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x+0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [semithick] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x-0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                }
+            \end{tikzpicture}
+            \caption{$k=0$.}
+            \label{fig:bandBonding-pa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \path (0,-0.3) -- ++(0,0.6);
+                \foreach \x in {-1.5,0.5} {
+                    \filldraw [semithick,draw,fill=grt] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x+0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \draw [semithick] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x-0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                }
+                \foreach \x in {-0.5,1.5} {
+                    \draw [semithick] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x+0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                    \filldraw [semithick,draw,fill=grt] (\x,0)
+                        to [out=90,in=90,out looseness=0.5] ({\x-0.4},0)
+                        to [out=-90,in=-90,in looseness=0.5] cycle
+                    ;
+                }
+            \end{tikzpicture}
+            \caption{$k=\frac{\pi}{a}$.}
+            \label{fig:bandBonding-pb}
+        \end{subfigure}
+        \caption{$p$ orbital bonding states.}
+        \label{fig:bandBonding-p}
+    \end{figure}
+    \item The analysis of Figures \ref{fig:bandBonding-s} and \ref{fig:bandBonding-p} can be done for many more types of orbitals, including $p_z$, $d_{z^2}$, and $d_{xz}$.
+    \item Bonding orbital bands run uphill (concave upwards $E(k)$) at $k=0$ and antibonding orbital bands run downhill (concave downwards $E(k)$) at $k=0$.
+    \item Energy bands run from $\alpha+2\beta$ to $\alpha-2\beta$ since $\beta$ is negative for $s$ orbitals.
+    \item \textbf{Density of states}: The number of energy levels in the energy interval $\Delta E$. \emph{Also known as} \textbf{DOS}.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \begin{scope}[xshift=-4.85cm]
+                \foreach \y in {0.4,0.5,...,3} {
+                    \draw [ultra thick] (0,\y) -- ++(0.5,0);
+                }
+                \node at (1.15,1.7) {$\equiv$};
+            \end{scope}
+            \begin{scope}[xshift=-3cm]
+                \draw [thick] (0,0.4) rectangle (0.5,3);
+                \node at (1.15,1.7) {$\equiv$};
+            \end{scope}
+            \begin{scope}
+                \draw (4,0) node[below]{$\pi/a$} -- node[below=2mm]{\small$k\longrightarrow$} (0,0) node[below]{$0$} -- node[left=2mm,align=center]{\small$\uparrow$\\$E$} (0,3.3);
+                \draw (0.1,0.5) -- ++(-0.2,0) node[left]{$\alpha+2\beta$};
+                \draw (0.1,2.9) -- ++(-0.2,0) node[left]{$\alpha-2\beta$};
+    
+                \draw [grx,thick] (0,0.5) cos (2,1.7) node[above left,black]{$E(k)$} sin (4,2.9);
+            \end{scope}
+            \begin{scope}[xshift=6cm]
+                \draw (3,0) -- node[below=2mm]{\small$\text{DOS}\longrightarrow$} (0,0) node[below]{$0$} -- node[left=2mm,align=center]{\small$\uparrow$\\$E$} (0,3.3);
+    
+                \draw [gry,thick,rotate=90] (0.5,0) -- (0.5,-2) sin (1.7,-0.5) cos (2.9,-2) -- (2.9,0);
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Density of states.}
+        \label{fig:densityOfStates}
+    \end{figure}
+    \begin{itemize}
+        \item Proportional to the inverse slope of the band; steep bands with large overlap yield a small DOS, and vice versa for flat bands.
+        \item Reality check: PES for a long-chain alkane (\ce{C36H74}) shows this inverse DOS relationship for a little while.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 22: Electronic Structure of Solids (2D and 3D solids)}
+\begin{itemize}
+    \item 2D band structure:
+    \begin{itemize}
+        \item Simple H\"{u}ckel: A two-dimensional square net ($s$ orbitals only (or $p_z$)).
+        \begin{equation*}
+            \psi(k) = \sum_{m,n}\e[ik_xma+ik_yna]\cdot\phi_{m,n}
+        \end{equation*}
+        \item Consider the \textbf{crystal orbitals} at special $k$ points (high symmetry).
+        \item The \textbf{Brillouin zone} is 2D here (we have a \textbf{wave vector}).
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}[
+                every node/.append style={black}
+            ]
+                \footnotesize
+                \path (-2,0) -- (2,0);
+                \draw (-1,-1) rectangle (1,1);
+
+                \draw [gry,thick,-stealth] (0,0) -- (1.5,0) node[right]{$\vec{b}_1$};
+                \draw [gry,thick,-stealth] (0,0) -- (0,1.5) node[above]{$\vec{b}_2$};
+
+                \fill [grx] (0,0) circle (2pt) node[below left]{$\Gamma$};
+                \fill [grx] (0,1) circle (2pt) node[above left]{$X$};
+                \fill [grx] (1,1) circle (2pt) node[above right]{$M$};
+                \fill [grx] (1,0) circle (2pt) node[above right]{$X$};
+            \end{tikzpicture}
+            \caption{2D Brillouin zone.}
+            \label{fig:brillouinZone-2D}
+        \end{figure}
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.24\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) grid (3,3);
+                    \foreach \x in {0,...,3} {
+                        \foreach \y in {0,...,3} {
+                            \filldraw [semithick,draw,fill=grt] (\x,\y) circle (3.125mm);
+                        }
+                    }
+                \end{tikzpicture}
+                \caption{$\Gamma$: $k_x,k_y=0$.}
+                \label{fig:specialKPointsa}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.24\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) grid (3,3);
+                    \foreach \x in {0,2} {
+                        \foreach \y in {0,...,3} {
+                            \filldraw [semithick,draw,fill=grt] (\x,\y) circle (3.125mm);
+                        }
+                    }
+                    \foreach \x in {1,3} {
+                        \foreach \y in {0,...,3} {
+                            \filldraw [semithick,draw,fill=white] (\x,\y) circle (3.125mm);
+                        }
+                    }
+                \end{tikzpicture}
+                \caption{$X$: $k_x=\pi/a,k_y=0$.}
+                \label{fig:specialKPointsb}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.24\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) grid (3,3);
+                    \foreach \x in {0,2} {
+                        \foreach \y in {1,3} {
+                            \filldraw [semithick,draw,fill=grt] (\x,\y) circle (3.125mm);
+                        }
+                        \foreach \y in {0,2} {
+                            \filldraw [semithick,draw,fill=grt] ({\x+1},\y) circle (3.125mm);
+                        }
+                    }
+                    \foreach \x in {0,2} {
+                        \foreach \y in {0,2} {
+                            \filldraw [semithick,draw,fill=white] (\x,\y) circle (3.125mm);
+                        }
+                        \foreach \y in {1,3} {
+                            \filldraw [semithick,draw,fill=white] ({\x+1},\y) circle (3.125mm);
+                        }
+                    }
+                \end{tikzpicture}
+                \caption{$M$: $k_x,k_y=\pi/a$.}
+                \label{fig:specialKPointsc}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.24\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.8]
+                    \draw (0,0) grid (3,3);
+                    \foreach \x in {0,...,3} {
+                        \foreach \y in {1,3} {
+                            \filldraw [semithick,draw,fill=grt] (\x,\y) circle (3.125mm);
+                        }
+                    }
+                    \foreach \x in {0,...,3} {
+                        \foreach \y in {0,2} {
+                            \filldraw [semithick,draw,fill=white] (\x,\y) circle (3.125mm);
+                        }
+                    }
+                \end{tikzpicture}
+                \caption{$X$: $k_x=0,k_y=\pi/a$.}
+                \label{fig:specialKPointsd}
+            \end{subfigure}
+            \caption{Special $k$ points.}
+            \label{fig:specialKPoints}
+        \end{figure}
+        \begin{itemize}
+            \item The center is the $\Gamma$ point ($k_x=k_y=0$). The midpoint of the lines are called $X$ points ($k_x=\frac{\pi}{a},k_y=0$, and vice versa). The maximum point is the $M$ point ($k_x=k_y=\frac{\pi}{a}$).
+        \end{itemize}
+        \item Calculating $E(k)$ in two dimensions.
+        \begin{equation*}
+            E(k) = \alpha+2\beta(\cos(k_xa)+\cos(k_ya))
+        \end{equation*}
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=0.75]
+                \footnotesize
+                \draw (3.41,0) -- node[below=3mm]{\small$k\longrightarrow$} (0,0) node[below]{$\Gamma$} -- node[left=1mm,align=center]{\small$\uparrow$\\$E$} (0,6);
+                \draw [densely dashed,|-] (1,6) -- ++(0,-6) node[below]{$X$};
+                \draw [densely dashed,|-] (2,6) -- ++(0,-6) node[below]{$M$};
+                \draw [densely dashed,|-] (3.41,6) -- ++(0,-6) node[below]{$\Gamma$};
+
+                \draw [grx,thick] (0,1.5) cos (0.5,2.5) sin (1,3.5) cos (1.5,4.5) sin (2,5.5) cos (2.71,3.5) sin (3.41,1.5);
+            \end{tikzpicture}
+            \caption{Schematic band structure (2D).}
+            \label{fig:schematicBands-2D}
+        \end{figure}
+        \item Our schematic band structure (Figure \ref{fig:schematicBands-2D}) traces a 2D path $\Gamma\to X\to M\to\Gamma$.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
