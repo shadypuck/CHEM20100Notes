@@ -15,9 +15,12 @@
 \begin{itemize}
     \item \marginnote{2/5:}Solid silicon's symmetry space group would be $Fd\overline{3}m$.
     \item Suggested reading: \textcite{bib:bandTheory}.
+    \begin{itemize}
+        \item A rare less mathematical article on band theory that has taught generations of chemists; comes at it from a physics perspective.
+    \end{itemize}
     \item To consider solids, let's first consider an infinite chain of hydrogen atoms.
     \begin{itemize}
-        \item This should separate into \ce{H2} molecules (\textbf{Peierl's instability}).
+        \item This should separate into \ce{H2} molecules (\textbf{Peierl's instability}); considering it to exist is a consequence of looking at chemistry through a physics perspective, where this is a simple model.
         \item However, other substances can have chains of $p_z$ orbitals, such as platinum atoms.
     \end{itemize}
     \item An imaginary zoo of hydrogen molecules (we use the limit of a cycle of hydrogen atoms to approximate an infinitely long chain):
@@ -29,11 +32,16 @@
     \end{itemize}
     \item Back to the chain of \ce{H} atoms:
     \begin{itemize}
-        \item The basis function on each lattice point is a \ce{H_{$1s$}} orbital.
-        \item The appropriate SALC $\psi$ is
+        \item The basis function on each lattice point is a \ce{H_{$1s$}} orbital; there are countably many.
+        \item The appropriate SALCs $\psi_k$ are based in translating every orbital by a finite number of units:
         \begin{equation*}
             \psi_k = \sum_n\e[ikna]\phi_n
         \end{equation*}
+        \begin{itemize}
+            \item $a$ is the distance between neighboring hydrogen atoms.
+            \item Since there are infinitely many translations, there should be infinitely many translational symmetry elements, so infinitely many irreducible representations, too.
+            \item The coefficients $\e[ikna]$ come from \textbf{Bloch's theorem}.
+        \end{itemize}
         \item In this formalism, $k$ is an index labeling irreducible representations of the translation group. $\psi$ transforms just like $a$, $e_1$, and $e_2$ (e.g., in the $C_5$ point symmetry group).
         \item This process of symmetry adaptation is called "forming Bloch functions."
     \end{itemize}
@@ -43,7 +51,7 @@
         \item Recipe: Use LCAO (tight binding) approach.
         \item A crystal is a regular periodic array with translational symmetry.
         \item Periodic boundary conditions require $\psi(x+Na)=\psi(x)$, i.e., each wavefunction must be symmetry equivalent to the one in the neighboring cells.
-        \item For a 1D solid with lattice constant $a$ and atom index $n$, \textbf{Bloch's theorem} tells us that the above SALC $\psi_k$ is a solution to the Schr\"{o}dinger equation.
+        \item For a 1D solid with lattice constant $a$ and atom index $n$, Bloch's theorem tells us that the above SALC $\psi_k$ is a solution to the Schr\"{o}dinger equation.
     \end{itemize}
     \item If we calculate $\psi_0$ and $\psi_{\pi/a}$, we get the most and least bonding states possible, respectively (the least bonding state is the most antibonding state and has the highest energy).
     \begin{figure}[h!]
@@ -79,18 +87,16 @@
         \psi_{\pi/a} &= \phi_0-\phi_1+\phi_2-\phi_3+\cdots
     \end{align*}
     \item At this point, we can construct a band between these two states.
-    \emph{picture}
     \begin{itemize}
         \item The band is \emph{almost} infinite; it's on the order of Avogadro's number.
         \item We have as many $k$ values as translations in the crystal or as many unit cells in a crystal.
     \end{itemize}
-    ...
     \item \textbf{First Brillouin zone}: The region that covers all possible energy states that the crystal can have.
     \begin{itemize}
         \item It is $-\frac{\pi}{a}<k<\frac{\pi}{a}$; which is the range of all possible values that the sine function will give.
     \end{itemize}
     \item There is one energy level for each value of $k$, but $E(k)=E(-k)$.
-    \item The energy is proportional to the electron momentum.
+    \item $k$ is proportional to the electron momentum, or electron velocity.
     \item Calculation of 1D band structure:
     \begin{itemize}
         \item We have $N$ atoms such that $\psi_k=\sum_{n=0}^N\e[inka]\phi_n$.
@@ -124,8 +130,8 @@
             E(k) = \frac{\ev{\hat{H}}{\psi}}{\braket{\psi}} = \frac{N\alpha+N\beta(\e[ika]+\e[-ika])}{N} = \alpha+2\beta\cos(ka)
         \end{equation*}
     \end{itemize}
-    \item \textbf{Zone center}: The ? where all atomic orbitals are in phase (all bonding $\sigma$). \emph{Also known as} $\bm{\Gamma}$.
-    \item \textbf{Zone border}: The ? where all atomic orbitals are out of phase (all antibonding $\sigma^*$). \emph{Also known as} $\bm{X}$.
+    \item \textbf{Zone center}: The state where all atomic orbitals are in phase (all bonding $\sigma$). \emph{Also known as} $\bm{\Gamma}$.
+    \item \textbf{Zone border}: The state where all atomic orbitals are out of phase (all antibonding $\sigma^*$). \emph{Also known as} $\bm{X}$.
     \item Large numbers of MOs form bands of states.
     \item \textbf{Band structure}: The plot of $E$ as a function of $k$.
     \begin{itemize}
@@ -336,7 +342,7 @@
             \label{fig:specialKPoints}
         \end{figure}
         \begin{itemize}
-            \item The center is the $\Gamma$ point ($k_x=k_y=0$). The midpoint of the lines are called $X$ points ($k_x=\frac{\pi}{a},k_y=0$, and vice versa). The maximum point is the $M$ point ($k_x=k_y=\frac{\pi}{a}$).
+            \item The center is the $\Gamma$ point ($k_x=k_y=0$; every orbital is surrounded by 4 orbitals of matching phase). The midpoint of the lines are called $X$ points ($k_x=\frac{\pi}{a},k_y=0$, and vice versa; every orbital is surrounded by 2 orbitals of matching phase and 2 orbitals of unlike phase). The maximum point is the $M$ point ($k_x=k_y=\frac{\pi}{a}$; every orbital is surrounded by 4 orbitals of unlike phase).
         \end{itemize}
         \item Calculating $E(k)$ in two dimensions.
         \begin{equation*}
@@ -344,7 +350,7 @@
         \end{equation*}
         \begin{figure}[H]
             \centering
-            \begin{tikzpicture}[scale=0.75]
+            \begin{tikzpicture}[scale=0.9]
                 \footnotesize
                 \draw (3.41,0) -- node[below=3mm]{\small$k\longrightarrow$} (0,0) node[below]{$\Gamma$} -- node[left=1mm,align=center]{\small$\uparrow$\\$E$} (0,6);
                 \draw [densely dashed,|-] (1,6) -- ++(0,-6) node[below]{$X$};
@@ -356,7 +362,7 @@
             \caption{Schematic band structure (2D).}
             \label{fig:schematicBands-2D}
         \end{figure}
-        \item Our schematic band structure (Figure \ref{fig:schematicBands-2D}) traces a 2D path $\Gamma\to X\to M\to\Gamma$.
+        \item Our schematic band structure (Figure \ref{fig:schematicBands-2D}) traces values along a 1D path in two-space from $\Gamma\to X\to M\to\Gamma$.
     \end{itemize}
     \item \marginnote{2/8:}The bandwidth $4|\beta|$ is proportional to the degree of interaction between neighboring orbitals.
     \begin{itemize}
