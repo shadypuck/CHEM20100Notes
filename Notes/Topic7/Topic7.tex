@@ -358,6 +358,112 @@
         \end{figure}
         \item Our schematic band structure (Figure \ref{fig:schematicBands-2D}) traces a 2D path $\Gamma\to X\to M\to\Gamma$.
     \end{itemize}
+    \item \marginnote{2/8:}The bandwidth $4|\beta|$ is proportional to the degree of interaction between neighboring orbitals.
+    \begin{itemize}
+        \item Since $\beta$ is the interaction integral and $E(k)$ varies from $\alpha-2\beta$ to $\alpha+2\beta$.
+    \end{itemize}
+    \item For $p_\sigma$ orbitals, $\beta>0$.
+    \item Deriving the density of states formula:
+    \begin{itemize}
+        \item We often simplify $E(k)$ with the first term of the Taylor series expansion; this gives us
+        \begin{equation*}
+            E = \frac{\hbar}{2m}k^2
+        \end{equation*}
+        \item This implies that $E\propto k^2$ and, hence, $k\propto\sqrt{E}$.
+        \item Thus, the one-dimensional density $D_{1d}(k)$ of states as a function of $k$ is $\dv*{N(k)}{k}=1$ since the number of states is evenly distributed along the $k$ axis (i.e., in Figure \ref{fig:densityOfStates}).
+        \item It follows that the one-dimensional density $D_{1d}(E)$ of states as a function of $E$ is
+        \begin{equation*}
+            D_{1d}(E) = \dv{N(E)}{E}
+            = \dv{N(k)}{k}\dv{k}{E}
+            \propto 1\cdot\frac{1}{\sqrt{E}}
+            = \frac{1}{\sqrt{E}}
+        \end{equation*}
+    \end{itemize}
+    \item For each orbital, there is a unique path akin to Figure \ref{fig:schematicBands-2D}. The combination of all of these \textbf{bands} in one graph characterizes a material.
+    \item \textbf{Wigner-Seitz cell} (of the reciprocal lattice): The first Brillouin zone, or FBZ.
+    \begin{itemize}
+        \item A primitive cell with a lattice point at its center.
+        \item A 3D discrete Fourier transform of the lattice.
+        \item Has $k_{x,y,z}$.
+        \item What is "d.I." and "r.I."?
+        \item We once again can find high symmetry points and directions akin to those in Figure \ref{fig:brillouinZone-2D}.
+    \end{itemize}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.75\linewidth]{../ExtFiles/bandStructure-Si.png}
+        \caption{Electronic band structure of \ce{Si}.}
+        \label{fig:bandStructure-Si}
+    \end{figure}
+    \item Electronic band structure is calculated within the first Brilluoin zone to give us the electronic band structure of a solid.
+    \item \textbf{Angle-resolved photoemission spectroscopy}\footnote{Figure 7.20 in \textcite{bib:APChemNotes} actually refers to this kind of photoelectron spectroscopy!}: If the incoming photon's energy is greater than the electron's ginding energy, the electron will eventually be emitted with a characteristic kinetic energy and angle relative to the surface normal. This angle is related to the electron's crystal momentum. The Bloch wave vector is linked to the measured electron's momentum. \emph{Also known as} \textbf{ARPES}.
+    \begin{itemize}
+        \item Indeed, ARPES can be used to reconstruct the band structure of a solid. The bands are real!
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 23: Filling Bands With Electrons}
+\begin{itemize}
+    \item The Fermi-Dirac statistics and Fermi Energy:
+    \begin{itemize}
+        \item At $T=0$, we expect all of the atoms in a solid to be in the ground state. The distribution of electrons (fermions) at the various energy levels is governed by the Fermi-Dirac distribution:
+        \begin{equation*}
+            F(E) = \frac{1}{1+\exp\left( \frac{E-E_F}{kT} \right)}
+        \end{equation*}
+        where $E_F$ is the Fermi energy.
+        \begin{itemize}
+            \item $F(E)$ is the probability to fill the states with a given energy $E$.
+        \end{itemize}
+        \item When $T=\SI{0}{\kelvin}$, the Fermi energy is the energy of the last occupied state. Moreover, 
+        \item The Fermi energy is the energy of the last occupied state at $T=\SI{0}{\kelvin}$; it is proportional to the square of the Fermi state $k_F$, i.e., $E_F\propto k_F^2$.
+    \end{itemize}
+    \item If $T>0$, then:
+    \begin{itemize}
+        \item We fill the states from bottom to top.
+        \item Instead of having a sharp shift from occupied to unoccupied states, we have a sort-of washed-out step function.
+        \item Far below $E_F$, $F(E)=1$; far above $E_F$, $F(E)=0$. In the small \textbf{Fermi window} (aka. \textbf{Fermi level}) at the border (where the washed-out step function is), $0<F(E)<1$.
+        \begin{itemize}
+            \item The Fermi window is $4kbt$.
+        \end{itemize}
+        \item It is in the Fermi level that all of the important stuff happens (i.e., electrons flowing in metals).
+    \end{itemize}
+    \item If the gap (range where $\text{DOS}(E)=0$) in the density of states at the Fermi level is smaller than $\SI{3}{eV}$, then we have a semiconductor. If larger, we have an insulator. If 0, we have a conductor. Magnitude of DOS at Fermi level correlates with conductivity (e.g., \ce{Al} has a higher DOS at the Fermi level than \ce{Ag}, and we observe that \ce{Al} is more conductive than \ce{Ag}).
+    \begin{itemize}
+        \item In metals and insulators, the Fermi level is within bands.
+        \item In semiconductors, it is between bands.
+        \item In physics, everything is a metal or insulator; semiconductors are a constructed perspective.
+    \end{itemize}
+    \item Fermi sphere:
+    \begin{itemize}
+        \item The surface of the Fermi sphere separates occupied and unoccupied states in $k$-space.
+        \item Bounded by Fermi surface.
+        \item Radius is Fermi wave vector $k_F=\sqrt[3]{3\pi^2n}$ where $n$ is a parameter related to the density of electrons.
+        \item Fermi energy: $E_F=\hbar^2k_F^2/2m$.
+        \item Fermi momentum: $p_F=\hbar k_F$.
+        \item Fermi velocity: $v_F=\hbar k_F/m$.
+        \item Fermi temperature: $T_F=E_F/k_B$.
+    \end{itemize}
+    \item Electrons at $T=\SI{0}{\kelvin}$ still move very quickly (approximately $0.06$ the speed of light) since they're quantum particles (not classical ones).
+    \item 3D density of states:
+    \begin{itemize}
+        \item The density of states $g(E)$ is the number of one-electron states (including spin multiplicity) per unit energy and volume:
+        \begin{equation*}
+            g(E)_{3D} \equiv \frac{1}{V}\dv{N}{E}
+        \end{equation*}
+        \begin{itemize}
+            \item $N$ is twice the product of the Fermi sphere volume and the number of levels per unit volume.
+        \end{itemize}
+        \item Thus,
+        \begin{equation*}
+            N = 2\times\frac{4}{3}\pi k^3\times\frac{V}{8\pi^3} = \frac{V}{3\pi^2\hbar^3}(2m^*E)^{3/2}
+        \end{equation*}
+        so
+        \begin{equation*}
+            g(E)_{3D} = \frac{1}{V}\dv{N}{E} = \frac{1}{2\pi^2}\left( \frac{2m^*}{\hbar^2} \right)^{3/2}\sqrt{E}
+        \end{equation*}
+        \item Take CHEM 39000 Solids, Materials, and Surfaces to learn more.
+    \end{itemize}
 \end{itemize}
 
 
