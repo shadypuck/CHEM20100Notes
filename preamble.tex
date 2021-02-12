@@ -68,6 +68,15 @@
         ;
     }
 }
+\newcommand{\felement}[4]{
+    \node (#2) [draw,semithick,fill=#3,align=center,minimum width=1cm,minimum height=1cm] #4 {{\scriptsize #1}\\[1pt]{\large\ce{#2}}};
+}
+\newcommand{\belement}[4]{
+    \node (#2) [draw,semithick,fill=#3,align=center,minimum width=1cm,minimum height=1cm,below=of #4] {{\scriptsize #1}\\[1pt]{\large\ce{#2}}};
+}
+\newcommand{\relement}[4]{
+    \node (#2) [draw,semithick,fill=#3,align=center,minimum width=1cm,minimum height=1cm,right=of #4] {{\scriptsize #1}\\[1pt]{\large\ce{#2}}};
+}
 
 \newenvironment{tchart}[3]
 {
