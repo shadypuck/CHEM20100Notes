@@ -1,0 +1,137 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{4}
+
+\begin{document}
+
+
+
+
+\chapter{Coordination Chemistry: Structures and Isomers of Metal Complexes}
+\section{Module 28: Introduction to Coordination Compounds}
+\begin{itemize}
+    \item \marginnote{2/12:}Modern inorganic chemistry is heavily concerned with the transition metals, i.e., the $d$-block elements.
+    \begin{itemize}
+        \item Most industrial catalysts utilize transition metal compounds.
+    \end{itemize}
+    \item Transition metals vs. main-group elements:
+\end{itemize}
+\begin{tchart}{1.4}{Transition-Metal Compounds}{Main-Group Elements}
+    Multiple oxidation states (e.g., the 11 oxidation states of \ce{Mn} from $-3$ to $+7$) & Single oxidation state\\
+    Brightly colored (thus a gap between HOMO and LUMO of a few electron volts) & Usually colorless\\
+    Usually have partially occupied valence $d$-orbitals that are often relatively close in energy & The valence $s$- or $p$-orbitals are either fully occupied or empty and are far apart energetically\\
+    Often paramagnetic & Usually diamagnetic\\
+    Often interact with small molecules such as \ce{CO}, \ce{C2H4}, and \ce{H2} & Generally do not interact strongly with  \ce{CO}, \ce{C2H4}, or \ce{H2}
+\end{tchart}
+\begin{itemize}
+    \item The orbital energy gap matches the bond energies of small molecules pretty well.
+    \begin{itemize}
+        \item This is exactly what is needed for activating those chemical bonds, i.e., making catalytic cycles!
+    \end{itemize}
+    \item History:
+    \begin{itemize}
+        \item Prussian blue ink is the first synthetic blue dye, and one of the first coordination compounds created (used in famous paintings such as \emph{Starry Night}).
+        \item The structure of coordination complexes was not understood until 1907, however.
+        \item Blomstrand and Jorgenson tried to determine the structure of \ce{Co(NH3)4Cl3}, but their guess didn't explain isomers.
+        \item Alfred Werner (late 1800s) was the father of coordination chemistry.
+        \begin{itemize}
+            \item He noticed that excess \ce{AgNO3} could only liberate and precipitate as \ce{AgCl} one chlorine from both the green and violet isomers of \ce{CoCl3*(NH3)4}.
+            \item However, it could precipitate two chlorines from \ce{CoCl3*(NH3)5} and three from \ce{CoCl3*(NH3)6}.
+            \item This observation plus a number of controls led him to \textbf{Werner's Conclusions}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Werner's Conclusions}:
+    \begin{enumerate}
+        \item In this series of compounds, cobalt has a constant \textbf{coordination number} of 6.
+        \item As the \ce{NH3} molecules are removed, they are replaced by \ce{Cl-}, which acts as if it is covalently bonded to cobalt.
+        \item Chloride and ammonia are now called ligands.
+        \item Ligands are a Lewis base/electron pair donors that can bind to a metal ion.
+        \item A metal complex is a metal ion combined with ligands.
+        \item Coordination complexes are neutral and counter ions are not bonded to the central metal ion but balance the charge.
+        \begin{itemize}
+            \item For example, in $[\stackrel{+3}{\ce{Co}}\!(\stackrel{0}{\ce{NH3}})_6]\!\stackrel{-3}{\ce{Cl}}_3$, the three chloride ions are the counter ions.
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{Coordination number}: The number of groups that can bond directly to the metal.
+    \item Werner also hypothesized an octahedral geometry for all cobalt complexes.
+    \begin{itemize}
+        \item If it were hexagonal planar or trigonal antiprismatic, there would be three isomers of the coordination sphere for the compound with two chlorines (think ortho, meta, para isomers for the hexagonal planar example).
+        \item However, if it is octahedral, the compound with two chlorines will have two isomers (the chlorines can either be $\ang{180}$ to each other or $\ang{90}$ to each other).
+        \item Octahedral also reduces steric crowding.
+    \end{itemize}
+    \item \textbf{Coodination compound}: A compound with a metal center, a coordination sphere, and counter ions. \emph{Also known as} \textbf{coordination complex}.
+    \item Werner also resolved hexol into optically active isomers. This was the first optically active chiral \emph{inorganic} compound.
+\end{itemize}
+
+
+
+\section{Module 29: Types and Classes of Ligands}
+\begin{itemize}
+    \item \textbf{Monodentate ligand}: A ligand that binds to a metal ion through a single donor site. \emph{Etymology} one-toothed.
+    \begin{itemize}
+        \item For example, \ce{NH3} is a monodentate ligand.
+    \end{itemize}
+    \item \textbf{Bridging ligand}: A ligand that binds to two or more metal ions simultaneously.
+    \begin{itemize}
+        \item For example, \ce{O^2-} is a bridging ligand.
+    \end{itemize}
+    \item \textbf{Ambidentate ligand}: A ligand with two kinds of binding sites that can bind through one or the other but not both simultaneously.
+    \begin{itemize}
+        \item For example, thiocyanide can bond through \ce{S} or \ce{N} but not both simultaneously.
+    \end{itemize}
+    \item \textbf{Multidentate chelating ligand}: A ligand bound to a metal through several donor sites. \emph{Etymology} multitooth crab claw (crabs grab their food with two claws in the same way a metal can be attracted to two lone pairs from different groups on the same ligand). \emph{Also known as} \textbf{polydentate chelating ligand}.
+    \begin{figure}[H]
+        \centering
+        \chemfig[atom sep=1cm]{[:54]M*5(-[,,,1,stealth-,grx,semithick]NH_2-[,,,1]CH_2-H_2C-[,,2,2]H_2N-[,,,,-stealth,grx,semithick])}
+        \caption{An example of a bidentate chelating ligand.}
+        \label{fig:bidentateLigand}
+    \end{figure}
+    \begin{itemize}
+        \item For example, ethylenediamine (\ce{H2NCH2CH2NH2}; see Figure \ref{fig:bidentateLigand}) can bond to the same metal with both of its nitrogens' lone pairs at the same time.
+        \item Thus, ethylenediamine is is bidentate, and it forms a 5-membered chelate ring.
+    \end{itemize}
+    \item The chelate effect: For a given metal ion, the thermodynamic stability of a chelated complex involving bidentate or polydentate ligands is greater than that of a complex containing a corresponding number of comparable monodentate ligands.
+    \begin{itemize}
+        \item Note that 5-membered rings are more stable than 6, and 4-membered rings (or smaller) are not stable due to angle strain.
+        \item For example, ethylenediaminetetraacetate (EDTA) is a hexadentate ligand has two nitrogens and four oxygens that wrap entirely around a metal atom and bond very strongly.
+        \item $\beta$-diketones and acetylacetone are also polydentate ligands.
+        \item Multidentate bonding is incredibly strong.
+        \item As one last example, hemoglobin and chlorophyll have extra stability because the iron/magnesium ion is attached to four nitrogens.
+    \end{itemize}
+    \item Explanations of the chelate effect:
+    \begin{itemize}
+        \item Effective concentration: If one bond breaks, the bridge between the two bonding sites in the ligands still holds the other site in close proximity to the metal, making it more likely that the bond will reform than if the metal and ligand were floating entirely independently.
+        \item Entropy considerations:
+        \begin{itemize}
+            \item Imagine you have a coordination complex. If you substitute two monodentate ligands for two other monodentate ligands, you do not change the number of particles.
+            \item However, if you substitute one polydentate chelating ligand for two monodentate ligands, you increase the number of particles by 1, increasing disorder in the universe and favoring the forward reaction.
+        \end{itemize}
+        \item Looking at the temperature-dependence of equilibrium, we can calculate $\Delta G^\circ$. We can then use this to calculate $\Delta H$ and $\Delta S$, and we find that the contributions are very similar. Thus, both explanations of the chelate effect contribute about equally.
+    \end{itemize}
+    \item Covalent bond classification (CBC) method:
+    \item \textbf{X-type} (ligand): A ligand that donates one electron to the metal and accepts one electron from the metal when using the neutral ligand method of electron counting, or donates two electrons to the metal when using the donor pair method of electron counting.
+    \begin{itemize}
+        \item Examples: hydrogen, the halogens, hydroxide, cyanide, carbocation, and nitric oxide.
+    \end{itemize}
+    \item \textbf{L-type} (ligand): A neutral ligand that donates two electrons to the metal center regardless of the electron counting method being used.
+    \begin{itemize}
+        \item Examples: carbon monoxide, \ce{PR3}, ammonia, water, carbenes (\ce{=CRR}'), and alkenes.
+    \end{itemize}
+    \item \textbf{Z-type} (ligand): A ligand that accepts two electrons from the metal center as opposed to the donation occurring with the other two types of ligands.
+    \begin{itemize}
+        \item Examples: Lewis acids, such as \ce{BR3}.
+    \end{itemize}
+    \item LXZ notation:
+    \begin{itemize}
+        \item Take the traditional formula and replace the central metal atom with \ce{M}, each X-type ligand with \ce{X}, each L-type ligand with \ce{L}, and each Z-type ligand with \ce{Z}. Then, if necessary, combine ligands of the same type using subscript arabic numerals, as per usual. Conserve the braces and charge.
+        \item For example, \ce{[Ir(CO)(PPh3)2(Cl)(NO)]^2+} becomes \ce{[ML3X2]^2+}.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
