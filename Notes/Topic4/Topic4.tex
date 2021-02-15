@@ -451,6 +451,158 @@
     \begin{itemize}
         \item For example, \ce{H2O} can oxidize \ce{Ca} metal, forming \ce{Ca^2+(aq) + 2OH-(aq) + H2(g)}. \ce{H2O-} is not formed because the addition of electrons to antibonding orbitals in \ce{H2O} weakens one \ce{O-H} bond.
     \end{itemize}
+    \item \marginnote{2/14:}Section on spectroscopic support for frontier orbital interactions.
+    \begin{itemize}
+        \item Very confusing; electron transitions' colors in \ce{I2} when it acts as a Lewis acid.
+    \end{itemize}
+    \item \textbf{Lewis basicity}: The thermodynamic tendency of a substance to act as a Lewis base.
+    \begin{itemize}
+        \item It would be ideal to measure in the gas phase, but this is hard to do.
+        \item Determining a good reference acid is difficult.
+        \item When in solution, we want to make sure that we choose a solvent that will not react significantly as a Lewis acid with the solutes.
+        \begin{itemize}
+            \item In other words, we need a solvent that primarily solvates the solutes through dispersion forces (i.e., nonpolar solvents).
+        \end{itemize}
+        \item Once we have a solvent, we quantify the Lewis basicity of a substance by finding the $\Kb$ and $\log\Kb$ values for its complexation with a reference acid (such as \ce{I2}). The absolute basicity will vary based on the solvent, but the Lewis basicity ranking will be the same overall.
+    \end{itemize}
+    \item The standard scale for Lewis basicity is its \ce{BF3} affinity, or $-\Delta H^o$ in the following reaction, ccorrected for the enthalpy of \ce{BF3} dissolving in the solvent.
+    \begin{equation*}
+        \ce{BF3 + \text{Lewis Base} ->[CH2Cl2] \text{Lewis Base}-BF3}
+    \end{equation*}
+    \item \textbf{Halogen} (bond): A coordinate covalent bond formed by a halogen \ce{X2} (e.g., \ce{I2}) or interhalogen \ce{XY} (e.g., \ce{ICl}) to a Lewis base.
+    \begin{itemize}
+        \item Exhibit approximately $\ang{180}$ angles about the halogen donor atom, supporting use of $\sigma^*$ LUMO.
+    \end{itemize}
+    \item \ce{I2} affinity values are commonly determined in heptane, and while there is interest in creating an \ce{I2} affinity scale analogous to the \ce{BF3} one, as of yet, various experimental designs have not been reconciled.
+    \item Since the formation of a halogen bond involves donation into the halogen $\sigma^*$ LUMO, the \ce{X-Y} bond weakens and lengthens. This also decreases the stretching frequency. Measuring changes in stretching frequency induced in \ce{I2}, \ce{ICN}, and \ce{ICl} via Raman spectroscopy has correlated reasonably well to basicity, but not perfectly since these stretching bands are affected by the presence of the Lewis base, too.
+    \item Inductive effects:
+    \begin{itemize}
+        \item Adding more electronegative substituents decreases Lewis basicity (in $C_{3v}$ Lewis bases).
+        \item Adding more alkyl substituents increases Lewis basicity (in $C_{3v}$ Lewis bases).
+        \item Adding more electronegative substituents increases Lewis basicity (in $D_{3h}$ Lewis bases) since the increase in bond lengths draws $\pi$-bonding electrons farther from the central boron.
+    \end{itemize}
+    \item Steric effects on Lewis acidity and basicity: \textbf{front strain}, \textbf{back strain}, and \textbf{internal strain}.
+    \item \textbf{Front strain}: Bulky groups interfering directly with the approach of an acid and a base to each other. \emph{Also known as} \textbf{F strain}.
+    \item \textbf{Back strain}: Bulky groups interfering with each other when VSEPR effects force them to bend away from the other molecule forming the adduct. \emph{Also known as} \textbf{B strain}.
+    \item \textbf{Internal strain}: Effects from electronic differences within similar molecules. \emph{Also known as} \textbf{I strain}.
+    \item An example of differences caused by F strain:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:-120]N**6(-(-H_3C)----(-CH_3)-)}
+            \caption{2,6-dimethylpyridine.}
+            \label{fig:4Lewisbasesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:-120]N**6(-(-H_3C)-----)}
+            \caption{2-methylpyridine.}
+            \label{fig:4Lewisbasesb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:-120]N**6(-(-C(-[1]CH_3)(-[3]H_3C)(-[5]H_3C))-----)}
+            \caption{2-$t$-butylpyridine.}
+            \label{fig:4Lewisbasesc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\linewidth}
+            \centering
+            \chemfig{[:-120]N**6(------)}
+            \caption{Pyridine.}
+            \label{fig:4Lewisbasesd}
+        \end{subfigure}
+        \caption{Four Lewis bases.}
+        \label{fig:4Lewisbases}
+    \end{figure}
+    \begin{itemize}
+        \item When reacting with \ce{H+}, $\text{2,6-dimethylpyridine}>\text{2-methylpyridine}>\text{2-$t$-butylpyridine}>\text{pyridine}$.
+        \item When reacting with \ce{BF3} or \ce{BMe3}, $\text{pyridine}>\text{2-methylpyridine}>\text{2,6-dimethylpyridine}>\text{2-$t$-butylpyridine}$.
+    \end{itemize}
+    \item An example of B strain: The fact that tri($t$-butyl)boron vs. \ce{H+} elicit a reversed order of the basicity of \ce{NH3}, \ce{MeNH2}, \ce{Me2NH}, and \ce{Me3N}.
+    \item \textbf{Frustrated Lewis pair}: A lone pair on a Lewis base that does not form a traditional adduct with a Lewis acid because both molecules are hindered by excessive steric bulk. \emph{Also known as} \textbf{FLP}.
+    \item Example (refer to Figure \ref{fig:FLPexample} throughout the following discussion):
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \chemfig[atom sep=5mm]{B(-[2,1.6]*6(=(-F)-(-F)=(-F)-(-F)=(-F)-))(-[:-30,1.6]*6(=(-F)-(-F)=(-F)-(-F)=(-F)-))(-[:-150,1.6]*6(=(-F)-(-F)=(-F)-(-F)=(-F)-))}
+            \caption{Tris(pentafluorophenyl)borane.}
+            \label{fig:FLPexamplea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \chemfig[atom sep=5mm]{\charge{180=\:}{P}(<H)(>:[:60,1.5]*6(=(-CH_3)-=(-CH_3)-=(-H_3C)-))(-[:-60,1.5]*6(=(-H_3C)-=(-CH_3)-=(-CH_3)-))}
+            \caption{di(2,4,6-trimethylphenyl)phosphine.}
+            \label{fig:FLPexampleb}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \chemfig[atom sep=5mm]{\charge{45=$+$}{P}(<[:-150]\ce{H2(CH3)3}C_6)(>:[:150]\ce{H2(CH3)3}C_6)(-[2]H)-*6(-(-F)=(-F)-(-\charge{135=$-$}{B}(-[2]F)(>:[:-10]C_6H_5)(<[:-70]C_6H_5))-(-F)=(-F)-)}
+            \caption{Initial phosphino-borane compound.}
+            \label{fig:FLPexamplec}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \chemfig[atom sep=5mm]{\charge{45=$+$}{P}(<[:-150]\ce{H2(CH3)3}C_6)(>:[:150]\ce{H2(CH3)3}C_6)(-[2]H)-*6(-(-F)=(-F)-(-\charge{135=$-$}{B}(-[2]H)(>:[:-10]C_6H_5)(<[:-70]C_6H_5))-(-F)=(-F)-)}
+            \caption{Hydrogenated phosphino-borane compound.}
+            \label{fig:FLPexampled}
+        \end{subfigure}
+        \caption{FLP phosphino-borane compound.}
+        \label{fig:FLPexample}
+    \end{figure}
+    \begin{itemize}
+        \item Although the FLP in di(2,4,6-trimethylphenyl)phosphine does not attack the boron in\\tris(pentafluorophenyl)borane, it reacts with a para carbon of the borane to create a \textbf{zwitterionic} species after fluoride migration.
+        \item This fluoride can be substituted for a hydrogen, creating a species that releases hydrogen gas upon heating and reacts with hydrogen gas at ambient temperature to reform the zwitterion.
+        \item The phosphino-borane is the first non-transition metal species that can reversibly activate the \ce{H-H} bond in \ce{H2}.
+    \end{itemize}
+    \item \textbf{Zwitterion}: A species that contains at least one formal positive and negative charge.
+    \item More small molecules have been activated with FLPs, including \ce{CO2} and \ce{N2O}.
+    \item \textbf{Hydrogen} (bond): An \ce{X-H\cdots B} bond formed from an attraction between an \ce{X-H} unit (where the electronegativity of \ce{X} is greater than that of \ce{H}) and a donor atom \ce{B}.
+    \begin{itemize}
+        \item The components may be incorportated into larger molecular fragments.
+        \item Hydrogen bonds can be either intermolecular or intramolecular.
+    \end{itemize}
+    \item Hydrogen bonds can be described on the basis of the varying relative contributions from three components:
+    \begin{itemize}
+        \item Electrostatic contribution: The polarity of \ce{X-H}.
+        \item Partial covalent character and charge transfer: The donor-acceptor nature of the interaction.
+        \item Dispersion forces.
+    \end{itemize}
+    \item Experimental stipulations that must be satisfied for an interaction to be declared a hydrogen bond.
+    \begin{itemize}
+        \item Bond angle close to $\ang{180}$.
+        \item Red-shifted IR stretching frequency for the \ce{X-H} bond (indicative of the bond weakening and, thus, donation into antibonding orbitals).
+        \item High deshielding of NMR chemical shift (extremely sensitive probe for hydrogen bonding).
+        \item Magnitude of $\Delta G$ for bond formation must exceed the thermal energy of the system.
+    \end{itemize}
+    \item \textbf{H-bond puzzle}: Predicting the strength of hydrogen bonds solely on the basis of the structures of the participaitng molecules.
+    \begin{itemize}
+        \item Based in the fact that structurally very similar hydrogen bonds can exhibit massive differences in strength.
+        \item For example, the \ce{O-H\cdots O} bond between hydronium and water is roughly six times stronger than the comparable bond between two water molecules.
+    \end{itemize}
+    \item \textbf{$\pKa$ equalization} (paradigm): An approach to predicting the strength of hydrogen bonds in aqueous solution by envisioning \ce{H}-bond strength as associated with the 3-way proton transfer equilibrium between \ce{X} and \ce{B}.
+    \begin{itemize}
+        \item The better matched the $\pKa$ values, the stronger the predicted H-bond.
+        \item In effect, a strong H-bond minimizes $\Delta\pKa(\ce{X-H\cdots B})=\pKa(\ce{HX})-\pKa(\ce{BH+})$.
+    \end{itemize}
+    \item \textbf{Receptor-guest interaction}: An interaction between molecules with extended pi systems where their pi systems interact with each other to hold the molecules or portions of the molecules together. \emph{Also known as} \textbf{receptor-substrate interaction}, \textbf{host-guest interaction}.
+    \begin{itemize}
+        \item One example is a double-concave hydrocarbon buckycatcher that forms a ball-and-socket structure with \ce{C60}. This is an example of an \textbf{inclusion complex}.
+    \end{itemize}
+    \item The hard vs. soft distinction is largely a result of polarizability, with soft acid having high polarizability and hard acids having low polarizability.
+    \item Soft transition metals have $d$ electrons available for $\pi$-bonding.
+    \item \textbf{Exchange reaction}: A reaction involving the exchange of a water and a base \ce{B}.
+    \item Is \ce{OH-} or \ce{S^2-} more likely to form insoluble salts with $3+$ transition-metal ions? Which is more likely to form insoluble salts with $2+$ transition-metal ions?
+    \begin{itemize}
+        \item \ce{OH-} and $3+$ are hard, and thus will form insoluble salts.
+        \item \ce{S^2-} and $2+$ are soft, and thus will form insoluble salts.
+    \end{itemize}
+    \item Both hardness/softness and strength must be considered to determine reactivity.
+    \item MO diagrams for hard-hard and soft-soft interactions reveal that there is a lower covalent contribution in hard-hard interactions, but this is compensated for by a strong ionic contribution, so don't think that hard-hard interactions are weaker.
+    \item Wrt. chemical hardness $\eta$ (Greek "eta"), ionization energy is assumed to measure the energy of the HOMO ($E_\text{HOMO}=-I$) and electron affinity the energy of the LUMO ($E_\text{LUMO}=-A$); thus, a hard species is one with a high difference in energy between its HOMO and LUMO.
+    \item \textbf{Chemical softness}: The inverse $\sigma=\frac{1}{\eta}$ of hardness.
+    \item Reviews a quantitative system of acid-base parameters to account for reactivity by explicitly including electrostatic and covalent factors.
 \end{itemize}
 
 
