@@ -545,5 +545,416 @@
 
 
 
+\section[Module 32: Ligand Field Theory for the \texorpdfstring{$O_h$}{TEXT} \texorpdfstring{$\sigma$}{TEXT}-Only Case]{Module 32: Ligand Field Theory for the \texorpdfstring{$\bm{O_h}$}{TEXT} \texorpdfstring{$\bm{\sigma}$}{TEXT}-Only Case}
+\begin{itemize}
+    \item \marginnote{2/17:}Suggested reading: \textcite{bib:MiesslerFischerTarr} Section 10.3.
+    \item Ligand field theory:
+    \begin{itemize}
+        \item Application of molecular orbital theory to transition metal complexes.
+        \item Ligands are not point charges.
+        \item Takes into account $\pi$ bonding.
+        \begin{itemize}
+            \item I.e., accounts for the fact that ligands can be $\sigma$-donors, $\pi$-donors, $\pi$-acceptors, or sometimes multiple simultaneously.
+        \end{itemize}
+        \item Can be used to explain spectrochemical series.
+        \item Better than valence-bond model or crystal field theory at explaining experimental data.
+    \end{itemize}
+    \item Octahedral $\sigma$-only MO diagram workflow:
+    \begin{enumerate}
+        \item Assign a point group.
+        \item Choose basis function.
+        \item Apply operations.
+        \item Generate a reducible representation.
+        \item Reduce to irreducible representations.
+        \item Combine orbitals by their symmetry.
+        \item Fill MOs with $\e[-]$.
+        \item Generate SALCs of peripheral atoms.
+        \item Draw peripheral atom SALC with central atom orbital to generate bonding/antibonding MOs.
+    \end{enumerate}
+    \item \ce{MH6} example.
+    \begin{itemize}
+        \item Point group: $O_h$.
+        \item Basis funtions: $1s$-orbitals on the ligands (you can also choose the $\sigma$-bond vectors if you wish [if it's easier for you]), and $s,p,d$-orbitals on the metal center.
+        \item Apply operations \& generate a reducible representation.
+        \begin{align*}
+            \Gamma_{\ce{H}} &= (6,0,0,2,2,0,0,0,4,2) = A_{1g}+T_{1u}+E_g\\
+            \Gamma_{\ce{M}_{s}} &= A_{1g}\\
+            \Gamma_{\ce{M}_{p}} &= T_{1u}\\
+            \Gamma_{\ce{M}_{d_{x^2-y^2,z^2}}} &= E_g\\
+            \Gamma_{\ce{M}_{d_{xy,xz,yz}}} &= T_{2g}
+        \end{align*}
+        \item Combine orbitals by their symmetry.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}[
+                yscale=0.15,
+                every node/.prefix style={black}
+            ]
+                \footnotesize
+                \path (-7,-20) -- (7,-20);
+        
+                \draw [ultra thick,gry]
+                    (-4.7,-10) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) coordinate (4p)
+                    (-3.5,-21) -- node[below]{$A_{1g}$} ++(0.5,0) coordinate (4s)
+                    (-5.9,-30) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) -- node[below]{$E_g$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) coordinate (3d1)
+                    (3,-36) coordinate (1s1) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) coordinate (1s3) -- node[below]{$A_{1g}$} ++(0.5,0)
+                ;
+                \draw [ultra thick]
+                    (-0.85,-2) coordinate (t1uul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1uur)
+                    (-0.85,-8) coordinate (a1gul) -- node[below]{$a_{1g}$} ++(1.7,0) coordinate (a1gur)
+                    (-0.85,-19) coordinate (egul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e_g$} ++(0.1,0) -- ++(0.8,0) coordinate (egur)
+                    (-0.85,-30) coordinate (t2g) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{2g}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0)
+                    (-0.85,-37) coordinate (t1ull) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1ulr)
+                    (-0.85,-43) coordinate (egll) -- ++(0.8,0) node[below,xshift=0.05cm]{$e_g$} ++(0.1,0) -- ++(0.8,0) coordinate (eglr)
+                    (-0.85,-50) coordinate (a1gll) -- node[below]{$a_{1g}$} ++(1.7,0) coordinate (a1glr)
+                ;
+        
+                \begin{scope}[on background layer]
+                    \draw [thick,grx,densely dashed]
+                        (4p) -- (t1uul)
+                        (4p) -- (t1ull)
+                        (4s) -- (a1gul)
+                        (4s) -- (a1gll)
+                        (3d1) -- (t2g)
+                        (3d2) -- (egul)
+                        (3d2) -- (egll)
+                        (1s1) -- (t1uur)
+                        (1s1) -- (t1ulr)
+                        (1s2) -- (egur)
+                        (1s2) -- (eglr)
+                        (1s3) -- (a1gur)
+                        (1s3) -- (a1glr)
+                    ;
+                \end{scope}
+
+                \node at (-4.45,-56) {\small\ce{M}};
+                \node at (4.75,-56) {\small$6\times \ce{H}$};
+            \end{tikzpicture}
+            \caption{\ce{MH6} orbital diagram.}
+            \label{fig:orbitalDiagram-MH6}
+        \end{figure}
+        \begin{itemize}
+            \item In a transition metal compound/coordination complex, the $t_{2g}$ MOs would be the HOMOs and the antibonding $e_g$ MOs would be the LUMOs.
+            \item Since the $t_{2g}$ orbitals are nonbonding, they are reflective of the energy of the metal $d$-orbitals. Thus, the energy difference between them and the $e_g$ orbitals is equal to the amount by which the $e_g$ orbitals' energy changes during bonding, i.e., the splitting parameter. This energy change is also indicative of the antibonding character of the $e_g$ orbitals, and consequently the strength of the bonding (bigger $\Delta$ implies higher energy $e_g$ orbitals implies stronger bonding).
+            \item In LFT, we call this quantity the \textbf{ligand field splitting parameter}, as opposed to the crystal field splitting parameter.
+            \item Pauses to consider \textbf{weak field ligands} and \textbf{strong field ligands}.
+        \end{itemize}
+        \item Generate SALCs of peripheral atoms.
+        \begin{align*}
+            \Psi(a_{1g}) &= c_1(4s)+c_2(\sigma_1+\sigma_2+\sigma_3+\sigma_4+\sigma_5+\sigma_6)\\
+            \Psi_z(t_{1u}) &= c_3(4p_z)+c_4(\sigma_1-\sigma_6)\\
+            \Psi_x(t_{1u}) &= c_3(4p_x)+c_4(\sigma_4-\sigma_2)\\
+            \Psi_y(t_{1u}) &= c_3(4p_y)+c_4(\sigma_3-\sigma_5)\\
+            \Psi_{z^2}(e_g) &= c_5(3d_{z^2})+c_6(\sigma_1+\sigma_6)+c_7(-\sigma_2-\sigma_3-\sigma_4-\sigma_5)\\
+            \Psi_{x^2-y^2}(e_g) &= c_8(3d_{x^2-y^2})+c_9(\sigma_2-\sigma_3+\sigma_4-\sigma_5)
+        \end{align*}
+        \begin{itemize}
+            \item Recall that the coefficients reflect the degree of overlap.
+            \item Note that for the $\Psi(t_{1u})$ wavefunctions, the in-plane $\sigma$-orbitals have zero overlap with the perpendicular $4p$ orbital, hence their coefficient of 0.
+        \end{itemize}
+        \item Draw peripheral atom SALC with central atom orbital to generate bonding/antibonding MOs.
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=white] plot[domain=0:2*pi,smooth,variable=\thta] ({\thta r}:1);
+        
+                    \filldraw [semithick,fill=white] (0:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (45:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (90:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (180:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (225:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (270:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi(a_{1g})$.}
+                \label{fig:SALCs-MH6a}
+            \end{subfigure}\\[1em]
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=grt] (0,{-6^0.5/4},0) circle (6^0.5/4);
+                    \filldraw [semithick,fill=white] (0,{6^0.5/4},0) circle (6^0.5/4);
+                    \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0,,,,opacity=0])(-[2,,,,opacity=0])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5])}};
+        
+                    \filldraw [semithick,fill=white] (90:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (270:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi_z(t_{1u})$.}
+                \label{fig:SALCs-MH6b}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=grt] ({-6^0.5/4},0,0) circle (6^0.5/4);
+                    \filldraw [semithick,fill=white] ({6^0.5/4},0,0) circle (6^0.5/4);
+                    \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0,,,,opacity=0])(-[2,,,,opacity=0])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5])}};
+        
+                    \filldraw [semithick,fill=white] (0:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (180:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi_x(t_{1u})$.}
+                \label{fig:SALCs-MH6c}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=white] (0,0,{6^0.5/4}) circle (6^0.5/4);
+                    \filldraw [semithick,fill=grt] (0,0,{-6^0.5/4}) circle (6^0.5/4);
+                    \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0])(-[2])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5,,,,opacity=0])}};
+        
+                    \filldraw [semithick,fill=white] (45:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (225:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi_y(t_{1u})$.}
+                \label{fig:SALCs-MH6d}
+            \end{subfigure}\\[1em]
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=white] plot [domain=0.63:2.51,smooth,variable=\thta] ({\thta r}:{0.5*2.5^0.5*(3*sin(\thta r)^2-1)});
+                    \filldraw [semithick,fill=white] plot [domain=3.75:5.67,smooth,variable=\thta] ({\thta r}:{0.5*2.5^0.5*(3*sin(\thta r)^2-1)});
+                    \filldraw [semithick,fill=grt] (-0.4,0,0) arc[start angle=120,end angle=60,x radius=0.8cm,y radius=0.9cm] arc[start angle=-60,end angle=-120,x radius=0.8cm,y radius=0.9cm];
+                    \filldraw [semithick,fill=white] ({0.73 r}:{0.5*2.5^0.5*(3*sin(0.73 r)^2-1)}) to[out=-125,in=-55] ({2.41 r}:{0.5*2.5^0.5*(3*sin(2.41 r)^2-1)});
+        
+                    \filldraw [semithick,fill=grt] (0:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (45:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (90:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (180:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (225:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (270:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi_{z^2}(e_g)$.}
+                \label{fig:SALCs-MH6e}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.19\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                    \footnotesize
+                    \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                    \filldraw [semithick,fill=grt,scale=1.3,rotate=40] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=white,scale=1.5] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=white,scale=1.5] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=grt,scale=1.3,rotate=40] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0,,,,opacity=0])(-[2])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5,,,,opacity=0])}};
+        
+                    \filldraw [semithick,fill=white] (0:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (45:1.6) circle (4mm);
+                    \filldraw [semithick,fill=white] (180:1.6) circle (4mm);
+                    \filldraw [semithick,fill=grt] (225:1.6) circle (4mm);
+                \end{tikzpicture}
+                \caption{$\Psi_{x^2-y^2}(e_g)$.}
+                \label{fig:SALCs-MH6f}
+            \end{subfigure}
+            \caption{\ce{MH6} bonding and antibonding MOs.}
+            \label{fig:SALCs-MH6}
+        \end{figure}
+    \end{itemize}
+    \item \textbf{Weak field ligand}: A ligand with high electronegativity, and thus low energy frontier orbitals.
+    \begin{itemize}
+        \item Weak $\sigma$ donor.
+        \item Weak Lewis base.
+        \item Weaker bonding interaction.
+        \item Smaller $\Delta_o$.
+    \end{itemize}
+    \item \textbf{Strong field ligand}: A ligand with comparable energy frontier orbitals to the $d$-orbitals of the metal cation.
+    \begin{itemize}
+        \item Strong $\sigma$ donor.
+        \item Strong Lewis base.
+        \item Stronger bonding interaction.
+        \item Larger $\Delta_o$.
+    \end{itemize}
+    \item Size matters more than Lewis basicity:
+    \begin{itemize}
+        \item Stronger Lewis base $\Rightarrow$ larger $\Delta_o$.
+        \item Smaller ligand $\Rightarrow$ larger $\Delta_o$.
+        \item However, size overall is more important.
+        \begin{itemize}
+            \item This is related to hardness and softness --- with a hard Lewis acid metal center, harder ligands will bond with greater strengths.
+        \end{itemize}
+    \end{itemize}
+    \item For the halides' $\Delta_o$: $\ce{I-}<\ce{Br-}<\ce{Cl-}<\ce{F-}$.
+    \item If we use $p$-orbitals pointing toward the center as bases for our peripheral atoms instead of $s$-orbitals, we get the exact same result.
+    \item Factors that influence $\Delta_\text{oct}=\Delta_o=10Dq$.
+    \begin{itemize}
+        \item Metal oxidation state: Increasing the charge increases $\Delta$.
+        \item Principal quantum number: Increasing $n$ (going down a period on the periodic table) increases $\Delta$, too.
+        \item Nature of the ligand:
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \textbf{\ce{L}} & \textbf{Ligand Type} & $\bm{z}$ & $\bm{\Delta_o\ (\textbf{cm}^{-1})}$\\
+                \hline
+                \ce{Cl-} & $\sigma,\pi$-donor & $3-$ & $\num{13700}$\\
+                \ce{H2O} & $\sigma$-donor & $3+$ & $\num{17400}$\\
+                \ce{NH3} & $\sigma$-donor & $3+$ & $\num{21500}$\\
+                \ce{CN-} & $\sigma$-donor/$\pi$-acceptor & $3-$ & $\num{26600}$\\
+                \hline
+            \end{tabular}
+            \caption{How the nature of the ligand influences $\Delta$.}
+            \label{tab:natureOfTheLigand}
+        \end{table}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section[Module 33: Ligand Field Theory for the \texorpdfstring{$O_h$}{TEXT} \texorpdfstring{$\sigma+\pi$}{TEXT} Case]{Module 33: Ligand Field Theory for the \texorpdfstring{$\bm{O_h}$}{TEXT} \texorpdfstring{$\bm{\sigma+\pi}$}{TEXT} Case}
+\begin{itemize}
+    \item Consider cyano-ligands (isoelectronic to \ce{CO} and \ce{NO+}).
+    \begin{itemize}
+        \item HOMO is perfect for $\sigma$ bonding via donation.
+        \item LUMO is perfect for $\pi$ acceptance from metal $d$-orbitals.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \node {\ce{M}};
+                \node at (2,0) {\ce{C}};
+                \node at (3,0) {\ce{N}};
+        
+                \filldraw [semithick,fill=grt,rotate=45] (0.7,0) ellipse (4mm and 2.5mm);
+                \filldraw [semithick,fill=white,rotate=135] (0.7,0) ellipse (4mm and 2.5mm);
+                \filldraw [semithick,fill=grt,rotate=225] (0.7,0) ellipse (4mm and 2.5mm);
+                \filldraw [semithick,fill=white,rotate=315] (0.7,0) ellipse (4mm and 2.5mm);
+        
+                \filldraw [semithick,fill=grt] (2,0.6) ellipse (6mm and 3.5mm);
+                \filldraw [semithick,fill=white] (2,-0.6) ellipse (6mm and 3.5mm);
+                \filldraw [semithick,fill=white] (3,0.5) ellipse (3mm and 2mm);
+                \filldraw [semithick,fill=grt] (3,-0.5) ellipse (3mm and 2mm);
+        
+                \draw [semithick,-stealth] (0.6,0.6) to[out=30,in=135] (1.8,0.5);
+                \draw [semithick,-stealth] (0.6,-0.6) to[out=-30,in=-135] (1.8,-0.5);
+            \end{tikzpicture}
+            \caption{LUMO $\pi$-acceptance.}
+            \label{fig:piAcceptance}
+        \end{figure}
+        \begin{itemize}
+            \item $d_{xz}$ and $\pi^*$ orbitals combine with stabilization energy $e_\pi$.
+        \end{itemize}
+        \item This is how we determine what kinds of donors the ligands in Table \ref{tab:natureOfTheLigand} are. For \ce{H2O}, for example, it is not a $\pi$-acceptor because its LUMO is a $\sigma^*$ orbital, not a $\pi^*$ one (see Figure \ref{fig:orbitalDiagram-H2O}).
+    \end{itemize}
+    \item Octahedral $\sigma+\pi$ bonding:
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[
+            scale=0.8,
+            every node/.append style={black}
+        ]
+            \footnotesize
+            \draw [->] (-4,0,0) -- (4,0,0) node[right]{\small$Y$};
+            \draw [->] (0,-4,0) -- (0,4,0) node[above]{\small$Z$};
+            \draw [->] (0,0,-4) -- (0,0,4) node[below left]{\small$X$};
+    
+            \draw [grx,thick,-stealth] (3.7,0,0) -- (2.7,0,0) node[above left=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (3.7,0,0) -- (3.7,1,0) node[above]{$x$};
+            \draw [grx,thick,-stealth] (3.7,0,0) -- (3.7,0,1) node[below left=-1mm]{$z$};
+    
+            \draw [grx,thick,-stealth] (0,0,-3.7) -- (0,0,-2.7) node[above left=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (0,0,-3.7) -- (0,-1,-3.7) node[below]{$x$};
+            \draw [grx,thick,-stealth] (0,0,-3.7) -- (-1,0,-3.7) node[left]{$z$};
+    
+            \draw [grx,thick,-stealth] (-3.7,0,0) -- (-2.7,0,0) node[above right=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (-3.7,0,0) -- (-3.7,0,-1) node[above right=-1mm]{$x$};
+            \draw [grx,thick,-stealth] (-3.7,0,0) -- (-3.7,-1,0) node[below]{$z$};
+    
+            \draw [grx,thick,-stealth] (0,0,3.7) -- (0,0,2.7) node[above left=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (0,0,3.7) -- (1,0,3.7) node[right]{$x$};
+            \draw [grx,thick,-stealth] (0,0,3.7) -- (0,1,3.7) node[above]{$z$};
+    
+            \draw [grx,thick,-stealth] (0,3.7,0) -- (0,2.7,0) node[below right=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (0,3.7,0) -- (0,3.7,1) node[below left=-1mm]{$x$};
+            \draw [grx,thick,-stealth] (0,3.7,0) -- (1,3.7,0) node[right]{$z$};
+    
+            \draw [grx,thick,-stealth] (0,-3.7,0) -- (0,-2.7,0) node[above left=-1mm]{$y$};
+            \draw [grx,thick,-stealth] (0,-3.7,0) -- (-1,-3.7,0) node[left]{$x$};
+            \draw [grx,thick,-stealth] (0,-3.7,0) -- (0,-3.7,-1) node[above right=-1mm]{$z$};
+        \end{tikzpicture}
+        \caption{Octahedral $\pi$-ligand coordinate systems.}
+        \label{fig:piOctahedralLigand}
+    \end{figure}
+    \begin{itemize}
+        \item Generate a reducible representation: $\Gamma_{L\pi_{x,z}}=(12,0,0,-4,0,0,0,0,0)=T_{1g}+T_{2g}+T_{1u}+T_{2u}$.
+        \item Combine orbitals by their symmetry.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[
+                yscale=0.25,
+                every node/.prefix style={black}
+            ]
+                \footnotesize
+                \path (-7,-20) -- (7,-20);
+        
+                \draw [ultra thick,gry]
+                    (-4.7,-10) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) coordinate (4p)
+                    (-3.5,-21) -- node[below]{$A_{1g}$} ++(0.5,0) coordinate (4s)
+                    (-5.9,-30) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) -- node[below]{$E_g$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) coordinate (3d1)
+                    (3,-6) coordinate (2p1) -- node[below]{$T_{1g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1g}$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2g}$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) coordinate (2p4) -- node[below]{$T_{2u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{2u}$} ++(0.5,0)
+                    (3,-36) coordinate (1s1) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_{1u}$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) -- node[below]{$E_g$} ++(0.5,0) ++(0.1,0) coordinate (1s3) -- node[below]{$A_{1g}$} ++(0.5,0)
+                ;
+                \draw [ultra thick]
+                    (-0.85,-1) coordinate (t1uul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1uur)
+                    (-0.85,-3.5) coordinate (t2gul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{2g}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2gur)
+                    (-2,-6) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{2u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.6,0) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1g}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1g)
+                    (-0.85,-9) coordinate (t1uml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1umr)
+                    (-0.85,-14) coordinate (a1gul) -- node[below]{$a_{1g}$} ++(1.7,0) coordinate (a1gur)
+                    (-0.85,-19) coordinate (egul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e_g$} ++(0.1,0) -- ++(0.8,0) coordinate (egur)
+                    (-0.85,-32) coordinate (t2gll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{2g}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2glr)
+                    (-0.85,-37) coordinate (t1ull) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_{1u}$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1ulr)
+                    (-0.85,-41) coordinate (egll) -- ++(0.8,0) node[below,xshift=0.05cm]{$e_g$} ++(0.1,0) -- ++(0.8,0) coordinate (eglr)
+                    (-0.85,-45) coordinate (a1gll) -- node[below]{$a_{1g}$} ++(1.7,0) coordinate (a1glr)
+                ;
+        
+                \begin{scope}[on background layer]
+                    \draw [thick,grx,densely dashed]
+                        (4p) -- (t1uul)
+                        (4p) -- (t1uml)
+                        (4p) -- (t1ull)
+                        (4s) -- (a1gul)
+                        (4s) -- (a1gll)
+                        (3d1) -- (t2gul)
+                        (3d1) -- (t2gll)
+                        (3d2) -- (egul)
+                        (3d2) -- (egll)
+                        (2p1) -- (t1g)
+                        (2p2) -- (t2gur)
+                        (2p2) -- (t2glr)
+                        (2p3) -- (t1uur)
+                        (2p3) -- (t1umr)
+                        (2p3) -- (t1ulr)
+                        (1s1) -- (t1uur)
+                        (1s1) -- (t1umr)
+                        (1s1) -- (t1ulr)
+                        (1s2) -- (egur)
+                        (1s2) -- (eglr)
+                        (1s3) -- (a1gur)
+                        (1s3) -- (a1glr)
+                    ;
+                \end{scope}
+        
+                \node at (-4.45,-47) {\small\ce{M}};
+                \node at (4.75,-47) {\small$6\times \ce{L}$};
+            \end{tikzpicture}
+            \caption{\ce{ML6} orbital diagram.}
+            \label{fig:orbitalDiagram-ML6}
+        \end{figure}
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}

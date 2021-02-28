@@ -42,7 +42,7 @@
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
 
-\usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals}
+\usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals,calc}
 \colorlet{grx}{green!25!cyan!40!black!95}
 \colorlet{gry}{green!25!cyan!40!black!50}
 \colorlet{grz}{green!25!cyan!40!black!20}
@@ -50,7 +50,8 @@
 \colorlet{gax}{gray!25}
 \tikzset{
     dashbondg/.style={draw=grt,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt},
-    dashbond/.style={draw=white,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt}
+    dashbond/.style={draw=white,double=black,very thick,double distance=0.4pt,dash pattern=on 2pt off 2pt},
+    bond/.style={draw=white,double=black,very thick,double distance=0.4pt}
 }
 
 \newcommand{\e}[1][]{\text{e}^{#1}}
