@@ -1,0 +1,163 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{5}
+
+\begin{document}
+
+
+
+
+\chapter{Bonding and Physical Properties of Metal Complexes}
+\section{Module 34: Magnetic Properties of Transition Metal Complexes}
+\begin{itemize}
+    \item \marginnote{2/22:}Electrons occupy the lowest energy triply degenerate orbitals in $d^1$, $d^2$, and $d^3$ configurations.
+    \item However, in the $d^4$ configuration:
+    \begin{itemize}
+        \item Low spin: The fourth electron will pair up in the lower $t_{2g}$ energy level.
+        \item High spin: The fourth electron will occupy a higher energy $e_g$ orbital.
+    \end{itemize}
+    \item The pairing energy $\Pi$ is made up of two parts (refer to Figure \ref{fig:coulombExchange} and the associated discussion):
+    \begin{enumerate}
+        \item Coulombic repulsion energy caused by having two eletrons in the same orbital. Destabilization energy contribution of $\Pi_c$ for each doubly occupied orbital. Has a positive sign because it increases the energy of the system.
+        \item Exchange stabilization energy for each pair of electrons having the same spin and same energy. Stabilizing contribution of $\Pi_e$ for each pair having same spin and same energy. Has a negative sign because it reduces the energy of the system.
+    \end{enumerate}
+    \item Deciding whether the fourth electron will go into the higher energy $e_g$ orbital at an energy cost of $\Delta$, or be paired at an energy cost of $\Pi$.
+    \begin{itemize}
+        \item Strong field ligand has big $\Delta$ so $\Pi<\Delta$; this implies a low spin configuration.
+        \item Weak field ligand has small $\Delta$ so $\Pi>\Delta$; this implies a high spin configuration.
+    \end{itemize}
+    \item We can experimentally discriminate between high- and low-spin compounds by measuring magnetic properties.
+    \begin{itemize}
+        \item The Gouy balance can determine the magnetic susceptibility of materials.
+        \item A more modern way to measure magnetic properties uses a \underline{S}uperconducting \underline{Qu}antum \underline{I}nterference \underline{D}evice, or SQUID.
+        \begin{itemize}
+            \item This device is just about the most sensitive machine humanity can build (can detect the magnetic field of the heart/brain).
+        \end{itemize}
+    \end{itemize}
+    \item Main types of magnetic behavior:
+    \begin{itemize}
+        \item Diamagnetism (from electron charge).
+        \item Paramagnetism (spin and orbital motion of electrons on individual atoms).
+        \item Ferromagnetism and antiferromagnetism (cooperative interaction between magnetic moments of individual atoms).
+    \end{itemize}
+    \item Paramagnetism is much stronger than diamagnetism and overpowers it.
+    \begin{itemize}
+        \item Ferromagnetism overpowers both.
+    \end{itemize}
+    \item Theoretical background for determining magnetic spins experimentally:
+    \begin{itemize}
+        \item When we place a sample in a magnetic field of magnitude $H$, the sample will interact with the magnetic field and magnetize. This magnetization causes the magnetic flux $B$ in the material to differ from the magnetic flux through the space the sample occupies (were the sample not there) by an amount determined by the magnetization parameter $M$, which is specific to each material. These three quantities are related via the equation
+        \begin{equation*}
+            B = H+4\pi M
+        \end{equation*}
+        \item If we divide the flux by the magnetic field, we obtain the magnetic susceptibility per unit volume $\kappa$ of the material:
+        \begin{equation*}
+            \frac{B}{H} = 1+4\pi\cdot\frac{M}{H} = 1+4\pi\kappa
+        \end{equation*}
+        \item This quantity can be normalized by the molecular weight and density of the substance to give the magnetic susceptibility per mole
+        \begin{equation*}
+            \chi_M = \kappa\cdot\frac{\text{molecular weight}}{\text{density}}
+        \end{equation*}
+        \item Dividing $\chi_M$ by Avogadro's number gives the magnetic susceptibility per molecule $\chi_M^\text{corr}$.
+        \item \textbf{Curie's law} relates $\chi_M^\text{corr}$ to the magnetic moment $\mu$ by the formula
+        \begin{equation*}
+            \chi_M^\text{corr} = \frac{N\mu^2k}{3T}
+        \end{equation*}
+        where $N$ is Avogadro's number, $k=\SI[per-mode=symbol]{1.381e23}{\joule\per\kelvin}$ is the Boltzmann constant, and $T$ is the absolute temperature of the substance.
+        \begin{itemize}
+            \item Note that $\mu$ is measured in units of Bohr magnetons where $\SI{1}{B.M.}=\frac{eh}{4\pi m_ec}$. As per usual, we have $e=\SI{1.602e-19}{\coulomb}$ is the charge of an electron, $h=\SI{6.626e-34}{\joule\second}$ is Planck's constant, $m_e=\SI{9.11e-31}{\kilo\gram}$ is the mass of an electron, and $c=\SI[per-mode=symbol]{2.998e8}{\meter\per\second}$ is the speed of light.
+            \item We can rearrange Curie's law to express the magnetic moment in terms of $\chi_M^\text{corr}$ as follows.
+            \begin{equation*}
+                \mu = \sqrt{3k/N}\cdot\sqrt{\chi_M^\text{corr}T}
+            \end{equation*}
+        \end{itemize}
+        \item Magnetic moment $\mu$ and the spin-only formula: Materials that are diamagnetic are repelled by a magnetic field, whereas paramagnetic substances are attracted into a magnetic field, i.e., show magnetic susceptibility. The unpaired electrons in paramagnetic complexes of $3d$-block metal ions create a magnetic field. The magnetic moment $\mu$ is then given by the spin-only formula
+        \begin{equation*}
+            \mu_\text{spin-only} = \sqrt{n(n+2)}
+        \end{equation*}
+        where $n$ is the number of unpaired electrons.
+        \item In heavier transition metals, we need to account for not just the $S$ quantum number but also $L$ (which accounts for some ground state relativistic effects) by using the formula
+        \begin{equation*}
+            \mu_{S+L} = \sqrt{4S(S+1)+L(L+1)}
+        \end{equation*}
+    \end{itemize}
+\end{itemize}
+
+
+
+% \section{Module 35: Reflections on the Ligand Field Effects in $O_h$ and $T_d$ Complexes}
+% \begin{itemize}
+%     \item \marginnote{2/24:}Factors that influence $\Delta_o$:
+%     \begin{itemize}
+%         \item Metal oxidation state --- increases in magnitude of oxidation state give bigger $\Delta_o$.
+%         \item Principal quantum number --- increases give bigger $\Delta_o$.
+%         \begin{itemize}
+%             \item This makes 2nd and 3rd row metals almost always low-spin, and 4th row transition metals often high-spin.
+%         \end{itemize}
+%         \item Nature of the ligand --- $\sigma,\pi$-donor < $\sigma$-donor $<$ $\sigma$-donor, $\pi$-acceptor.
+%     \end{itemize}
+%     \item $T_d$ vs. $O_h$ splitting.
+%     \emph{picture}
+%     \begin{itemize}
+%         \item For $T_d$, 2 $e$-type orbitals are lower in energy and 3 $t_2$ orbitals are higher.
+%         \item For $O_h$, it's reversed.
+%         \item $T_d$ complexes are always weak-field.
+%     \end{itemize}
+%     \item Rationalization of coordination geometries (factors that influence the geometry adopted):
+%     \begin{itemize}
+%         \item The number of bonds: Electrostatic and covalent model.
+%         \item Ligand-ligand repulsions from $T_d$.
+%         \begin{itemize}
+%             \item High charge on cation increases $\Delta$ --- favors $O_h$.
+%             \item $\text{CFSE}(O_h)\geq\text{CFSE}(T_d)$, always.
+%             \item ...
+%         \end{itemize}
+%     \end{itemize}
+% \end{itemize}
+
+
+
+% \section{Module 36: Angular Overlap Model}
+% \begin{itemize}
+%     \item Allows for the construction of the orbitals?
+%     \item ...
+%     \item Changing the metal and/or ligand affects the magnitudes of $e_\sigma$ and $e_\pi$, thereby changing the value of $\Delta$.
+%     \item $e_\sigma>e_\pi$ always.
+%     \item Values decrease with increasing size and decreasing electronegativity.
+%     \item Both positive and negative values for $e_\pi$.
+% \end{itemize}
+
+
+
+% \section{Module 37: Jahn-Teller Effect}
+% \begin{itemize}
+%     \item The \textbf{Jahn-Teller theorem} helps explain why the $d^9$ configuration is far more stable (far higher peak) than predicted by Figure \ref{fig:CFSEcurve}.
+%     \item \textbf{Jahn-Teller theorem}: For nonlinear molecules/ions that have a degenerate ground-state, the molecule/ion will distort to remove the degeneracy. \emph{Also known as} \textbf{J-T theorem}.
+%     \begin{itemize}
+%         \item When orbitals in the same level are occupied by different numbers of electrons, this will lead to distortion of the molecule.
+%         \item If the two orbitals of the $e_g$ level have different numbers of electrons, this will lead to J-T distortion.
+%         \item Cu(II) with its $d^9$ configuration is degenerate and has J-T distortion.
+%     \end{itemize}
+%     \item Consider the two degenrate $e_g$ orbitals ($d_{x^2-y^2,z^2}$).
+%     \begin{itemize}
+%         \item Elongating the $z$-axis in an $O_h$ complex stabilizes the ? orbital and destabilizes the ? orbital.
+%         \item Vice versa for compressing the $z$-axis.
+%     \end{itemize}
+%     \item History: Before the rigorous formulation and verifiction of the J-T theorem by Jahn and Teller, Landau proposed the \textbf{Landau statement} from his observations.
+%     \item \textbf{Landau statement}: A molecule in an orbitally degenerate electronic state is unstable with respect to spontaneous distortion of the nuclear configuration that removes the degeneracy.
+% \end{itemize}
+
+
+
+% \section{Module 38: Applying MO Theory beyond "Simple" \ce{ML6} Complexes}
+% \begin{itemize}
+%     \item \marginnote{2/26:}
+% \end{itemize}
+
+
+
+
+\end{document}

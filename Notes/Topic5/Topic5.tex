@@ -952,6 +952,144 @@
             \label{fig:orbitalDiagram-ML6}
         \end{figure}
     \end{itemize}
+    \begin{figure}[h!]\marginnote{2/22:}
+        \centering
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                \footnotesize
+                \filldraw [semithick,fill=white,yshift=4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (45:1.6) circle (4mm);
+    
+                \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                \filldraw [semithick,fill=grt] (0,{-6^0.5/4},0) circle (6^0.5/4);
+                \filldraw [semithick,fill=white] (0,{6^0.5/4},0) circle (6^0.5/4);
+                \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0,,,,opacity=0])(-[2,,,,opacity=0])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5])}};
+    
+                \filldraw [semithick,fill=white,yshift=4mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,yshift=4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,yshift=4mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (0:1.6) circle (4mm);
+            \end{tikzpicture}
+            \caption{$t_{1u}$ type (3 of these).}
+            \label{fig:SALCs-ML6a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                \footnotesize
+                \filldraw [semithick,fill=white,xshift=4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=-4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=2.83mm,yshift=2.83mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,xshift=-2.83mm,yshift=-2.83mm] (180:1.6) circle (4mm);
+    
+                \filldraw [semithick,fill=grt,scale=1.2,rotate=-60] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+                \filldraw [semithick,fill=white,scale=1.5,rotate=20] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0])(-[2,,,,opacity=0])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5])}};
+                \filldraw [semithick,fill=white,scale=1.5,rotate=20] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                \node {\chemfig[atom sep=1cm]{\phantom{M}(-[0])(-[2,,,,opacity=0])(-[4,,,,opacity=0])(-[6,,,,opacity=0])(>:[1,,,,opacity=0])(<[5])}};
+                \filldraw [semithick,fill=grt,scale=1.4,rotate=-60] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+    
+                \filldraw [semithick,fill=white,xshift=2.83mm,yshift=2.83mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=-2.83mm,yshift=-2.83mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,xshift=-4mm] (225:1.6) circle (4mm);
+            \end{tikzpicture}
+            \caption{$t_{2g}$ type (3 of these).}
+            \label{fig:SALCs-ML6b}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                \footnotesize
+                \filldraw [semithick,fill=white,yshift=4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (45:1.6) circle (4mm);
+    
+                \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+    
+                \filldraw [semithick,fill=grt,yshift=4mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,yshift=-4mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,yshift=4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=-4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,yshift=4mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,yshift=-4mm] (0:1.6) circle (4mm);
+            \end{tikzpicture}
+            \caption{$t_{2u}$ type (3 of these).}
+            \label{fig:SALCs-ML6c}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
+                \footnotesize
+                \filldraw [semithick,fill=white,xshift=4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=-4mm] (45:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,xshift=2.83mm,yshift=2.83mm] (180:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=-2.83mm,yshift=-2.83mm] (180:1.6) circle (4mm);
+    
+                \node {\chemfig[atom sep=1cm]{M(-[0])(-[2])(-[4])(-[6])(>:[1])(<[5])}};
+    
+                \filldraw [semithick,fill=grt,xshift=2.83mm,yshift=2.83mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,xshift=-2.83mm,yshift=-2.83mm] (0:1.6) circle (4mm);
+                \filldraw [semithick,fill=grt,xshift=4mm] (225:1.6) circle (4mm);
+                \filldraw [semithick,fill=white,xshift=-4mm] (225:1.6) circle (4mm);
+            \end{tikzpicture}
+            \caption{$t_{1g}$ type (3 of these).}
+            \label{fig:SALCs-ML6d}
+        \end{subfigure}
+        \caption{\ce{ML6} bonding and antibonding MOs.}
+        \label{fig:SALCs-ML6}
+    \end{figure}
+    \item There are three of each type of triply degenerate orbital, formed as in Figure \ref{fig:SALCs-ML6}.
+    \item If the ligand is an empty $\pi$-acceptor, $\pi$-acid that accepts electrons from $M$ and thus has high energy $T_{2g}$ orbitals, there is a stabilization energy.
+    \begin{itemize}
+        \item If the ligand is a filled $\pi$-donor, $\pi$-base that donates electrons to $M$ and thus has low energy $T_{2g}$ orbitals, there is increased antibonding character.
+    \end{itemize}
+    \item The following is a more formal treatment of the effects of $\pi$-bonding on $\Delta$ in an octahedral complex.
+    \begin{itemize}
+        \item If the ligand possesses $\pi$-orbitals as well as $\sigma$-symmetry (as in Figure \ref{fig:piAcceptance}), we need to take into account the overlap of these orbitals with the $t_{2g}$ orbitals of the metal.
+        \item Two situations may arise: Either the ligand $\pi$-orbitals are empty and of higher energy than the metal $t_{2g}$ orbitals, or the ligand $\pi$-orbitals are filled and of lower energy than the metal $t_{2g}$ orbitals.
+        \item The former case may increase $\Delta$ and is the most important case, including ligands such as \ce{CO}, \ce{NO+}, and \ce{CN-}. This type of covalency, called $\pi$-bonding or back bonding, provides a plausible explanation of the position of these ligands in the spectrochemical series.
+    \end{itemize}
+    \item Ligand field strength:
+    \begin{itemize}
+        \item Characteristics of $\sigma$-bonding that make for a stronger field:
+        \begin{itemize}
+            \item Stronger $\sigma$-donor.
+            \item Strong Lewis base.
+            \item Stronger bonding interaction.
+        \end{itemize}
+        \item Characteristics of $\pi$-bonding that make for a stronger field:
+        \begin{itemize}
+            \item Empty $\pi$-acceptor.
+            \item $\pi$-acid.
+            \item Accepts from $M$.
+        \end{itemize}
+        \item And vice versa for what makes a weaker field.
+    \end{itemize}
+    \item \textbf{Spectrochemical series}: An arrangement from greatest to least of ligands by ligand field strength.
+    \begin{equation*}
+        \ce{CO},\ce{CN-} > \text{phen}
+        > \ce{NO2-}
+        > \text{en}
+        > \ce{NH3}
+        > \ce{NCS-}
+        > \ce{H2O}
+        > \ce{F-}
+        > \ce{RCO2-}
+        > \ce{OH-}
+        > \ce{Cl-}
+        > \ce{Br-}
+        > \ce{I-}
+    \end{equation*}
+    \begin{itemize}
+        \item Note that en is ethylenediamine and phen is phenanthroline.
+        \item As in Table \ref{tab:natureOfTheLigand}, we see that $\pi$-acceptors are stronger than pure $\sigma$-donors are stronger than $\pi$-donors.
+        \item With different metal ions, the order of increasing $\Delta$ with different ligands is often the same. All metal ions produce high values of $\Delta$ in their hexacyano complex, while the hexafluoro complex always produces a low value of $\Delta$. The increase in $\Delta$ with the changing of ligands can be placed in an order known as the spectrochemical series.
+    \end{itemize}
+    \item Increasing $\Delta$ correlates with a color change (because of electron transitions because $t_{2g}$ and $e_g$ orbitals).
 \end{itemize}
 
 
