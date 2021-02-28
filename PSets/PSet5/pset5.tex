@@ -83,9 +83,9 @@
                 \end{tikzpicture}
             \end{center}
             \begin{proof}[Answer]
-                There are four stereoisomers of \ce{Fe(dtc)3}. We first divide into $\Lambda$ and $\Delta$ types, and then further subdivide into one with a $C_3$ rotation axis and the other without.
+                There are two stereoisomers of \ce{Fe(dtc)3} if we consider the bidentate ligand to be a simple bridge: one $\Lambda$ form and one $\Delta$ form.
                 \begin{enumerate}[label={\arabic*.}]
-                    \item $\Lambda$ form, has $C_3$ axis.
+                    \item $\Lambda$ form.
                     \begin{center}
                         \begin{tikzpicture}[
                             every node/.style={inner sep=1pt,text height=1.5ex,text depth=0.25ex}
@@ -117,40 +117,7 @@
                             \draw [dash pattern=on 3pt off 2pt] (S6) to[out=-120,in=120,looseness=1.4] (S1);
                         \end{tikzpicture}
                     \end{center}
-                    \item $\Lambda$ form, does not have $C_3$ axis.
-                    \begin{center}
-                        \begin{tikzpicture}[
-                            every node/.style={inner sep=1pt,text height=1.5ex,text depth=0.25ex}
-                        ]
-                            \node{\chemfig{Fe(>:[:-150])(>:[:-30])(>:[:90])(<[:-90])(<[:30])(<[:150])}};
-                            \node (S1) [circle] at (-150:1.1) {\ce{S}};
-                            \node (S2) [circle] at (-90:1.1)  {\ce{S}};
-                            \node (S3) [circle] at (-30:1.1)  {\ce{S}};
-                            \node (S4) [circle] at (30:1.1)   {\ce{S}};
-                            \node (S5) [circle] at (90:1.1)   {\ce{S}};
-                            \node (S6) [circle] at (150:1.1)  {\ce{S}};
-                    
-                            \node (Ca)   [circle] at (-60:1.6) {\ce{C}} edge (S2) edge (S3);
-                            \node (Na)   [circle] at ($(Ca)+(-45:0.9)$) {\ce{N}} (Na.145) edge (Ca.-55) (Na.125) edge [dash pattern=on 3pt off 2pt] (Ca.-35);
-                            \node (CH3a) [circle,label={[xshift=-1.4mm]right:\ce{H3}}] at ($(Na)+(0:0.9)$) {\ce{C}} edge (Na);
-                            \node (Ha)   [circle] at ($(Na)+(-90:0.9)$) {\ce{H}} edge (Na);
-                            \draw [dash pattern=on 3pt off 2pt] (S2) to[out=0,in=-120,looseness=1.4] (S3);
-                    
-                            \node (Cb)   [circle] at (60:1.6) {\ce{C}} edge (S4) edge (S5);
-                            \node (Nb)   [circle] at ($(Cb)+(45:0.9)$) {\ce{N}} (Nb.-125) edge (Cb.35) (Nb.-145) edge [dash pattern=on 3pt off 2pt] (Cb.55);
-                            \node (CH3b) [circle,label={[xshift=-1.4mm]right:\ce{H3}}] at ($(Nb)+(90:0.9)$) {\ce{C}} edge (Nb);
-                            \node (Hb)   [circle] at ($(Nb)+(0:0.9)$) {\ce{H}} edge (Nb);
-                            \draw [dash pattern=on 3pt off 2pt] (S4) to[out=120,in=0,looseness=1.4] (S5);
-                    
-                            \node (Cc)   [circle] at (180:1.6) {\ce{C}} edge (S6) edge (S1);
-                            \node (Nc)   [circle] at ($(Cc)+(180:0.9)$) {\ce{N}} (Nc.10) edge (Cc.170) (Nc.-10) edge [dash pattern=on 3pt off 2pt] (Cc.-170);
-                            \node (CH3c) [circle,label={[xshift=1.4mm]left:\ce{H3}}] at ($(Nc)+(135:0.9)$) {\ce{C}} edge (Nc);
-                            \node (Hc)   [circle] at ($(Nc)+(-135:0.9)$) {\ce{H}} edge (Nc);
-                            \draw [dash pattern=on 3pt off 2pt] (S6) to[out=-120,in=120,looseness=1.4] (S1);
-                        \end{tikzpicture}
-                    \end{center}
-                    \pagebreak
-                    \item $\Delta$ form, has $C_3$ axis.
+                    \item $\Delta$ form.
                     \begin{center}
                         \begin{tikzpicture}[
                             every node/.style={inner sep=1pt,text height=1.5ex,text depth=0.25ex}
@@ -179,38 +146,6 @@
                             \node (Nc)   [circle] at ($(Cc)+(180:0.9)$) {\ce{N}} (Nc.10) edge (Cc.170) (Nc.-10) edge [dash pattern=on 3pt off 2pt] (Cc.-170);
                             \node (CH3c) [circle,label={[xshift=1.4mm]left:\ce{H3}}] at ($(Nc)+(-135:0.9)$) {\ce{C}} edge (Nc);
                             \node (Hc)   [circle] at ($(Nc)+(135:0.9)$) {\ce{H}} edge (Nc);
-                            \draw [dash pattern=on 3pt off 2pt] (S6) to[out=-120,in=120,looseness=1.4] (S1);
-                        \end{tikzpicture}
-                    \end{center}
-                    \item $\Delta$ form, does not have $C_3$ axis.
-                    \begin{center}
-                        \begin{tikzpicture}[
-                            every node/.style={inner sep=1pt,text height=1.5ex,text depth=0.25ex}
-                        ]
-                            \node{\chemfig{Fe(<[:-150])(<[:-30])(<[:90])(>:[:-90])(>:[:30])(>:[:150])}};
-                            \node (S1) [circle] at (-150:1.1) {\ce{S}};
-                            \node (S2) [circle] at (-90:1.1)  {\ce{S}};
-                            \node (S3) [circle] at (-30:1.1)  {\ce{S}};
-                            \node (S4) [circle] at (30:1.1)   {\ce{S}};
-                            \node (S5) [circle] at (90:1.1)   {\ce{S}};
-                            \node (S6) [circle] at (150:1.1)  {\ce{S}};
-                    
-                            \node (Ca)   [circle] at (-60:1.6) {\ce{C}} edge (S2) edge (S3);
-                            \node (Na)   [circle] at ($(Ca)+(-45:0.9)$) {\ce{N}} (Na.145) edge (Ca.-55) (Na.125) edge [dash pattern=on 3pt off 2pt] (Ca.-35);
-                            \node (CH3a) [circle,label={[xshift=-1.4mm]right:\ce{H3}}] at ($(Na)+(0:0.9)$) {\ce{C}} edge (Na);
-                            \node (Ha)   [circle] at ($(Na)+(-90:0.9)$) {\ce{H}} edge (Na);
-                            \draw [dash pattern=on 3pt off 2pt] (S2) to[out=0,in=-120,looseness=1.4] (S3);
-                    
-                            \node (Cb)   [circle] at (60:1.6) {\ce{C}} edge (S4) edge (S5);
-                            \node (Nb)   [circle] at ($(Cb)+(45:0.9)$) {\ce{N}} (Nb.-125) edge (Cb.35) (Nb.-145) edge [dash pattern=on 3pt off 2pt] (Cb.55);
-                            \node (CH3b) [circle,label={[xshift=-1.4mm]right:\ce{H3}}] at ($(Nb)+(90:0.9)$) {\ce{C}} edge (Nb);
-                            \node (Hb)   [circle] at ($(Nb)+(0:0.9)$) {\ce{H}} edge (Nb);
-                            \draw [dash pattern=on 3pt off 2pt] (S4) to[out=120,in=0,looseness=1.4] (S5);
-                    
-                            \node (Cc)   [circle] at (180:1.6) {\ce{C}} edge (S6) edge (S1);
-                            \node (Nc)   [circle] at ($(Cc)+(180:0.9)$) {\ce{N}} (Nc.10) edge (Cc.170) (Nc.-10) edge [dash pattern=on 3pt off 2pt] (Cc.-170);
-                            \node (CH3c) [circle,label={[xshift=1.4mm]left:\ce{H3}}] at ($(Nc)+(135:0.9)$) {\ce{C}} edge (Nc);
-                            \node (Hc)   [circle] at ($(Nc)+(-135:0.9)$) {\ce{H}} edge (Nc);
                             \draw [dash pattern=on 3pt off 2pt] (S6) to[out=-120,in=120,looseness=1.4] (S1);
                         \end{tikzpicture}
                     \end{center}
@@ -361,7 +296,7 @@
                 };
             \end{tikzpicture}
             \begin{proof}[Answer]
-                This molecule is achiral (if we assume that the ring on the right side largely lies in the plane with quickly reversing buckling or puckering, a reasonable hypothesis given the light \ce{N} and \ce{C} atoms).
+                This molecule is achiral (if we assume that the ring on the right side largely lies in the plane with quickly reversing buckling or puckering, a reasonable hypothesis given the light \ce{N} and \ce{C} atoms). It is chiral if we assume a rigid ring.
             \end{proof}
             \item 
             \begin{tikzpicture}
