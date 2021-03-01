@@ -88,74 +88,227 @@
 
 
 
-% \section{Module 35: Reflections on the Ligand Field Effects in $O_h$ and $T_d$ Complexes}
-% \begin{itemize}
-%     \item \marginnote{2/24:}Factors that influence $\Delta_o$:
-%     \begin{itemize}
-%         \item Metal oxidation state --- increases in magnitude of oxidation state give bigger $\Delta_o$.
-%         \item Principal quantum number --- increases give bigger $\Delta_o$.
-%         \begin{itemize}
-%             \item This makes 2nd and 3rd row metals almost always low-spin, and 4th row transition metals often high-spin.
-%         \end{itemize}
-%         \item Nature of the ligand --- $\sigma,\pi$-donor < $\sigma$-donor $<$ $\sigma$-donor, $\pi$-acceptor.
-%     \end{itemize}
-%     \item $T_d$ vs. $O_h$ splitting.
-%     \emph{picture}
-%     \begin{itemize}
-%         \item For $T_d$, 2 $e$-type orbitals are lower in energy and 3 $t_2$ orbitals are higher.
-%         \item For $O_h$, it's reversed.
-%         \item $T_d$ complexes are always weak-field.
-%     \end{itemize}
-%     \item Rationalization of coordination geometries (factors that influence the geometry adopted):
-%     \begin{itemize}
-%         \item The number of bonds: Electrostatic and covalent model.
-%         \item Ligand-ligand repulsions from $T_d$.
-%         \begin{itemize}
-%             \item High charge on cation increases $\Delta$ --- favors $O_h$.
-%             \item $\text{CFSE}(O_h)\geq\text{CFSE}(T_d)$, always.
-%             \item ...
-%         \end{itemize}
-%     \end{itemize}
-% \end{itemize}
+\section[Module 35: Reflections on the Ligand Field Effects in \texorpdfstring{$O_h$}{TEXT} and \texorpdfstring{$T_d$}{TEXT} Complexes]{Module 35: Reflections on the Ligand Field Effects in \texorpdfstring{$\bm{O_h}$}{TEXT} and \texorpdfstring{$\bm{T_d}$}{TEXT} Complexes}
+\begin{itemize}
+    \item \marginnote{2/24:}Note that 2nd and 3rd row metals almost always low-spin, and 4th row transition metals often high-spin.
+    \item $T_d$ vs. $O_h$ splitting.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            every node/.append style={black}
+        ]
+            \footnotesize
+            \draw [gry,ultra thick,dash pattern=on 5mm off 1mm]
+                (2.65,-1.4) coordinate (t2g) -- node[below]{$t_{2g}$} ++(1.7,0)
+                (2.95,2.1) coordinate (eg) -- node[above]{$e_g$} ++(1.1,0)
+                (-4.05,-1.2) -- node[below]{$e$} ++(1.1,0) coordinate (e)
+                (-4.35,0.8) -- node[above]{$t_2$} ++(1.7,0) coordinate (t2)
+            ;
+            \draw [grx,thick,dashed]
+                (-5,0) -- (5,0)
+                (1,0) -- (t2g)
+                (1,0) -- (eg)
+                (-1,0) -- (e)
+                (-1,0) -- (t2)
+            ;
+    
+            \draw [<->] ([yshift=-1pt]3.5,0) -- node[right]{$-\SI{4}{Dq}$} ([yshift=1.5pt]3.5,0 |- t2g);
+            \draw [<->] ([yshift=1pt]3.5,0) -- node[right]{$+\SI{6}{Dq}$} ([yshift=-1.5pt]3.5,0 |- eg);
+            \draw [<->] ([yshift=-1pt]-3.5,0) -- node[right]{$-\SI{6}{Dq}$} ([yshift=1.5pt]-3.5,0 |- e);
+            \draw [<->] ([yshift=1pt]-3.5,0) -- node[right]{$+\SI{4}{Dq}$} ([yshift=-1.5pt]-3.5,0 |- t2);
+            \draw [<->] (5.5,0 |- eg) -- node[right]{$\SI{10}{Dq}\ (O_h)$} (5.5,0 |- t2g);
+            \draw [<->] (-5.5,0 |- e) -- node[left]{$\SI{10}{Dq}\ (T_d)$} (-5.5,0 |- t2);
+    
+            \small
+            \node (freeIon) at (0,-2.4) {Free ion};
+            \node at (-3.5,-2.4) {$T_d$ field} edge [stealth-,semithick] (freeIon);
+            \node at (3.5,-2.4) {$O_h$ field} edge [stealth-,semithick] (freeIon);
+        \end{tikzpicture}
+        \caption{$T_d$ vs. $O_h$ splitting.}
+        \label{fig:TdOhSplitting}
+    \end{figure}
+    \begin{itemize}
+        \item For $T_d$, 2 $e$-type orbitals are lower in energy and 3 $t_2$ orbitals are higher.
+        \begin{itemize}
+            \item Note that we do not mark with gerade because $T_d$ molecules lack an inversion center.
+        \end{itemize}
+        \item For $O_h$, it's reversed.
+        \item Note that the splitting energy of tetrahedral complexes is less than that of octahedral complexes. This is because there are fewer ligands acting on the $d$-orbitals of the metal center (4 vs. 6), and the angular overlap of the $d$-orbitals and the ligand group orbitals is less favorable when tetrahedral (there is a directional factor of $\frac{2}{3}$). Indeed, the tetrahedral splitting energy is generally $\frac{4}{6}\cdot\frac{2}{3}=\frac{4}{9}$ that of a relative octahedral splitting energy.
+        \item Conclusion: $T_d$ complexes are always weak-field and thus high spin.
+    \end{itemize}
+    \item Rationalization of coordination geometries (factors that influence the geometry adopted):
+    \begin{itemize}
+        \item Electronic factor (the number of bonds): Electrostatic and covalent model favor $O_h$ (6 vs. 4).
+        \item Steric factor: Ligand-ligand repulsions favor $T_d$.
+        \begin{itemize}
+            \item High charge on cation increases $\Delta$ --- favors $O_h$ coordination and $O_h$ low spin. Indeed, $O_h\text{ (l.s.)}>O_h\text{ (h.s.)}>T_d$.
+            \item $\text{CFSE}(O_h)\geq\text{CFSE}(T_d)$, always.
+        \end{itemize}
+    \end{itemize}
+    \item In $d^5$ complexes (e.g., with \ce{Mn^2+} and \ce{Fe^3+}), there is no stabilization energy. Thus, L-L repulsions dominate and $T_d$ complexes are formed.
+    \begin{itemize}
+        \item Note however that the higher charge on \ce{Fe^3+} favors low spin $O_h$ complexes in more cases than \ce{Mn^2+}.
+    \end{itemize}
+    \item In $d^6$ complexes (e.g., with \ce{Fe^2+} and \ce{Co^3+}), the stabilization is much higher for $O_h$ low spin than high spin than $T_d$. Thus, we form low spin complexes.
+    \begin{itemize}
+        \item Note that there are exceptions --- extremely weak field ligands such as \ce{F-} can still form high spin complexes as with \ce{CoF6^3-}.
+    \end{itemize}
+\end{itemize}
 
 
 
-% \section{Module 36: Angular Overlap Model}
-% \begin{itemize}
-%     \item Allows for the construction of the orbitals?
-%     \item ...
-%     \item Changing the metal and/or ligand affects the magnitudes of $e_\sigma$ and $e_\pi$, thereby changing the value of $\Delta$.
-%     \item $e_\sigma>e_\pi$ always.
-%     \item Values decrease with increasing size and decreasing electronegativity.
-%     \item Both positive and negative values for $e_\pi$.
-% \end{itemize}
+\section{Module 36: Angular Overlap Model}
+\begin{itemize}
+    \item In many catalytic cycles, the coordination environment (molecular geometry) changes frequently throughout the cycle.
+    \item To account for changes in the coordination environment, we use the \textbf{angular overlap model}.
+    \begin{itemize}
+        \item We can also use this model to help account for complexes with different ligands in the coordination sphere.
+    \end{itemize}
+    \item Recall that $\sigma$-bonding is stabilizing, but $\pi$-bonding is stabilizing only in the case of $\pi$-acceptance by a ligand, not $\pi$-donation.
+    \item Angular overlap parameters:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node {\chemfig{M(-2)(>:[1]3)(-[2]1)(-[4]4)(<[5]5)(-[6]6)}};
+    
+                \node at (0.7,-0.2) {$x$};
+                \node at (0.6,0.3) {$y$};
+                \node at (0.2,0.7) {$z$};
+            \end{tikzpicture}
+            \caption{Octahedral.}
+            \label{fig:AOM-positionLabelinga}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black,fill=white,inner sep=1.5pt}
+            ]
+                \node {\chemfig{M(-)(>:[1])(-[2])(-[4])(<[5])(-[6])}};
+    
+                \draw [grx,semithick,dashed]
+                    (-1.4,-1.4) rectangle (0.8,0.8)
+                    (-0.8,-0.8) rectangle (1.4,1.4)
+                    (-1.4,-1.4) -- (-0.8,-0.8) node{9}
+                    (0.8,-1.4) node{10} -- (1.4,-0.8)
+                    (0.8,0.8) -- (1.4,1.4) node{7}
+                    (-1.4,0.8) node{8} -- (-0.8,1.4)
+                ;
+            \end{tikzpicture}
+            \caption{Tetrahedral.}
+            \label{fig:AOM-positionLabelingb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black,fill=white,inner sep=1.5pt}
+            ]
+                \node {\chemfig{M(-2)(>:[1])(-[2]1)(-[4])(<[5])(-[6]6)}};
+    
+                \draw [grx,semithick,dashed]
+                    (0.7,0) -- (-0.2,0.5) node[above left]{11} -- (-1.2,-0.5) node[below left]{12} -- cycle
+                ;
+            \end{tikzpicture}
+            \caption{Trigonal bipyramidal.}
+            \label{fig:AOM-positionLabelingc}
+        \end{subfigure}
+        \caption{Angular overlap model: Labeling of positions.}
+        \label{fig:AOM-positionLabeling}
+    \end{figure}
+    \begin{itemize}
+        \item With multiple ligands and multiple orbitals, we add the angular overlap interaction coefficients.
+        \item These are tabulated for each orbital of each ligand at each position in the coordination sphere with each metal-center $d$-orbital.
+        \item Suggested reading (on coefficients' derivation): \emph{TBD}.
+    \end{itemize}
+    \item Trigonal planar coordination example:
+    \begin{itemize}
+        \item From Figure \ref{fig:AOM-positionLabelingc}, the ligand positions are 2, 11, and 12.
+        \item Thus, we add the coefficients in these rows to get $e_\sigma=(\frac{3}{4},\frac{9}{8},\frac{9}{8},0,0)$ and $e_\pi=(0,\frac{3}{2},\frac{3}{2},\frac{3}{2},\frac{3}{2})$, where the respective $d$-orbitals are $z^2,x^2-y^2,xy,xz,yz$.
+        \item With these energies, we can now sum $e_\sigma+e_\pi$ to determine that the energies of the orbitals are $(\frac{3}{4},\frac{21}{8},\frac{21}{8},\frac{3}{2},\frac{3}{2})$.
+        \item This gives us three sets of degenerate orbitals: Lowest energy ($d_{xz,yz}$), medium energy ($d_{z^2}$), and high energy ($d_{xy,x^2-y^2}$).
+        \begin{itemize}
+            \item How did we get these energy rankings?
+        \end{itemize}
+        \item Assigning Mulliken symbols with the $D_{3h}$ character table, we have from lowest to highest energy: $e''<a_1'<e'$.
+    \end{itemize}
+    \item Note that $e_\sigma$ is always positive (because ligands are $\sigma$-donors), but $e_\pi$ can be negative (because ligands can be $\pi$-acceptors).
+    \item Changing the metal and/or ligand affects the magnitudes of $e_\sigma$ and $e_\pi$, thereby changing the value of $\Delta$.
+    \item $e_\sigma>e_\pi$ always.
+    \item Values decrease with increasing size and decreasing electronegativity.
+    \item Both positive and negative values for $e_\pi$.
+\end{itemize}
 
 
 
-% \section{Module 37: Jahn-Teller Effect}
-% \begin{itemize}
-%     \item The \textbf{Jahn-Teller theorem} helps explain why the $d^9$ configuration is far more stable (far higher peak) than predicted by Figure \ref{fig:CFSEcurve}.
-%     \item \textbf{Jahn-Teller theorem}: For nonlinear molecules/ions that have a degenerate ground-state, the molecule/ion will distort to remove the degeneracy. \emph{Also known as} \textbf{J-T theorem}.
-%     \begin{itemize}
-%         \item When orbitals in the same level are occupied by different numbers of electrons, this will lead to distortion of the molecule.
-%         \item If the two orbitals of the $e_g$ level have different numbers of electrons, this will lead to J-T distortion.
-%         \item Cu(II) with its $d^9$ configuration is degenerate and has J-T distortion.
-%     \end{itemize}
-%     \item Consider the two degenrate $e_g$ orbitals ($d_{x^2-y^2,z^2}$).
-%     \begin{itemize}
-%         \item Elongating the $z$-axis in an $O_h$ complex stabilizes the ? orbital and destabilizes the ? orbital.
-%         \item Vice versa for compressing the $z$-axis.
-%     \end{itemize}
-%     \item History: Before the rigorous formulation and verifiction of the J-T theorem by Jahn and Teller, Landau proposed the \textbf{Landau statement} from his observations.
-%     \item \textbf{Landau statement}: A molecule in an orbitally degenerate electronic state is unstable with respect to spontaneous distortion of the nuclear configuration that removes the degeneracy.
-% \end{itemize}
-
-
-
-% \section{Module 38: Applying MO Theory beyond "Simple" \ce{ML6} Complexes}
-% \begin{itemize}
-%     \item \marginnote{2/26:}
-% \end{itemize}
+\section{Module 37: Jahn-Teller Effect}
+\begin{itemize}
+    \item The \textbf{Jahn-Teller theorem} helps explain why the $d^9$ configuration is far more stable (far higher peak) than predicted by Figure \ref{fig:CFSEcurve}.
+    \item \textbf{Jahn-Teller theorem}: For nonlinear molecules/ions that have a degenerate ground-state, the molecule/ion will distort to remove the degeneracy. \emph{Also known as} \textbf{J-T theorem}.
+    \begin{itemize}
+        \item When orbitals in the same level are occupied by different numbers of electrons, this will lead to distortion of the molecule.
+        \item If the two orbitals of the $e_g$ level have different numbers of electrons, this will lead to J-T distortion so as to stabilize the doubly occupied $e_g$ orbital and destabilize the singly occupied $e_g$ orbital.
+        \item Cu(II) with its $d^9$ configuration is degenerate and has J-T distortion.
+    \end{itemize}
+    \item Consider the two degenrate $e_g$ orbitals ($d_{x^2-y^2,z^2}$).
+    \emph{picture}
+    \begin{itemize}
+        \item Elongating the $z$-axis in an $O_h$ complex stabilizes the $d_{z^2}$ orbital and destabilizes the $d_{x^2-y^2}$ orbital.
+        \item Vice versa for compressing the $z$-axis.
+    \end{itemize}
+    \item Thus, we can see significant elongation of the $z$-axis bonds in \ce{[Cu(H2O)6]^2+}.
+    \item History: Before the rigorous formulation and verification of the J-T theorem by Jahn and Teller, Landau proposed the \textbf{Landau statement} from his observations.
+    \item \textbf{Landau statement}: A molecule in an orbitally degenerate electronic state is unstable with respect to spontaneous distortion of the nuclear configuration that removes the degeneracy.
+    \item Strength of the J-T effect in various configurations:
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.4}
+        \small
+        \begin{tabular}{lcccccccccc}
+            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            Number of electrons & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+            \rowcolor{grz}
+            High-spin Jahn-Teller & w & w & & s & & w & w & & s & \\
+            Low-spin Jahn-Teller & w & w & & w & w & & s & & s & \\
+            \hline
+        \end{tabular}
+        \caption{Jahn-Teller effects in various configurations.}
+        \label{tab:JTconfigurations}
+    \end{table}
+    \begin{itemize}
+        \item Unequal occupation of $t_{2g}$ orbitals leads to the J-T effect in principle, but only weakly in practice because $t_{2g}$ orbitals are nonbonding in $\sigma$-bonded complexes, i.e., localized on the metal center, i.e., not strongly perturbed by ligand bonding.
+        \item Unequal occupation of $e_g$ orbitals leads to a strong J-T effect since they are antibonding.
+    \end{itemize}
+    \item Structural effects of J-T distortion:
+    \begin{itemize}
+        \item In \ce{[Cu(en)2(H2O)2]^2+}, we will have axial aqua groups and equatorial en groups for two reasons.
+        \begin{itemize}
+            \item The aqua groups are weaker field ligands that interact less efficiently with the metal center, so it is easier for them to be farther from it.
+            \item Having the en groups in plane means they don't have to be structurally distorted.
+        \end{itemize}
+        \item In \ce{[Cu(en)3]^2+}, we observe strong structural distortion from perfect octahedral forced by the J-T distortion; this angle strain is not energetically favorable.
+    \end{itemize}
+    \item Jahn-Teller distortion of the excited state:
+    \begin{itemize}
+        \item In high spin $d^6$ complexes such as \ce{[Fe(H2O)6]^2+}, there will only be weak J-T distortion of the ground state. Thus, we expect to see only one peak in the absorption spectrum, corresponding to the promotion of a $t_{2g}$ electron to the $e_g$ orbitals and its fall back down.
+        \item However, we observe two bands.
+        \item This is because promotion of an electron from the $t_{2g}$ orbitals to the $e_g$ orbitals leads to a much stronger J-T distortion (unequally occupied $e_g$ orbitals).
+        \item The resultant $d$-orbital splitting causes the two absorption peaks.
+    \end{itemize}
+    \item Square planar complexes:
+    \begin{itemize}
+        \item Jahn-Teller distortion leads to tetragonal distortion of the octahedron, with the extreme of tetragonal distortion being the complete loss of axial ligands, and formation of a square-planar complex. Tetragonal distortion is the stretching of the axial \ce{M-L} bonds, and shortening of the in-plane bonds. \ce{Cu}(II) is usually tetragonally distorted, while low-spin \ce{Ni}(II) is usually square planar.
+        \item Since the axial bonds get weaker as they lengthen, eventually we can have enough thermal energy to break them entirely, resulting in a square planar complex.
+        \item This occurs in the case of \ce{Ni}(II) bonded to strong field ligands, such as cyano ligands. Essentially, what happens is the splitting of the $e_g$ orbitals exceeds the spin-pairing energy, causing the $d_{x^2-y^2}$ electron to pair with the $d_{z^2}$ electron.
+        \begin{itemize}
+            \item The filled $d_{z^2}$ orbital now occupies two coordination sites, and the four donor atoms occupy the plane.
+            \item The structure is comparable to that of \ce{[IF4]-}, where two lone pairs occupy the axial sites.
+            \item This is a particularly important special example because such compounds are very reactive, owing to their frontier $d_{z^2}$ orbitals, and can be involved in nucleophilic attacks.
+        \end{itemize}
+        \item All high-spin $d^8$ metal ions are octahedral (or tetrahedral). Low-spin $d^8$ metal ions are usually square planar.
+        \item Both Wilkinson's catalyst and Crabtree's catalyst are square planar!
+    \end{itemize}
+\end{itemize}
 
 
 
