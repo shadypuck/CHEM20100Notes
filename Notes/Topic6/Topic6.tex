@@ -312,5 +312,110 @@
 
 
 
+\section{Module 38: Applying MO Theory Beyond "Simple" \ce{ML6} Complexes}
+\begin{itemize}
+    \item \marginnote{2/26:}Reviews Figure \ref{fig:orbitalDiagram-ML6} and the difference between $\pi$-acceptor and $\pi$-donor ligands.
+    \item Mixing different ligands within the same coordination sphere:
+    \begin{itemize}
+        \item The MO diagram for $O_h$ complexes proves to be a convenient starting point for deducing the electronic structure of many lower symmetry metal complexes.
+        \item To analyze lower symmetry compounds, we use the descent in symmetry technique.
+    \end{itemize}
+    \item \ce{[Co(CN)5Br]^3-} example:
+    \begin{itemize}
+        \item Five strong-field cyano ligands and one weak-field bromo ligand.
+        \item Choose to orient the \ce{Br-} ligand along the positive $z$-axis.
+        \item To build the MO, we could use DFT (first principles), but it's an unintuitive black box.
+        \item Alternatively, we can start with hexacyanocobaltate(III), remove one cyano ligand and see how the MOs are perturbed, and add one bromo ligand and see how the MOs are perturbed. This process correlates the electronic structure of this $C_{4v}$ complex with its $O_h$ parent complex.
+        \item To begin, consider perturbations to $\sigma$ and $\pi$ interactions upon substituting $\pi$-accepting \ce{CN-} with $\pi$-donating \ce{Br-}.
+        \item First, let's simply remove the \ce{CN-} ligand.
+        \begin{itemize}
+            \item The $d_{x^2-y^2}$ orbital is not greatly perturbed by substitution along the $z$-axis.
+            \item The $d_{z^2}$ orbital was \ce{M-L\sigma^*}; thus, removal of 1 $\sigma$ ligand from the $z$-axis will stabilize it.
+            \item The $d_{xz,yz}$ orbitals are destabilized owing to the removal of 1 \ce{M-L\pi} bonding interaction.
+            \item The $d_{xy}$ orbital is in-plane and notal with respect to $\sigma$- and $\pi$-bonding along the $z$-axis; thus, it is not greatly perturbed by such substitution.
+            \item The $d_{z^2}$ orbital is more greatly stabilized than the $d_{xz,yz}$ orbitals are destabilized because the former is involved in stronger $\sigma$-interactions, as opposed to weaker $\pi$-interactions.
+        \end{itemize}
+        \item Now let's add the \ce{Br-} ligand. Addition of \ce{Br-} to the $C_{4v}$ fragment will give rise to new interactions.
+        \begin{itemize}
+            \item $\sigma$: \ce{Br}($p_z$) will interact with the $d_{z^2}$, $s$, and $p_z$ orbitals of cobalt. All of these will be \ce{M-L\sigma^*} with respect to \ce{M} orbitals, and \ce{M-L\sigma} with respect to the ligand.
+            \item $\pi$: \ce{Br}($p_x,p_y$) will interact with $d_{xz,yz}$ in \ce{M-L\pi^*} interactions.
+            \item The formation of a bonding pair causes \ce{Br}($p_z$) orbital stabilization, at the cost of the destabilization of the $d_{z^2}$ orbital.
+            \item The metal $p_z$ and $d_{z^2}$ orbitals will be destabilized, but will remain below \ce{Co-CN\sigma^*} orbitals because the \ce{Co-Br} interaction is not as great as the \ce{Co-CN} interaction.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 39: Metal-Metal Bonding}
+\begin{itemize}
+    \item First historical puzzle:
+    \begin{itemize}
+        \item Copper (II) acetate has crystalizes with four \ce{O-CR-O} bridges joining two square pyramidal copper atoms that are also bonded to one aqua group, each.
+        \item Copper is $d^9$, so $\mu=1.73$ in theory. However, we observe $\mu=1.4$.
+        \item We resolve this conflict by noting that the copper atoms are not square pyramidal --- they bond to each other, giving both an octahedral geometry.
+        \begin{itemize}
+            \item This is important because it gives us a new pair of bonding and antibonding orbitals. We thus have low-spin and high-spin states, and the existence of a nonzero but not super high magnetic moment hints at a high-spin state with some preference for low-lyingness.
+        \end{itemize}
+    \end{itemize}
+    \item Metal-metal bonding is common for metals in low oxidation state, and generally increases in strength along the series $3d<<4d<5d$.
+    \item Single metal-metal bonded complexes:
+    \begin{itemize}
+        \item We will consider the paradiamagnetic single \ce{M-M} complex \ce{M2(CO)10}.
+        \begin{itemize}
+            \item Possible metals are \ce{Fe^2+}, manganese, and uranium.
+        \end{itemize}
+        \item Strategy for group fragment approach: Correlate to \ce{M(CO)6} ($O_h$), remove a ligand to give \ce{M(CO)5}, and dimerize.
+        \begin{itemize}
+            \item Note that \ce{Mn(CO)5} is the inorganic analog to \ce{CH3}, i.e., the \ce{Mn(CO)5} fragment is said to be isolobal with \ce{CH3}.
+        \end{itemize}
+        \item The HOMO of \ce{Mn(CO)5} is a singly occupied $d_{z^2}$ orbital.
+        \item The energetic stabilization of the electrons in $d_{z^2}$ into a $\sigma$-bond by dimerization is the driving force for metal-metal bond formation.
+        \item Note that a diamagnetic complex is formed from the dimerization of two metallic radicals.
+        \item Also note that the $d_{z^2}$ orbital is cylindrically symmetric, i.e., indicates no preference for the staggered vs. eclipsed conformation. Thus, the molecule will adopt the more torsionally favorable staggered $D_{4d}$ configuration.
+    \end{itemize}
+    \item Cluster formation:
+    \begin{itemize}
+        \item As mentioned above, odd electron occupancy of the $e_g$ orbitals ($O_h$) prompts ligand loss in order to destabilize $d_{z^2}$. Further stabilization occurs by metal-metal single bond formation. We can take limiting argument to explain cluster formation across the periodic table:
+        \item In each case, the clusters assume an octahedral coordination as a result of burying 7 $d$-electrons in what are formally $t_{2g}$ orbitals. The system loses a number of \ce{CO}s equivalent to the number of electrons in \ce{M-L\sigma^*}; this permits maximum \ce{M-M} bond formation and thus maximum stabilization.
+        \item Clusters can trimerize or form higher polymers.
+        \item Clusters can act as super atoms, combinations of atoms that you can add and remove electrons from with similar effects to changing the oxidation state in one atom.
+    \end{itemize}
+    \item Multiple metal-metal bonded complexes:
+    \begin{itemize}
+        \item Inorganic chemists synthesized a compound with a quadruple bond in 1964.
+        \item The MO strategy will be to correlate \ce{Re2Cl8^2-} with \ce{ReCl6^3-} ($O_h$), remove two axial \ce{Cl-} ligands to give a square planar \ce{ReCl4-} fragment, and then dimerize.
+        \begin{itemize}
+            \item Here, we see stabilization of the $d_{xz,yz}$ (the \ce{Cl-} ligand had been giving antibonding character) orbitals and massive stabilization of the $d_{z^2}$ orbital (same reason).
+        \end{itemize}
+        \item The $d_{z^2}$ orbital reacts the most to form an $a_{1g}$ $\sigma$-bond.
+        \item The $d_{xz,yz}$ orbitals react the second most to form two $e_u$ $\pi$-bonds.
+        \item The $d_{xy}$ orbitals react the third most to form one $b_{2g}$ $\delta$-bond.
+        \item The eclipsed $D_{4h}$ structure is a result of the $\delta$ bond.
+        \item Adding up our 8 bonding and 0 antibonding electrons and diving by two gives us our first quadruple bond.
+    \end{itemize}
+    \item Metal-metal bonding vs. configuration: Increases single to quadruple bond as $d^1\to d^4$; decreases triple to no bond as $d^5\to d^8$.
+    \item $f$ orbitals are deep within the core of the atom and not generally available form bonding, so we will not see higher bonding \emph{because} of $f$ orbitals in lanthanides and actinides.
+    \item The $d^8$ case:
+    \begin{itemize}
+        \item No bonding predicted, but\dots
+        \item We actually see one-dimensional crystals, as in band theory.
+        \item The orbitals responsible are the $d_{z^2}$ orbitals, which mix with the higher energy $p_z$ orbitals to stabilize the $d_{z^2}$ $\sigma$-bonding MO (and destabilize the $p_z$ bonding MO, but this orbital is unfilled).
+    \end{itemize}
+    \item The $d_{x^2-y^2}$ orbitals cannot participate in \ce{ML4} coupling since they are used for ligand bonding.
+    \begin{itemize}
+        \item Thus, the only orbitals available for coupling are $d_{z^2,xz,yz,xy}$.
+    \end{itemize}
+    \item Inorganic chemists (including Phil Power, who is probably the greatest currently living main-group inorganic chemist) synthesized a compound with a quintuple bond in 2005.
+    \begin{itemize}
+        \item They had to change the coordination environment around the metal center to free up the $d_{x^2-y^2}$ orbital. They did so with sterically bulky ligands that hindered more bonding.
+        \item The quintuple bonding was verified by observing a very short bond length (not super short on the scheme of things, but shorter than ever reported before, indicating the presence of a weak fifth bond).
+        \item $C_{2h}$ symmetry.
+        \item Suggested reading: The full paper.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
