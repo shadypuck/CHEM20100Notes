@@ -1,0 +1,450 @@
+\documentclass[../psets.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Problem Set 6}
+
+\begin{document}
+
+
+
+
+\begin{enumerate}[label={\Roman*)}]
+    \item \marginnote{3/1:}Derive the proper MO diagram for tetrahedral molecules \ce{ML4} using the $n$ $d$-orbitals, the $(n+l)$ $s$-orbital, and the $(n+l)$ $p$-orbitals on the central atom \ce{M} for
+    \begin{enumerate}
+        \item $\sigma$-only ligands;
+        \begin{proof}[Answer]
+            Point group: $T_d$.\par
+            Basis functions: All four \ce{L} $\sigma$-orbitals, \ce{M}($ns$), \ce{M}($(n+l)p$), and \ce{M}($(n+l)d$).\par
+            Apply operations, generate reducible representations, and reduce to irreducible representations:
+            \begin{align*}
+                \Gamma_{L\sigma} &= (4,1,0,0,2) = A_1+T_2\\
+                \Gamma_{\ce{M}_{ns}} &= A_1\\
+                \Gamma_{\ce{M}_{(n+l)p}} &= T_2\\
+                \Gamma_{\ce{M}_{(n+l)d}} &= E+T_2
+            \end{align*}
+            Combine orbitals by their symmetry.
+            \begin{center}
+                \begin{tikzpicture}[
+                    yscale=0.15,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \path (-7,-20) -- (7,-20);
+            
+                    \draw [ultra thick,gry]
+                        (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
+                        (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
+                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
+                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                    ;
+                    \draw [ultra thick]
+                        (-0.85,-8) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
+                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
+                        (-0.85,-26) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-30) coordinate (e) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0)
+                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                    ;
+            
+                    \begin{scope}[on background layer]
+                        \draw [thick,grx,densely dashed]
+                            (4p) -- (t2ul)
+                            (4p) -- (t2ml)
+                            (4p) -- (t2ll)
+                            (4s) -- (a1ul)
+                            (4s) -- (a1ll)
+                            (3d1) -- (e)
+                            (3d2) -- (t2ul)
+                            (3d2) -- (t2ml)
+                            (3d2) -- (t2ll)
+                            (1s1) -- (a1ur)
+                            (1s1) -- (a1lr)
+                            (1s2) -- (t2ur)
+                            (1s2) -- (t2mr)
+                            (1s2) -- (t2lr)
+                        ;
+                    \end{scope}
+    
+                    \node at (-4.45,-50) {\small\ce{M}};
+                    \node at (0,-50) {\small\ce{ML4}};
+                    \node at (4.75,-50) {\small$4\times\ce{L}$};
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+        \item $\pi$-donor ligands (having low-lying, filled $\pi$ orbitals);
+        \begin{proof}[Answer]
+            Point group: $T_d$.\par
+            Basis functions: All four \ce{L} $\sigma$-orbitals, all eight \ce{L} $\pi_{x,z}$ orbitals, \ce{M}($ns$), \ce{M}($(n+l)p$), and \ce{M}($(n+l)d$).\par
+            Apply operations, generate reducible representations, and reduce to irreducible representations:
+            \begin{align*}
+                \Gamma_{L\sigma} &= (4,1,0,0,2) = A_1+T_2\\
+                \Gamma_{L\pi_{x,z}} &= (8,-1,0,0,0) = E+T_1+T_2\\
+                \Gamma_{\ce{M}_{ns}} &= A_1\\
+                \Gamma_{\ce{M}_{(n+l)p}} &= T_2\\
+                \Gamma_{\ce{M}_{(n+l)d}} &= E+T_2
+            \end{align*}
+            Combine orbitals by their symmetry.
+            \begin{center}
+                \begin{tikzpicture}[
+                    yscale=0.22,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \path (-7,-20) -- (7,-20);
+            
+                    \draw [ultra thick,gry]
+                        (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
+                        (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
+                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
+                        (3,-28) coordinate (2p1) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                    ;
+                    \draw [ultra thick]
+                        (-0.85,-8) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
+                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
+                        (-0.85,-22) coordinate (t2nl) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2nr)
+                        (-0.85,-24.5) coordinate (eul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (eur)
+                        (-0.85,-28) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_1$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1)
+                        (-0.85,-32) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-35) coordinate (ell) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (elr)
+                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                    ;
+            
+                    \begin{scope}[on background layer]
+                        \draw [thick,grx,densely dashed]
+                            (4p) -- (t2ul)
+                            (4p) -- (t2nl)
+                            (4p) -- (t2ml)
+                            (4p) -- (t2ll)
+                            (4s) -- (a1ul)
+                            (4s) -- (a1ll)
+                            (3d1) -- (eul)
+                            (3d1) -- (ell)
+                            (3d2) -- (t2ul)
+                            (3d2) -- (t2nl)
+                            (3d2) -- (t2ml)
+                            (3d2) -- (t2ll)
+                            (2p1) -- (t1)
+                            (2p2) -- (eur)
+                            (2p2) -- (elr)
+                            (2p3) -- (t2ur)
+                            (2p3) -- (t2nr)
+                            (2p3) -- (t2mr)
+                            (2p3) -- (t2lr)
+                            (1s1) -- (a1ur)
+                            (1s1) -- (a1lr)
+                            (1s2) -- (t2ur)
+                            (1s2) -- (t2nr)
+                            (1s2) -- (t2mr)
+                            (1s2) -- (t2lr)
+                        ;
+                    \end{scope}
+    
+                    \node at (-4.45,-48) {\small\ce{M}};
+                    \node at (0,-48) {\small\ce{ML4}};
+                    \node at (4.75,-48) {\small$4\times\ce{L}$};
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+        \item $\pi$-acceptor ligands (having high-lying, empty $\pi$ orbitals).
+        \begin{proof}[Answer]
+            Same intro analysis as part (b).
+            \begin{center}
+                \begin{tikzpicture}[
+                    yscale=0.23,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \path (-7,-20) -- (7,-20);
+            
+                    \draw [ultra thick,gry]
+                        (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
+                        (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
+                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
+                        (3,-22) coordinate (2p1) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                    ;
+                    \draw [ultra thick]
+                        (-0.85,-5) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
+                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
+                        (-0.85,-17) coordinate (t2nl) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2nr)
+                        (-0.85,-19) coordinate (eul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (eur)
+                        (-0.85,-22) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_1$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1)
+                        (-0.85,-27) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-33) coordinate (ell) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (elr)
+                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                    ;
+            
+                    \begin{scope}[on background layer]
+                        \draw [thick,grx,densely dashed]
+                            (4p) -- (t2ul)
+                            (4p) -- (t2nl)
+                            (4p) -- (t2ml)
+                            (4p) -- (t2ll)
+                            (4s) -- (a1ul)
+                            (4s) -- (a1ll)
+                            (3d1) -- (eul)
+                            (3d1) -- (ell)
+                            (3d2) -- (t2ul)
+                            (3d2) -- (t2nl)
+                            (3d2) -- (t2ml)
+                            (3d2) -- (t2ll)
+                            (2p1) -- (t1)
+                            (2p2) -- (eur)
+                            (2p2) -- (elr)
+                            (2p3) -- (t2ur)
+                            (2p3) -- (t2nr)
+                            (2p3) -- (t2mr)
+                            (2p3) -- (t2lr)
+                            (1s1) -- (a1ur)
+                            (1s1) -- (a1lr)
+                            (1s2) -- (t2ur)
+                            (1s2) -- (t2nr)
+                            (1s2) -- (t2mr)
+                            (1s2) -- (t2lr)
+                        ;
+                    \end{scope}
+    
+                    \node at (-4.45,-48) {\small\ce{M}};
+                    \node at (0,-48) {\small\ce{ML4}};
+                    \node at (4.75,-48) {\small$4\times\ce{L}$};
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+    \end{enumerate}
+    \newpage
+    \item Do the following problems from Chapter 10: 1, 6, 7, 8, 19, 22.
+    \begin{enumerate}[label={\textbf{10.\arabic*}}]
+        \item Predict the number of unpaired electrons for each of the following:
+        \begin{enumerate}[label={\textbf{\alph*.}}]
+            \item A tetrahedral $d^6$ ion.
+            \begin{proof}[Answer]
+                Tetrahedral means high spin and $t_2$ orbitals above $e$. Thus, there will be 4 unpaired electrons.
+                \begin{center}
+                    \begin{tikzpicture}[
+                        every node/.prefix style={black}
+                    ]
+                        \draw [gry,ultra thick]
+                            (-0.85,1) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                            (-0.55,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                \end{center}
+            \end{proof}
+            \item \ce{[Co(H2O)6]^2+}.
+            \begin{proof}[Answer]
+                Octahedral cobalt with a $2+$ oxidation state means high spin. Thus, there will be 3 unpaired electrons.
+                \begin{center}
+                    \begin{tikzpicture}[
+                        every node/.prefix style={black}
+                    ]
+                        \draw [gry,ultra thick]
+                            (-0.85,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                            (-0.55,1) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                \end{center}
+            \end{proof}
+            \item \ce{[Cr(H2O)6]^3+}.
+            \begin{proof}[Answer]
+                High spin/low spin doesn't matter here; there will be 3 unpaired electrons, regardless.
+                \begin{center}
+                    \begin{tikzpicture}[
+                        every node/.prefix style={black}
+                    ]
+                        \draw [gry,ultra thick]
+                            (-0.85,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                            (-0.55,1) -- ++(0.5,0) ++(0.1,0) --++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                \end{center}
+            \end{proof}
+            \item A square-planar $d^7$ ion.
+            \begin{proof}[Answer]
+                Square planar compounds have an orbital arrangement determined by the angular overlap model, and are low spin. Thus, there will be 1 unpaired electron.
+                \begin{center}
+                    \begin{tikzpicture}[
+                        yshift=0.6,
+                        every node/.prefix style={black}
+                    ]
+                        \draw [gry,ultra thick]
+                            (-0.25,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                            (-0.55,1) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                            (-0.25,2) -- node{\Large$\upharpoonleft$} ++(0.5,0)
+                            (-0.25,3) -- ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                \end{center}
+            \end{proof}
+            \item A coordination compound with a magnetic moment of $5.1$ Bohr magnetons.
+            \begin{proof}[Answer]
+                Using the spin-only magnetic moment formula $\mu_S=\sqrt{n(n+2)}$, we can solve for $n$ with the quadratic formula, take the positive answer, and round.
+                \begin{align*}
+                    5.1 &= \sqrt{n(n+2)}\\
+                    0 &= n^2+2n-5.1^2\\
+                    n &\approx 4
+                \end{align*}
+            \end{proof}
+        \end{enumerate}
+        \newpage
+        \setcounter{enumii}{5}
+        \item Predict the magnetic moments (spin-only) of the following species.
+        \begin{enumerate}[label={\textbf{\alph*.}}]
+            \item \ce{[Cr(H2O)6]^2+}.
+            \begin{proof}[Answer]
+                We know that \ce{[Cr(H2O)6]^2+} has four unpaired electrons. Thus, $\mu=\sqrt{4(4+2)}=\sqrt{24}\approx 4.9$.
+            \end{proof}
+            \item \ce{[Cr(CN)6]^4-}.
+            \begin{proof}[Answer]
+                We know that \ce{[Cr(CN)6]^4-} has two unpaired electrons. Thus, $\mu=\sqrt{2(2+2)}=\sqrt{8}\approx 2.82$.
+            \end{proof}
+            \item \ce{[FeCl4]-}.
+            \begin{proof}[Answer]
+                We know that \ce{[FeCl4]-} has five unpaired electrons. Thus, $\mu=\sqrt{5(5+2)}=\sqrt{15}\approx 5.92$.
+            \end{proof}
+            \item \ce{[Fe(CN)6]^3-}.
+            \begin{proof}[Answer]
+                We know that \ce{[Fe(CN)6]^3-} has one unpaired electron. Thus, $\mu=\sqrt{1(1+2)}=\sqrt{3}\approx 1.73$.
+            \end{proof}
+            \item \ce{[Ni(H2O)6]^2+}.
+            \begin{proof}[Answer]
+                We know that \ce{[Ni(H2O)6]^2+} has two unpaired electrons. Thus, $\mu=\sqrt{2(2+2)}=\sqrt{8}\approx 2.82$.
+            \end{proof}
+            \item \ce{[Cu(en)2(H2O)2]^2+}.
+            \begin{proof}[Answer]
+                We know that \ce{[Cu(en)2(H2O)2]^2+} has one unpaired electron. Thus, $\mu=\sqrt{1(1+2)}=\sqrt{3}\approx 1.73$.
+            \end{proof}
+        \end{enumerate}
+        \newpage
+        \item A compound with the empirical formula \ce{Fe(H2O)4(CN)2} has a magnetic moment corresponding to $2\frac{2}{3}$ unpaired electrons per iron. How is this possible? (Hint: Two octahedral \ce{Fe}(II) species are involved, each containing a single type of ligand.)
+        \begin{proof}[Answer]
+            \ce{Fe(H2O)6} is a low spin complex with 4 unpaired electrons. \ce{Fe(CN)6} is a high spin complex with 0 unpaired electrons. If we take a weighted average of the spins, we find that the magnetic moment of \ce{Fe(H2O)4(CN)2} is $\mu=4\cdot\frac{4}{6}+0\cdot\frac{2}{6}=2\frac{2}{3}$.
+        \end{proof}
+        \newpage
+        \item What are the possible magnetic moments of \ce{Co}(II) in tetrahedral, octahedral, and square-planar complexes?
+        \begin{proof}[Answer]
+            For tetrahedral and octahedral complexes, we have $\mu=\sqrt{3(3+2)}=\sqrt{15}\approx 3.87$. For square planar, we have $\mu=\sqrt{1(1+2)}=\sqrt{3}\approx 1.73$.
+        \end{proof}
+        \newpage
+        \setcounter{enumii}{18}
+        \item Explain the order of the magnitudes of the following $\Delta_o$ values for \ce{Cr}(III) complexes in terms of the $\sigma$ and $\pi$ donor and acceptor properties of the ligands.
+        \begin{center}
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{lllllll}
+                \rowcolor{grx}
+                \textcolor{white}{\textbf{Ligand}} & \textcolor{white}{\textbf{\ce{F-}}} & \textcolor{white}{\textbf{\ce{Cl-}}} & \textcolor{white}{\textbf{\ce{H2O}}} & \textcolor{white}{\textbf{\ce{NH3}}} & \textcolor{white}{\textbf{en}} & \textcolor{white}{\textbf{\ce{CN-}}}\\
+                $\Delta_o\ (\si{\per\centi\meter})$ & $\num{15200}$ & $\num{13200}$ & $\num{17400}$ & $\num{21600}$ & $\num{21900}$ & $\num{33500}$\\
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grt}\hline
+            \end{tabular}
+        \end{center}
+        \begin{proof}[Answer]
+            Cyanide has by far the greatest magnitude $\Delta_o$ because it is the only $\pi$-accepting ligand. Ethylenediamine and ammonia form the next group down because they are pure $\pi$-donating ligands. Lastly, we have water, chloride, and fluoride because they have $\pi$-donating character.
+        \end{proof}
+        \newpage
+        \setcounter{enumii}{21}
+        \item Solid \ce{CrF3} contains a \ce{Cr}(III) ion surrounded by six \ce{F-} ions in an octahedral geometry, all at distances of $\SI{190}{\pico\meter}$. However, \ce{MnF3} is in a distorted geometry, with \ce{Mn-F} distances of 179, 191, and $\SI{209}{\pico\meter}$ (two of each). Explain.
+        \begin{proof}[Answer]
+            The manganese ion has unequally occupied $e_g$ orbitals whereas the chromium one does not, so the former is subject to Jahn-Teller distortion while the latter is not.
+        \end{proof}
+    \end{enumerate}
+    \newpage
+    \item Use the Angular Overlap Model to derive the $d$-orbital splitting diagrams for \ce{M(CO)5} complexes having
+    \begin{enumerate}
+        \item Square pyramidal geometry;
+        \begin{proof}[Answer]
+            From the charts in Module 36, we have $e_\sigma=(2,3,0,0,0)$ and $e_\pi=(0,0,4,3,3)$. Thus we know that the $d$-orbital splitting diagram is
+            \begin{center}
+                \begin{tikzpicture}[
+                    yscale=0.3,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \draw [thick,-stealth] (-1,-5) -- node[left]{\small$E$} ++(0,9);
+
+                    \draw [ultra thick,gry]
+                        (-0.25,3) -- ++(0.5,0) node[right]{$d_{x^2-y^2}$}
+                        (-0.25,2) -- ++(0.5,0) node[right]{$d_{z^2}$}
+                        (-0.55,-3) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$d_{xz,yz}$}
+                        (-0.25,-4) -- ++(0.5,0) node[right]{$d_{xy}$}
+                    ;
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+        \item Trigonal bipyramidal geometry.
+        \begin{proof}[Answer]
+            From the charts in Module 36, we have $e_\sigma=(\frac{11}{4},\frac{11}{8},\frac{9}{8},0,0)$ and $e_\pi=(0,\frac{3}{2},\frac{3}{2},\frac{7}{2},\frac{7}{2})$. Thus we know that the $d$-orbital splitting diagram is
+            \begin{center}
+                \begin{tikzpicture}[
+                    yscale=0.4,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \draw [thick,-stealth] (-1,-4) -- node[left]{\small$E$} ++(0,7);
+
+                    \draw [ultra thick,gry]
+                        (-0.25,2.75) -- ++(0.5,0) node[right]{$d_{z^2}$}
+                        (-0.25,-0.125) -- ++(0.5,0) node[above right]{$d_{x^2-y^2}$}
+                        (-0.25,-0.375) -- ++(0.5,0) node[below right]{$d_{xy}$}
+                        (-0.55,-3.5) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$d_{xz,yz}$}
+                    ;
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+        \item Label the orbitals with the appropriate energies in units of $e_\sigma$ and $e_\pi$. Note that degenerate orbitals are those with the same energies --- you don't have to use group theory to get this information!
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    yscale=0.3,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \draw [thick,-stealth] (-1,-5) -- node[left]{\small$E$} ++(0,9);
+
+                    \draw [ultra thick,gry]
+                        (-0.25,3) -- ++(0.5,0) node[right]{$3e_\sigma$}
+                        (-0.25,2) -- ++(0.5,0) node[right]{$2e_\sigma$}
+                        (-0.55,-3) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$-3e_\pi$}
+                        (-0.25,-4) -- ++(0.5,0) node[right]{$-4e_\pi$}
+                    ;
+                \end{tikzpicture}
+                \caption{Square pyramidal.}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    yscale=0.4,
+                    every node/.prefix style={black}
+                ]
+                    \footnotesize
+                    \draw [thick,-stealth] (-1,-4) -- node[left]{\small$E$} ++(0,7);
+
+                    \draw [ultra thick,gry]
+                        (-0.25,2.75) -- ++(0.5,0) node[right]{$\frac{11}{4}e_\sigma$}
+                        (-0.25,-0.125) -- ++(0.5,0) node[above right]{$\frac{11}{8}e_\sigma-\frac{3}{2}e_\pi$}
+                        (-0.25,-0.375) -- ++(0.5,0) node[below right]{$\frac{9}{8}e_\sigma-\frac{3}{2}e_\pi$}
+                        (-0.55,-3.5) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$-\frac{7}{2}e_\pi$}
+                    ;
+                \end{tikzpicture}
+                \caption{Trigonal bipyramidal.}
+            \end{subfigure}
+        \end{figure}
+        \item Determine the relative energies of \ce{Cr(CO)5} (based on orbital population) in these two geometries, and use this to predict the structure of \ce{Cr(CO)5}.
+        \begin{proof}[Answer]
+            Assuming a high spin configuration since chromium is neutral and noting that chromium has a $d^4$ configuration, we have
+            \begin{align*}
+                E_\text{square pyramidal} &= 1(-4e_\pi)+2(-3e\pi)+2e_\sigma = 2e_\sigma-10e_\pi\\
+                E_\text{trigonal bipyramid} &= 2\left( -\frac{7}{2}e_\pi \right)+1\left( \frac{9}{8}e_\sigma-\frac{3}{2}e_\pi \right)+1\left( \frac{11}{8}e_\sigma-\frac{3}{2}e_\pi \right) = \frac{5}{2}e_\sigma-10e_\pi
+            \end{align*}
+            Since $E_\text{trigonal bipyramidal}>E_\text{square pyramidal}$, we know that \ce{Cr(CO)5} is square pyramidal.
+        \end{proof}
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
