@@ -1,0 +1,158 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{7}
+
+\begin{document}
+
+
+
+
+\chapter{Electronic Spectra of Coordination Compounds}
+\section{Module 40: Electronic Transitions}
+\begin{itemize}
+    \item \marginnote{3/1:}Suggested reading: Chapter 11.1.
+    \item Transition metal complexes are known to show rich photophysics and optical properties.
+    \begin{itemize}
+        \item For example, \ce{[Ni(NH3)6]^2+} has peaks in the infrared, visible, and UV spectra.
+    \end{itemize}
+    \item How electronic transitions occur:
+    \begin{itemize}
+        \item Take a solid or aqueous sample and illuminate it with photons of a particular power $P_0$ through $l\si{\centi\meter}$ of it.
+        \item Some will be absorbed and some will pass through. Measure the power $P$ that comes out on the other side.
+    \end{itemize}
+    \item Transmittance $T=P/P_0$.
+    \item Absorbance $A=-\log T=\log\frac{P_0}{P}$.
+    \item The Beer-Lambert Law: $A=\varepsilon Cl$, where $C$ is the concentration of the sample in solution, $l$ is the path length (how large the cuvette is), and $\varepsilon$ is the molar absorption coefficient.
+    \item Plotting the wavelength of the impinging photons vs. $\varepsilon$ gives us a graph with peaks, where each peak corresponds to an electron transition.
+    \item Spectral features:
+    \begin{itemize}
+        \item Number of transitions.
+        \item Energy of the transitions.
+        \item Intensity of the transitions.
+        \item Shape of the transition.
+    \end{itemize}
+    \item \textbf{Transition probability}: The probability of a particular transition taking place.
+    \item The transition probability depends on:
+    \begin{itemize}
+        \item Energy of the transition vs. incident light.
+        \item Orientation of the molecule/material.
+        \item Symmetry of the initial and final states.
+        \item Angular momentum (spin).
+    \end{itemize}
+    \item The absorption spectra of various hexaaqua complexes of the first-row transition metals give us a zoo of spectra.
+    \item We usually have $\varepsilon<10$, which means faint colors.
+    \item Types of molecular transitions:
+    \begin{itemize}
+        \item Metal Centered (MC): Transitions between the $d$-orbitals on the metal center.
+        \item Ligand to Metal Charge Transfer (LMCT): For example, \ce{MnO4-} has $\varepsilon\approx\num{10000}$.
+        \item Metal to Ligand Charge Transfer (MLCT) and Metal to Metal Charge Transfer (MMCT), too.
+    \end{itemize}
+    \item The transition probability of one molecule from one state $\Psi_1$ to another state $\Psi_2$ is given by $|\vec{M}_{21}|$, the transition dipole moment or transition moment from $\Psi_1$ to $\Psi_2$.
+    \begin{itemize}
+        \item The transition matrix element $\vec{M}_{21}=\int\Psi_2\vec{\mu}\Psi_1\dd{\tau}$, where $\vec{\mu}$ is the electric dipole moment operator $\vec{\mu}=\sum_nQ_n\vec{x}_n$, where $Q_n$ is charge and $\vec{x}_n$ is the position vector operator.
+        \item Derived with time-dependent perturbation theory.
+        \item For an electronic transition to be allowed, the transition moment integral must be nonzero.
+        \item Note that $\varepsilon\approx\vec{M}_{21}$.
+    \end{itemize}
+    \item How the HOMO moves about the molecule depends on the type of incoming light.
+    \begin{itemize}
+        \item If $\vec{M}_{21}=0$, then the transition probability is 0 and the transition from $\Psi_1$ to $\Psi_2$ is forbidden or electric-dipole forbidden ($\varepsilon=0$).
+        \item If $\vec{M}_{21}\neq 0$, then the transition probability is not 0 and the transition from $\Psi_1$ to $\Psi_2$ is not forbidden ($\varepsilon\geq 0$).
+        \begin{itemize}
+            \item If $\vec{M}_{21}\neq 0$, we do not definitively know that there will be an electron transition or know how intense it will be; we just know that it is not electric-dipole forbidden.
+        \end{itemize}
+    \end{itemize}
+    \item Calculating $\vec{M}_{21}$:
+    \begin{itemize}
+        \item Use the same procedure with $\Gamma_2\otimes\Gamma_\mu\otimes\Gamma_1$ as in Module 12.
+        \item If the direct product does not contain the totally symmetric representation, then the transition is forbidden by symmetry arguments.
+        \item If the direct product does contain the totally symmetric representation, then the transition is allowed by symmetry arguments.
+    \end{itemize}
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|l|lll|}
+            \hline
+            \normalsize$C_{3v}$ & $\bm{A_1}$ & $\bm{A_2}$ & $\bm{E}$\\
+            \hline
+            $\bm{A_1}$ & $A_1$ & $A_2$ & $E$\\
+            $\bm{A_2}$ &       & $A_1$ & $E$\\
+            $\bm{E}$   &       &       & $A_1+A_2+E$\\
+            \hline
+        \end{tabular}
+        \caption{Direct product table for the $C_{3v}$ point group.}
+        \label{tab:directProductTable-C3v}
+    \end{table}
+    \item Be aware of direct product tables, such as the above example, which we may readily obtain from Table \ref{tab:characterTable-C3v}.
+    \item Example: In a $D_{2h}$ complex, can we excite a $d_{z^2}$ electron to the $p_z$ orbital?
+    \begin{itemize}
+        \item From the $D_{2h}$ character table, we have that $\Gamma_1=A_g$ and $\Gamma_2=B_{1u}$. We also have that $\Gamma_\mu$ for an $x$-, $y$-, and $z$-basis is $B_{3u}$, $B_{2u}$, and $B_{1u}$, respectively.
+        \item Taking direct products under each basis gives us
+        \begin{align*}
+            B_{1u}\otimes B_{3u}\otimes A_g &= B_{2g}\tag{$x$-basis}\\
+            B_{1u}\otimes B_{2u}\otimes A_g &= B_{3g}\tag{$y$-basis}\\
+            B_{1u}\otimes B_{1u}\otimes A_g &= A_g\tag{$z$-basis}
+        \end{align*}
+        \item Thus, the $x$- and $y$-components are forbidden while the $z$ one is not.
+        \item What this means is that $z$-plane polarized light will be able to cause the desired electron transition, but $x$- and $y$-plane polarized light will not.
+    \end{itemize}
+    \item We can use the same procedure to prove that we can never promote an electron from $d_{xy}$ to $p_z$.
+    \item We can use the same procedure for octahedral complexes, except the calculations of the direct products are just a bit more difficult.
+    \begin{itemize}
+        \item For a $d^1$ complex, we calculate $E_g\otimes T_{1u}\otimes T_{2g}$.
+        \item For a $d^6$ complex, we calculate $(T_{2g}\otimes E_g)\otimes T_{1u}\otimes A_{1g}=(T_{1g}+T_{2g})\otimes T_{1u}\otimes A_{1g}$.
+        \begin{itemize}
+            \item A low spin $d^6$ complex has $A_{1g}$ symmetry by taking the direct product of $T_{2g}$ times itself six times.
+            \item The excited state has $T_{2g}$ times itself five times, and then times $E_g$.
+            \item Basically, we take the direct product of the orbital that each electron occupies.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 41: Many Electron States}
+\begin{itemize}
+    \item Suggested reading: Chapter 11.2.
+    \item For octahedral $d^3$, we have multiple excited states (six, to be exact).
+    \begin{itemize}
+        \item Fortunately, there is an easier way to describe transitions between states (we will talk about this next time).
+    \end{itemize}
+    \item A single electron is completely described by the principal quantum number $n$, its angular momentum $\ell$, its magnetic quantum number $m_\ell$, and its spin $m_s$.
+    \item Multielectron states are described by \textbf{Russell-Sounders coupling}, \emph{also known as} \textbf{LS coupling}, \textbf{L-S coupling}.
+    \item For example, consider the $d^2$ configured \ce{V^3+} ion.
+    \begin{itemize}
+        \item There are 45 different possible microstates. Some will have the same energy, some will not.
+        \item There are five states (denoted by \textbf{term symbols}) with distinct energy in total.
+    \end{itemize}
+    \item To find the term symbol, we need:
+    \begin{itemize}
+        \item $L=\text{total orbital angular momentum}=\sum m_\ell$.
+        \item $S=\text{total spin angular momentum}=\sum m_s$.
+    \end{itemize}
+    \item Term symbols then are of the form
+    \begin{equation*}
+        {}^{2S+1}L_J
+    \end{equation*}
+    where $2S+1$ is the spin multiplicity, $L$ is the subshell letter corresponding to the angular momentum quantum number ($0\mapsto s$, $1\mapsto p$, $2\mapsto d$, $3\mapsto f$, \dots), and $J$ is the total angular momentum ($J=L+S,L+S-1,L+S-2,\dots,|L-S|$, the spin orbit coupling).
+    \item Some examples:
+    \begin{itemize}
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0)}: $S=\frac{1}{2}$, so our term symbol will be of the form ${}^2L_J$.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\downharpoonright$} node[below=2mm]{$-1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0)}: $S=1$, so our term symbol will be of the form ${}^3L_J$.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=3$, so our term symbol will be of the form ${}^3F_J$.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=0$, so our term symbol will be of the form ${}^3S_J$.
+    \end{itemize}
+    \item Spin-orbit coupling is weak for a carbon atom (we can essentially just disregard it).
+    \begin{itemize}
+        \item For lanthanides, it becomes very significant.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
