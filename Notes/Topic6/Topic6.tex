@@ -519,6 +519,105 @@
         \item "The average energy of the five $d$ orbitals [in a coordination complex] is above that of the free ion orbitals [i.e., those in the metal ion before it is surrounded by ligands], because the electrostatic field of the ligands raises their energy" \parencite[364]{bib:MiesslerFischerTarr}.
         \item CFT is flawed because as we can see from Figure \ref{fig:CFT-freeIon}, there is no energetically favorable bonding; at best, we could have zero energy difference between the free ion and bonded octahedral field state (this occurs if only the $t_{2g}$ orbitals are occupied).
     \end{itemize}
+    \item \marginnote{3/4:}Ligand field theory was synthesized from CFT and MO theory by Griffith and Orgel.
+    \item The ligand HOMO often serves as the basis for group orbitals.
+    \item Based on their shapes, it makes sense that the symmetry of the $d_{xy,xz,yz}$ orbitals doesn't match that of the ligand $\sigma$ orbitals.
+    \item The colors of transition metal complexes are often due to the energy difference between the $t_{2g}$ and ${e_g}^*$ orbitals, which is often equal to the energy of photons of visible light.
+    \begin{itemize}
+        \item \ce{[Ni(H2O)6]^2+}, for example, is green because $\Delta_o$ matches well with the energy of red light, so when white light passes through a solution of this compound, red light is absorbed and the complement (green light) passes through to be perceived.
+    \end{itemize}
+    \item "$\Delta_o$ is also used in ligand field theory as a measure of the magnitude of metal-ligand interactions" \parencite[367]{bib:MiesslerFischerTarr}.
+    \item Perhaps the orbital labeling scheme in Figure \ref{fig:piOctahedralLigand} isn't actually procedural; it's just a consistent reference frame.
+    \item The interaction of ligand $\pi$($t_{1u}$) orbitals with metal $p$($T_{1u}$) orbitals is relatively weak since metal $p$ orbitals largely interact with ligand $\sigma$($t_{1u}$) orbitals.
+    \item "Strong $\pi$ acceptor ligands have the ability to increase the magnitude of $\Delta_o$ by lowering the energy of the $t_{2g}$ orbitals" \parencite[368]{bib:MiesslerFischerTarr}.
+    \item "Electrons in the lower bonding orbitals are largely concentrated on the ligands. It is the stabilization of these ligand electrons that is primarily responsible for why these ligands bind to the metal center" \parencite[368]{bib:MiesslerFischerTarr}.
+    \item Electrons in higher energy orbitals are affected by ligand field effects and determine "structural details, magnetic properties, electronic spectrum absorptions, and coordination complex reactivity" \parencite[368]{bib:MiesslerFischerTarr}.
+    \item \textbf{Metal-to-ligand (\ce{M -> L}) $\bm{\pi}$ bonding}: Electron donation from metal $d_{xy,xz,yz}$ orbitals to ligand $\pi^*$ orbitals. \emph{Also known as} \textbf{$\bm{\pi}$ back-bonding}.
+    \item $\Delta_o$ is the splitting between the \emph{highest occupied} $t_{2g}$ (which can be either $t_{2g}$ or ${t_{2g}}^*$) orbital and the ${e_g}^*$ orbital.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            yscale=0.8,
+            semithick
+        ]
+            \footnotesize
+            \draw [dash pattern=on 4mm off 1mm]
+                (0,2) -- node[below]{$t_{2g}$} node[below=4mm,text width=9mm]{Empty ligand group orbital} ++(1.4,0) coordinate (pl)
+                (5,-3.5) coordinate (sl) -- node[below]{$t_{2g}$} node[below=4mm,text width=1.1cm]{$\sigma$ bonds only} node[pos=0.143,above]{$\uparrow$} node[pos=0.5,above]{$\uparrow$} node[pos=0.857,above]{$\uparrow$} ++(1.4,0) coordinate (sr)
+                (10,-4) coordinate (pr) -- node[below]{$t_{2g}$} node[below=4mm,text width=9mm]{Filled ligand group orbital} node[pos=0.143,above]{$\uparrow$$\downarrow$} node[pos=0.5,above]{$\uparrow$$\downarrow$} node[pos=0.857,above]{$\uparrow$$\downarrow$} ++(1.4,0)
+                (2,3.5) coordinate (t2glul) -- node[below]{${t_{2g}}^*$} ++(1.4,0) coordinate (t2glur)
+                (2,-5) coordinate (t2glll) -- node[below]{$t_{2g}$} node[pos=0.143,above]{$\uparrow$} node[pos=0.5,above]{$\uparrow$} node[pos=0.857,above]{$\uparrow$} ++(1.4,0) coordinate (t2gllr)
+                (8,-2) coordinate (t2grul) -- node[below]{${t_{2g}}^*$} node[pos=0.143,above]{$\uparrow$} node[pos=0.5,above]{$\uparrow$} node[pos=0.857,above]{$\uparrow$} ++(1.4,0) coordinate (t2grur)
+                (8,-6.5) coordinate (t2grll) -- node[below]{$t_{2g}$} node[pos=0.143,above]{$\uparrow$$\downarrow$} node[pos=0.5,above]{$\uparrow$$\downarrow$} node[pos=0.857,above]{$\uparrow$$\downarrow$}  ++(1.4,0) coordinate (t2grlr)
+                (2.25,0) -- node[below]{${e_g}^*$} ++(0.9,0) coordinate (egl)
+                (5.25,0) coordinate (egml) -- node[below]{${e_g}^*$} ++(0.9,0) coordinate (egmr)
+                (8.25,0) coordinate (egr) -- node[below]{${e_g}^*$} ++(0.9,0)
+            ;
+            \draw [grx,densely dashed]
+                (pl) -- (t2glul)
+                (pl) -- (t2glll)
+                (t2glur) -- (sl)
+                (t2gllr) -- (sl)
+                (sr) -- (t2grul)
+                (sr) -- (t2grll)
+                (t2grur) -- (pr)
+                (t2grlr) -- (pr)
+                (egl) -- (egml)
+                (egmr) -- (egr)
+            ;
+    
+            \draw [-stealth] (t2gllr) -- node[right]{$\Delta_o$} (t2gllr |- egl);
+            \draw [-stealth] (sr) -- node[right]{$\Delta_o$} (sr |- egmr);
+            \draw [-stealth] (t2grur) -- node[right]{$\Delta_o$} (t2grur |- egr);
+        \end{tikzpicture}
+        \caption{Effects of $\pi$ bonding on $\Delta_o$ using a $d^3$ ion.}
+        \label{fig:piDeltao}
+    \end{figure}
+    \begin{itemize}
+        \item This is why we consider $\Delta_o$ to be the energy difference between the $t_{2g}$ and ${e_g}^*$ orbitals in complexes with $\pi$-accepting ligands (where the $t_{2g}$ orbitals are filled and lie beneath the ${e_g}^*$ orbitals), but the difference between the ${t_{2g}}^*$ and ${e_g}^*$ orbitals in complexes with $\pi$-donating ligands (where the $t_{2g}$ \emph{and} ${t_{2g}}^*$ are filled and \emph{both} lie beneath the ${e_g}^*$ orbitals).
+        \item Empty ligand group orbitals engage in \ce{M -> L} bonding while filled ligand group orbitals engage in \textbf{\ce{L -> M} bonding}.
+    \end{itemize}
+    \item \textbf{Ligand-to-metal (\ce{L -> M}) $\bm{\pi}$ bonding}: Electron donation from the ligand $\pi$ orbitals to metal $d_{xy,xz,yz}$ orbitals.
+    \item \ce{L -> M} bonding favors high-spin configurations while \ce{M -> L} bonding favors low-spin configurations.
+    \item Part of the stabilization of \ce{M -> L} bonding comes from donation of excess electron density on the metal cation resulting from $\sigma$ acceptance back to the ligands (metals prefer to be relatively positive because of their low electronegativity).
+    \item Note that because backbonding orbitals are composed of $\pi^*$ orbitals, filling of them results in weakening of the ligand $\pi$ bond.
+    \item "In octahedral coordination complexes, electrons from the ligands fill all six bonding molecular orbitals, and the metal valence electrons occupy the $t_{2g}$ and $e_g^*$ orbitals" \parencite[372]{bib:MiesslerFischerTarr}.
+    \item Strong field ligands interact more strongly with metal orbitals, leading to greater stabilization of the $t_{2g}$ set, leading to a larger $\Delta_o$ and low-spin configurations.
+    \begin{itemize}
+        \item Weak field ligands interact more weakly metal orbitals, leading to lesser stabilization of the $t_{2g}$ set, leading to a smaller $\Delta_o$ and low-spin configurations.
+    \end{itemize}
+    \item Recall that increases in $\Pi_c$ \emph{destabilize} the complex, whereas increases in $\Pi_e$ \emph{stabilize} the complex.
+    \item Is there any case in which we would have a $d^5$ configuration with four $t_{2g}$ electrons and one ${e_g}^*$ electron?
+    \item \ce{Co^3+} is the third row cation that most easily adopts a low-spin configuration.
+    \item Magnitudes of $\Delta_o$ values:
+    \begin{itemize}
+        \item Values for $d^5$ ions are smaller than those of $d^4$ and $d^6$ ions.
+        \item Increases in the principal quantum number $n$ increase $\Delta_o$ because of two effects:
+        \begin{itemize}
+            \item There is greater overlap between the larger $4d$ and $5d$ orbitals and the ligand orbitals.
+            \item There is a decreased pairing energy due to a larger available volume for electrons in the $4d$ and $5d$ orbitals relative to with $3d$ orbitals.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Ligand field stabilization energy}: The difference\footnote{This is equivalent to the CFSE defined in the lecture.} between the energy of the $t_{2g}$ / $e_g$ electronic configuration resulting from the ligand field splitting and the hypothetical energy of the $t_{2g}$ / $e_g$ electronic configuration with all five orbitals degenerate and equally populated. \emph{Also known as} \textbf{LFSE}.
+    \item Note that LFSE can only be calculated using the $\frac{2}{5}$ / $\frac{3}{5}$ method for $\sigma$-bonded octahedral complexes.
+    \item Although we might expect transition metal ions to have linearly\footnote{Errata: \textcite{bib:MiesslerFischerTarr} refers to the linear line in the graph as "blue," even though it should be green (a relic from the previous edition).} increasingly exothermic $\Delta H$s for hydration reactions (see below) across a period (as decreasing atomic radius makes them more concentrated [hence more unstable] sources of postive charge), we observe two loops similar to Figure \ref{fig:CFSEcurve} but inverted.
+    \begin{equation*}
+        \ce{M^2+ + 6H2O -> [M(H2O)6]^2+}
+    \end{equation*}
+    \begin{itemize}
+        \item This is because the LFSE provides extra stabilization.
+        \item It is also because of spin-orbit coupling, a relaxation effect caused by contraction of the metal-ligand distance, and an interelectronic repulsion energy (see Chapter 11 for a more detailed description of the first and third phenomena).
+        \item Small corrections must be made in cases where the J-T distortion is present.
+    \end{itemize}
+    \item \textbf{Nephelauxetic effect}: The magnitude of the reduction in the interelectron repulsion energy between the free ion and coordination complex.
+    \begin{itemize}
+        \item Is this due to increases in delocalization?
+        \item Factors that increase the nephelauxetic effect:
+        \begin{itemize}
+            \item Softness of the ligand.
+            \item Increase in metal oxidation state magnitude.
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 
