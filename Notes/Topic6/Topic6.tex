@@ -618,6 +618,77 @@
             \item Increase in metal oxidation state magnitude.
         \end{itemize}
     \end{itemize}
+    \item \marginnote{3/8:}Square-planar complexes.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\linewidth]{../ExtFiles/piSquarePlanarLigand.png}
+        \caption{Square-planar $\pi$-ligand coordinate system.}
+        \label{fig:piSquarePlanarLigand}
+    \end{figure}
+    \begin{itemize}
+        \item Point group: $D_{4h}$.
+        \item "Unlike the octahedral case, there are two distinctly different sets of potential $\pi$-bonding orbitals, the parallel set ($\pi_\parallel$ or $p_x$, in the molecular plane) and the perpendicular set ($\pi_\perp$ or $p_z$, perpendicular to the plane)" \parencite[377]{bib:MiesslerFischerTarr}.
+        \item Apply operations, generate reducible representations, and reduce them to irreducible representations:
+        \begin{align*}
+            \Gamma_{\sigma(y)} &= (4,0,0,2,0,0,0,4,2,0) = A_{1g}+B_{1g}+E_u\\
+            \Gamma_{\parallel(x)} &= (4,0,0,-2,0,0,0,4,-2,0) = A_{2g}+B_{2g}+E_u\\
+            \Gamma_{\perp(z)} &= (4,0,0,-2,0,0,0,-4,2,0) = A_{2u}+B_{2u}+E_g
+        \end{align*}
+        \item For the $\sigma$-only case, the metal's $3d_{x^2-y^2}$, $4p_x$, and $4p_y$ orbitals primarily participate in bonding, with smaller contributions from the less directed $3d_{z^2}$ (see Figure \ref{fig:SALCs-MH6e}) and $4s$.
+        \item Combine orbitals by their symmetry:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.47\linewidth]{../ExtFiles/orbitalDiagram-MH4-squarePlanar.png}
+            \caption{Square planar \ce{MH4} orbital diagram.}
+            \label{fig:orbitalDiagram-MH4-squarePlanar}
+        \end{figure}
+        \begin{itemize}
+            \item Note that Figure \ref{fig:orbitalDiagram-MH4-squarePlanar} is more complex than Figure \ref{fig:orbitalDiagram-MH6} since the lower symmetry reduces degeneracy.
+        \end{itemize}
+        \item For the $\sigma+\pi$ case, the metal's $3d_{xy}$, $4p_x$, and $4p_y$ orbitals primarily participate in bonding with the $p_x(\pi_\parallel)$ ligand orbitals, and the metal's $3d_{xz}$, $3d_{yz}$, and $4p_z$ orbitals primarily participate in bonding with the $p_z(\pi_\perp)$ ligand orbitals.
+        \item Combine orbitals by their symmetry:
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.7\linewidth]{../ExtFiles/orbitalDiagram-ML4-squarePlanar.png}
+            \caption{Square planar \ce{ML4} orbital diagram.}
+            \label{fig:orbitalDiagram-ML4-squarePlanar}
+        \end{figure}
+        \begin{itemize}
+            \item The lowest energy boxed set of orbitals in Figure \ref{fig:orbitalDiagram-ML4-squarePlanar} contains the $\sigma$-bonding orbitals.
+            \item The next higher set is involved in $\pi$ bonding.
+            \item The highest set's order is a subject of debate: The bottom three are the lowest and $b_{1g}$ is much higher, for sure, but the ranking of the bottom three is uncertain. The remaining orbital in the box is not particularly relevant.
+            \item The remaining high-energy orbitals are only important in excited states.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Homoleptic} (complex): A coordination complex with all the ligands identical.
+    \item \textbf{Heteroleptic} (complex): A coordination complex with variation within the ligand set.
+    \item Tetrahedral complexes.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.32\linewidth]{../ExtFiles/piTetrahedralLigand.png}
+        \caption{Tetrahedral $\pi$-ligand coordinate system.}
+        \label{fig:piTetrahedralLigand}
+    \end{figure}
+    \begin{itemize}
+        \item In Figure \ref{fig:piTetrahedralLigand}, the local coordinate systems are ostensibly chosen so that "the $y$ axis of the ligand orbitals is chosen along the bond axis, and the $x$ and $z$ axes are arranged to allow the $C_2$ operation to work properly" \parencite[381]{bib:MiesslerFischerTarr}.
+        \item Point group: $T_d$.
+        \item Apply operations, generate representations:
+        \begin{align*}
+            \Gamma_\sigma &= (4,1,0,0,2)\\
+            \Gamma_\pi &= (8,-1,0,0,0)
+        \end{align*}
+        \item Combine orbitals by their symmetry:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{../ExtFiles/orbitalDiagram-MH4-tetrahedral.png}
+            \caption{Tetrahedral \ce{MH4} orbital diagram.}
+            \label{fig:orbitalDiagram-MH4-tetrahedral}
+        \end{figure}
+        \begin{itemize}
+            \item Recall that $\Delta_t\approx\frac{4}{9}\Delta_o$ under the same ligands.
+        \end{itemize}
+        \item For the $\sigma$ case, ignore all $\pi^*$-derived orbitals in Figure \ref{fig:orbitalDiagram-MH4-tetrahedral}. For the $\pi$ case, consider them.
+    \end{itemize}
 \end{itemize}
 
 
