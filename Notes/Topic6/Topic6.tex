@@ -689,6 +689,189 @@
         \end{itemize}
         \item For the $\sigma$ case, ignore all $\pi^*$-derived orbitals in Figure \ref{fig:orbitalDiagram-MH4-tetrahedral}. For the $\pi$ case, consider them.
     \end{itemize}
+    \item \marginnote{3/9:}\textbf{Angular overlap model}: A method for estimating orbital energies in coordination complexes with the flexibility to deal with a variety of geometries and ligands, including heteroleptic complexes. \emph{Also known as} \textbf{AOM}.
+    \begin{itemize}
+        \item Determines the energy of a molecular orbital with high metal $d$-orbital contribution by summing the varying effects of each ligand on the parent metal $d$ orbital.
+        \item Limited since it exclusively focuses on the $d$ orbitals, neglecting the role of the $s$ and $p$ valence orbitals.
+        \begin{itemize}
+            \item However, this is not a big problem since the frontier orbitals are typically MOs with high $d$-orbital contribution, so considering only $d$-based MOs can still provide useful information.
+        \end{itemize}
+    \end{itemize}
+    \item The strength of all $\sigma$ interactions in the AOM is defined relative to the strength of the strongest one, namely that between the valence $d_{z^2}$ metal orbital and a $p_z$ ligand orbital.
+    \begin{itemize}
+        \item The strength of this reference interaction is denoted by $e_\sigma$.
+        \item Note that since the $d_{z^2}$ orbital is higher in energy than the $p_z$ orbital, the interaction of the two forms a bonding MO most like the ligand orbital, and an antibonding MO most like the metal orbital.
+        \item Although the antibonding MO is slightly more destabilized than the bonding MO is stabilized, we treat both energy changes as equal and equal to $e_\sigma$.
+    \end{itemize}
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{subtable}{0.49\linewidth}
+            \centering
+            \begin{tabular}{cccccc}
+                \rowcolor{grx}
+                \textcolor{white}{\textbf{Ligand Position}} & \textcolor{white}{$\bm{z^2}$} & \textcolor{white}{$\bm{x^2-y^2}$} & \textcolor{white}{$\bm{xy}$} & \textcolor{white}{$\bm{xz}$} & \textcolor{white}{$\bm{yz}$}\\
+    
+                1 & 1 & 0 & 0 & 0 & 0\\
+                \rowcolor{grz}
+                2 & $\frac{1}{4}$ & $\frac{3}{4}$ & 0 & 0 & 0\\
+                3 & $\frac{1}{4}$ & $\frac{3}{4}$ & 0 & 0 & 0\\
+                \rowcolor{grz}
+                4 & $\frac{1}{4}$ & $\frac{3}{4}$ & 0 & 0 & 0\\
+                5 & $\frac{1}{4}$ & $\frac{3}{4}$ & 0 & 0 & 0\\
+                \rowcolor{grz}
+                6 & 1 & 0 & 0 & 0 & 0\\
+                7 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
+                \rowcolor{grz}
+                8 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
+                9 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
+                \rowcolor{grz}
+                10 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
+                11 & $\frac{1}{4}$ & $\frac{3}{16}$ & $\frac{9}{16}$ & 0 & 0\\
+                \rowcolor{grz}
+                12 & $\frac{1}{4}$ & $\frac{3}{16}$ & $\frac{9}{16}$ & 0 & 0\\
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \end{tabular}
+            \caption{Sigma interactions.}
+            \label{tab:AOM-parametersa}
+        \end{subtable}
+        \begin{subtable}{0.49\linewidth}
+            \centering
+            \begin{tabular}{cccccc}
+                \rowcolor{grx}
+                \textcolor{white}{\textbf{Ligand Position}} & \textcolor{white}{$\bm{z^2}$} & \textcolor{white}{$\bm{x^2-y^2}$} & \textcolor{white}{$\bm{xy}$} & \textcolor{white}{$\bm{xz}$} & \textcolor{white}{$\bm{yz}$}\\
+    
+                1 & 0 & 0 & 0 & 1 & 1\\
+                \rowcolor{grz}
+                2 & 0 & 0 & 1 & 1 & 0\\
+                3 & 0 & 0 & 1 & 0 & 1\\
+                \rowcolor{grz}
+                4 & 0 & 0 & 1 & 1 & 0\\
+                5 & 0 & 0 & 1 & 0 & 1\\
+                \rowcolor{grz}
+                6 & 0 & 0 & 0 & 1 & 1\\
+                7 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
+                \rowcolor{grz}
+                8 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
+                9 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
+                \rowcolor{grz}
+                10 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
+                11 & 0 & $\frac{3}{4}$ & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{3}{4}$\\
+                \rowcolor{grz}
+                12 & 0 & $\frac{3}{4}$ & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{3}{4}$\\
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \end{tabular}
+            \caption{Pi interactions.}
+            \label{tab:AOM-parametersb}
+        \end{subtable}
+        \caption{Angular overlap parameters.}
+        \label{tab:AOM-parameters}
+    \end{table}
+    \item \ce{[M(NH3)6]^n+} example:
+    \begin{itemize}
+        \item \ce{NH3} is a $\sigma$-only ligand, and it bonds mostly through the nitrogen $p_z$ orbital.
+        \item $d_{z^2}$ orbital: Interacts most strongly with the 1 and 6 ligands, for a contribution of $1e_\sigma$ from each of them. It also interacts in a less significant fashion with the 2, 3, 4, and 5 ligands, for a contribution of $\frac{1}{4}e_\sigma$, each. Thus, in total, it is raised in energy by $3e_\sigma$.
+        \item $d_{x^2-y^2}$ orbital: Interacts well with the 2, 3, 4, and 5 ligands (for a contribution of $\frac{3}{4}e_\sigma$ each) and not at all with the 1 and 6 ligands. Thus, in total, it is also raised in energy by $3e_\sigma$.
+        \item $d_{xy,xz,yz}$ orbitals: No $\sigma$ interactions with the ligand orbitals. Thus, their energy does not change.
+        \item Ligand orbitals: Sum across a row in Table \ref{tab:AOM-parametersa}. Ligands in positions 1 and 6 interact with $d_{z^2}$ significantly and no other orbital, for an energy lowering of $1e_\sigma$ each. Ligands in positions 2, 3, 4, and 5 interact with $d_{z^2}$ for an energy lowering of $\frac{1}{4}e_\sigma$, and with $d_{x^2-y^2}$ for an energy lowering of $\frac{3}{4}e_\sigma$; thus, they are lowered by $\frac{1}{4}e_\sigma+\frac{3}{4}e_\sigma=1e_\sigma$, each, in total. Thus, it so happens that each ligand orbital is lowered in energy by $e_\sigma$.
+        \item Since the ligand orbitals are all filled and lowered, the total stabilization energy is
+        \begin{equation*}
+            \frac{6\text{ ligands}}{1}\times\frac{2\text{ electrons}}{1\text{ ligand}}\times\frac{1e_\sigma}{1\text{ electron}} = 12e_\sigma
+        \end{equation*}
+        \item The AOM predicts $\Delta_o=3e_\sigma-0e_\sigma=3e_\sigma$.
+    \end{itemize}
+    \item The strength of all $\pi$-acceptor interactions in the AOM is defined relative to the strength of the strongest one, namely that between the valence $d_{xz}$ metal orbital and a $\pi^*$ ligand orbital.
+    \begin{itemize}
+        \item The strength of this reference interaction is denoted by $e_\pi$.
+        \item "Because the overlap for these orbitals is generally smaller than the sigma overlap, $e_\pi<e_\sigma$" \parencite[385]{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \ce{[M(CN)6]^n-} example:
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\linewidth]{../ExtFiles/orbitalDiagram-AOMpiAcc.png}
+        \caption{$\sigma$-donor, $\pi$-acceptor \ce{ML6} angular overlap model orbital diagram.}
+        \label{fig:orbitalDiagram-AOMpiAcc}
+    \end{figure}
+    \begin{itemize}
+        \item Similar to \ce{[M(NH3)6]^n+}, except that the $d_{xy,xz,yz}$ orbitals are now lowered by $4e_\pi$ each, and the $\pi^*$ orbitals are raised by $2e_\pi$ each.
+        \item Note that this gives us $\Delta_o=3e_\sigma+4e_\pi$.
+        \item Cyano ligands tend to be $\pi$ acceptors.
+    \end{itemize}
+    \item $\pi$-donor interactions are equivalent to $\pi$-acceptor interactions, except that the signs of the energy changes are reversed.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.45\linewidth]{../ExtFiles/orbitalDiagram-AOMpiDon.png}
+        \caption{$\sigma,\pi$-donor \ce{ML6} angular overlap model orbital diagram.}
+        \label{fig:orbitalDiagram-AOMpiDon}
+    \end{figure}
+    \begin{itemize}
+        \item Additionally, $\sigma$ and $\pi$ orbitals are not separate, but treated as the same orbitals. This further emphasizes that the AOM is primarily useful for predicting $d$-orbital splitting.
+        \item Halide ions tend to be $\pi$ donors.
+    \end{itemize}
+    \item "With ligands that behave as both $\pi$ acceptors and $\pi$ donors (such as \ce{CO} and \ce{CN-}), the $\pi$-acceptor nature predominates" \parencite[388]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item This is largely because $d$-orbital overlap is generally more effective with $\pi^*$-acceptor orbitals than with $\pi$-donor orbitals.
+    \end{itemize}
+    \item \textbf{Ligand field molecular mechanics}: A more mathematically sophisticated approach to metal-ligand interactions in which the angular overlap approach was used as a component. \emph{Also known as} \textbf{LFMM}.
+    \item Constructing the spectrochemical series:
+    \begin{itemize}
+        \item First, consider pure $\sigma$ donors.
+        \begin{itemize}
+            \item Among these, $\text{en}>\ce{NH3}$. This is also the order of their proton basicity.
+        \end{itemize}
+        \item Next, consider $\pi$-donors.
+        \begin{itemize}
+            \item Among the halides, $\ce{F-}>\ce{Cl-}>\ce{Br-}>\ce{I-}$. This is also the order of their proton basicity.
+            \item Others fit into the series as follows (note that \ce{OH-} is below \ce{H2O} since \ce{OH-} has more $\pi$-donating ability): $\ce{H2O}>\ce{F-}>\ce{RCO2-}>\ce{OH-}>\ce{Cl-}>\ce{Br-}>\ce{I-}$.
+        \end{itemize}
+        \item Finally, consider $\pi$-acceptors.
+        \begin{itemize}
+            \item \ce{CN-} and \ce{CO} will be particularly strong, but here are some others: $\ce{CO},\ce{CN-}>\text{phen}>\ce{NO2-}>\ce{NCS-}$.
+        \end{itemize}
+    \end{itemize}
+    \item Increasing ligand size and the corresponding bond length decreases angular overlap.
+    \item \textcite{bib:MiesslerFischerTarr} lists the wavenumbers of some angular overlap parameters.
+    \item \textbf{Magnetochemical series}: A ligand ranking correlated to $\Delta$.
+    \item \textbf{Tetragonal distortion}: A distortion from $O_h$ symmetry to $D_{4h}$ symmetry.
+    \item Considers four- and six-coordinate preferences, as well as possibilities for other shapes (such as trigonal bipyramidal).
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{l|cccccccccc|l|l}
+            $O_h$ & $E$ & $8C_3$ & $6C_2$ & $6C_4$ & $3C_2(={C_4}^2)$ & $i$ & $6S_4$ & $8S_6$ & $3\sigma_h$ & $6\sigma_d$ & linear & quadratic\\
+            \hline
+            $A_{1g}$ & $1$ & $1$  & $1$  & $1$  & $1$  & $1$  & $1$  & $1$  & $1$  & $1$  & & $x^2+y^2+z^2$\\
+            $A_{2g}$ & $1$ & $1$  & $-1$ & $-1$ & $1$  & $1$  & $-1$ & $1$  & $1$  & $-1$ & & \\
+            $E_g$    & $2$ & $-1$ & $0$  & $0$  & $2$  & $2$  & $0$  & $-1$ & $2$  & $0$  & & $(2z^2-x^2-y^2,x^2-y^2)$\\
+            $T_{1g}$ & $3$ & $0$  & $-1$ & $1$  & $-1$ & $3$  & $1$  & $0$  & $-1$ & $-1$ & $(R_x,R_y,R_z)$ & \\
+            $T_{2g}$ & $3$ & $0$  & $1$  & $-1$ & $-1$ & $3$  & $-1$ & $0$  & $-1$ & $1$  & & $(xy,xz,yz)$\\
+            $A_{1u}$ & $1$ & $1$  & $1$  & $1$  & $1$  & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & & \\
+            $A_{2u}$ & $1$ & $1$  & $-1$ & $-1$ & $1$  & $-1$ & $1$  & $-1$ & $-1$ & $1$  & & \\
+            $E_u$    & $2$ & $-1$ & $0$  & $0$  & $2$  & $-2$ & $0$  & $1$  & $-2$ & $0$  & & \\
+            $T_{1u}$ & $3$ & $0$  & $-1$ & $1$  & $-1$ & $-3$ & $-1$ & $0$  & $1$  & $1$  & $(x,y,z)$ & \\
+            $T_{2u}$ & $3$ & $0$  & $1$  & $-1$ & $-1$ & $-3$ & $1$  & $0$  & $1$  & $-1$ & & \\
+        \end{tabular}
+        \caption{Character table for the $O_h$ point group.}
+        \label{fig:characterTable-Oh}
+    \end{table}
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{l|ccccc|l|l}
+            $T_d$ & $E$ & $8C_3$ & $3C_2$ & $6S_4$ & $6\sigma_d$ & linear & quadratic\\
+            \hline
+            $A_1$ & $1$ & $1$  & $1$  & $1$  & $1$  & & $x^2+y^2+z^2$\\
+            $A_2$ & $1$ & $1$  & $1$  & $-1$ & $-1$ & & \\
+            $E$   & $2$ & $-1$ & $2$  & $0$  & $0$  & & $(2z^2-x^2-y^2,x^2-y^2)$\\
+            $T_1$ & $3$ & $0$  & $-1$ & $1$  & $-1$ & $(R_x,R_y,R_z)$ & \\
+            $T_2$ & $3$ & $0$  & $-1$ & $-1$ & $1$  & $(x,y,z)$ & $(xy,xz,yz)$\\
+        \end{tabular}
+        \caption{Character table for the $T_d$ point group.}
+        \label{fig:characterTable-Td}
+    \end{table}
 \end{itemize}
 
 
