@@ -548,5 +548,115 @@
 
 
 
+\section{Chapter 11: Coordination Chemistry III (Electronic Spectra)}
+\emph{From \textcite{bib:MiesslerFischerTarr}.}
+\begin{itemize}
+    \item \marginnote{3/9:}We will consider the energy levels of $d$ electron configurations, how electrons in such atomic orbitals can interact with each other, and how the electronic absorption spectrum provides a convenient method (via finding $\Delta_o$) for determining the magnitude of the effect of ligands on the metal $d$ orbitals.
+    \item \textbf{Complementary colors}: Two colors on opposite sides of the color wheel.
+    \item In an absorption spectrum with one band, the color of the substance will be the complementary color of the wavelength absorbed.
+    \item Beer-Lambert law:
+    \begin{equation*}
+        \log\frac{I_0}{I} = A = \varepsilon lc
+    \end{equation*}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../ExtFiles/absorption.png}
+        \caption{Absorption of light by solution.}
+        \label{fig:absorption}
+    \end{figure}
+    \begin{itemize}
+        \item Note that $\varepsilon$ is the molar absorptivity or \textbf{molar extinction coefficient}, measured in units of $\si{\liter\per\mole\per\centi\meter}$.
+    \end{itemize}
+    \item Absorbance is a dimensionless quantity.
+    \begin{itemize}
+        \item An absorbance of 1.0 corresponds to 90\% absorption since
+        \begin{align*}
+            1 &= \log\frac{I_0}{I}\\
+            10^1 &= \frac{I_0}{I}\\
+            I &= 0.10I_0
+        \end{align*}
+        so 10\% of light is transmitted, meaning that 90\% is absorbed.
+    \end{itemize}
+    \item \textbf{Spectrophotometer}: A device that obtains spectra as plots of absorbance versus wavelength.
+    \item Consider a carbon atom, with its $p^2$ electron configuration.
+    \begin{itemize}
+        \item We might expect the $p$ electrons to be degenerate; however, we experimentally observe three major energy levels, one of which splits into three smaller energy levels. Let's find out why.
+        \item Independently, each of the $2p$ electrons could have any of six possible $m_l,m_s$ combinations since $m_l=+1,0,-1$ and $m_s=+\frac{1}{2},-\frac{1}{2}$.
+        \item However, the electrons are not independent of each other. Indeed, their angular momenta and spin angular moment interact via Russell-Saunders coupling.
+        \begin{itemize}
+            \item In oversimplified terms, imagine each electron as a magnet. The magnetic fields interact, producing microstates that can be described by the new quantum numbers $M_L$ and $M_S$.
+        \end{itemize}
+        \item Note that electrons in filled orbitals do not interact with the $p^2$ electrons since their net spin and orbital angular momenta are both zero.
+    \end{itemize}
+    \item \textbf{Microstate}: A set of possible quantum numbers that communicates a unique possible coupling of magnetic fields of the electrons.
+    \item An alternate formulation for the number of microstates is
+    \begin{equation*}
+        \frac{i!}{j!(i-j)!}
+    \end{equation*}
+    where $i$ is the number of $m_l,m_s$ combinations (e.g., six for $p^2$, as discussed above) and $j$ is the number of electrons.
+    \item Quantum numbers $M_L$ and $M_S$ in turn give quantum numbers $L$, $S$, and $J$.
+    \begin{itemize}
+        \item "Quantum numbers $L$ and $S$ describe collections of microstates, whereas $M_L$ and $M_S$ describe the microstates themselves. $L$ and $S$ are the largest possible values of $M_L$ and $M_S$" \parencite[408]{bib:MiesslerFischerTarr}.
+        \item Just as $m_l=0,\pm 1,\dots,\pm l$, we have that $M_L=0,\pm 1,\dots,\pm L$. Similarly, like $m_s=+\frac{1}{2},-\frac{1}{2}$, we have that $M_S=S,S-1,\dots,-S$.
+        \item $m_l$ describes the $z$-component of the magnetic field due to an electron's orbital motion; $M_L$ describes the $z$-component of the magnetic field associated with a microstate.
+        \item $m_s$ describes an electron's magnetic spin; $M_S$ describes the analogous component of the magnetic field produced by electron spin for a microstate.
+    \end{itemize}
+    \item "States having spin multiplicities of 1, 2, 3, and 4 are described as singlet, double, triplet, and quartet states" \parencite[408]{bib:MiesslerFischerTarr}.
+    \item \textbf{Free-ion term}: An atomic state characterized by $S$ and $L$. \emph{Also known as} \textbf{Russell-Saunders terms}.
+    \begin{itemize}
+        \item So named because they describe individual atoms and ions, i.e., ones that are free of ligands.
+    \end{itemize}
+    \item \textbf{Term symbol}: A label corresponding to a free-ion term and consisting of a letter relating to the value of $L$ and a left superscript for the spin multiplicity.
+    \item Note that \textbf{term} and \textbf{state} are often used interchangeably, but they do technically have different meanings.
+    \item \textbf{Term}: The preferred label for the results of Russell-Saunders coupling.
+    \item \textbf{State}: The preferred label for the results of spin-orbit coupling, which includes the quantum number $J$.
+    \item Spin multiplicity is equal to the number possible values of $M_S$, hence the number of columns in the microstate table.
+    \item Returning to our $p^2$ carbon atom example:
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\linewidth]{../ExtFiles/microstateTable-p2-reduced.png}
+        \caption{Reduced $p^2$ microstate table.}
+        \label{fig:microstateTable-p2-reduced}
+    \end{figure}
+    \begin{itemize}
+        \item Designate each microstate in Table \ref{tab:microstateTable-p2} with an $x$ for the sake of convenience.
+        \item "To reduce the $p^2$ microstate table into its terms, all that is necessary is to find the rectangular arrays" \parencite[410]{bib:MiesslerFischerTarr}.
+        \item Notice how the spin multiplicity in each term symbol is the same as the number of columns in each reduced microstate table in Figure \ref{fig:microstateTable-p2-reduced}.
+        \item The ${}^3P$, ${}^1D$, and ${}^1S$ terms have three distinct energies (the three major energy levels observed experimentally).
+    \end{itemize}
+    \item \textbf{Spin-orbit coupling}: A phenomenon in which the spin and orbital angular momenta (or the magnetic fields associated with them) couple with each other.
+    \item Returning to our $p^2$ carbon atom example, the ${}^1D$ term and ${}^1S$ term would only have one $J$ (namely, $2+0=0$ and $0+0=0$, respectively). However, the ${}^3P$ term subdivides into ${}^3P_2$, ${}^3P_1$, and ${}^3P_0$ since $1+1=2$, $1+1-1=1$, and $1+1-2=0$.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\linewidth]{../ExtFiles/multielectronStates-p2.png}
+        \caption{Multielectron energy levels in the $p^2$ configuration.}
+        \label{fig:multielectronStates-p2}
+    \end{figure}
+    \begin{itemize}
+        \item This subdivision explains the experimental observation of three smaller energy levels within one of the major energy levels (see Figure \ref{fig:multielectronStates-p2}).
+        \item Notice how when we calculate $J$ values, we iterate down from $L+S$ to $|L-S|$. In ${}^3P$ for example, $1+1=2$ and $|1-1|=0$, so the possible $J$ values are 2, 1, and 0.
+    \end{itemize}
+    \item \textbf{Hund's third rule}: For subshells that are less than half filled, the state having the lowest $J$ value has the lowest energy; for subshells that are more than half filled, the state having the highest $J$ value has the lowest energy. Half-filled subshells have only one possible $J$ value.
+    \item Spin-orbit coupling plays a significant role in heavy metals ($\text{atomic number}>40$).
+    \item We now connect electron-electron interactions back to absorption spectra.
+    \item \textcite{bib:MiesslerFischerTarr} list free-ion terms for $d^n$ configurations, since they are tedious to determine by hand.
+    \item A method for identifying the lowest-energy term:
+    \begin{enumerate}
+        \item Sketch the energy levels, showing the $d$ electrons.
+        \item Spin multiplicity of lowest-energy state is the number of unpaired electrons plus 1.
+        \item Determine the maximum possible value of $M_L$ (sum of $m_l$ values) for the configuration as shown. This determines the type of free-ion term (e.g., $S$, $P$, $D$).
+        \item Combine results of Steps 2 and 3 to get the ground term.
+    \end{enumerate}
+    \item Example: Applying the above method to $d^3$ octahedral symmetry.
+    \begin{itemize}
+        \item There will be three electrons of parallel spin, one in each of the three degenerate $t_{2g}$ orbitals.
+        \item $2S+1=3+1=4$.
+        \item $2+1+0=3$ (recall that we use Hund's rules to know that it is the $+2,+1,0$ orbitals filled first); therefore, $F$.
+        \item Result: ${}^4F$.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
