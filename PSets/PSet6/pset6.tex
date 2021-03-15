@@ -34,16 +34,16 @@
                     \draw [ultra thick,gry]
                         (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
                         (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
-                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
-                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                        (-5.9,-30) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) coordinate (3d1)
+                        (3,-36) coordinate (1s1) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0)
                     ;
                     \draw [ultra thick]
+                        (-0.85,-3) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
                         (-0.85,-8) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
-                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
-                        (-0.85,-26) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
-                        (-0.85,-30) coordinate (e) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0)
-                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
-                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                        (-0.85,-24) coordinate (t2ml) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-30) coordinate (e) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) node[below=2mm,xshift=0.05cm]{$e$} ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0)
+                        (-0.85,-39) coordinate (t2ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-46) coordinate (a1ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.7,0) coordinate (a1lr)
                     ;
             
                     \begin{scope}[on background layer]
@@ -65,12 +65,13 @@
                         ;
                     \end{scope}
     
-                    \node at (-4.45,-50) {\small\ce{M}};
-                    \node at (0,-50) {\small\ce{ML4}};
-                    \node at (4.75,-50) {\small$4\times\ce{L}$};
+                    \node at (-4.45,-52) {\small\ce{M}};
+                    \node at (0,-52) {\small\ce{ML4}};
+                    \node at (4.75,-52) {\small$4\times\ce{L}$};
                 \end{tikzpicture}
             \end{center}
         \end{proof}
+        \pagebreak
         \item $\pi$-donor ligands (having low-lying, filled $\pi$ orbitals);
         \begin{proof}[Answer]
             Point group: $T_d$.\par
@@ -95,20 +96,20 @@
                     \draw [ultra thick,gry]
                         (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
                         (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
-                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
-                        (3,-28) coordinate (2p1) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
-                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                        (-5.9,-30) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) coordinate (3d1)
+                        (3,-36) coordinate (1s1) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0)
+                        (3,-44) coordinate (2p1) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_1$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$E$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$E$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0)
                     ;
                     \draw [ultra thick]
+                        (-0.85,-5) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
                         (-0.85,-8) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
-                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
-                        (-0.85,-22) coordinate (t2nl) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2nr)
-                        (-0.85,-24.5) coordinate (eul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (eur)
-                        (-0.85,-28) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_1$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1)
-                        (-0.85,-32) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
-                        (-0.85,-35) coordinate (ell) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (elr)
-                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
-                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                        (-0.85,-22) coordinate (t2nl) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (t2nr)
+                        (-0.85,-27) coordinate (eul) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) node[below=2mm,xshift=0.05cm]{$e$} ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) coordinate (eur)
+                        (-0.85,-39) coordinate (t2ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-43) coordinate (a1ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                        (-0.85,-48) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$t_1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (t1)
+                        (-0.85,-52) coordinate (t2ml) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-56) coordinate (ell) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) node[below=2mm,xshift=0.05cm]{$e$} ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) coordinate (elr)
                     ;
             
                     \begin{scope}[on background layer]
@@ -141,12 +142,13 @@
                         ;
                     \end{scope}
     
-                    \node at (-4.45,-48) {\small\ce{M}};
-                    \node at (0,-48) {\small\ce{ML4}};
-                    \node at (4.75,-48) {\small$4\times\ce{L}$};
+                    \node at (-4.45,-60) {\small\ce{M}};
+                    \node at (0,-60) {\small\ce{ML4}};
+                    \node at (4.75,-60) {\small$4\times\ce{L}$};
                 \end{tikzpicture}
             \end{center}
         \end{proof}
+        \pagebreak
         \item $\pi$-acceptor ligands (having high-lying, empty $\pi$ orbitals).
         \begin{proof}[Answer]
             Same intro analysis as part (b).
@@ -161,20 +163,20 @@
                     \draw [ultra thick,gry]
                         (-4.7,-10) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (4p)
                         (-3.5,-21) -- node[below]{$A_1$} ++(0.5,0) coordinate (4s)
-                        (-5.9,-30) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) coordinate (3d1)
+                        (-5.9,-30) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$T_2$} ++(0.5,0) coordinate (3d2) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$E$} ++(0.5,0) coordinate (3d1)
                         (3,-22) coordinate (2p1) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_1$} ++(0.5,0) ++(0.1,0) coordinate (2p2) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) -- node[below]{$E$} ++(0.5,0) ++(0.1,0) coordinate (2p3) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
-                        (3,-36) coordinate (1s1) -- node[below]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0) ++(0.1,0) -- node[below]{$T_2$} ++(0.5,0)
+                        (3,-36) coordinate (1s1) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$A_1$} ++(0.5,0) ++(0.1,0) coordinate (1s2) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$T_2$} ++(0.5,0)
                     ;
                     \draw [ultra thick]
-                        (-0.85,-5) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
-                        (-0.85,-13) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
-                        (-0.85,-17) coordinate (t2nl) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2nr)
-                        (-0.85,-19) coordinate (eul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (eur)
+                        (-0.85,-3) coordinate (a1ul) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1ur)
+                        (-0.85,-8) coordinate (t2ul) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2ur)
+                        (-0.85,-14) coordinate (eul) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (eur)
+                        (-0.85,-18) coordinate (t2nl) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2nr)
                         (-0.85,-22) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_1$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t1)
-                        (-0.85,-27) coordinate (t2ml) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2mr)
-                        (-0.85,-33) coordinate (ell) -- ++(0.8,0) node[below,xshift=0.05cm]{$e$} ++(0.1,0) -- ++(0.8,0) coordinate (elr)
-                        (-0.85,-39) coordinate (t2ll) -- ++(0.5,0) ++(0.1,0) -- node[below]{$t_2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) coordinate (t2lr)
-                        (-0.85,-44) coordinate (a1ll) -- node[below]{$a_1$} ++(1.7,0) coordinate (a1lr)
+                        (-0.85,-27) coordinate (t2ml) -- node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (t2mr)
+                        (-0.85,-33) coordinate (ell) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) node[below=2mm,xshift=0.05cm]{$e$} ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.8,0) coordinate (elr)
+                        (-0.85,-39) coordinate (t2ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$t_2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (t2lr)
+                        (-0.85,-44) coordinate (a1ll) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.7,0) coordinate (a1lr)
                     ;
             
                     \begin{scope}[on background layer]
@@ -340,7 +342,7 @@
             \end{tabular}
         \end{center}
         \begin{proof}[Answer]
-            Cyanide has by far the greatest magnitude $\Delta_o$ because it is the only $\pi$-accepting ligand. Ethylenediamine and ammonia form the next group down because they are pure $\pi$-donating ligands. Lastly, we have water, chloride, and fluoride because they have $\pi$-donating character.
+            Cyanide has by far the greatest magnitude $\Delta_o$ because it is the only $\pi$-accepting ligand. Ethylenediamine and ammonia form the next group down because they are pure $\pi$-donating ligands. Lastly, we have water, chloride, and fluoride because they have $\pi$-donating character (within this group, chloride has the lowest value because it has fairly good $\pi$-donor abilities, fluoride is in the middle because it has lesser $\pi$-donor abilities than chloride, and water has the highest value because it only engages in $\sigma$ bonding).
         \end{proof}
         \newpage
         \setcounter{enumii}{21}
@@ -374,7 +376,7 @@
         \end{proof}
         \item Trigonal bipyramidal geometry.
         \begin{proof}[Answer]
-            From the charts in Module 36, we have $e_\sigma=(\frac{11}{4},\frac{11}{8},\frac{9}{8},0,0)$ and $e_\pi=(0,\frac{3}{2},\frac{3}{2},\frac{7}{2},\frac{7}{2})$. Thus we know that the $d$-orbital splitting diagram is
+            From the charts in Module 36, we have $e_\sigma=(\frac{11}{4},\frac{9}{8},\frac{9}{8},0,0)$ and $e_\pi=(0,\frac{3}{2},\frac{3}{2},\frac{7}{2},\frac{7}{2})$. Thus we know that the $d$-orbital splitting diagram is
             \begin{center}
                 \begin{tikzpicture}[
                     yscale=0.4,
@@ -385,8 +387,7 @@
 
                     \draw [ultra thick,gry]
                         (-0.25,2.75) -- ++(0.5,0) node[right]{$d_{z^2}$}
-                        (-0.25,-0.125) -- ++(0.5,0) node[above right]{$d_{x^2-y^2}$}
-                        (-0.25,-0.375) -- ++(0.5,0) node[below right]{$d_{xy}$}
+                        (-0.55,-0.125) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$d_{x^2-y^2,xy}$}
                         (-0.55,-3.5) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$d_{xz,yz}$}
                     ;
                 \end{tikzpicture}
@@ -424,8 +425,7 @@
 
                     \draw [ultra thick,gry]
                         (-0.25,2.75) -- ++(0.5,0) node[right]{$\frac{11}{4}e_\sigma$}
-                        (-0.25,-0.125) -- ++(0.5,0) node[above right]{$\frac{11}{8}e_\sigma-\frac{3}{2}e_\pi$}
-                        (-0.25,-0.375) -- ++(0.5,0) node[below right]{$\frac{9}{8}e_\sigma-\frac{3}{2}e_\pi$}
+                        (-0.55,-0.375) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$\frac{9}{8}e_\sigma-\frac{3}{2}e_\pi$}
                         (-0.55,-3.5) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) node[right]{$-\frac{7}{2}e_\pi$}
                     ;
                 \end{tikzpicture}
@@ -437,7 +437,7 @@
             Assuming a high spin configuration since chromium is neutral and noting that chromium has a $d^4$ configuration, we have
             \begin{align*}
                 E_\text{square pyramidal} &= 1(-4e_\pi)+2(-3e\pi)+2e_\sigma = 2e_\sigma-10e_\pi\\
-                E_\text{trigonal bipyramid} &= 2\left( -\frac{7}{2}e_\pi \right)+1\left( \frac{9}{8}e_\sigma-\frac{3}{2}e_\pi \right)+1\left( \frac{11}{8}e_\sigma-\frac{3}{2}e_\pi \right) = \frac{5}{2}e_\sigma-10e_\pi
+                E_\text{trigonal bipyramid} &= 2\left( -\frac{7}{2}e_\pi \right)+2\left( \frac{9}{8}e_\sigma-\frac{3}{2}e_\pi \right) = \frac{9}{4}e_\sigma-10e_\pi
             \end{align*}
             Since $E_\text{trigonal bipyramidal}>E_\text{square pyramidal}$, we know that \ce{Cr(CO)5} is square pyramidal.
         \end{proof}
