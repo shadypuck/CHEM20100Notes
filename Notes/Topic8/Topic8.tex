@@ -20,12 +20,12 @@
     \end{itemize}
     \item How electronic transitions occur:
     \begin{itemize}
-        \item Take a solid or aqueous sample and illuminate it with photons of a particular power $P_0$ through $l\si{\centi\meter}$ of it.
+        \item Take a solid or aqueous sample and illuminate it with photons of a particular power/intensity $P_0$ through $l\si{\centi\meter}$ of it.
         \item Some will be absorbed and some will pass through. Measure the power $P$ that comes out on the other side.
     \end{itemize}
     \item Transmittance $T=P/P_0$.
     \item Absorbance $A=-\log T=\log\frac{P_0}{P}$.
-    \item The Beer-Lambert Law: $A=\varepsilon Cl$, where $C$ is the concentration of the sample in solution, $l$ is the path length (how large the cuvette is), and $\varepsilon$ is the molar absorption coefficient.
+    \item The Beer-Lambert Law: $A=\varepsilon Cl$, where $C$ is the concentration of the sample in solution, $l$ is the path length (the length through solution), and $\varepsilon$ is the molar absorption coefficient.
     \item Plotting the wavelength of the impinging photons vs. $\varepsilon$ gives us a graph with peaks, where each peak corresponds to an electron transition.
     \item Spectral features:
     \begin{itemize}
@@ -75,13 +75,13 @@
         \centering
         \small
         \renewcommand{\arraystretch}{1.4}
-        \begin{tabular}{|l|lll|}
+        \begin{tabular}{|c|lll|}
             \hline
-            \normalsize$C_{3v}$ & $\bm{A_1}$ & $\bm{A_2}$ & $\bm{E}$\\
+            \normalsize$C_{3v}$ & $\bm{A_1}$ & $\bm{A_2}$ & \multicolumn{1}{c|}{$\bm{E}$}\\
             \hline
             $\bm{A_1}$ & $A_1$ & $A_2$ & $E$\\
             $\bm{A_2}$ &       & $A_1$ & $E$\\
-            $\bm{E}$   &       &       & $A_1+A_2+E$\\
+            $\bm{E}$   &       &       & $A_1+[A_2]+E$\\
             \hline
         \end{tabular}
         \caption{Direct product table for the $C_{3v}$ point group.}
@@ -123,7 +123,7 @@
         \item Fortunately, there is an easier way to describe transitions between states (we will talk about this next time).
     \end{itemize}
     \item A single electron is completely described by the principal quantum number $n$, its angular momentum $\ell$, its magnetic quantum number $m_\ell$, and its spin $m_s$.
-    \item Multielectron states are described by \textbf{Russell-Sounders coupling}, \emph{also known as} \textbf{LS coupling}, \textbf{L-S coupling}.
+    \item Multielectron states are described by \textbf{Russell-Saunders coupling}, \emph{also known as} \textbf{LS coupling}, \textbf{L-S coupling}.
     \item For example, consider the $d^2$ configured \ce{V^3+} ion.
     \begin{itemize}
         \item There are 45 different possible microstates. Some will have the same energy, some will not.
@@ -138,18 +138,237 @@
     \begin{equation*}
         {}^{2S+1}L_J
     \end{equation*}
-    where $2S+1$ is the spin multiplicity, $L$ is the subshell letter corresponding to the angular momentum quantum number ($0\mapsto s$, $1\mapsto p$, $2\mapsto d$, $3\mapsto f$, \dots), and $J$ is the total angular momentum ($J=L+S,L+S-1,L+S-2,\dots,|L-S|$, the spin orbit coupling).
+    where $2S+1$ is the spin multiplicity, $L$ is the subshell letter corresponding to the angular momentum quantum number ($0\mapsto s$, $1\mapsto p$, $2\mapsto d$, $3\mapsto f$, \dots), and $J$ is the total angular momentum ($J=L+S,L+S-1,L+S-2,\dots,|L-S|$, the spin-orbit coupling).
     \item Some examples:
     \begin{itemize}
-        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0)}: $S=\frac{1}{2}$, so our term symbol will be of the form ${}^2L_J$.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0) ++(0.1,0) -- ++(0.5,0)}: $S=\frac{1}{2}$, so our term symbol will be of the form ${}^2L_J$\footnote{Pronounced "doublet state."}.
         \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\downharpoonright$} node[below=2mm]{$-1/2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1/2$} ++(0.5,0) ++(0.1,0) -- ++(0.5,0)}: $S=1$, so our term symbol will be of the form ${}^3L_J$.
-        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=3$, so our term symbol will be of the form ${}^3F_J$.
-        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=0$, so our term symbol will be of the form ${}^3S_J$.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=3$, so our term symbol will be of the form ${}^3F_J$\footnote{Pronounced "triplet eff state."}.
+        \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+2$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$-2$} ++(0.5,0)}: $S=1$ and $L=0$, so our term symbol will be of the form ${}^3S_J$\footnote{Pronounced "triplet ess state."}.
     \end{itemize}
     \item Spin-orbit coupling is weak for a carbon atom (we can essentially just disregard it).
     \begin{itemize}
         \item For lanthanides, it becomes very significant.
     \end{itemize}
+    \item \marginnote{3/3:}In term symbols, $J$ is typically a small correction to the energy for light elements.
+    \begin{itemize}
+        \item It becomes significant with the lanthanides and actinides.
+    \end{itemize}
+    \item We group electrons into terms because each state has a characteristic energy in the absence of external electric and magnetic fields.
+    \begin{itemize}
+        \item If we do apply an external magnetic fields, states will split into $2S+1$ substates.
+        \item Each term includes multiple microstates, which are atomic states produced by interactions of the atom with a magnetic field.
+    \end{itemize}
+    \item Consider the examples from above. The third and fourth examples are very similar but give rise to two different terms. This is because if we have ions with these states, we will observe differing energy levels spectroscopically.
+    \item What if we have one electron in the orbital with $m_\ell=-2$? Then how do we create the term symbol?
+    \begin{itemize}
+        \item It is part of one of the microstates of the ${}^1D$ term.
+        \item We fill electrons starting with the lowest energy states, and the lowest energy state has the greatest spin multiplicity (e.g., $+2$; this is one of Hund's rules).
+    \end{itemize}
+    \item Correspondences between $d$ electron configurations and term symbols:
+    \begin{align*}
+        d^1 &= {}^2D&
+            d^6 &= {}^5D\\
+        d^2 &= {}^3F&
+            d^7 &= {}^4F\\
+        d^3 &= {}^4F&
+            d^8 &= {}^3F\\
+        d^4 &= {}^5D&
+            d^9 &= {}^2D\\
+        d^5 &= {}^6S&
+            d^{10} &= {}^1S\\
+    \end{align*}
+    \begin{itemize}
+        \item Note that a fully occupied or unoccupied subshell is always ${}^1S$.
+        \item Now if we take a direct product of a singlet $S$ state with any other state, we will have just that state left over. This implies that we can ignore all fully occupied shells, and the term will be determined entirely by partially filled ones.
+    \end{itemize}
+    \item If we want to build the full picture and see all possible states, we need a \textbf{microstate table}.
+    \item Microstate table:
+    \begin{itemize}
+        \item A microstate table contains all possible combinations of $m_\ell$ and $m_s$.
+        \item Each microstate represents a possible electron configuration.
+        \item It includes both ground and excited states.
+        \item It must obey the Pauli exclusion principle.
+    \end{itemize}
+    \item Example ($p^2$ electron configuration):
+    \begin{itemize}
+        \item Microstate notation:
+        \begin{itemize}
+            \item For each of the $n$ electrons in the configuration, list a special symbol in an $n$-tuple.
+            \item The special symbol will be a number ($m_\ell$) with either a $+$ or $-$ sign as an exponent (for positive and negative spin, respectively).
+        \end{itemize}
+        \item There are three ground state configurations.
+        \begin{itemize}
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(1^+,0^+)$.
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(0^+,-1^+)$.
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$} node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(1^+,-1^+)$.
+        \end{itemize}
+        \item We will not show all excited state configurations, but we will show a few.
+        \begin{itemize}
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(1^+,1^-)$.
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(0^+,0^-)$.
+            \item \tikz[xscale=1.5,every node/.append style={black},baseline={(0,0)}]{\footnotesize\draw [gry,ultra thick] (0,0) -- node[below=2mm]{$+1$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$0$} ++(0.5,0) ++(0.1,0) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$-1$} ++(0.5,0)}: The microstate is $(-1^+,-1^-)$.
+        \end{itemize}
+        \item We can now generate the microstate table.
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{c|c|c|c|c|}
+                \multicolumn{2}{c}{} & \multicolumn{3}{c}{$M_S$}\\
+                \cline{3-5}
+                \multicolumn{2}{c|}{} & $-1$ & $0$ & $+1$\\
+                \cline{2-5}
+                 & $+2$ & & $1^+1^-$ & \\
+                \cline{2-5}
+                 & $+1$ & $1^-0^-$ & \vertcell{$1^+0^-$\\[-3pt]$1^-0^+$} & $1^+0^+$\\
+                \cline{2-5}
+                $M_L$ & $0$ & $-1^-1^-$ & \vertcell{$-1^+1^-$\\[-3pt]$0^+0^-$\\[-3pt]$-1^-1^+$} & $-1^+1^+$\\
+                \cline{2-5}
+                 & $-1$ & $-1^-0^-$ & \vertcell{$-1^+0^-$\\[-3pt]$-1^-0^+$} & $-1^+0^+$\\
+                \cline{2-5}
+                 & $-2$ & & $-1^+-1^-$ & \\
+                \cline{2-5}
+            \end{tabular}
+            \caption{Microstate table for a $p^2$ electron configuration.}
+            \label{tab:microstateTable-p2}
+        \end{table}
+        \begin{itemize}
+            \item Each column represents a state with a given spin angular momentum.
+            \item Each row represents the sum of the angular momentum of two electrons.
+        \end{itemize}
+        \item To analyze the microstate label, rename each microstate with $X$.
+        \begin{itemize}
+            \item Each term consists of multiple microstates of equivalent energies (similar to how we can have multiple degenerate orbitals of a given energy).
+            \item We can lift degeneracy by applying an external electric (\textbf{Stark effect}) or magnetic field (\textbf{Ziemann effect}).
+        \end{itemize}
+        \item Now each term consists of $(2L+1)(2S+1)$ states (this is the \textbf{double multiplicity formula}).
+        \item Group energetically equivalent states:
+        \begin{itemize}
+            \item First, focus on the term containing the states with the largest possible $L$ (i.e., those with $+2$). We know that it contains $(2(2)+1)(2(0)+1)=5$ microstates. Choose 5 microstates from the $M_S=0$ column, one per $M_L$.
+            \item Next, focus on the term containing states with the next largest possible $L$ (i.e., those with $+1$ and $M_S=+1$). We know that it contains $(2(1)+1)(2(1)+1)=9$ microstates. Choose 9 microstates, one from each box in the square bounded by $(-1,-1)$ and $(+1,+1)$.
+            \item The remaining microstate in $M_S=M_L=0$ forms its own term.
+        \end{itemize}
+        \item Thus, our microstate table can be decomposed into three terms (${}^1D$, ${}^3P$, and ${}^1S$).
+    \end{itemize}
+    \item Identifying relative energies with Hund's rules:
+    \begin{itemize}
+        \item For a given electron configuration, the term with the greatest spin multiplicity lies lowest in energy (Hund's rule).
+        \item For a term with a given multiplicity, the greater the value of $L$, the lower the energy.
+        \item Note that the rules for predicting the ground state always work, but they may fail in predicting the order of energies for excited states.
+    \end{itemize}
+    \item Thus, going back to our example, we have that energetically, ${}^3P<{}^1D<{}^1S$.
+    \item Example ($d^2$ electron configuration):
+    \begin{itemize}
+        \item In this example, Hund's rules do not provide accurate energy predictions (they would predict ${}^3F<{}^3P<{}^1G<{}^1D<{}^1S$, but in reality, ${}^3F<{}^1D<{}^3P<{}^1G<{}^1S$).
+    \end{itemize}
+    \item \textbf{Electron-hole formalism}: The Russel-Saunders terms for $d^n$ and $d^{10-n}$ configurations are identical for $n=0,\dots,5$.
+    \begin{itemize}
+        \item We can rationalize this by thinking of $n$ electrons and $10-n$ holes (or positrons) as related to $10-n$ electrons and $n$ holes.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 42: Many Electron States and Transitions in Coordination Compounds}
+\begin{itemize}
+    \item Suggested reading: Chapter 11.3.
+    \item Ligand field dependence ($d^1$ system):
+    \begin{itemize}
+        \item Degenerate symmetric field:
+        \begin{itemize}
+            \item Absence of ligand field.
+            \item Free-ion term.
+            \item All $d$-orbitals are energetically equal.
+            \item If all $d$ orbitals are degenerate, then we can put a single electron in any orbital and we will have a microstate of ${}^2D$.
+        \end{itemize}
+        \item Infinite $O_h$ field:
+        \begin{itemize}
+            \item Strong ligand field.
+            \item Coordination complexes.
+            \item $d$-orbitals are not degenerate ($d_{z^2,x^2-y^2}$ have higher energy; $d_{xy,xz,yz}$ have lower energy).
+            \item In this case, it matters in which $d$ orbital we put the electron.
+        \end{itemize}
+        \item Real molecules:
+        \begin{itemize}
+            \item We use a correlation diagram or Orgel diagram.
+            \item If ligand field strength is zero, we have the degenerate symmetric field. If it is at maximum strength, we have two distinct states ($t_{2g}$ and $e_g$). Anywhere in between, the states are in between in energy, too (as we apply the ligand field, we split the state).
+        \end{itemize}
+    \end{itemize}
+    \item Ligand field dependence ($d^2$ system):
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.45\linewidth]{../ExtFiles/correlationDiagram-d2.png}
+        \caption{Correlation diagram for a $d^2$ system.}
+        \label{fig:correlationDiagram-d2}
+    \end{figure}
+    \begin{itemize}
+        \item Under a weak ligand field, the multielectron states split.
+        \begin{itemize}
+            \item From the $O_h$ character table, we can determine how each term transforms similarly to determining how each orbital transforms (however, we may need a character table with cubic, quartic, and beyond functions).
+            \item For example, $S$ terms transform as $A_{1g}$, $P$ as $T_{1g}$, $D$ as $T_{2g}+E_g$, $F$ as $T_{1g}+T_{2g}+A_{2g}$, and $G$ as $A_{1g}+E_g+T_{1g}+T_{2g}$.
+        \end{itemize}
+        \item Under an infinitely strong field, we will return to our $t_{2g}$ / $e_g$ formalism with a low energy ${t_{2g}}^2$ state, a midlevel $t_{2g}e_g$ state (with one of the $d^2$ electrons in each level), and a high level ${e_g}^2$ state.
+        \begin{itemize}
+            \item From the $O_h$ group multiplication table, we can determine how each state splits under strong but finite ligand fields.
+            \item For example, $E_g\otimes E_g=A_{1g}+E_g+A_{2g}$, so thats why the $e_g^2$ state coalesces from these three states.
+        \end{itemize}
+        \item The bold lines in Figure \ref{fig:correlationDiagram-d2} correspond to triplet states, and the dashed lines to singlet states.
+    \end{itemize}
+    \item The direct product of two irreducible representations of dimension 2 or higher is reducible to a sum of symmetric and antisymmetric irreducible representations, so named because their respective symmetry-adapted basis functions are either symmetric or antisymmetric with respect to exchange of the components. It is important to understand these properties when dealing with the electronic states produced by incompletely filled degenerate orbitals.
+    \begin{itemize}
+        \item The following expressions may be applied to determine the characters ($\chi$) of the symmetric and antisymmetric components of a direct product. The characters of the symmetric irreducible representation(s) ($\chi^+$) are given by
+        \begin{equation*}
+            \chi^+(R) = \frac{1}{2}\left( [\chi(R)]^2+\chi(R^2) \right)
+        \end{equation*}
+        The characters of the antisymmetric irreducible representation(s) are given by
+        \begin{equation*}
+            \chi^-(R) = \frac{1}{2}\left( [\chi(R)]^2-\chi(R^2) \right)
+        \end{equation*}
+        In these expressions, $\chi(R)$ is the character under symmetry operation $R$ and $\chi(R^2)$ is the character associated with the operation $R^2$.
+        \begin{itemize}
+            \item We do not need to know these formulas since deriving them is outside the scope of this course.
+        \end{itemize}
+        \item For example, in the $C_{4v}$ point group, the direct product $E\otimes E=A_1+A_2+B_1+B_2$.
+        \item These results are typically written showing the antisymmetric component in square brackets, i.e., $E\otimes E=A_1+[A_2]+B_1+B_2$.
+        \item The electron wave function, which is a product of the orbital and spin wave function components, must be antisymmetric (see Pauli exclusion principle). Therefore, if the orbital component is symmetric, the spin one should be antisymmetric, i.e., singlet state. And vice versa.
+    \end{itemize}
+    \item Back to our $d^2$ example:
+    \begin{itemize}
+        \item Symmetric components have electrons with opposite spins; antisymmetric components have electrons with like spin.
+        \begin{itemize}
+            \item This demonstrates how $T_2\otimes T_2=A_1+E+[T_1]+T_2$ rationalizes the existence of three singlet states and one triplet state under ${t_{2g}}^2$.
+        \end{itemize}
+    \end{itemize}
+    \item Correlation diagrams are immensely useful, and we can tediously construct them or find them in the textbook. However, we can nicely simplify them into Tanabe-Sugano diagrams:
+\end{itemize}
+\begin{tchart}{1.4}{Correlation Diagram}{Tanabe-Sugano Diagram}
+    Number of states. & Number of states.\\
+    General sense of field effects. & Field effects.\\
+    Only qualitative. & Quantitative.
+\end{tchart}
+\begin{itemize}
+    \item Tanabe-Sugano diagrams are designed to intuitively interpret optical spectra and electron transitions in transition metal complexes.
+    \item In a Tanabe-Sugano diagram, we make the lowest line in the corresponding correlation diagram the $x$-axis/ground state and calculate energies of every state above with respect to the gap between the ground state and the upper state.
+    \item Tanabe-Sugano diagrams show:
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.35\linewidth]{../ExtFiles/tanabeSugano-d2.png}
+        \caption{Tanabe-Sugano diagram for a $d^2$ system.}
+        \label{fig:tanabeSugano-d2}
+    \end{figure}
+    \begin{itemize}
+        \item Relative energies of the states vs. ligand field strength.
+        \item Electronic states with the same symmetry never cross (\textbf{non-crossing rule}).
+        \item Curvature (${}^1E$ and ${}^1E$).
+        \item Ground state on the $x$-axis; all other states are excited.
+        \item Transitions between states.
+        \item A Tanabe-Sugano diagram is a graph which plots the energy of different spectroscopic terms (on the $y$-axis) against the strength of the ligand field (on the $x$-axis). The units used for each are given in terms of the \textbf{Racah parameter} $B$.
+        \item The choice of unit means that the diagram takes account of electron-electron repulsion effects.
+        \item The lowest energy state is usually placed along the $x$-axis.
+        \item The electrostatic repulsion between electrons varies from atom to atom, depending upon the number and spin of the electrons and the orbitals they occupy. The total repulsion can be expressed in terms of three parameters $A$, $B$, and $C$, which are known as the Racah parameters. They are generally obtained empirically from gas-phase spectroscopic studies of atoms.
+    \end{itemize}
+    \item Each particular coordination compound will be a vertical slice through its electron configuration's Tanabe-Sugano diagram.
 \end{itemize}
 
 
