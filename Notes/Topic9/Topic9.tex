@@ -1,0 +1,155 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\setcounter{chapter}{8}
+
+\begin{document}
+
+
+
+
+\chapter{Reactions and Mechanisms}
+\section{Module 46: Ligand Substitution in Octahedral Complexes}
+\begin{itemize}
+    \item \marginnote{3/8:}Suggested reading: Chapter 12.
+    \item Having learned about structure, isomerism, and electronic structure, let's now talk about reactivity.
+    \item What makes transition metals unique is the reactions of the metal center (i.e., the first coordination sphere).
+    \item \textbf{Substitution reaction}: A reaction where a ligand in the first coordination sphere is exchanged.
+    \item Factors that affect the rate of substitution:
+    \begin{itemize}
+        \item Role of the entering group.
+        \item Role of the leaving group.
+        \item Nature of the other ligands in the complex.
+        \item Effect of the metal center.
+    \end{itemize}
+    \item Stable/unstable are thermodynamic terms, and labile/inert are kinetic terms.
+    \begin{itemize}
+        \item \ce{[Co(NH3)6]^3+} is unstable but inert wrt. aquation (large $K_\text{eq}$, but slow to react).
+        \item \ce{[Ni(CN)4]^2-} is stable but labile wrt. exchange (small $K_\text{eq}$, but equilibrium is established quickly).
+    \end{itemize}
+    \item \textbf{Potential energy landscape}: A thermodynamic representation of a reaction by a (potentially multidimensional) potential energy surface along its reaction coordinate.
+    \item Thermodynamics and kinetics are two different things, but they can be related.
+    \item Potential energy landscapes with small $\Delta G$ and large $\Delta E_A$ are slow to react.
+    \begin{itemize}
+        \item Increasing $\Delta G$ (perhaps by destabilizing the reactant) can speed up the reaction.
+        \item Increasing $\Delta G$ often occurs at the expense of $\Delta E_A$ (the activation energy literally decreases as the free energy change increases).
+    \end{itemize}
+    \item Consider the reaction \ce{[Co(NH3)5X]^2+ + H2O -> [Co(NH3)5(H2O)]^3+ + X-}.
+    \begin{itemize}
+        \item The more bulky/less electronegative the X-type ligand, the higher the equilibrium constant and reaction rate.
+    \end{itemize}
+    \item But how do we adequately compare different reactions when so many parameters are entangled together?
+    \item One good way to compare kinetics of transition metals is with water exchange rate constants (light/heavy water being exchanged in metal coordination spheres), since this eliminates thermodynamic consternation.
+    \begin{itemize}
+        \item There is massive variation among the metals.
+        \item The fastest (the alkali metals) run up against the \textbf{diffusion limit}.
+        \item Metals with larger atomic radii react more quickly (the alkali and alkaline earth metals follow this pattern nicely, but the transition metals are all over the place).
+        \begin{itemize}
+            \item Group 1A: As we go down the group, the cations are getting larger and the charge density decreases, so the \ce{M+-OH2} bond is getting weaker and more easily broken.
+            \item Group 2A: The charge density is larger (doubly charged) so the strength of the bond is greater so the rate of exchange is slower.
+        \end{itemize}
+        \item We define such a reaction as having a labile half life if the half life is less than 1 minute; otherwise, it is inert.
+    \end{itemize}
+    \item \textbf{Diffusion limit}: At most, one molecular collision can result in one successful reaction; thus, reaction rate is bounded above by how many molecular collisions can physically occur in a given period of time at a given temperature.
+    \item You cannot prove mechanisms; you can only disprove other plausible scenarios.
+    \item Possible mechanisms for \ce{ML5X + Y -> ML5Y + X} where $\ce{X}=\ce{H2O}$ and $\ce{Y}=\text{anion}$ or vice versa:
+    \item Associative ($A$): Via a 7-coordinate intermediate.
+    \begin{gather*}
+        \ce{ML5X + Y <=>[$k_1$][$k_{-1}$] ML5XY}\tag{slow}\\
+        \ce{ML5XY ->[$k_2$] ML5Y + X}\tag{fast}
+    \end{gather*}
+    \begin{itemize}
+        \item Corresponds to organic S\textsubscript{N}2.
+        \item First step (RDS) is slow since the incoming \ce{Y} causes steric hindrance.
+        \item The transition state is either a monocapped octahedron or pentagonal bipyramidal, depending on how the \ce{Y} attacks.
+        \item Applying a steady-state approximation for \ce{[ML5XY]}, we have
+        \begin{equation*}
+            \dv{\ce{[ML5XY]}}{t} = 0 = k_1\ce{[ML5X][Y]}-k_{-1}\ce{[ML5XY]}-k_2\ce{[ML5XY]}
+        \end{equation*}
+        \item We can solve the above equation for \ce{[ML5XY]}:
+        \begin{equation*}
+            \ce{[ML5XY]} = \frac{k_1\ce{[ML5X][Y]}}{k_{-1}+k_2}
+        \end{equation*}
+        \item Substituting the above into the rate constant equation for the fast step will give us the rate law in terms of the reactants (where $k=\frac{k_1k_2}{k_{-1}+k_2}$):
+        \begin{align*}
+            \text{Rate} &= k_2\ce{[ML5XY]}\\
+            &= \frac{k_1k_2\ce{[ML5X][Y]}}{k_{-1}+k_2}\\
+            &= k\ce{[ML5X][Y]}
+        \end{align*}
+        \item Thus, the S\textsubscript{N}2 mechanism is second-order overall, but first-order in both reactants.
+    \end{itemize}
+    \item Dissociative ($D$): Via a 5-coordiinate intermediate.
+    \begin{gather*}
+        \ce{ML5X <=>[$k_1$][$k_{-1}$] ML5 + X}\tag{Slow}\\
+        \ce{ML5 + Y ->[$k_2$] ML5Y}\tag{Fast}
+    \end{gather*}
+    \begin{itemize}
+        \item Corresponds to organic S\textsubscript{N}1.
+        \item First step (RDS) is slow since its spontaneous elimination of a ligand.
+        \item The transition state is generally square pyramidal, but if it is sufficiently long-lived, it can reorganize itself into the trigonal bipyramidal state.
+        \item The dissociative mechanism predicts that the rate of the overall substitution reaction depends on only the concentration of  the original complex \ce{[ML5X]}, and is independent of the concentration of the incoming ligand \ce{[Y]}.
+        \item Thus, the overall rate law is
+        \begin{equation*}
+            \text{Rate} = k_1\ce{[ML5X]}
+        \end{equation*}
+        \item We can also derive this with an analogous kinetic analysis to that used for the $A$ mechanism, the only difference being that we simplify $\frac{k_1k_2\ce{[ML5X][Y]}}{k_{-1}\ce{[X]}+k_2\ce{[Y]}}$ to the rate law by noting that $k_2>>k_{-1}$ or $\ce{[Y]}>>\ce{[X]}$.
+    \end{itemize}
+    \item Interchange ($I$): As \ce{Y} begins to bond, \ce{X} begins to leave, i.e., the bond making to \ce{Y} and bond breaking to \ce{X} occur simultaneously.
+    \begin{gather*}
+        \ce{ML5X + Y <=>[$k_1$][$k_{-1}$] ML5X*Y}\tag{Slow}\\
+        \ce{ML5X*Y ->[$k_2$] ML5Y + X}\tag{Fast}
+    \end{gather*}
+    \begin{itemize}
+        \item Corresponds to organic SN\textsubscript{2}.
+        \item This is how the majority of ligand substitutions occur.
+        \item It is too simplistic to assume that a first-order rate law implies $D$ and a second-order rate law implies $A$. Indeed, most substitution reactions probably involve a mechanism like this, i.e., one that is intermediate between these two extremes.
+        \item In an interchange mechanism, the intermediate involves an association between the original \ce{ML5X} complex and the attacking \ce{Y} ligand. The \ce{Y} ligand remains outside the coordination sphere of \ce{ML5X}, unlike the S\textsubscript{N}2 mechanism, so the intermediate is not seven coordinate. However, it can help weaken the \ce{M-X} bond.
+        \item Assuming high $\ce{[Y]}\approx\ce{[Y]_0}$, it can be shown that the rate is given by
+        \begin{equation*}
+            \text{Rate} = \frac{k_2K_1\ce{[M]_0[Y]_0}}{1+K_1\ce{[Y]_0}}
+        \end{equation*}
+        where \ce{[M]_0=[ML5X]_0 + [ML5X*Y]} and \ce{[Y]_0} are initial conditions and $K_1=\frac{k_1}{k_{-1}}$ is the equilibrium constant for the RDS reaction.
+        \begin{itemize}
+            \item At high \ce{[Y]} and $K_1\ce{[Y]_0}>>1$, the rate is first-order in $\ce{[M]_0}\approx\ce{[ML5X]}$.
+            \item At lower \ce{[Y]}, the rate is second order.
+        \end{itemize}
+    \end{itemize}
+    \item At some point, the kinetic analysis becomes essentially worthless. Indeed, although we speak generally about associative and disassociative reaction mechanisms, the terms $A$ and $D$ are reserved for situations where 7- and 5-coordinate intermediates have actually been isolated and positively identified. If no intermediates have been isolated or identified, the designations $I_d$ and $I_a$ are more appropriate.
+    \begin{itemize}
+        \item Two minor variations on the $I$ mechanism are $I_d$ (dissociative interchange) and $I_a$ (associative interchange).
+        \item If breaking the \ce{M-X} bond is more important, the mechanism is $I_d$.
+        \item If bond formation between \ce{ML5X} and \ce{Y} is significant, the mechanism is $I_a$.
+        \item The difference between $I_d$ and $I_a$ is subtle and does not necessarily correspond to whether the observed rate law is first or second order.
+        \item If the rates of a series of comparable substitution reactions are most sensitive to the identity of \ce{X}, the leaving ligand, then the mechanism is more probably $I_d$, and vice versa for $I_a$.
+        \item For example, the rate constants for the anation of \ce{[Cr(NH3)5(H2O)]^3+} by various ligands vary very little. Thus, it is probably $I_d$. However, the rate constants for the anation of \ce{[Cr(H2O)6]^3+} by various ligands vary by three orders of magnitude. Thus, it is probably $I_a$.
+    \end{itemize}
+    \item Solvent (e.g., water) effects in substitution reactions:
+    \begin{itemize}
+        \item Many substitution reactions occurring in solvent water may have first-order kinetics regardless of whether their initial steps are primarily $D$ or $A$.
+        \item For example, this occurs if aquation is a precursor RDS.
+        \item If $D$, $\text{Rate}=k\ce{[ML5X]}$.
+        \item If $A$, $\text{Rate}=k\ce{[ML5X][H2O]}=k'\ce{[ML5X]}$.
+        \begin{itemize}
+            \item The latter equality is valid since water has constant concentration\footnote{Is this what we meant when we said in \textcite{bib:APChemNotes} that liquids and solids don't have active mass? In other words, the species should be included in the mass-action expression; they just simply get lumped in with the rate constant generally.}.
+        \end{itemize}
+        \item Both mechanisms lead to apparent first-order kinetics.
+    \end{itemize}
+    \item Steric factors favoring $D$ or $I_d$:
+    \begin{itemize}
+        \item For most octahedral complexes, steric factors inhibit formation of a CN7 intermediate, which suggests a dissociative mechanism ($D$ or $I_d$) is more plausible.
+        \begin{itemize}
+            \item Even cases showing second-order kinetics may not be $A$ for this reason.
+        \end{itemize}
+        \item For example, aquation of ammine-halides is second order with a first-order dependence on \ce{[OH-]}.
+        \item If $k_2>>k_1$, the rate is approximately $\text{Rate}=\ce{k_2[Co(NH3)5X]^2+[OH-]}$.
+        \item Calls for an alternate mechanism called S\textsubscript{N}1CB, where ligands with lower energy bond as \underline{c}onjugate \underline{b}ases and those with higher $\Delta_0$ (hence CB).
+    \end{itemize}
+    \item Kinetically analyzes S\textsubscript{N}1CB.
+\end{itemize}
+
+
+
+
+\end{document}
