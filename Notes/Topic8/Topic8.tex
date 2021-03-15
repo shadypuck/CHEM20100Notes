@@ -373,5 +373,180 @@
 
 
 
+\section{Module 43: Using Tanabe-Sugano Diagrams}
+\begin{itemize}
+    \item \marginnote{3/5:}Suggested reading: Chapter 11.3.
+    \item Extra Tanabe-Sugano facts:
+    \begin{itemize}
+        \item States of the complex have the same spin multiplicity as the free ion states from which they originate.
+        \item States that are the only ones of their type have energies that depend linearly on the crystal field strength, whereas when there are two or more states of identical designation, their lines will in general show curvature. This is because such states interact with one another.
+    \end{itemize}
+    \item Selection rules determine the probability (intensity) of the transition.
+    \item \textbf{Symmetry selection rule}: The initial and final wavefunctions must change in parity. Parity is related to the orbital angular momentum summation over all electrons $\sum {m_l}_i$, which can be even or odd; only even ($g$) $\leftrightarrow$ odd ($u$) transitions are allowed. Transitions between the orbitals of the same subshell are forbidden. \emph{Also known as} \textbf{Laporte selection rule}, \textbf{Parity selection rule}.
+    \begin{itemize}
+        \item For example, $g\to g$ and $u\to u$ are forbidden, but $g\to u$ and $u\to g$ are allowed.
+        \item The weaker of the two selection rules.
+        \item This is related back to Fermi's golden rule and $\vec{M}_{21}$.
+        \item For $O_h$ complexes, $\Gamma_{\mu_{xyz}}=T_{1u}$.
+        \item Direct product rules:
+        \begin{align*}
+            g\otimes u &= u&
+            g\otimes g &= g&
+            u\otimes u &= g
+        \end{align*}
+        \item For example, if we try a $g\to g$ transition in an $O_h$ complex, we would have $\vec{M}_{21}=g\otimes u\otimes g=u$ is unsymmetric to inversion, meaning that there is no totally symmetric representation in $\vec{M}_{21}$.
+    \end{itemize}
+    \item Octahedral vs. tetrahedral absorption spectra:
+    \begin{itemize}
+        \item A tetrahedron has no center of symmetry, and so orbitals in this point group cannot be gerade. Hence, the $d$-levels in a tetrahedral complex are $e$ and $t_2$, with no "$g$" for gerade. This largely overcomes the Laporte selection rule, making tetrahedral complexes very intense in color.
+        \item This is why a solution of \ce{[Co(H2O)6]^2+} is pale pink, but \ce{[CoCl4]^2-} is a very intense blue.
+    \end{itemize}
+    \item \textbf{Spin selection rule}: There must be no change in the spin multiplicity ($\Delta S=0$) during the transition. i.e., the spin of the electron must not change during the transition.
+    \begin{itemize}
+        \item For example, ${}^1T_1\to{}^1T_2$ is allowed, but ${}^1T_1\to{}^3T_1$ and ${}^3T_1\to{}^1A_2$ are forbidden.
+        \item The stronger of the two selection rules.
+    \end{itemize}
+    \item All $d$-$d$ transitions are symmetry (Laporte) forbidden.
+    \begin{itemize}
+        \item Thus, it makes more sense to disregard the complete Tanabe-Sugano diagram and focus on the spin-only one.
+    \end{itemize}
+    \item Example: $d^8$ Tanabe-Sugano Diagram and \ce{[Ni(H2O)6]^2+} absorption spectrum.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/NiH2O6a.png}
+            \caption{The $d^8$ Tanabe-Sugano diagram.}
+            \label{fig:NiH2O6a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[width=0.95\linewidth]{../ExtFiles/NiH2O6b.png}
+            \caption{The absorption spectrum.}
+            \label{fig:NiH2O6b}
+        \end{subfigure}
+        \caption{\ce{[Ni(H2O)6]^2+}: Relating a Tanabe-Sugano diagram and an absorption spectrum.}
+        \label{fig:NiH2O6}
+    \end{figure}
+    \begin{itemize}
+        \item The two higher energy peaks involve differences in the magnetic quantum numbers of the $d$ orbitals, and are labeled as ${}^3A_{2g}\to{}^3T_{1g}(F)$ and ${}^3A_{2g}\to{}^3T_{1g}(P)$ to reflect this.
+        \item Note that there is a shoulder near the second band corresponding to a nominally forbidden transition.
+    \end{itemize}
+    \item $d^1$ and $d^9$ complexes have only one electron transition and, thus, one peak in the absorption spectrum.
+    \begin{itemize}
+        \item However, the peak is not symmetric; this is a result of the Jahn-Teller distortion of the excited state.
+    \end{itemize}
+    \item Analyzes a ruby's Tanabe-Sugano diagram and spectrum.
+    \item The $d^6$ Tanabe-Sugano diagram:
+    \begin{itemize}
+        \item The curves are not everywhere differentiable, the ground state changes, there is a vertical line, etc.
+        \item This is because at the line, the complex switches from high-spin to low spin (recall that increasing ligand field strength increases $\Delta$; increasing $\Delta$ enough will make it larger than the spin-pairing energy).
+    \end{itemize}
+    \item The colors of the electron transitions tell us where the compound falls along the $x$-axis in the Tanabe-Sugano diagram.
+    \item In the $d^5$ high-spin configuration, any transition involves spin pairing and does not change parity. Thus, there is a very low probability of transitions occurring.
+    \item In $d^n$ and $d^{10-n}$ complexes, the splitting order in the Tanabe-Sugano diagrams (as we increase ligand field strength) is inverted.
+    \begin{itemize}
+        \item For example, in $d^2$, ${}^3F$ splits into (from lowest to highest energy) ${}^3T_1(F)$, ${}^3T_2$, and ${}^3A_2$. In $d^8$, ${}^3F$ splits into (from lowest to highest energy) ${}^3A_2$, ${}^3T_2$, and ${}^3T_1(F)$.
+    \end{itemize}
+    \item Other factors that can influence whether or not electrons are promoted:
+    \begin{itemize}
+        \item In $d^2$ complexes, there are three allowed transitions. However, one of them would involve promotion of two electrons from $t_{2g}$ to $e_g$ simultaneously upon the absorption of one photon, and this is highly improbable.
+    \end{itemize}
+    \item By comparing the energies of multiple transitions, we can look for a place in the Tanabe-Sugano diagram that would produce such results.
+    \begin{itemize}
+        \item For example, if one known transition has 1.5 times the energy of another, we can look for a place where the distance between it and the ground state is 1.5 times that of the other.
+    \end{itemize}
+    \item We can also use experimental values to calculate $B$, the Racah parameter.
+    \begin{itemize}
+        \item With the Racah parameter, we can pretty much calculate anything we want.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 44: How Can We See "Forbidden" Transitions?}
+\begin{itemize}
+    \item \textbf{Oscillator strength}: A quantity proportional to the integral of $\varepsilon$ as measured in the absorption spectrum. \emph{Also known as} $\bm{f}$.
+    \begin{itemize}
+        \item $f$ relates $\varepsilon$ to the matrix element $\vec{M}_{21}$:
+        \begin{equation*}
+            \frac{4m_e\pi v}{3e^2\hbar}\cdot|\vec{M}_{21}|^2 = f \propto \num{4.3e-9}\int\varepsilon\dd{\bar{\nu}}
+        \end{equation*}
+        \item Thus, the probability of light absorption is related to $f$.
+        \item Strong absorption occurs when $f$ is around 1.
+        \item The rate constant $k^0_e$ for emission is related to $\varepsilon$ by
+        \begin{equation*}
+            k^0_e \propto \num{4.3e-9}\bar{\nu}^{-2}_0\int\varepsilon\dd{\bar{\nu}} = \bar{\nu}^{-2}_0f
+        \end{equation*}
+        \begin{itemize}
+            \item Good emitters are also good absorbers.
+        \end{itemize}
+    \end{itemize}
+    \item Allowed transitions:
+    \begin{itemize}
+        \item Allowedness is measured by $f$ which can be dissected into
+        \begin{equation*}
+            f = (f_e\times f_v\times f_s)f_\text{max}
+        \end{equation*}
+        where $f_e$ is related to electronic factors, $f_v$ is related to Franck-Condon factors, and $f_s$ is related to spin-orbit factors.
+        \item A perfectly allowed transition has $f=1$.
+        \item $f_s$ factors:
+        \begin{itemize}
+            \item A spin-allowed transition has $f_s=1$.
+            \item For a spin-forbidden transition, $f_s$ depends on spin-orbit coupling.
+        \end{itemize}
+        \item $f_e$ factors: \textbf{overlap forbiddenness} and \textbf{orbital forbiddenness}.
+    \end{itemize}
+    \item \textbf{Overlap forbiddenness}: Poor spatial overlap of orbitals involved in electronic transitions.
+    \item \textbf{Orbital forbiddenness}: Wavefunctions which overlap in space but cancel because of symmetry.
+    \item Mechanisms that make forbidden electronic transitions allowed: \textbf{vibronic coupling}, \textbf{spin-orbit coupling}, and \textbf{mixing of states}.
+    \item \textbf{Vibronic coupling}: Electronic states coupled to vibrational states help overcome the Laporte selection rule.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\linewidth]{../ExtFiles/vibronicCoupling.png}
+        \caption{Vibronic coupling.}
+        \label{fig:vibronicCoupling}
+    \end{figure}
+    \begin{itemize}
+        \item For an octahedral complex, there are 15 vibrational normal modes with irreducible representations: $\Gamma_\text{vibs}=a_{1g}+e_g+2t_{1u}+t_{2g}+t_{2u}$.
+        \item Vibrational transitions couple with electronic transition: $\vec{M}_{21}=\int\psi_v^*\psi_e^*\vec{\mu}\psi_e\psi_v\dd{\tau}$. Indeed, the wavefunction of the complex can be represented by this product (this is called the \textbf{Franck-Condon principle}), which will give fully symmetric irreducible representations.
+        \item Essentially, $T_{1u}$ and $T_{2u}$ vibrations can couple with the electronic transition to form the allowed vibronic transition.
+        \item The band one sees in the UV-visible spectrum is the sum of bands due to transitions too coupled electronic ($E$) and vibrational energy levels ($u_1$, $u_2$, $u_3$, etc.).
+    \end{itemize}
+    \item \textbf{Spin-orbit coupling}: Spin and orbital angular momenta can interact to make spin forbidden transitions allowed.
+    \begin{itemize}
+        \item Allows us to relax spin selection rules and promote an electron from an electron pair \emph{without changing its spin}.
+        \item This is possible in heavy atoms because of their relativistic properties.
+    \end{itemize}
+    \item \textbf{Mixing of states}: $\pi$-acceptor and $\pi$-donor ligands can mix with the $d$-orbitals; transitions are no longer purely $d$-$d$.
+    \begin{itemize}
+        \item The Tanabe-Sugano diagram assumes pure $d$-$d$ transitions.
+        \item However, spin-forbidden transitions can borrow intensity from nearby spin-allowed transitions by mixing of states.
+    \end{itemize}
+    \item $\varepsilon_\text{max}(\si{M^{-1}.cm^{-1}})$ ranges for different transitions:
+    \begin{itemize}
+        \item Spin and symmetry forbidden $d$-$d$ bands: 0.02-1.
+        \item Spin allowed and symmetry forbidden $d$-$d$ bands: 1-10.
+        \item Spin and symmetry allowed CT bands: $\num{e3}$-$\num{5e4}$.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 45: Charge Transfer Transitions}
+\begin{itemize}
+    \item \textbf{Charge-transfer band}: A Laporte- and spin-allowed, very intense absorption peak. \emph{Also known as} \textbf{CT band}.
+    \item We can have transitions from metal $d$ orbitals to $p$ orbitals ($t_{2g}\to t_{1u}$).
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\linewidth]{../ExtFiles/chargeTransferTransitions.png}
+        \caption{Electronic transitions in an octahedral complex.}
+        \label{fig:chargeTransferTransitions}
+    \end{figure}
+    \item There exist \ce{M -> L} and \ce{L -> M} charge transfer transitions.
+\end{itemize}
+
+
+
 
 \end{document}
