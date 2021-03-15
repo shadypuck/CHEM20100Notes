@@ -151,5 +151,180 @@
 
 
 
+\section{Module 47: Substitution and Ligand Field Stabilization Energy}
+\begin{itemize}
+    \item \marginnote{3/10:}Factors that affect the rate of substitution:
+    \begin{enumerate}
+        \item Role of the entering group.
+        \item Role of the leaving group.
+        \item The nature of the other ligands in the complex.
+        \item Effect of the metal center.
+    \end{enumerate}
+    \item Six factors that support a dissociative mechanism:
+    \begin{enumerate}
+        \item The rate of reaction only slightly (within a factor of 10) changes on the incoming ligand.
+        \begin{itemize}
+            \item Means that the ligand is not significantly involved in the RDS.
+        \end{itemize}
+        \item Making the charge on complex more positive decreases the rate of substitution.
+        \begin{itemize}
+            \item Increasing the charge increases the bond strength, making it harder for one ligand to spontaneously break away.
+        \end{itemize}
+        \item Steric crowding increases reaction rate.
+        \item The volume of activation is positive and reaction rate decreases at high pressure.
+        \begin{itemize}
+            \item Especially if the reactant is a gas, for example.
+        \end{itemize}
+        \item Reaction rate correlates with Ligand Field Activation Energy (LFAE) predictions.
+        \item Stereochemistry can give additional hints.
+        \begin{itemize}
+            \item A messy subject unless you use very well crafted multidentate ligands.
+        \end{itemize}
+    \end{enumerate}
+    \item Simple changes in oxidation state can have massive effects on water exchange rate constants\footnote{We pronounce the units of rate constants, "reciprocal seconds."} (e.g., \ce{Cr^2+} to \ce{Cr^3+} results in a shift of 15 orders of magnitude).
+    \item Variations in complex reactivity:
+    \begin{itemize}
+        \item Most first row transition metals are labile\footnote{Werner was only able to make his conclusions about coordination chemistry because he happened to be working with the relatively inert \ce{Co^3+} complexes.}, but \ce{Cr^3+} ($d^3$, $S=\frac{3}{2}$) and low-spin \ce{Co^3+} ($d^6$, $S=0$) are usually inert.
+        \item $d^7$-$d^{10}$, with filling of $e_g^*$ levels, are labile.
+        \begin{itemize}
+            \item These configurations tend to have large Jahn-Teller distortions and/or low CFSEs.
+            \item $d^7$, $d^9$, and $d^{10}$ cases are more labile than $d^8$.
+            \item $d^8$ has a ${}^3A_{2g}$ ground state, which is immune to Jahn-Teller distortion.
+            \item With strong-field ligands, $d^8$ may be square planar, often being inert.
+        \end{itemize}
+        \item Inert octahedral complexes tend to be those with high CFSE; viz., $d^3$ low-spin $d^4$-$d^6$.
+        \begin{itemize}
+            \item \ce{ML6} complexes of both $d^3$ (${}^4A_{2g}$) and low-spin $d^6$ (${}^1A_{1g}$) are immune from Jahn-Teller distortions and therefore can be perfect $O_h$.
+            \item \ce{ML6} $d^3$ has $\text{CFSE}=-\frac{6}{5}\Delta_o$ and low-spin $d^6$ has $\text{CFSE}=-\frac{12}{5}\Delta_o+3P$.
+        \end{itemize}
+    \end{itemize}
+    \item The most inert complexes among the first row transition metals:
+    \begin{itemize}
+        \item \ce{Co^3+} is primarily dissociative, but with dependence on the incoming ligand $I_d$.
+        \item \ce{Cr^3+} has a dimorphism where it can be $I_d$ or $I_a$!
+        \begin{itemize}
+            \item For example, it is $I_d$ in the complex \ce{[Cr(NH3)5(H2O)]^3+} but $I_a$ in the complex \ce{[Cr(H2O)6]^3+}.
+        \end{itemize}
+    \end{itemize}
+    \item Water exchange rate constants are greatest for Jahn-Teller distorted species.
+    \begin{itemize}
+        \item They are smallest for $d^{3,5,8}$.
+    \end{itemize}
+    \item Variations in complex reality: Explained by the potential energy landscape for a substitution reaction \ce{ML6 -> ML5Y}:
+    \begin{itemize}
+        \item $O_h$ to $C_{4v}$ to "$O_h$."
+        \item The activated complex is square pyramidal.
+        \item We can now use the AOM to calculate the LFSE in both the initial $O_h$ state and the transition $C_{4v}$ state.
+        \begin{itemize}
+            \item The difference between them will be the \textbf{ligand field activation energy} or \textbf{LFAE}. The LFAE is not particularly useful because it predicts negative activation energies, which are not a thing, but it does allow us to rationalize reactivity trends.
+            \item If $\text{LFAE}\leq 0$, the reaction is labile; otherwise, it is moderate or slow.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Module 48: Ligand Substitution in Square Planar Complexes}
+\begin{itemize}
+    \item Although steric factors favor $D$-type mechanisms for octahedral complexes, square planar \ce{ML4} complexes are not so inhibited.
+    \begin{itemize}
+        \item For square planar \ce{ML4} complexes, an associative ($A$) mechanism, in which a coordination number 5 (CN5) intermediate is formed, is plausible.
+    \end{itemize}
+    \item The $d^8$ metals are especially likely to form square planar complexes.
+    \item Substitution of square planar complexes, such as \ce{PtLX3}, leads to \emph{trans} and \emph{cis} isomers.
+    \item The rate law is
+    \begin{equation*}
+        \text{Rate} = k_1\ce{[PtLX3]}+k_2\ce{[PtLX3][Y^-]}
+    \end{equation*}
+    \begin{itemize}
+        \item Suggests two paths, where the first term may be pseudo-first-order due to excess solvent acting as an attacking group.
+    \end{itemize}
+    % \item Example:
+    % \begin{figure}[h!]
+    %     \centering
+    %     \schemestart[][west]
+    %         \chemfig{Pt(-Cl)(-[2]PEt_3)(-[4]L)(-[6]PEt_3)}
+    %         \arrow{0}[,0]\+{1em,1em,2em}
+    %         \chemfig{[:60]N**6(------)}
+    %         \arrow
+    %         \chemleft{[}
+    %             \chemfig{Pt(-N**6(------))(-[2]PEt_3)(-[4]L)(-[6]PEt_3)}
+    %         \chemright{]^+}
+    %         \+{1em,1em}
+    %         \chemfig{\ce{Cl-}}
+    %     \schemestop
+    %     \caption{Square-planar substitution reaction.}
+    %     \label{fig:squarePlanarSubstitution}
+    % \end{figure}
+    % \begin{itemize}
+    \item If we make \ce{L} bulkier, we would expect the $D$ pathway to dominate ($k_1$ increases, $k_2$ decreases).
+    \item However, both $k_1$ and $k_2$ decrease with increasingly bulky ligands, suggesting an associative mechanism:
+    \begin{gather*}
+        \ce{ML4 + Y <=>[$k_2$] [ML4Y]^{$\ddagger$} ->[][fast] ML3Y + L}\tag{$k_2$ term}\\
+        \ce{ML4 + S ->[$k_1$] [ML4S]^{$\ddagger$} -> [ML3S] + L ->[Y][fast] ML3Y + S}\tag{$k_1$ term}
+    \end{gather*}
+    \begin{itemize}
+        \item \ce{S} means the solvent.
+        \item Since $\ce{[S]}>>\ce{[ML4]}$, we see pseudo-first order kinetics in the $k_1$ term in the rate law.
+    \end{itemize}
+    % \end{itemize}
+    \item In square planar complexes, $d$-orbital splitting yields a $d_{x^2-y^2}$ LUMO.
+    \begin{itemize}
+        \item However, it points exactly toward the ligands, so you cannot fill it without displacing a ligand.
+        \item Indeed, since ligands cannot attack it, they instead attack the higher-lying metal $p_z$ orbital.
+    \end{itemize}
+    \item Note that the stereochemistry stays the same under these reactions.
+    \item An example of the trans effect:
+    \begin{gather*}
+        \ce{[Pt(NH3)4]^2+ ->[2Cl-] \emph{trans}-[Pt(NH3)2Cl2]}\\
+        \ce{[Pt(Cl)4]^2- ->[2NH3] \emph{cis}-[Pt(NH3)2Cl2]}
+    \end{gather*}
+    \begin{itemize}
+        \item The first ligand takes any of the four spots, but the second substitutes opposite the stronger \emph{trans}-directing ligand.
+        \item In the above example, chloride is a stronger \emph{trans}-directing ligand than amine groups.
+    \end{itemize}
+    \item The trans effect:
+    \begin{itemize}
+        \item The ratio of \emph{trans} and \emph{cis} isomers is found to vary with the ability of \ce{L} to acct as a \emph{trans}-directing ligand.
+        \item The increasing order of \emph{trans}-directing ability is
+        \begin{equation*}
+            \ce{H2O}<\ce{OH-}<\text{py}\approx\ce{NH3}<\ce{Cl-}<\ce{Br-}<\ce{I-}<\ce{NO2-}<\ce{PR3}\approx\ce{SH2}<<\ce{CO}\approx\ce{C2H4}\approx\ce{CN-}
+        \end{equation*}
+        \begin{itemize}
+            \item This ranking comes from a combination of the following two factors.
+        \end{itemize}
+        \item The effect is kinetic rather than thermodynamic.
+    \end{itemize}
+    \item Two factors explain the trans effect (both aim at lowering $\Delta G^\ddagger$):
+    \begin{enumerate}
+        \item Weakening of the \ce{Pt-X} bond \emph{trans} to the directing ligand ($\sigma$-donor effects).
+        \begin{itemize}
+            \item Destabilizes the ground state of the reactants.
+            \item \ce{Pt-A} is influenced by \emph{trans}-\ce{Pt-T} bond because both share \ce{Pt} $p_x$ and $d_{x^2-y^2}$ orbitals. When the \ce{Pt-T} bond is strong, electron density on those orbitals is shifted away from the \ce{Pt-A} bond.
+            \item The more polarizable the \ce{L} ligand, the better \emph{trans}-director it is; e.g., $\ce{I-}>\ce{Br-}>\ce{Cl-}$.
+            \begin{itemize}
+                \item The \emph{trans}-directing ligand polarizes the metal ion, inducing a slight repulsion with the negative electron density on the leaving ligand in the \emph{trans}-position.
+            \end{itemize}
+            \item For example, the \ce{Pt-Cl} bond is longer in in \emph{cis}-\ce{[Pt(PMe3)2(Cl)2]} than in the \emph{trans} form because the stronger $\sigma$-donor ability of \ce{PMe3} weakens the opposite \ce{Pt-Cl} bond in the \emph{cis} form.
+        \end{itemize}
+        \item Stabilization of the presumed CN5 intermediate ($\pi$-acceptor effects).
+        \begin{itemize}
+            \item Stabilizes the activated complex.
+            \item The strongest \emph{trans}-directors are good $\pi$-acceptor ligands.
+            \item Assuming an $A$ mechanism, substitution involves a trigonal bipyramidal transition state.
+            \item The \emph{trans} intermediate (activated complex) is more favorable for $\pi$-acceptor ligands because it permits $\pi$-delocalization in the trigonal plane.
+            \begin{itemize}
+                \item When the \ce{T}-ligand engages in a strong $\pi$-backbonding, charge is removed from \ce{Pt}, making the metal center more electrophilic and stabilizing the TBP intermediate.
+            \end{itemize}
+        \end{itemize}
+    \end{enumerate}
+    \item The trans effect has applications to synthesis (synthesizing \emph{cis} versus \emph{trans} square planar compounds).
+    \begin{itemize}
+        \item For example, \emph{cis}-\ce{[Pt(NH3)2(Cl)2]} is cisplatin, the first anti-cancer drug.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
