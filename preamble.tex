@@ -42,7 +42,7 @@
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}
 
-\usetikzlibrary{decorations.pathreplacing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals,calc}
+\usetikzlibrary{decorations.pathreplacing,decorations.pathmorphing,3d,fpu,positioning,intersections,backgrounds,arrows.meta,bending,decorations.fractals,calc}
 \colorlet{grx}{green!25!cyan!40!black!95}
 \colorlet{gry}{green!25!cyan!40!black!50}
 \colorlet{grz}{green!25!cyan!40!black!20}
@@ -55,6 +55,7 @@
 }
 
 \newcommand{\e}[1][]{\text{e}^{#1}}
+\newcommand{\vertcell}[1]{\begin{tabular}{@{\hspace{-2pt}}c@{\hspace{-2pt}}}#1\end{tabular}}
 
 \newcommand{\porbital}[6]{
     \tikz[node distance=2mm]{

@@ -654,6 +654,179 @@
         \item $2+1+0=3$ (recall that we use Hund's rules to know that it is the $+2,+1,0$ orbitals filled first); therefore, $F$.
         \item Result: ${}^4F$.
     \end{itemize}
+    \item \marginnote{3/11:}Vibronic coupling permits $d$-$d$  transitions having molar absorptivities in the range of approximately $5$-$\SI[per-mode=reciprocal]{50}{L.mol^{-1}.cm^{-1}}$.
+    \item More on mixing of states: "Tetrahedral complexes often absorb more strongly than octahedral complexes of the same metal in the same oxidation state. Metal-ligand $\sigma$ bonding in transition-metal complexes of $T_d$ symmetry can be described as involving a combination of $sp^3$ and $sd^3$ hybridization of the metal orbitals; both types of hybridization are consistent with the symmetry. The mixing of $p$-orbital character (of $u$ symmetry)  with $d$-orbital character provides a second way of relaxing the [Laporte] selection rule" \parencite[414]{bib:MiesslerFischerTarr}.
+    \item On correlation diagrams (considering a $d^2$ configuration, as earlier in the discussion surrounding Figure \ref{fig:correlationDiagram-d2}):
+    \begin{itemize}
+        \item Free ions have five energy levels: ${}^3F<{}^1D<{}^3P<{}^1G<{}^1S$.
+        \item In a strong $O_h$ ligand field, there are three possible $d^2$ electron configurations:
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=0.6\linewidth]{../ExtFiles/strongFieldConfigs-d2.png}
+            \caption{Strong ligand field $d^2$ electron configurations.}
+            \label{fig:strongFieldConfigs-d2}
+        \end{figure}
+        \begin{itemize}
+            \item Clearly, ${t_{2g}}^2$ is the ground state and the other two are excited states.
+        \end{itemize}
+        \item The above states are the \textbf{strong-field limit}, since no compound perfectly overrides LS coupling except one in an infinitely strong ligand field.
+        \item Do we need to be able to reconstruct the symmetry splitting and pairing between the weak-field and strong-field states in Figure \ref{fig:correlationDiagram-d2}?
+        \item Free-ion terms have symmetry characteristics that enable them to be reduced to their component irreducible representations. For the $O_h$ point group:
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{ll}
+                \rowcolor{grx}
+                \textcolor{white}{\textbf{Term}} & \textcolor{white}{\textbf{Irreducible Representations}}\\
+
+                $S$ & $A_{1g}$\\
+                \rowcolor{grz}
+                $P$ & $T_{1g}$\\
+                $D$ & $E_g+T_{2g}$\\
+                \rowcolor{grz}
+                $F$ & $A_{2g}+T_{1g}+T_{2g}$\\
+                $G$ & $A_{1g}+E_g+T_{1g}+T_{2g}$\\
+                \rowcolor{grz}
+                $H$ & $E_g+2T_{1g}+T_{2g}$\\
+                $I$ & $A_{1g}+A_{2g}+E_g+T_{1g}+2T_{2g}$\\
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \end{tabular}
+            \caption{Splitting of free-ion terms in the $O_h$ point group.}
+            \label{tab:freeIonOhSplitting}
+        \end{table}
+        \item Strong-field limit states can also be split into irreducible representations.
+        \item "Each free-ion irreducible representation is matched with (correlates with) a strong-field irreducible representation having the same symmetry" \parencite[417]{bib:MiesslerFischerTarr}.
+        \item The bolded lines in Figure \ref{fig:correlationDiagram-d2} are those with the same spin multiplicity as the ground state, i.e., the states available for spin-allowed transitions.
+        \item The non-crossing rule applies to correlation diagrams, too.
+        \item \textcite{bib:MiesslerFischerTarr} lists a reference with correlation diagrams for other $d$-electron configurations.
+    \end{itemize}
+    \item Note that the above revelations about the practicality of $d$-orbital splitting implies that "all the energy level diagrams in Chapter 10 are based in this strong-field limit. Although this perspective is useful to rationalize the bonding in transition metal complexes, understanding the spectra of these complexes requires additional considerations that result from electron-electron interactions" \parencite[415]{bib:MiesslerFischerTarr}.
+    \item On Tanabe-Sugano diagrams (again of a $d^2$ configuration, as with Figure \ref{fig:tanabeSugano-d2}):
+    \begin{itemize}
+        \item The horizontal ground state does not mean it has now energy changes under increasing ligand field strength; we just do this because it's useful from a spectroscopic perspective to emphasize energy \emph{differences}.
+        \item The letter in parentheses for ${}^3T_{1g}(F)$ and ${}^3T_{1g}(P)$ distinguishes the ${}^3T_{1g}$ terms arising from the ${}^3F$ and ${}^3P$ states, respectively.
+        \item Axis units:
+        \begin{itemize}
+            \item Horizontal axis: $\Delta_o/B$, where $\Delta_o$ is the octahedral ligand field splitting parameter and $B$ is the \textbf{Racah parameter}.
+            \item Vertical axis: $E/B$, where $E$ is the energy (of the excited states) above the ground states and $B$ is the Racah parameter.
+        \end{itemize}
+        \item Notice how in the ground state changes of $d^4$ to $d^7$ complexes, there is a spin multiplicity change reflecting the change in the number of unpaired electrons.
+    \end{itemize}
+    \item \textbf{Racah parameter}: A measure of the repulsion between terms of the same multiplicity.
+    \begin{itemize}
+        \item For $d^2$ for example, the energy difference between ${}^3F$ and ${}^3P$ is $15B$.
+        \item Generally greater for a free ion than that same ion coordinated (this is because the Racah parameter depends on the amount of volume the valence electrons can access; electrons interact less if they occupy more volume).
+        \begin{itemize}
+            \item This means that the difference between $B$ in a free ion and a complex can be used to assess the degree of covalency in the metal-ligand bonds.
+        \end{itemize}
+    \end{itemize}
+    \item \ce{[Mn(H2O)6]^2+} ($d^6$ configuration) is very pale pink because its ground state (${}^6A_{1g}$) is unique in its spin multiplicity. Indeed, all transitions are spin-forbidden.
+    \begin{itemize}
+        \item There are many such excited states, however, hence a more complicated spectrum when you zoom in.
+    \end{itemize}
+    \item The unsymmetric, Jahn-Teller affected peak of $d^{1,9}$ complexes:
+    \begin{itemize}
+        \item First, note that we can write electron configurations in terms of degenerate MOs. For example, a complex with a $d^9$ configuration also has a ${t_{2g}}^6{e_g}^3$ configuration. Note that this is analogous to writing a complex with a $p^4$ configuration as having a ${p_x}^2{p_y}^1{p_z}^1$ configuration.
+        \item Electron configurations have symmetry labels that match their degeneracies (see Table \ref{tab:configurationLabels}).
+        \begin{table}[h!]
+            \centering
+            \small
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{cp{4cm}c}
+                \rowcolor{grx}
+                 & & \textcolor{white}{\textbf{Examples}}\\
+                
+                
+                $T$ & Designates a triply degenerate asymmetrically occupied state. & \tikz[baseline={(0,0.95)}]{
+                    \footnotesize
+                    \begin{scope}
+                        \draw [thick]
+                            (0.35,0.75) -- ++(0.6,0) ++(0.1,0) -- ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- ++(0.6,0) ++(0.1,0) -- ++(0.6,0)
+                        ;
+                    \end{scope}
+                    \begin{scope}[xshift=3cm]
+                        \draw [thick]
+                            (0.35,0.75) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet\,\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet\,\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                        ;
+                    \end{scope}
+                }\\[1cm]
+        
+                \rowcolor{grt}
+                $E$ & Designates a doubly degenerate asymmetrically occupied state. & \tikz[baseline={(0,0.95)}]{
+                    \footnotesize
+                    \begin{scope}
+                        \draw [thick]
+                            (0.35,0.75) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                        ;
+                    \end{scope}
+                    \begin{scope}[xshift=3cm]
+                        \draw [thick]
+                            (0.35,0.75) -- node[above]{$\bullet\,\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet\,\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet\,\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet\,\bullet$} ++(0.6,0)
+                        ;
+                    \end{scope}
+                }\\[1cm]
+        
+                $A$ or $B$ & Designates a nondegenerate state. Each set of levels in an $A$ or $B$ state is symmetrically occupied. & \tikz[baseline={(0,0.95)}]{
+                    \footnotesize
+                    \begin{scope}
+                        \draw [thick]
+                            (0.35,0.75) -- ++(0.6,0) ++(0.1,0) -- ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                        ;
+                    \end{scope}
+                    \begin{scope}[xshift=3cm]
+                        \draw [thick]
+                            (0.35,0.75) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                            (0,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0) ++(0.1,0) -- node[above]{$\bullet$} ++(0.6,0)
+                        ;
+                    \end{scope}
+                }\\[1cm]
+                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \end{tabular}
+            \caption{Symmetry labels for split $d$-orbital electron configurations.}
+            \label{tab:configurationLabels}
+        \end{table}
+        \begin{itemize}
+            \item To clarify, the definition of $T$ specifies that the triply degenerate state is asymmetrically occupied, the definition of $E$ specifies that the doubly degenerate state is asymmetrically occupied, and the definition $A$ and $B$ specifies that each set of degenerate states is symmetrically occupied.
+        \end{itemize}
+        \item "The labels of the states resulting from the free-ion term\dots are in reverse order to the labels on the orbitals" \parencite[424]{bib:MiesslerFischerTarr}.
+        \begin{itemize}
+            \item For example, in the $D_{4h}$ orbitals, the $b_{1g}$ atomic orbital is of highest energy, but the $B_{1g}$ state is of lowest energy.
+        \end{itemize}
+        \item We see slight distortion of the $d^1$ absorption peak, too, because J-T distortion of the excited state splits the degeneracy of the $e_g$ orbitals.
+    \end{itemize}
+    \item An important limitation of Tanabe-Sugano diagrams is that they assume $O_h$ symmetry in excited states as well as ground states.
+    \begin{itemize}
+        \item This can account for differences between their predictions and observed absorption spectra.
+    \end{itemize}
+    \item Determining $\Delta_o$ from spectra:
+    \begin{itemize}
+        \item $d^1$, $d^4$ (high spin), $d^6$ (high spin), and $d^9$ configurations:
+        \begin{itemize}
+            \item There is only a single absorption peak, corresponding to the promotion of an electron from the $t_{2g}$ orbitals to the $e_g$ orbitals.
+            \item Thus, $\Delta_o$ is equal to the energy of the absorbed light.
+        \end{itemize}
+        \item $d^3$ and $d^8$ configurations:
+        \begin{itemize}
+            \item The ground-state $F$ term splits into three terms: $A_{2g}$, $T_{2g}$, and $T_{1g}$. The difference in energy between the two lowest-energy terms ($A_{2g}$ and $T_{2g}$) is equal to $\Delta_o$.
+            \item Thus, $\Delta_o$ is equal to the energy of the light absorbed in the $A_{2g}\to T_{2g}$ transition, which is typically the lowest energy peak in the spectrum.
+        \end{itemize}
+        \item \textcite{bib:MiesslerFischerTarr} continues for more configurations.
+        % Come back here after watching the 3/10 lecture.
+    \end{itemize}
+    \item States of like symmetry in correlation/Tanabe-Sugano diagrams can mix just like MOs.
+    \item On CT bands:
+    \begin{itemize}
+        \item \ce{MnO4-} is dark purple because of "a strong absorption involving charge transfer from orbitals derived primarily from the filled oxygen $p$ orbitals to empty orbitals derived primarily from the manganese(VII)" \parencite[430]{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \textbf{Metal  to ligand charge transfer}: Empty $\pi^*$ orbitals on the ligands become the acceptor orbitals on absorption of light. \emph{Also known as} \textbf{MLCT}, \textbf{charge transfer to ligand}, \textbf{CTTL}.
+    \item \textbf{Intraligand band}: An absorption band caused by a ligand with a chromophore.
+    \item \textcite{bib:MiesslerFischerTarr} discusses energy applications (e.g., solar cells) of charge-transfer bands.
 \end{itemize}
 
 
