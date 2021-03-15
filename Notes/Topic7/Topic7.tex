@@ -474,5 +474,130 @@
 
 
 
+\section{Hoffmann's Band Theory}
+\emph{From \textcite{bib:bandTheory}.}
+\begin{itemize}
+    \item \marginnote{3/8:}Lists and attempts to resolve some minor problems at the intersection of solid-state chemistry and physics/the rest of chemistry.
+    \item An understanding of the electromagnetic properties of solids hinges on an understanding of modern solid-state physics, or band theory.
+    \begin{itemize}
+        \item Yet while physicists can better \emph{describe} (i.e., mathematically) a solid-state system, chemists better \emph{understand} them (i.e., intuitively).
+    \end{itemize}
+    \item Solid state chemists must consider not just ionic packing and electrostatic properties, but covalency and other more "molecular" notions.
+    \item \textbf{Zintl concept}: "In some compounds \ce{A_xB_y}, where \ce{A} is very electropositive relative to a main-group element \ce{B}, one could just think, that's all, think that the \ce{A} atoms transfer their electrons to the \ce{B} atoms, which they then use to form bonds" \parencite[847]{bib:bandTheory}.
+    \item Three big problems (in Hoffmann's opinion; in some others' opinions, these may not be issues at all):
+    \begin{enumerate}
+        \item Some lack of knowledge (therefore fear) of solid-state physics language on the part of chemists.
+        \item Insufficient appreciation of the chemists' intuitive feeling for bonding on the part of physicists.
+        \item Not enough reaching out for connections with molecular chemistry on the part of solid-state chemists.
+    \end{enumerate}
+    \item This paper will largely focus on problem 1, taking a simple (indeed, oversimplified) approach that utilizes the extended H\"{u}ckel model or the \textbf{tight-binding method} (with overlap).
+    \item \textbf{Tight-binding method} (with overlap): The solid-state analogue of the extended H\"{u}ckel model.
+    \item \textbf{Peierls distortion}: The instability of the band for an equally spaced one-dimensional polymer of \ce{H} atoms. \emph{Also known as} \textbf{strong electron-phonon coupling}, \textbf{pairing distortion}, \textbf{$\bm{2k_F}$ instability}.
+    \begin{itemize}
+        \item This will lead to a one-dimensional \ce{H}-atom polymer to form a chain of hydrogen molecules at ambient pressure.
+    \end{itemize}
+    \item \textbf{Applying cyclic boundary conditions}: Thinking of a long chain as an imperceptibly bent segment of a large ring.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../ExtFiles/zooOfHAtoms.png}
+        \caption{Orbitals in \ce{H}-atom rings.}
+        \label{fig:zooOfHAtoms}
+    \end{figure}
+    \begin{itemize}
+        \item We apply cyclic boundary conditions to the 1D \ce{H}-atom chain.
+    \end{itemize}
+    \item In a cyclic structure, "except for the lowest (and occasionally the highest) level, the orbitals come in degenerate pairs" \parencite[848]{bib:bandTheory}.
+    \begin{itemize}
+        \item The number of nodes also increases as one rises in energy: The lowest level is nodeless, the highest has the maximum number of nodes, and a growing number of nodes are present in between.
+    \end{itemize}
+    \item Introduces Bloch's theorem.
+    \item The larger the absolute value of $k$ (within the FBZ), the more nodes in the wave function.
+    \item The number of values of $k$ is equal to the number of translations in the crystal, or the number of microscopic unit cells in the macroscopic crystal.
+    \begin{itemize}
+        \item And this will be on the order of Avogadro's number $N_A$.
+        \item Keep in mind that although the $E(k)$ curve in Figure \ref{fig:densityOfStates} appears continuous, there are only a finite (albeit very large) number of points in $k$-space.
+    \end{itemize}
+    \item "There is an energy level for each value of $k$ (actually a degenerate pair of levels for each pair of positive and negative $k$ values)" \parencite[848]{bib:bandTheory}.
+    \begin{itemize}
+        \item Since $E(k)=E(-k)$ (as can be proved in an easy but unreferenced theorem), most graphical representations of the function depict $E(|k|)$ and label it $E(k)$.
+    \end{itemize}
+    \item \textbf{Reciprocal space}: The space of $k$, in which the allowed values of $k$ are equally spaced. \emph{Also known as} \textbf{momentum space}, \textbf{$\bm{k}$-space}.
+    \begin{itemize}
+        \item $k$ is related to momentum because $k=1/\lambda$, and from de Brogelie, $\lambda=h/p$.
+        \item This means that $k$ is not only a symmetry label and a node counter, but also a wave vector (thus a measure of momentum).
+    \end{itemize}
+    \item \textbf{Band width}: The difference in energy between the highest and lowest levels of the band. \emph{Also known as} \textbf{dispersion}.
+    \begin{itemize}
+        \item Determined by the overlap between the interacting orbitals of neighboring unit cells.
+    \end{itemize}
+    \item Bands extend unsymmetrically around their origin (which is the energy of a free \ce{H} atom at $\SI{-13.6}{eV}$) because of the inclusion of overlap in calculations.
+    \begin{itemize}
+        \item Note that bands with greater band width are \emph{more} symmetric about the origin, i.e., as $4|\beta|$ increases in Figure \ref{fig:densityOfStates}, the $E(k)$ band centers itself more around the origin.
+    \end{itemize}
+    \item To recap band width and the import of bands running up or down, "band width is set by inter-unit-cell overlap, and the way bands run is determined by the topology of that overlap" \parencite[849]{bib:bandTheory}.
+    \item Discusses stacking of platinum square-planar complexes, incorporating CFT and MO theory to build its band structure\footnote{If I have time to come back and digest this, it would be fascinating and educational.}.
+    \item \textbf{Fermi level}: The HOMO of a solid.
+    \begin{itemize}
+        \item The alternate thermodynamic definition (appropriate to both metals and semiconductors) is what was discussed in lecture.
+    \end{itemize}
+    \item Determining the Fermi level of \ce{[PtH4]^2-}:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\linewidth]{../ExtFiles/bandStructure-PtH4.png}
+        \caption{Electronic band structure of \ce{[PtH4]^2-}.}
+        \label{fig:bandStructure-PtH4}
+    \end{figure}
+    \begin{itemize}
+        \item Each platinum atom is $d^8$.
+        \item From the band structure, the $\frac{8\text{ electrons}}{2\text{ electrons per level}}=4$ lowest energy bands are the $z^2$, $xy$, $xz$, and $yz$ bands (with the latter two degenerate).
+        \item Thus, these will be completely filled, making the Fermi level the top of the band that protrudes the highest (the $z^2$ band).
+    \end{itemize}
+    \item Although this is not formal, we can tell from Figures \ref{fig:bandBonding-s} and \ref{fig:bandBonding-p} that the bottom of each band is bonding and the top, antibonding.
+    \begin{itemize}
+        \item Thus, filling a band entirely provides no net bonding (and, in fact, net antibonding).
+    \end{itemize}
+    \item Returning to our \ce{[PtH4]^2-} example:
+    \begin{itemize}
+        \item The stack likely forms due to a combination of van der Waals attractions and a combination of orbital interactions involving the mixing of the $d_{z^2}$ and $p_z$ bands.
+        \item Additionally, \ce{Pt-Pt} separation likely decreases on oxidation because losing electrons takes them away from the higher energy antibonding portions of the bands, enhancing bonding character.
+        \begin{itemize}
+            \item A typical oxidation of 0.3 electrons per \ce{Pt} atom empties the top 15\% of the $d_{z^2}$ band, which had been strongly $\sigma^*$ antibonding.
+        \end{itemize}
+        \item Importantly, "the oxidized material\dots has its Fermi level in a band; i.e., there is a zero band gap between filled and empty levels. The unoxidized cyanoplatinates have a substantial gap --- they are semiconductors or insulators. The oxidized materials are good low dimensional conductors" \parencite[851-52]{bib:bandTheory}.
+    \end{itemize}
+    \item For good conductivity, the Fermi level must cut one or more bands. However, we must also beware distortions which open up gaps at the Fermi level and exceedingly narrow bands that are cut by the Fermi level.
+    \item Density of states resolves the following conundrum:
+    \begin{itemize}
+        \item In a discrete molecule, we can single out one or a few orbitals (HOMO, LUMO) as being the frontier orbitals responsible for geometry, reactivity, etc.
+        \item There is no way that a few orbitals determine the properties of a solid.
+        \item How, then, can we determine such properties?
+        \item We can do so by looking at bunches of levels (all those in a given energy interval between $E$ and $E+\dd{E}$).
+    \end{itemize}
+    \item The shapes of DOS curves are predictable from the band structures.
+    \item "The integral of DOS up to the Fermi level is the total number of occupied MOs. Multiplied by two, it's the total number of electrons" \parencite[852]{bib:bandTheory}.
+    \begin{itemize}
+        \item Thus, the DOS curves plot the distribution of electrons in energy.
+    \end{itemize}
+    \item DOS curves represent a return from reciprocal space to real space since it's an average over the Brillouin zone, i.e., over all $k$ that might give molecular orbitals at the specified energy.
+    \begin{itemize}
+        \item One benefit to this is that it facilitates intuitively sketching the DOS from the MO diagram using our knowledge of orbital interactions in space, as we did when rationalizing the \ce{[PtH4]^2-} band structure.
+    \end{itemize}
+    \item Continues into some higher level 1D topics, from which there are a couple of relevant points:
+    \begin{itemize}
+        \item "The Jahn-Teller theorem says that such a situation necessitates a large interaction of vibrational and electronic motion. It states that there must be at least one normal mode of vibration which will break the degeneracy and lower the energy of the system (and, of course, lower its symmetry). It even specifies which vibrations would accomplish this" \parencite[862]{bib:bandTheory}.
+        \item The Peierls distortion is the solid-state counterpart of the Jahn-Teller distortion, a phenomenon where electrons in a partially filled band can distort the system (\'{a} la Jahn-Teller) to lower its energy and open up a gap at the Fermi level.
+    \end{itemize}
+    \item In higher dimensions, $\vec{k}$ must be treated as a vector with components in reciprocal space.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.45\linewidth]{../ExtFiles/bandBonding-pxpy2D.png}
+        \caption{2D $p_{x,y}$ orbital bonding states.}
+        \label{fig:bandBonding-pxpy2D}
+    \end{figure}
+    \item When we include $p$ orbitals in our 2D lattice, the $\Gamma$, $X$, and $M$ configurations have varying $\sigma$ / $\sigma^*$ character and $\pi$ / $\pi^*$ character (see Figure \ref{fig:bandBonding-pxpy2D}).
+\end{itemize}
+
+
+
 
 \end{document}
