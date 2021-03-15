@@ -1,0 +1,173 @@
+\documentclass[../psets.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Problem Set 8}
+
+\begin{document}
+
+
+
+
+\begin{enumerate}[label={\Roman*)}]
+    \item Do problem 16 from Chapter 11 of your text.
+    \begin{enumerate}[label={\textbf{11.\arabic*}}]
+        \setcounter{enumii}{15}
+        \item Classify the following configurations as $A$, $E$, or $T$ in complexes having $O_h$ symmetry. Some of these configurations represent excited states.
+        \begin{enumerate}[label={\textbf{\alph*.}}]
+            \item ${t_{2g}}^4{e_g}^2$
+            \begin{proof}[Answer]
+                $T$: Because the triply degenerate state is asymmetrically occupied and the doubly degenerate state is symmetrically occupied.
+            \end{proof}
+            \item ${t_{2g}}^6$
+            \begin{proof}[Answer]
+                $A$: Because both states are nondegenerate and symmetrically occupied.
+            \end{proof}
+            \item ${t_{2g}}^3{e_g}^3$
+            \begin{proof}[Answer]
+                $E$: Because the triply degenerate state is symmetrically occupied and the doubly degenerate state is asymmetrically occupied.
+            \end{proof}
+            \item ${t_{2g}}^5$
+            \begin{proof}[Answer]
+                $T$: Because the triply degenerate state is asymmetrically occupied and the doubly degenerate state is symmetrically occupied.
+            \end{proof}
+            \item $e_g$
+            \begin{proof}[Answer]
+                $E$: Because the triply degenerate state is symmetrically occupied and the doubly degenerate state is asymmetrically occupied.
+            \end{proof}
+        \end{enumerate}
+    \end{enumerate}
+    \newpage
+    \item For \ce{Co(NH3)6^3+} ($O_h$ symmetry), the spin-allowed transitions ${}^1A_{1g}\to{}^1T_{1g}$ and ${}^1A_{1g}\to{}^1T_{2g}$ are orbitally forbidden. Use symmetry arguments to determine which (if any) are vibronically allowed.
+    \begin{proof}[Answer]
+        We will first consider the ${}^1A_{1g}\to{}^1T_{1g}$ transition. From its definition, we can determine $\Gamma_1$ and $\Gamma_2$, the irreducible representations of the ground state and excited state, respectively. From the $O_h$ character table, we can determine $\Gamma_{\mu_{x,y,z}}$. And from the lecture slides, we can determine $\Gamma_\text{gv}$ and $\Gamma_\text{ev}$, the irreducible representations of the ground state and excited state vibrations, respectively. All values are listed below.
+        \begin{align*}
+            \Gamma_\text{ev} &= A_{1g}+E_g+2T_{1u}+T_{2g}+T_{2u}\\
+            \Gamma_2 &= T_{1g}\\
+            \Gamma_\mu &= T_{1u}\\
+            \Gamma_1 &= A_{1g}\\
+            \Gamma_\text{gv} &= A_{1g}
+        \end{align*}
+        We want to determine if the direct product $\Gamma_\text{ev}\otimes\Gamma_2\otimes\Gamma_\mu\otimes\Gamma_1\otimes\Gamma_\text{gv}$ contains the totally symmetric irreducible representation. To do so, we will first take the direct product of the right four terms and then distribute it to each of the five terms in $\Gamma_\text{ev}$ and see which distributed products contain the totally symmetric representation. Let's begin.\par
+        The product of the right four terms is
+        \begin{align*}
+            \Gamma_2\otimes\Gamma_\mu\otimes\Gamma_1\otimes\Gamma_\text{gv} &= T_{1g}\otimes T_{1u}\otimes A_{1g}\otimes A_{1g}\\
+            &= T_{1g}\otimes T_{1u}\\
+            &= A_{1u}+E_u+T_{1u}+T_{2u}
+        \end{align*}
+        By Theorem 2, the direct product of the above and any of $A_{1g}$, $E_g$, and $T_{2g}$ does not contain the totally symmetric representation, but the direct product of the above and any of $T_{1u}$ and $T_{2u}$ does. Therefore, the ${}^1A_{1g}\to{}^1T_{1g}$ transition is vibronically allowed.\par\medskip
+        We will now consider the ${}^1A_{1g}\to{}^1T_{2g}$ transition. Using the same method as before, we can determine that
+        \begin{align*}
+            \Gamma_\text{ev} &= A_{1g}+E_g+2T_{1u}+T_{2g}+T_{2u}\\
+            \Gamma_2 &= T_{2g}\\
+            \Gamma_\mu &= T_{1u}\\
+            \Gamma_1 &= A_{1g}\\
+            \Gamma_\text{gv} &= A_{1g}
+        \end{align*}
+        As before, the product of the right four terms is
+        \begin{align*}
+            \Gamma_2\otimes\Gamma_\mu\otimes\Gamma_1\otimes\Gamma_\text{gv} &= T_{2g}\otimes T_{1u}\otimes A_{1g}\otimes A_{1g}\\
+            &= T_{2g}\otimes T_{1u}\\
+            &= A_{2u}+E_u+T_{1u}+T_{2u}
+        \end{align*}
+        By Theorem 2, the direct product of the above and any of $A_{1g}$, $E_g$, and $T_{2g}$ does not contain the totally symmetric representation, but the direct product of the above and any of $T_{1u}$ and $T_{2u}$ does. Therefore, the ${}^1A_{1g}\to{}^1T_{2g}$ transition is vibronically allowed.
+    \end{proof}
+    \newpage
+    \item "Optical pumping" consists of irradiating a molecule with near monochromatic high intensity light. A short-lived molecule in an electronically excited state is therefore produced. Optically pumping \ce{[Cr(NCS)6]^3-} at $\SI{13000}{\per\centi\meter}$ yields an electronically excited state whose absorption spectrum is shown in the figure below. This spectrum showed no detectable bands between $\num{9000}$ and $\SI{16000}{\per\centi\meter}$; experimental difficulties prohibited looking below $\SI{9000}{\per\centi\meter}$. The table gives the normal electronic absorption spectrum (i.e., from the ${}^4A_{2g}$ level).
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{llr}
+            \hline
+            Energy ($\si{\per\centi\meter}$) & Assignment & $\varepsilon$\\
+            \hline
+            $\num{13000}$ & ${}^4A_{2g}\to{}^2E_g$               & 10\\
+            $\num{18870}$ & ${}^4A_{2g}\to{}^4T_{2g}$            & 159\\
+            $\num{21000}$ & ${}^4A_{2g}\to{}^2T_{2g}$            & 8\\
+            $\num{25000}$ & ${}^4A_{2g}\to{}^4T_{1g}$            & 129\\
+            $\num{31600}$ & ${}^4A_{2g}\to{}^2A_{1g}$            & 12\\
+            $\num{38200}$ & ${}^4A_{2g}\to{}^2T_{1g},{}^2T_{2g}$ & $\sim 10$\\
+            $\num{40300}$ & ${}^4A_{2g}\to{}^2E_g$               & $\sim 10$\\
+            \hline
+        \end{tabular}
+        \caption{Absorption spectrum of ${}^4A_{2g}$ \ce{Cr(NCS)6^3-}.}
+        \label{tab:opticalPumping-numbers}
+    \end{table}
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \draw (7.5,0) -- node[below=5mm]{\small$\si{\per\centi\meter}\times 10^{-3}$} (0,0) -- node[left=8mm]{\small$\varepsilon$} (0,2.5);
+            \draw [ultra thick,white] (0.3,0) -- (0.7,0);
+            \draw [decorate,decoration={zigzag,segment length=1.75mm}] (0.3,0) -- (0.7,0);
+            \foreach \x [evaluate=\x as \wvnum using int(2*\x+14)] in {1,...,7} {
+                \draw (\x,0.1) -- ++(0,-0.2) node[below]{$\wvnum$};
+            }
+            \foreach \y [evaluate=\y as \absorptivity using int(100*\y)] in {1,2} {
+                \draw (0.1,\y) -- ++(-0.2,0) node[left]{$\absorptivity$};
+            }
+    
+            \draw [grx,thick] (1.3,0.1)
+                to[out=45,in=180,in looseness=0.7] (2.435,1.59) coordinate (a)
+                to[out=0,in=180,out looseness=0.6,in looseness=0.8] (3.9,0.1)
+                to[out=0,in=180,out looseness=0.9,in looseness=0.5] (5.6,1.29) coordinate (b)
+                to[out=0,in=180,out looseness=0.3,in looseness=0.75] (6.7,2.2) coordinate (c)
+                to[out=0,in=110,out looseness=0.5] (7.2,1.4)
+            ;
+    
+            \node at (a |- 0,3) {\small$a$} edge [-stealth,semithick] ([yshift=1mm]a);
+            \node at (b |- 0,3) {\small$b$} edge [-stealth,semithick] ([yshift=1mm]b);
+            \node at (c |- 0,3) {\small$c$} edge [-stealth,semithick] ([yshift=1mm]c);
+        \end{tikzpicture}
+        \caption{Excited state absorption spectrum of \ce{K3Cr(NCS)6}.}
+        \label{fig:opticalPumping-spectrum}
+    \end{figure}
+    \begin{enumerate}
+        \item What excited state is produced by $\SI{13000}{\per\centi\meter}$ light (give the molecular term symbol)?
+        \begin{proof}[Answer]
+            From Table \ref{tab:opticalPumping-numbers}, we can read that $\SI{13000}{\per\centi\meter}$ light excites a ground state electron to the ${}^2E_g$ excited state.
+        \end{proof}
+        \item Assign the three transitions in the absorption spectrum of the optically pumped ion (and show your reasoning).
+        \begin{proof}[Answer]
+            Consider a (gaseous) sample of \ce{K3Cr(NCS)6}. Before it is optically pumped, the electrons of the vast majority of the molecules in the sample lie in the ${}^4A_{2g}$ ground state. While the sample is being irradiated, the electrons' energy is raised (by $\SI{13000}{\per\centi\meter}$) to the ${}^2E_g$ excited state in the vast majority of molecules, essentially making ${}^2E_g$ a new "ground state." After the light is shut off, the molecules in the sample retain their excited state for a very short but measurable amount of time. In this window, we can irradiate the sample with different wavenumbers of light to explore the electronic transitions accessible to the complex if ${}^2E_g$ were its ground state, with electrons being excited from ${}^2E_g$ and falling back down to it.\par
+            What we see in Figure \ref{fig:opticalPumping-spectrum} is the absorption spectrum of this optically pumped compound. It tells us things like, "if we have a sample of \ce{K3Cr(NCS)6} and raise its electrons' energy by $\SI{13000}{\per\centi\meter}$ to an excited state, this excited state will absorb significant quantities of photons with energy approximately equal to $\SI{18600}{\per\centi\meter}$, i.e., there is an energy level $\SI{18600}{\per\centi\meter}$ above the $\SI{13000}{\per\centi\meter}$-excited state to which electrons are excited and from which they fall back down to the $\SI{13000}{\per\centi\meter}$-excited state."\par
+            With this understanding, we are now ready to interpret Figure \ref{fig:opticalPumping-spectrum}. Peak $a$ corresponds to an energy level approximately $\SI{18600}{\per\centi\meter}$ above the ${}^2E_g$ excited state. From the original reference frame, this means that peak $a$ corresponds to an energy level approximately $\SI{18600}{\per\centi\meter}+\SI{13000}{\per\centi\meter}=\SI{31600}{\per\centi\meter}$ above the ${}^4A_{2g}$ ground state. It follows from Table \ref{tab:opticalPumping-numbers} that the energy level being accessed by this transition is ${}^2A_{1g}$. Therefore, the assignment of this transition is ${}^2E_g\to{}^2A_{1g}$. The argument is symmetric for the other two peaks, so we know that peak $b$'s assigned transitions are ${}^2E_g\to{}^2T_{1g}$ and ${}^2E_g\to{}^2T_{2g}$, and peak $c$'s assigned transition is ${}^2E_g\to{}^2E_g$.
+        \end{proof}
+        \item Explain qualitatively the observed intensities in the spectrum shown.
+        \begin{proof}[Answer]
+            Table \ref{tab:opticalPumping-numbers} shows the three transitions of interest all having very small $\varepsilon$ from the ground state, but Figure \ref{fig:opticalPumping-spectrum} shows that they are considerably (approximately an order of magnitude) larger from the excited state. The reason for this discrepancy is that the transitions from the ground state are Laporte (all $g\to g$) and spin (all $4\to 2$) forbidden, while the transitions from the excited state are still Laporte forbidden (all $g\to g$) but now spin allowed (all $2\to 2$). Moreover, since chromium is a relatively light transition metal, the Laporte selection rule is of negligible importance, so the change in the spin selection rule is what truly accounts for the difference in intensity.\par
+            Also note that peak $b$ is not just slightly smaller than peak $a$, but represents a much lesser absorption than peak $a$. We know this because it is close enough to peak $c$ that much of its absorption intensity is borrowed from its neighbor.
+        \end{proof}
+        \item How might this technique be useful in assigning electronic spectra?
+        \begin{proof}[Answer]
+            Some transitions (such as the three in Figure \ref{fig:opticalPumping-spectrum}) are heavily forbidden from the ground state (as we can see from the corresponding lackluster absorptivities in Table \ref{tab:opticalPumping-numbers}) and thus hard to spot in the ground state absorption spectrum. Consequently, if we want to be able to identify \emph{all} of the energy levels in a compound, we will need to reconcile the absorption spectra of a number of optically pumped spectra with the original ground state spectrum.
+        \end{proof}
+    \end{enumerate}
+    \newpage
+    \item Do the following problems from Chapter 12: 4, 15, 20.
+    \begin{enumerate}[label={\textbf{12.\arabic*}}]
+        \setcounter{enumii}{3}
+        \item The yellow "prussiate of soda" \ce{Na4[Fe(CN)6]} has been added to table salt as an anticaking agent. Why have there been no apparent toxic effects, even though this compound contains cyano ligands?
+        \begin{proof}[Answer]
+            \ce{[Fe(CN)6]^4-} is a low-spin $d^6$ compound, meaning that it has a high CFSE, meaning that it is highly chemically inert. Thus, the cyano ligands do not significantly separate from it.
+        \end{proof}
+        \newpage
+        \setcounter{enumii}{14}
+        \item When the two isomers of \ce{Pt(NH3)2Cl2} react with thiourea [$\text{tu}=\ce{S=C(NH2)2}$], one product is \ce{[Pt(tu)4]^2+} and the other is \ce{[Pt(NH3)2(tu)2]^2+}. Identify the initial isomers and explain the results.
+        \begin{proof}[Answer]
+            \emph{cis}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \ce{[Pt(tu)4]^2+}. Chloride has a strong trans-effect; thus, the amine groups are replaced first by thiourea groups. Since the thiourea groups, in turn, have a stronger trans-effect than chloride, both chlorides are then replaced by thiourea groups.\par
+            \emph{trans}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \emph{trans}-\ce{[Pt(NH3)2(tu)2]^2+}. The strong trans-effect of the chlorides causes one to boot the other off. The stronger thiourea then boots off the other chloride, but nothing is able to kick out the amine groups.
+        \end{proof}
+        \newpage
+        \setcounter{enumii}{19}
+        \item Is the reaction \ce{[Co(NH3)6]^3+ + [Cr(H2O)6]^2+} likely to proceed by an inner-sphere or outer-sphere mechanism? Explain your answer.
+        \begin{proof}[Answer]
+            The chromium complex is $d^4$ high spin, and would pursue an inner-sphere mechanism. However, the amine ligands of the cobalt complex have no occupied nonbonding or antibonding orbitals, making it a poor ligand for quantum tunneling, and necessitating an outer-sphere mechanism. Additionally, the cobalt complex is $d^6$ low spin, hence inert, meaning that it cannot transfer ligands; this further promotes the use of an outer-sphere mechanism.
+        \end{proof}
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}
