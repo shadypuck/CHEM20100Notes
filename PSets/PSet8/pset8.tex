@@ -39,7 +39,8 @@
     \newpage
     \item For \ce{Co(NH3)6^3+} ($O_h$ symmetry), the spin-allowed transitions ${}^1A_{1g}\to{}^1T_{1g}$ and ${}^1A_{1g}\to{}^1T_{2g}$ are orbitally forbidden. Use symmetry arguments to determine which (if any) are vibronically allowed.
     \begin{proof}[Answer]
-        We will first consider the ${}^1A_{1g}\to{}^1T_{1g}$ transition. From its definition, we can determine $\Gamma_1$ and $\Gamma_2$, the irreducible representations of the ground state and excited state, respectively. From the $O_h$ character table, we can determine $\Gamma_{\mu_{x,y,z}}$. And from the lecture slides, we can determine $\Gamma_\text{gv}$ and $\Gamma_\text{ev}$, the irreducible representations of the ground state and excited state vibrations, respectively. All values are listed below.
+        We will first consider the ${}^1A_{1g}\to{}^1T_{1g}$ transition. Since $\int\Gamma_2\Gamma_\mu\Gamma_1\dd{\tau}=\int 0\dd{\tau}=0$ for the ${}^1A_{1g}\to{}^1T_{1g}$ transition (as can readily be confirmed), the transition is orbitally forbidden. Thus, we must determine if it can be vibronically allowed.\par
+        From its definition, we can determine $\Gamma_1$ and $\Gamma_2$, the irreducible representations of the ground state and excited state, respectively. From the $O_h$ character table, we can determine $\Gamma_{\mu_{x,y,z}}$. And from the lecture slides, we can determine $\Gamma_\text{gv}$ and $\Gamma_\text{ev}$, the irreducible representations of the ground state and excited state vibrations, respectively. All values are listed below.
         \begin{align*}
             \Gamma_\text{ev} &= A_{1g}+E_g+2T_{1u}+T_{2g}+T_{2u}\\
             \Gamma_2 &= T_{1g}\\
@@ -54,7 +55,7 @@
             &= T_{1g}\otimes T_{1u}\\
             &= A_{1u}+E_u+T_{1u}+T_{2u}
         \end{align*}
-        By Theorem 2, the direct product of the above and any of $A_{1g}$, $E_g$, and $T_{2g}$ does not contain the totally symmetric representation, but the direct product of the above and any of $T_{1u}$ and $T_{2u}$ does. Therefore, the ${}^1A_{1g}\to{}^1T_{1g}$ transition is vibronically allowed.\par\medskip
+        By Theorem 2, the direct product of the above and any of $A_{1g}$, $E_g$, and $T_{2g}$ does not contain the totally symmetric representation, but the direct product of the above and any of $T_{1u}$ and $T_{2u}$ does. Therefore, the ${}^1A_{1g}\to{}^1T_{1g}$ transition is vibronically allowed. This means that \ce{Co(NH3)6^3+} can vibrate along either the $T_{1u}$ or $T_{2u}$ mode to break octahedral symmetry temporarily, removing the inversion center. This relaxes Laporte's rule, thus allowing the transition.\par\medskip
         We will now consider the ${}^1A_{1g}\to{}^1T_{2g}$ transition. Using the same method as before, we can determine that
         \begin{align*}
             \Gamma_\text{ev} &= A_{1g}+E_g+2T_{1u}+T_{2g}+T_{2u}\\
@@ -155,7 +156,7 @@
         \setcounter{enumii}{14}
         \item When the two isomers of \ce{Pt(NH3)2Cl2} react with thiourea [$\text{tu}=\ce{S=C(NH2)2}$], one product is \ce{[Pt(tu)4]^2+} and the other is \ce{[Pt(NH3)2(tu)2]^2+}. Identify the initial isomers and explain the results.
         \begin{proof}[Answer]
-            \emph{cis}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \ce{[Pt(tu)4]^2+}. Chloride has a strong trans-effect; thus, the amine groups are replaced first by thiourea groups. Since the thiourea groups, in turn, have a stronger trans-effect than chloride, both chlorides are then replaced by thiourea groups.\par
+            \emph{cis}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \ce{[Pt(tu)4]^2+}. Chloride has a strong trans-effect; thus, the amine groups are replaced first by thiourea groups. Since the thiourea groups, in turn, have a stronger trans-effect than chloride ($\ce{SR2}>\ce{Cl-}$ from \cite[460]{bib:MiesslerFischerTarr}), both chlorides are then replaced by thiourea groups. Alternatively, it is possible that one amine group is replaced, then the tu group (being very strong) replaces the chloride opposite it, and then the process repeats for the other chloride/amine pair.\par
             \emph{trans}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \emph{trans}-\ce{[Pt(NH3)2(tu)2]^2+}. The strong trans-effect of the chlorides causes one to boot the other off. The stronger thiourea then boots off the other chloride, but nothing is able to kick out the amine groups.
         \end{proof}
         \newpage
