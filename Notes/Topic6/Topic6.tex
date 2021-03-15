@@ -332,7 +332,7 @@
             \item The $d_{x^2-y^2}$ orbital is not greatly perturbed by substitution along the $z$-axis.
             \item The $d_{z^2}$ orbital was \ce{M-L\sigma^*}; thus, removal of 1 $\sigma$ ligand from the $z$-axis will stabilize it.
             \item The $d_{xz,yz}$ orbitals are destabilized owing to the removal of 1 \ce{M-L\pi} bonding interaction.
-            \item The $d_{xy}$ orbital is in-plane and notal with respect to $\sigma$- and $\pi$-bonding along the $z$-axis; thus, it is not greatly perturbed by such substitution.
+            \item The $d_{xy}$ orbital is in-plane and nodal with respect to $\sigma$- and $\pi$-bonding along the $z$-axis; thus, it is not greatly perturbed by such substitution.
             \item The $d_{z^2}$ orbital is more greatly stabilized than the $d_{xz,yz}$ orbitals are destabilized because the former is involved in stronger $\sigma$-interactions, as opposed to weaker $\pi$-interactions.
         \end{itemize}
         \item Now let's add the \ce{Br-} ligand. Addition of \ce{Br-} to the $C_{4v}$ fragment will give rise to new interactions.
@@ -412,6 +412,112 @@
         \item The quintuple bonding was verified by observing a very short bond length (not super short on the scheme of things, but shorter than ever reported before, indicating the presence of a weak fifth bond).
         \item $C_{2h}$ symmetry.
         \item Suggested reading: The full paper.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Chapter 10: Coordination Chemistry II (Bonding)}
+\emph{From \textcite{bib:MiesslerFischerTarr}.}
+\begin{itemize}
+    \item \marginnote{3/3:}We seek to review experimental observations of coordination complexes and show how these observations have been reconciled with electronic structure and bonding theories.
+    \item \textbf{Stability constant}: An equilibrium constant in a reaction that forms a coordination complex, typically by replacing one or more aqua ligands with another type. \emph{Also known as} \textbf{formation constant}.
+    \begin{itemize}
+        \item A measure of bond strength frequently used by inorganic chemists.
+    \end{itemize}
+    \item Stronger field ligands preferably bond to the metal center.
+    \item Polydentate ligands bond more readily than one split into chunks each with fewer attachment sites because bonding once makes bonding a second time easier (proximity), and ligand dissociation is more difficult.
+    \begin{itemize}
+        \item Thus, for example, \ce{[Ni(en)3]^2+} is more stable than \ce{[Ni(CH3NH2)6]^2+}.
+    \end{itemize}
+    \item The chelate effect has the largest impact on formation constants when the ring is 5-6 atoms long (shorter causes strain; longer means less proximity, hence tougher bond formation).
+    \item "Thermodynamic parameters such as $\Delta H^\circ$, $\Delta S^\circ$, and the dependence of $K$ with $T$ are useful for comparing reactions of different metal ions reacting with the same ligand or a series of different ligands reacting with the same metal ion" \parencite[358]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item Sometimes, properties of coordination complexes can be predicted directly off of this information, but it's rare.
+    \end{itemize}
+    \item An example of the thermodynamics of the chelate effect:
+    \begin{gather*}
+        \ce{[Cd(H2O)6]^2+ + 4CH3NH2 -> [Cd(CH3NH2)4(H2O)2]^2+ + 4H2O}\tag*{$K=\num{3.3e6}$}\\
+        \ce{[Cd(H2O)6]^2+ + 2en -> [Cd(en)2(H2O)2]^2+ + 4H2O}\tag*{$K=\num{4.0e10}$}
+    \end{gather*}
+    \begin{itemize}
+        \item Differences in $\Delta S^\circ$ play the dominant role in the chelate effect. $\Delta H^\circ$ is similar for the above two reactions, but for the en substitution, we dramatically increase entropy by binding two en particles and liberate four \ce{H2O} particles, as opposed to conserving the number of particles in the methylamine reaction.
+    \end{itemize}
+    \item \textbf{Magnetic susceptibility}: A molecule's attraction to or repulsion from a magnetic field. \emph{Also known as} $\bm{\chi}$.
+    \item $\mu=2.828\sqrt{\chi T}$, where $2.828\approx\sqrt{3k/N}$.
+    \item "The total spin magnetic moment for a configuration of electrons is characterized by the spin quantum number $S$, which is equal to the maximum total spin, the sum of the $m_s$ values" \parencite[360]{bib:MiesslerFischerTarr}.
+    \item "The orbital angular momentum [is] characterized by the quantum number $L$, where $L$ is equal to the maximum possible sum of the $m_l$ values for an electronic configuration" \parencite[360]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item For a $p^4$ ground state electron configuration, $L$ is maximized when two electrons occupy the orbital with $m_l=+1$, and the other two occupy the $m_l=0,-1$ orbitals, respectively. Thus, $L_{p^4}=1+1+0-1=1$.
+    \end{itemize}
+    \item Technically, $\mu_S=2.00023\sqrt{S(S+1)}$ where $2.00023$ is the gyromagnetic ratio.
+    \begin{itemize}
+        \item However, if we round the gyromagnetic ratio to 2 and note that $S=\frac{n}{2}$ where $n$ is the number of unpaired electrons, we obtain $\mu_S=\sqrt{n(n+2)}$.
+    \end{itemize}
+    \item Recall from Chapter 2 that in transition metals, $ns$ electrons are lost before $(n-1)d$ electrons.
+    \item Number of unpaired electrons examples:
+    \begin{itemize}
+        \item \ce{Fe} is $4s^23d^6$, so 4 unpaired $d$-electrons.
+        \item \ce{Fe^2+} is $3d^6$, so 4 unpaired $d$-electrons.
+        \item \ce{Cr} is $4s^13d^5$, so 6 unpaired electrons (1 unpaired $s$-electron and 5 unpaired $d$-electrons).
+        \item \ce{Cu} is $4s^13d^{10}$, so 1 unpaired $s$-electron.
+        \item \ce{Cu} is $3d^9$, so 1 unpaired $d$-electron.
+    \end{itemize}
+    \item The unit symbol for Bohr magnetons is $\mu_B$, so we say, for instance, that the magnetic moment of copper is $\SI{1.73}{\mu_B}$.
+    \item \textcite{bib:MiesslerFischerTarr} gives a full explanation of the Gouy method.
+    \begin{itemize}
+        \item Modern magnetic susceptibility measurements are taken with a magnetic susceptibility balance (for solids), via the Evans NMR method (for solutes), or with a SQUID.
+    \end{itemize}
+    \item \textbf{Mass susceptibility}: The magnetic susceptibility of a substance per gram.
+    \item "A complex with one unpaired electron exhibits ideal \textbf{Curie paramagnetism} if the inverse of the molar susceptibility (for a given applied external field) increases linearly with temperature and has a $y$-intercept of 0" \parencite[362]{bib:MiesslerFischerTarr}.
+    \item "In a paramagnetic complex, the magnetic moments of individual species do not effectively couple, but act more or less independently of each other" \parencite[362]{bib:MiesslerFischerTarr}.
+    \begin{itemize}
+        \item This contrasts with ferromagnetism.
+    \end{itemize}
+    \item \textbf{Antiferromagnetism}: An alternate long-range arrangement of magnetic moments where adjacent moments line up in opposite directions.
+    \item Electronic spectra and molecular shapes provide further evidence for electronic structures.
+    \item There are three main bonding models for coordination complexes.
+    \item \textbf{Crystal field theory}: This is an electrostatic approach, used to describe the split in metal $d$-orbital energies within an octahedral environment. It provides an approximate description of the electronic energy levels often responsible for the ultraviolet and visible spectra of coordination complexes, but it does not describe metal-ligand bonding.
+    \item \textbf{Ligand field theory}: This is a description of bonding in terms of the interactions between metal and ligand frontier orbitals to form molecular orbitals. It uses some crystal field theory terminology but focuses on orbital interactions rather than attractions between ions.
+    \item \textbf{Angular overlap method}: This is a method of estimating the relative magnitudes of molecular orbital energies within coordination complexes. It explicitly takes into account the orbitals responsible for ligand binding as well as the relative orientation of the frontier orbitals.
+    \item \textbf{Born-Oppenheimer approximation}: Atomic nuclei are in fixed positions in comparison with rapidly moving electrons.
+    \item \textbf{Extended H\"{u}ckel theory}: The simplest approach to approximating the many-body problem of electronic movements.
+    \pagebreak
+    \item Thoughts on CFT:
+    \begin{itemize}
+        \item "When the $d$ orbitals of a metal ion are placed in an occtahedral field of ligand electron pairs, any electrons in these orbitals are repelled by the field. As a result, the $d_{x^2-y^2}$ and $d_{z^2}$ orbitals, which have $e_g$ symmetry, are directed at the surrounding ligands and are raised in energy. The $d_{xy}$, $d_{xz}$, and $d_{yz}$, orbitals ($t_{2g}$ symmetry), directed between the ligands, are relatively unaffected by the field" \parencite[364]{bib:MiesslerFischerTarr}.
+        \item In $\Delta_o$, the $o$ stands for octahedral.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}[
+                yscale=0.8,
+                semithick,
+                every node/.append style={black}
+            ]
+                \footnotesize
+                \draw [dash pattern=on 5mm off 2mm]
+                    (0,0) -- node[below=2mm]{Free ion} ++(3.3,0)
+                    (4,2) -- node[below=1.8cm]{Spherical field} ++(3.3,0)
+                    (8,0) -- node[below=2mm]{Octahedral field} ++(1.9,0) node[right]{$t_{2g}$}
+                    (8.35,5) -- ++(1.2,0) node[right]{$e_g$}
+                ;
+                \draw [grx,densely dashed]
+                    (3.3,0) -- (4,2)
+                    (3.3,0) -- (8,0)
+                    (7.3,2) -- (8,0)
+                    (7.3,2) -- (9.55,2)
+                    (7.3,2) -- (8.35,5)
+                ;
+        
+                \draw [grx,stealth-stealth] (8.95,0.05) -- node[right]{$0.4\Delta_o$} ++(0,1.9);
+                \draw [grx,stealth-stealth] (8.95,2.05) -- node[right]{$0.6\Delta_o$} ++(0,2.9);
+                \draw [grx,stealth-stealth] (10.8,0.05) -- node[right]{$\Delta_o$} ++(0,4.9);
+            \end{tikzpicture}
+            \caption{Crystal field splitting from the free ion.}
+            \label{fig:CFT-freeIon}
+        \end{figure}
+        \item "The average energy of the five $d$ orbitals [in a coordination complex] is above that of the free ion orbitals [i.e., those in the metal ion before it is surrounded by ligands], because the electrostatic field of the ligands raises their energy" \parencite[364]{bib:MiesslerFischerTarr}.
+        \item CFT is flawed because as we can see from Figure \ref{fig:CFT-freeIon}, there is no energetically favorable bonding; at best, we could have zero energy difference between the free ion and bonded octahedral field state (this occurs if only the $t_{2g}$ orbitals are occupied).
     \end{itemize}
 \end{itemize}
 
