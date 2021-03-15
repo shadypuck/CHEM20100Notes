@@ -570,5 +570,155 @@
 
 
 
+\section{Chapter 12: Coordination Chemistry IV (Reactions and Mechanisms)}
+\emph{From \textcite{bib:MiesslerFischerTarr}.}
+\begin{itemize}
+    \item \marginnote{3/11:}\textbf{Transition-state theory}: A theory describing chemical reactions as moving from one energy minimum (the reactants) through higher energy structures (transition states, intermediates) to another energy minimum (the products).
+    \item \textbf{Principle of microscopic reversibility}: The lowest energy pathway going in one direction must also be the lowest energy pathway going in the opposite direction.
+    \begin{itemize}
+        \item "Although the complexity of reaction coordinate diagrams can vary widely, the adopted path between the reactants and the products is always the lowest energy pathway available and must be the same regardless of the direction of the reaction" \parencite[437-38]{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \textbf{Steady-state approximation}: The concentration of the intermediate is assumed to be extremely small and essentially unchanging during much of the reaction.
+    \begin{itemize}
+        \item Allowed by the presence of undetectable intermediates.
+    \end{itemize}
+    \item \textbf{Order} (of a reactant): The power of the reactant concentration in the differential equation that describes how its concentration changes with time, which indicates how the reaction rate is tied to a change in that reactant's concentration.
+    \item \textbf{Rate constant}: A proportionality constant that relates the reaction rate to the concentration of the reactants, which is temperature dependent.
+    \item The \textbf{free energy of activation} can be divided into two components: \textbf{enthalpy of activation} and \textbf{entropy of activation}.
+    \item \textbf{Volume of activation}: A quantity that offers insight into whether the transition state is larger or smaller than the reactants, derived from examinations of pressure dependence on reaction rates.
+    \item The rate of reaction depends on the activation energy via the Arrhenius equation
+    \begin{equation*}
+        k = A\e[-\frac{E_A}{RT}]
+    \end{equation*}
+    \item \textcite{bib:MiesslerFischerTarr} introduces substitution reactions of \ce{[M(H2O)_m]^n+} and color-based identification of species.
+    \begin{itemize}
+        \item Note that \ce{[V(H2O)6]^3+} has a higher water exchange rate constant than \ce{[V(H2O)6]^2+}, despite the fact that we might expect it to hold onto its ligands more tightly because of its higher oxidation state.
+    \end{itemize}
+    \item \textbf{Labile} (compound): Compounds which react rapidly, essentially exchanging one ligand for another within the time of mixing the reactants. \emph{Also known as} \textbf{kinetically labile}.
+    \begin{itemize}
+        \item Very low activation energy for ligand substitution.
+        \item Examples include $d^1$, $d^2$, and high-spin $d^4$ through $d^6$ compounds, as well as $d^7$, $d^9$, and $d^{10}$ ones.
+    \end{itemize}
+    \item \textbf{Inert} (compound): A compound that does not resist ligand substitution but is simply slower to react. \emph{Also known as} \textbf{kinetically inert}.
+    \begin{itemize}
+        \item "Inert octahedral complexes are generally those with high ligand field stabilization energies\dots specifically those with $d^3$ or low-spin $d^4$ through $d^6$ electronic structures" \parencite[440-41]{bib:MiesslerFischerTarr}.
+        \item Strong ligand-field $d^8$ complexes often form inert square-planar complexes.
+    \end{itemize}
+    \item \textbf{Stoichiometric mechanism}: Any one of the substitution reaction categories ($D$, $A$, or $I$).
+    \item \textbf{Intimate mechanism}: The distinction between activation processes that are associative and dissociative.
+    \item A word on notation: In this chapter's reactions, "\ce{X} will indicate the ligand that is leaving a complex, \ce{Y} the ligand that is entering, and \ce{L} any ligands that are unchanged during the reaction. In cases of solvent exchange, the \ce{X}, \ce{Y}, and \ce{L} may be the same species. Charges will be omitted when using \ce{X}, \ce{Y}, and \ce{L}, but the species may be ions" \parencite[441]{bib:MiesslerFischerTarr}.
+    \item In a rate law, Rate equals the change in the concentration of the product with respect to time, $\dv*{[\ce{P}]}{t}$.
+    \item We assume the formation of an \textbf{ion pair} or \textbf{preassociation complex} in our description of an interchange reaction, instead of just assuming that the interchange occurs in one step.
+    \item Ion pairs form from ionic reactions while preassociation complexes form from dipole-dipole interactions.
+    \item Substitution reaction intermediates are detectable when $k_1,k_{-1}>>k_2$ since this allows the first (reversible) reaction to reach an equilibrium independent of the second.
+    \begin{itemize}
+        \item Determining the concentration of \ce{[ML5X*Y]} facilitates the calculation of $K_1$. Otherwise, it must be estimated theoretically.
+    \end{itemize}
+    \item Interchange mechanisms involving preassociation complexes can be difficult to distinguish from $D$ mechanisms when \ce{[Y]} is large since they both tend toward first-order kinetics.
+    \item \marginnote{3/14:}\textbf{Ligand field activation energy}: The difference between the LFSE of the square-pyramidal transition state and the LFSE of the octahedral reactant. \emph{Also known as} \textbf{LFAE}.
+    \begin{itemize}
+        \item LFAEs for trigonal bipyramidal transition states are usually the same or larger than those for square pyramidal ones.
+    \end{itemize}
+    \item Other factors that influence reaction rate:
+    \begin{itemize}
+        \item Oxidation state of the central ion: Higher oxidation states lead to slower ligand exchange.
+        \item Ionic radius: Smaller ions have slower exchange rates.
+    \end{itemize}
+    \item \textbf{Aquation}: Substitution by water.
+    \item \textbf{Anation}: Substitution by an anion.
+    \item \textbf{Linear free-energy relationship}: A relation between kinetic effects and thermodynamic effects. \emph{Also known as} \textbf{LFER}.
+    \begin{itemize}
+        \item Observed when the bond strength of a metal-ligand bond (thermodynamic parameter) plays a major role in determining the dissociation rate of a ligand (kinetic parameter).
+        \item Observed when a plot of the logarithm of the rate constants for \ce{[ML5X]^n+ + Y} substitutioin reactions, where \ce{X} is varied but \ce{Y} is not, versus the logarithm of the equilibrium constants for \ce{[ML5X]^n+ + Y <=> [ML5Y]^m+ + X} is linear.
+    \end{itemize}
+    \item \textbf{Conjugate base mechanism}: A ligand is deprotonated, the ligand \emph{trans} to it dissociates, and then the deprotonated ligand is reprotonated and a new ligand binds. \emph{Also known as} \textbf{S\textsubscript{N}1CB}, \textbf{substitution, nuccleophilic, unimolecular, conjugate base}.
+    \begin{itemize}
+        \item For example, the mechanism of \ce{[Co(NH3)5X]^2+ + OH- -> [Co(NH3)5(OH)]^2+ + X-} could be
+        \begin{gather*}
+            \ce{[Co(NH3)5X]^2+ + OH- <=> [Co(NH3)4(NH2)X]+ + H2O}\tag{Equilibrium}\\
+            \ce{[Co(NH3)4(NH2)X]+ -> [Co(NH3)4(NH2)]^2+ + X-}\tag{Slow}\\
+            \ce{[Co(NH3)4(NH2)]^2+ + H2O -> [Co(NH3)5(OH)]^2+}\tag{Fast}
+        \end{gather*}
+        \item This mechanism is common with octahedral cobalt (III) metal centers.
+    \end{itemize}
+    \item \textbf{Kinetic chelate effect}: Substitution for a chelated ligand is slower than a similar monodentate ligand.
+    \item In dissociative mechanisms, products can have the same or different stereochemistry than the reactants.
+    \begin{itemize}
+        \item What happens depends on the stereochemistry of the reactants, the ligands (both to be removed and to be added), and occasionally the concentration of the ligand to be added.
+        \item A square pyramidal intermediate leads to a retention of configuration. A trigonal bipyramidal one does not (necessarily; different points of attack along the equator lead to different products in varying ratios).
+        \item "As a general rule, \emph{cis} reactants give a relatively higher percentage of substitution products that retain their \emph{cis} configuration; \emph{trans} reactants often afford a more balanced mixture of \emph{cis} and \emph{trans} substitution products" \parencite[456]{bib:MiesslerFischerTarr}.
+        \item Compounds with multiple chelating rings can interconvert between stereoisomers by a dissociation $\to$ rearrangement $\to$ reattachment mechanism.
+    \end{itemize}
+    \item Square-planar nomenclature: \ce{T} is the ligand \emph{trans} to the departing ligand \ce{X}.
+    \item Square-planar axes: Let the plane of the molecule be the $xy$-plane, with the $x$-axis collinear to the \ce{T-Pt-X} axis.
+    \item Square-planar rate law:
+    \begin{equation*}
+        \text{Rate} = k_1\ce{[Cplx]}+k_x\ce{[Cplx][Y]}
+    \end{equation*}
+    \begin{itemize}
+        \item The $k_2$ term derives from a standard associative mechanism.
+        \item The $k_1$ term derives from a solvent-assisted $A$ mechanism (the solvent substitutes first, slowly; then the incoming ligand replaces the solvent, quickly).
+        \begin{itemize}
+            \item This may occasionally lead to a 6-coordinate transition state.
+        \end{itemize}
+    \end{itemize}
+    \item Determining the effect on reaction rate of ligands other than \ce{T}:
+    \begin{equation*}
+        \log k_Y = s\cdot\eta_{\ce{Pt}}+\log k_S
+    \end{equation*}
+    \begin{itemize}
+        \item $k_Y$ is the rate constant for reaction with \ce{Y}.
+        \item $k_S$ is the rate constant for reaction with \ce{S}.
+        \item $s$ is the \textbf{nucleophilic discrimination factor} (for the complex).
+        \begin{itemize}
+            \item $s:=1.00$ for \emph{trans}-\ce{[Pt(py)2Cl2]}, and other values are based off of this reference.
+        \end{itemize}
+        \item $\eta_{\ce{Pt}}$ is the \textbf{nucleophilic reactivity constant} (for the entering ligand).
+        \begin{equation*}
+            \eta_{\ce{Pt}} = \log\left( \frac{k_Y}{k_{\ce{CH3OH}}} \right)
+        \end{equation*}
+        \begin{itemize}
+            \item Values are determined via the above equation with kinetic data from the reactions used to determine $s$.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{\emph{trans} influence}: The ground-state, thermodynamic effect where \ce{Pt-T} $\sigma$ donation uses a larger contribution of the $p_x$ and $d_{x^2-y^2}$ orbitals, leaving less for the \ce{Pt-X} bond.
+    \item \textbf{Inner-sphere reaction}: A redox reaction of transition-metal complexes where the two molecules are connected by a common ligand through which the electron is transferred.
+    \item \textbf{Outer-sphere reaction}: A redox reaction of transition-metal complexes where the exchange occurs between two separate coordination spheres.
+    \begin{itemize}
+        \item Occur when the ligands of both reactants are tightly held.
+        \item Primary change upon electron transfer is metal-ligand bond length, affected both by changes in metal oxidation state and use of $e_g^*$ electrons (adding these increases antibonding character, lengthening bonds; vice versa for removing them).
+        \item Promoted by the chelate effect.
+    \end{itemize}
+    \item Factors that influence electron transfer rates:
+    \begin{itemize}
+        \item The rate of ligand substitution within the reactants.
+        \item The match of the reactant orbital energies.
+        \item The solvation of reactants.
+        \item The nature of the ligands.
+    \end{itemize}
+    \item Inner sphere mechanisms depend on \textbf{quantum tunneling}.
+    \begin{itemize}
+        \item "Ligands with $\pi$ or $p$ orbitals that can be used in bonding provide good pathways for tunneling. Ligands like \ce{NH3}, with neither extra nonbonding pairs nor low-lying antibonding orbitals, do not provide effective tunneling pathways" \parencite[463]{bib:MiesslerFischerTarr}.
+    \end{itemize}
+    \item \textbf{Quantum tunneling}: A quantum mechanical property wherebby electrons can pass through potential barrierrs that are too high to permit ordinary transfer.
+    \item Three steps in an inner-sphere mechanism:
+    \begin{enumerate}
+        \item A substitution reaction that leaves the oxidant and reductant linked by the bridging ligand.
+        \item The electron transfer, frequently accompanied by the transfer of the ligand.
+        \item A separation of the products.
+    \end{enumerate}
+    \item Lists specific examples of molecules/ions that are prone to inner- or outer-sphere mechanisms.
+    \item Factors that influence the stability of complexes with different oxidation numbers:
+    \begin{itemize}
+        \item LFSE.
+        \item Metal-ligand bonding.
+        \item Redox properties of the ligands.
+        \item Hard/soft character of the ligands.
+    \end{itemize}
+    \item Discusses reactions of coordinated ligands.
+\end{itemize}
+
+
+
 
 \end{document}
