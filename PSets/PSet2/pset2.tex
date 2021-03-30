@@ -189,7 +189,6 @@
     \begin{proof}[Answer]
         \begin{figure}[h!]
             \centering
-            \colorlet{orz}{orange!40!black!20}
             \begin{subfigure}[b]{0.19\linewidth}
                 \centering
                 \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
@@ -208,7 +207,7 @@
                     \footnotesize
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
-                    \filldraw [semithick,fill=orz] ({-6^0.5/4},0,0) circle (6^0.5/4);
+                    \filldraw [semithick,fill=grz] ({-6^0.5/4},0,0) circle (6^0.5/4);
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
                     \filldraw [semithick,fill=white] ({6^0.5/4},0,0) circle (6^0.5/4);
                 \end{tikzpicture}
@@ -222,7 +221,7 @@
                     \filldraw [semithick,fill=white] (0,0,{6^0.5/4}) circle (6^0.5/4);
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
-                    \filldraw [semithick,fill=orz] (0,0,{-6^0.5/4}) circle (6^0.5/4);
+                    \filldraw [semithick,fill=grz] (0,0,{-6^0.5/4}) circle (6^0.5/4);
                     \draw [-latex] (0,0,-1.7) -- (0,0,-0.85) (0,0,{6^0.5/2}) -- (0,0,1.7) node[above right=-2pt]{$y$};
                 \end{tikzpicture}
                 \caption{$p_y$ orbital.}
@@ -234,7 +233,7 @@
                     \footnotesize
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
-                    \filldraw [semithick,fill=orz] (0,{-6^0.5/4},0) circle (6^0.5/4);
+                    \filldraw [semithick,fill=grz] (0,{-6^0.5/4},0) circle (6^0.5/4);
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
                     \filldraw [semithick,fill=white] (0,{6^0.5/4},0) circle (6^0.5/4);
                 \end{tikzpicture}
@@ -250,7 +249,7 @@
                     \filldraw [semithick,fill=white] plot [domain=0.63:2.51,smooth,variable=\thta] ({\thta r}:{0.5*2.5^0.5*(3*sin(\thta r)^2-1)});
                     \filldraw [semithick,fill=white] plot [domain=3.75:5.67,smooth,variable=\thta] ({\thta r}:{0.5*2.5^0.5*(3*sin(\thta r)^2-1)});
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
-                    \filldraw [semithick,fill=orz] (-0.4,0,0) arc[start angle=120,end angle=60,x radius=0.8cm,y radius=0.9cm] arc[start angle=-60,end angle=-120,x radius=0.8cm,y radius=0.9cm];
+                    \filldraw [semithick,fill=grz] (-0.4,0,0) arc[start angle=120,end angle=60,x radius=0.8cm,y radius=0.9cm] arc[start angle=-60,end angle=-120,x radius=0.8cm,y radius=0.9cm];
                     \filldraw [semithick,fill=white] ({0.73 r}:{0.5*2.5^0.5*(3*sin(0.73 r)^2-1)}) to[out=-125,in=-55] ({2.41 r}:{0.5*2.5^0.5*(3*sin(2.41 r)^2-1)});
                 \end{tikzpicture}
                 \caption{$d_{z^2}$ orbital.}
@@ -263,10 +262,10 @@
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
                     \filldraw [semithick,fill=white,scale=1.5] plot [domain=-pi:-pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
-                    \filldraw [semithick,fill=orz,scale=1.5] plot [domain=-pi/2:0,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                    \filldraw [semithick,fill=grz,scale=1.5] plot [domain=-pi/2:0,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
                     \filldraw [semithick,fill=white,scale=1.5] plot [domain=0:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
-                    \filldraw [semithick,fill=orz,scale=1.5] plot [domain=pi/2:pi,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                    \filldraw [semithick,fill=grz,scale=1.5] plot [domain=pi/2:pi,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                 \end{tikzpicture}
                 \caption{$d_{xz}$ orbital.}
                 \label{fig:orbitals-spdf}
@@ -275,13 +274,13 @@
                 \centering
                 \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
                     \footnotesize
-                    \filldraw [semithick,fill=orz,rotate=25,xscale=1.2,yscale=1.3] plot [domain=pi/2:pi,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                    \filldraw [semithick,fill=grz,rotate=25,xscale=1.2,yscale=1.3] plot [domain=pi/2:pi,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                     \filldraw [semithick,fill=white,rotate=25,scale=1.5] plot [domain=0:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
                     \filldraw [semithick,fill=white,rotate=25,scale=1.5] plot [domain=-pi:-pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
-                    \filldraw [semithick,fill=orz,rotate=25,xscale=1.2,yscale=1.3] plot [domain=-pi/2:0,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                    \filldraw [semithick,fill=grz,rotate=25,xscale=1.2,yscale=1.3] plot [domain=-pi/2:0,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
                 \end{tikzpicture}
                 \caption{$d_{yz}$ orbital.}
                 \label{fig:orbitals-spdg}
@@ -290,12 +289,12 @@
                 \centering
                 \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
                     \footnotesize
-                    \filldraw [semithick,fill=orz,scale=1.3,rotate=40] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=grz,scale=1.3,rotate=40] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
                     \filldraw [semithick,fill=white,scale=1.5] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                     \filldraw [semithick,fill=white,scale=1.5] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
-                    \filldraw [semithick,fill=orz,scale=1.3,rotate=40] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=grz,scale=1.3,rotate=40] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                     \draw [-latex] (0,0,-1.7) -- (0,0,-1) (0,0,1.2) -- (0,0,1.7) node[above right=-2pt]{$y$};
                 \end{tikzpicture}
                 \caption{$d_{x^2-y^2}$ orbital.}
@@ -305,13 +304,13 @@
                 \centering
                 \begin{tikzpicture}[scale=0.7,z={(0.8,0.65)}]
                     \footnotesize
-                    \filldraw [semithick,fill=orz,scale=1.2,rotate=-60] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=grz,scale=1.2,rotate=-60] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                     \draw [-latex] (-1.7,0,0) -- (1.7,0,0) node[right=-1pt]{$x$};
                     \draw [-latex] (0,-1.7,0) -- (0,1.7,0) node[above right=-2pt]{$z$};
                     \filldraw [semithick,fill=white,scale=1.5,rotate=20] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                     \draw [-latex] (0,0,-1.7) -- (0,0,1.7) node[above right=-2pt]{$y$};
                     \filldraw [semithick,fill=white,scale=1.5,rotate=20] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
-                    \filldraw [semithick,fill=orz,scale=1.4,rotate=-60] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \filldraw [semithick,fill=grz,scale=1.4,rotate=-60] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                 \end{tikzpicture}
                 \caption{$d_{xy}$ orbital.}
                 \label{fig:orbitals-spdi}
