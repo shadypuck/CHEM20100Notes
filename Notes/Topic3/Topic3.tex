@@ -48,7 +48,7 @@
         \begin{equation*}
             E = \frac{\int\Psi\hat{H}\Psi\dd{\tau}}{\int\Psi^2\dd{\tau}}
         \end{equation*}
-        \item Shortcomings: Does not count for electron correlation and a few other things.
+        \item Shortcomings: Does not account for electron correlation and a few other things.
     \end{itemize}
     \item Electronic structure of \ce{H2} molecule.
     \begin{itemize}
@@ -710,9 +710,9 @@
     \end{figure}
     \item The energies of atomic orbitals (measured by PES) have been tabulated (see Figure \ref{fig:orbitalPotentialEnergies}).
     \item If you want to measure orbital energies in the range of -10 eV (i.e., upper valence orbitals; see Table 5.2 in \textcite{bib:MiesslerFischerTarr}), use UPS. If you want to look at energy states that are very deep, very core (i.e., $1s$ in \ce{Fe}), use XPS.
+    \item \textbf{State conservation principle}: The number of molecular orbitals is equal to the number of incipient (atomic) orbitals.
     \item Symmetry and orbital diagrams (suggested reading \textcite{bib:reinforceMOTheory}):
     \begin{itemize}
-        \item \textbf{State conservation principle}: The number of molecular orbitals is equal to the number of incipient (atomic) orbitals.
         \item Orbitals of the same symmetry mix.
         \item Orbital interactions can be bonding, nonbonding, or antibonding.
         \item There are three basic types of orbital overlap: $\sigma$ (end-on interaction), $\pi$ (side-by-side approach) and $\delta$ (off-axis approach).
@@ -986,7 +986,7 @@
                 \draw [ultra thick] (-0.55,-44) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.1,0);
                 \draw [ultra thick] (-0.55,-34) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$b_1$} ++(1.1,0);
                 \draw [ultra thick] (-0.55,-28) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$a_1$} ++(1.1,0);
-                \draw [ultra thick] (-0.55,-18.65) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_y(b_2)$} ++(1.1,0);
+                \draw [ultra thick] (-0.55,-15.85) -- node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} node[below=2mm]{$p_y(b_2)$} ++(1.1,0);
                 \draw [ultra thick] (-0.55,-7) -- node[below]{$a_1$} ++(1.1,0);
                 \draw [ultra thick] (-0.55,-1) -- node[below]{$b_1$} ++(1.1,0);
         
@@ -1077,7 +1077,7 @@
             $A_2$ & $1$ & $1$ & $-1$ & $R_z$ & \\
             $E$ & $2$ & $-1$ & $0$ & $(x,y),(R_x,R_y)$ & $(x^2-y^2,xy),(xz,yz)$\\
         \end{tabular}
-        \caption{Character table for the $C_{3v}$}
+        \caption{Character table for the $C_{3v}$ point group.}
         \label{tab:characterTable-C3v}
     \end{table}
     \begin{itemize}
@@ -1229,7 +1229,7 @@
     \begin{itemize}
         \item Two different approaches ($D_{2h}$): \ce{C_1 + C_2} then \ce{H_{1-4}}, or two carbene fragments (\ce{CH2}).
         \begin{itemize}
-            \item We can read about the first approach in the linked JCE article (\emph{cite}).
+            \item We can read about the first approach in the linked JCE article \parencite{bib:reinforceMOTheory}.
         \end{itemize}
         \item $C_{2v}$ for the \ce{CH2} fragment.
         \item When we make the MO diagram, we have two unpaired electrons, one in each of the upper two orbitals. These will be used for bonding to the other carbene fragment.
@@ -1524,7 +1524,7 @@
         \item For example, the $\sigma_g(2s)$ and $\sigma_g(2p)$ orbitals in Figure \ref{fig:molecularOrbitals-first10} can mix, lowering the energy of the $2s$ one and raising the energy of the $2p$ one.
     \end{itemize}
     \item \marginnote{2/6:}Atomic orbital energies decrease across a row in the periodic table.
-    \item Characterization of selected homonuclerar diatomic molecules:
+    \item Characterization of selected homonuclear diatomic molecules:
     \begin{itemize}
         \item \ce{He2}'s bond order is 0, with two bonding and two antibonding electrons. Thus, it has no significant tendency to form (it's bond energy is $\SI[per-mode=symbol]{0.01}{\joule\per\mole}$, compared to \ce{H2}'s $\SI[per-mode=symbol]{436}{\kilo\joule\per\mole}$).
         \item \ce{B2} is paramagnetic (because of its two unpaired $\pi_u$ electrons). The $2p$ valence electrons do not occupy the $\sigma_g$ MO because of orbital mixing and because the energy difference between $\sigma_g(2p)$ and $\pi_u(2p)$ is greater than $\Pi_c$ (even if there were no mixing, the electrons would still occupy the $\pi_u$ orbitals if it was more energetically favorable to do this than to occupy the same orbital).
@@ -1539,13 +1539,13 @@
     \end{itemize}
     \item Notice how atomic radius consistently decreases across the second period, but bond length decreases until \ce{N2} and then increases (because of the addition of antibonding electrons).
     \item At this point, we'll assume (for PES purposes) the energy levels in the uncharged molecule to be essentially the same as those in the charged ions generated when we seek to examine core energy levels\footnote{However, we should note that this is an oversimplification; a rigorous treatment of PES considers how the energy levels and orbital shapes vary between the neutral and ionized species.}.
-    \item Comparing the PES spectrums for \ce{N2} and \ce{O2}, it can be seen that the \ce{N2} energy levels are closer together than the \ce{O2} ones.
+    \item Comparing the PES spectra for \ce{N2} and \ce{O2}, it can be seen that the \ce{N2} energy levels are closer together than the \ce{O2} ones.
     \item PES also provides evidence for the existence of \textbf{vibrational energy levels}, energy levels that are much more closely spaced than electronic levels that cause the multiple peaks within one "peak."
     \item Orbitals that are strongly involved in bonding have \textbf{vibrational fine structure} (multiple peaks), and vice versa for less involved orbitals.
     \begin{itemize}
         \item Thus, the 10 $\pi_u$ vs. the 6 $\sigma_g$ vibrational peaks in \ce{O2} indicate that the $\pi_u$ orbitals are more strongly involved in bonding than the $\sigma_g$ orbital.
     \end{itemize}
-    \item "The atomic orbitals of atoms that form homonuclear diatomic molecules have identical energies, and both atoms contribute equally to a given MO. Therefore, in the molecular orbital equations, the coefficients associated with the same atomic orbitals of each atom\dots are identical. In heteronuclear diatomic molecules\dots the atomic orbitals have different energies, and a given MO receives unequal contribbutions from these atomic orbitals; the MO equation has a different coefficient for each of the atomic orbitals that contribute to it" \parencite[134,136]{bib:MiesslerFischerTarr}.
+    \item "The atomic orbitals of atoms that form homonuclear diatomic molecules have identical energies, and both atoms contribute equally to a given MO. Therefore, in the molecular orbital equations, the coefficients associated with the same atomic orbitals of each atom\dots are identical. In heteronuclear diatomic molecules\dots the atomic orbitals have different energies, and a given MO receives unequal contributions from these atomic orbitals; the MO equation has a different coefficient for each of the atomic orbitals that contribute to it" \parencite[134,136]{bib:MiesslerFischerTarr}.
     \item Atomic orbitals closer in energy to an MO contribute more to that MO, and thus have larger coefficients in the wave equation.
     \item \ce{CO} example:
     \begin{itemize}
@@ -1660,13 +1660,13 @@
         \item The only two group orbitals eligible for bonding with the \ce{H}($1s$) orbital based on symmetry are $2s+2s$ and $2p_{z_a}-2p_{z_b}$. Having the \ce{H} orbital with the same sign as the surrounding lobes gives bonding orbitals, and the opposite sign generates antibonding orbitals.
         \item Since the \ce{H}($2s$) orbitals match better energetically with the \ce{F}($2p_z$) orbitals than the \ce{F}($2s$) orbitals, the $2p_z$ interactions will be stronger.
         \item Notice that the lone pairs are delocalized over both fluorine atoms, not confined to one as the Lewis dot model predicts.
-        \item Additionally, the Lewis approach predicts two, 2-electron bonds, resulting in 4 electrons arount the central \ce{H} atom. However, the MO model suggests 2 electrons (in a $\sigma$ bond [$a_g$]) decentralized over all three atoms.
+        \item Additionally, the Lewis approach predicts two, 2-electron bonds, resulting in 4 electrons around the central \ce{H} atom. However, the MO model suggests 2 electrons (in a $\sigma$ bond [$a_g$]) decentralized over all three atoms.
     \end{itemize}
     \item A stepwise approach to building MOs for more complex molecules \parencite[143]{bib:MiesslerFischerTarr}:
     \begin{enumerate}
         \item Determine the point group of the molecule. If it is linear, substituting a simpler point group that retains the symmetry of the orbitals (ignoring the wave function signs) makes the process easier. It is useful to substitute $D_{2h}$ for $D_{\infty h}$ and $C_{2v}$ for $C_{\infty v}$. This substitution (known as a \textbf{Descent in Symmetry}) retains the symmetry of the orbitals without the need to use infinite-fold rotation axes.
         \item Assign $x,y,z$ coordinates to the atoms, chosen for convenience. Experience is the best guide here. A general rule is that the highest order rotation axis of the molecule is assigned as the $z$-axis of the central atom. In nonlinear molecules, the $y$-axes of the outer atoms are chosen to point toward the central atom.
-        \item Construct a (reducible) representation for the combination of the valence $s$ orbitals on the outer atoms. If the outer atom is not hydrogen, repeat the process, finding the representations for each of the other sets of outer atom orbbitals (for example, $p_x$, $p_y$, and $p_z$). As in the case of the vectors described in Chapter 4, any orbital that changes position during a symmetry operation contributes 0 to the character of the resulting representation; any orbital that remains in its original position --- such as a $p$ orbital that maintains its position and direction (signs of its orbital lobes) --- contributes 1; and any orbital that remains in the original position, with the signs of its lobes reversed, contributes $-1$.
+        \item Construct a (reducible) representation for the combination of the valence $s$ orbitals on the outer atoms. If the outer atom is not hydrogen, repeat the process, finding the representations for each of the other sets of outer atom orbitals (for example, $p_x$, $p_y$, and $p_z$). As in the case of the vectors described in Chapter 4, any orbital that changes position during a symmetry operation contributes 0 to the character of the resulting representation; any orbital that remains in its original position --- such as a $p$ orbital that maintains its position and direction (signs of its orbital lobes) --- contributes 1; and any orbital that remains in the original position, with the signs of its lobes reversed, contributes $-1$.
         \item Reduce each representation from Step 3 to the sum of its irreducible representations. This is equivalent to finding the symmetry of the group orbitals or the \textbf{symmetry-adapted linear combinations} (SALCs) of the orbitals. The group orbitals are then the combinations of atomic orbitals that match the symmetry of the irreducible representations.
         \item Identify the atomic orbitals of the central atom with the same symmetries (irreducible representations) as those found in Step 4.
         \item Combine the atomic orbitals of the central atom and those of the group orbitals with matching symmetry and similar energy to form molecular orbitals. The total number of molecular orbitals formed must equal the number of atomic orbitals used from all the atoms. Note that the MOs are assigned lowercase Mulliken symbols (e.g., $a_1$), whereas atomic orbitals and representations in general are assigned uppercase Mulliken symbols (e.g., $A_1$).
