@@ -776,6 +776,22 @@
         \end{itemize}
     \end{itemize}
     \item Main types of magnetic behavior:
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{lcllp{5cm}}
+            \multicolumn{1}{c}{\textbf{Type}} & \vertcell{\textbf{Sign of}\\[-5pt]$\bm{\chi_M}$} & \vertcell{\textbf{Magnetude}\\[-5pt]\textbf{of} $\bm{\chi_M}$\\[-5pt]\textbf{(cgs units)}} & \vertcell{\textbf{Dependence}\\[-5pt]\textbf{of}\\[-5pt]$\bm{\chi_M}$ \textbf{on} $\bm{H}$} & \multicolumn{1}{c}{\textbf{Origin}}\\
+            \hline
+            Diamagnetism & $-$ & 1-$\num{500e-6}$ & Independent & Electron charge\\
+            Paramagnetism & $+$ & 0-$\num{e-2}$ & Independent & Spin and orbital motion of electrons on individual atoms\\
+            Ferromagnetism & $+$ & $\num{e-2}$-$\num{e6}$ & Dependent & \multirow{2}{*}{\begin{tabular}{@{\hspace{0pt}}l@{\hspace{0pt}}}Cooperative interaction between\\[-5pt]magnetic moments of individual\\[-5pt]atoms\end{tabular}}\\
+            Antiferromagnetism & $+$ & 0-$\num{e-2}$ & \begin{tabular}{@{\hspace{0pt}}l@{\hspace{0pt}}}May be\\[-5pt]dependent\end{tabular} & \\
+            \hline
+        \end{tabular}
+        \caption{Main types of magnetic behavior.}
+        \label{fig:typesOfMagnetism}
+    \end{table}
     \begin{itemize}
         \item Diamagnetism (from electron charge).
         \item Paramagnetism (spin and orbital motion of electrons on individual atoms).
@@ -802,7 +818,7 @@
         \item Dividing $\chi_M$ by Avogadro's number gives the magnetic susceptibility per molecule $\chi_M^\text{corr}$.
         \item \textbf{Curie's law} relates $\chi_M^\text{corr}$ to the magnetic moment $\mu$ by the formula
         \begin{equation*}
-            \chi_M^\text{corr} = \frac{N\mu^2k}{3T}
+            \chi_M^\text{corr} = \frac{N\mu^2}{3kT}
         \end{equation*}
         where $N$ is Avogadro's number, $k=\SI[per-mode=symbol]{1.381e23}{\joule\per\kelvin}$ is the Boltzmann constant, and $T$ is the absolute temperature of the substance.
         \begin{itemize}
@@ -830,7 +846,7 @@
 \begin{itemize}
     \item \marginnote{2/24:}Note that 2nd and 3rd row metals almost always low-spin, and 4th row transition metals often high-spin.
     \item $T_d$ vs. $O_h$ splitting.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \begin{tikzpicture}[
             every node/.append style={black}
