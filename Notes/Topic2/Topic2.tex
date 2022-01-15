@@ -71,7 +71,7 @@
     \begin{itemize}
         \item Methane has $S_4$ symmetry.
         \item Note that $S_1\equiv\sigma_h$, $S_2\equiv i$, and sometimes $S_{2n}\equiv C_n$. In methane, for example, ${S_4}^2\equiv C_2$.
-        \item Applied to a triangular prism, is a good example.
+        \item Applied to a tetrahedron (triangular prism), is a good example.
         \item If $n$ is even, we have $n$ unique operations. There should be $C_{n/2}$.
         \item If $n$ is odd, we have $2n$ unique operations. There should be $C_n$ and $\sigma_h$.
     \end{itemize}
@@ -192,7 +192,7 @@
     \item History:
     \begin{itemize}
         \item Early group theory was driven by the quest for solutions of polynomial equations of degree 5 and above.
-        \item Early 1800s: \'{E}variste Galois realized that the algebraic solution to a polynomial equation is related to the structure of a group of permutations associated with the roots off the polynomial, the Galois group of the polynomial.
+        \item Early 1800s: \'{E}variste Galois realized that the algebraic solution to a polynomial equation is related to the structure of a group of permutations associated with the roots of the polynomial, the Galois group of the polynomial.
         \begin{itemize}
             \item Link to Galois video \href{https://www.youtube.com/watch?v=Ct2fyigNgPY}{here}.
         \end{itemize}
@@ -279,7 +279,7 @@
     \end{table}
     \begin{itemize}
         \item Table \ref{tab:groupMultiplication-C2h} corresponds to the $C_{2h}$ point group, which has $E$, $C_2$, $\sigma_h$, and $i$ operations.
-        \item Note that the operation in the top row is the one that's applied first, while the one in the left column will be applied second.
+        \item The operation in the top row is applied first, and the one in the left column is applied second.
     \end{itemize}
     \item \textbf{Subgroup}: Fractional parts of groups that are groups, too.
     \begin{table}[h!]
@@ -305,14 +305,13 @@
         \label{tab:groupMultiplication-C3v}
     \end{table}
     \begin{itemize}
-        \item If $h=6$ (as in the $C_{3v}$ group), subgroup order can be $h={\color{red!50!blue}3},{\color{blue}2},{\color{red}1}$. Why only these?
+        \item If $h=6$ (as in the $C_{3v}$ group), subgroup order can be $h={\color{red!50!blue}3},{\color{blue}2},{\color{red}1}$. Why only these?\footnote{See Lagrange's theorem.}
         \item The order ${\color{red}1}$ and ${\color{red!50!blue}3}$ charts are subgroups.
-        \item The order ${\color{blue}2}$ chart is not a subgroup because ${C_3}^2$ is not an operation in the group (therefore, the "subgroup" is not closed).
+        \item The order ${\color{blue}2}$ chart is not a subgroup because ${C_3}^2$ is not an operation in the group (therefore, the subset is not closed).
     \end{itemize}
     \item We use subgroups because they can make complex problems simpler.
     \begin{itemize}
-        \item For example, calculating the vibrational modes of \ce{CO2}.
-        \item As another example, $D_{2h}$ is a subgroup of $D_{\infty h}$.
+        \item For example, when calculating the vibrational modes of \ce{CO2}, we use $D_{2h}$, a simpler finite subgroup of its actual infinite $D_{\infty h}$ point group.
     \end{itemize}
 \end{itemize}
 
@@ -320,8 +319,8 @@
 
 \section{Module 6: Representations}
 \begin{itemize}
-    \item Items of the same point group have the same vibration modes.
-    \item \textbf{Representation} (of a group): Any collection of quantities (or symbols) which obey the multiplication table of a group. \emph{Also known as} $\Gamma$.
+    \item Items of the same point group have the same vibrational modes.
+    \item \textbf{Representation} (of a group): Any collection of quantities (or symbols) which obey the multiplication table of a group. \emph{Also known as} $\bm{\Gamma}$.
     \item For our purposes, these quantities are the matrices that show how certain characteristic of a molecule behave under the symmetry operations of the group.
     \item Operations (on a point $(x,y,z)$ in Cartesian coordinates):
     \begin{itemize}
@@ -426,6 +425,10 @@
         \item We can use a similar method to prove that $\sigma_v$, $\sigma_v'$, and $\sigma_v''$ are all in the same class within the $C_{3v}$ point group.
         \item Likewise $E$ is in a class by itself.
         \item Thus, for the $C_{3v}$ point group, $E$ forms a class of order 1, $C_3,{C_3}^2$ form a class of order 2, and $\sigma_v,\sigma_v',\sigma_v''$ form a class of order 3.
+        \item Note, however, that \emph{all} rotation and reflection operations are not always in the same class.
+        \begin{itemize}
+            \item In the higher-order $C_{5v}$ point group, for example, $C_5$ and ${C_5}^4$ are in the same class, and ${C_5}^2$ and ${C_5}^3$ are in the same class, but these two classes are distinct.
+        \end{itemize}
     \end{itemize}
     \item \textbf{Similarity transformation}: The transformation
     \begin{equation*}
@@ -437,16 +440,19 @@
         \item $v^{-1}$ is the inverse of the similarity transform operator.
         \item $A'$ is the product.
         \item $A$ and $A'$ are conjugates, and we say that $A'$ is the similarity transform of $A$ by $v$.
+        \item If $A$ and $A'$ are matrices of equal dimensions, $A$ and $A'$ are \textbf{similar matrices}, and $v$ is the change of coordinates matrix.
     \end{itemize}
     \item \textbf{Block-diagonal} (matrix): A matrix with nonzero values only in square blocks along the diagonal from the top left to the bottom right.
     \begin{equation*}
-        \begin{bmatrix}
-            2 & 3 & 0 & 0 & 0\\
-            1 & 2 & 0 & 0 & 0\\
-            0 & 0 & 1 & 1 & 0\\
-            0 & 0 & 1 & 1 & 0\\
-            0 & 0 & 0 & 0 & 2\\
-        \end{bmatrix}
+        \begin{bNiceArray}{cc|cc|c}[margin]
+            2 & 3 & \Block{2-2}{0} &  & \Block{2-1}{0}\\
+            1 & 2 &  &  & \\
+            \hline
+            \Block{2-2}{0} &  & 1 & 1 & \Block{2-1}{0}\\
+             &  & 1 & 1 & \\
+            \hline
+            \Block{1-2}{0} &  & \Block{1-2}{0} &  & 2\\
+        \end{bNiceArray}
     \end{equation*}
     \begin{itemize}
         \item The above matrix is an example of a block-diagonal matrix.
@@ -791,7 +797,7 @@
         \end{itemize}
     \end{itemize}
     \item Another example: \ce{XeOF4}.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \chemfig{Xe(>:[:30]F_c)(=[2]O)(>:[:150]F_d)(<[:-150]F_a)<[:-30]F_b}
         \caption{\ce{XeOF4}.}
@@ -1168,7 +1174,7 @@
                             1\\
                         \end{bmatrix}
         \end{align*}
-        \item Three of the $C_{2v}$ irreducible representations can be found in this way. The fourth can be found w/ linear algebra and the character table properties (or by inspection).
+        \item Three of the $C_{2v}$ irreducible representations can be found in this way. The fourth can be found with linear algebra and the character table properties (or by inspection).
     \end{itemize}
     \item If one matrix in the reducible representation cannot be blocked past having a $2\times 2$ chunk, per se, then the others must also have that $2\times 2$ chunk (so that we have an irreducible $2\times 2$ representation).
     \item "Matching the symmetry operations of a molecule with those listed in the top row of the character table will confirm any point group assignment" \parencite[99]{bib:MiesslerFischerTarr}.

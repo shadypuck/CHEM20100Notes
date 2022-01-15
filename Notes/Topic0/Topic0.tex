@@ -164,6 +164,7 @@
         \item The delta bond is only possible with metal atoms because these atoms possess energetically accessible $d$ orbitals.
     \end{itemize}
     \item Quintuple bonds between transition metals have been reported, but scientists have not yet reached a consensus on to what extent these exist.
+    \item Hydrogen atoms and alkyl groups can act as bridges in inorganic chemistry, excessively disobeying the octet rule (see Figure \ref{fig:bridgingH-CH3}).
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -173,7 +174,6 @@
         \caption{Inorganic compounds containing bridging hydrogens and alkyl groups.}
         \label{fig:bridgingH-CH3}
     \end{figure}
-    \item Hydrogen atoms and alkyl groups can act as bridges in inorganic chemistry, excessively disobeying the octet rule (see Figure \ref{fig:bridgingH-CH3}).
     \item \textbf{Coordination number}: The number of other atoms, molecules, or ions to which an atom is bonded.
     \item "Numerous inorganic compounds have central atoms with coordination numbers of five, six, seven, and higher" \parencite[2]{bib:MiesslerFischerTarr}.
     \begin{itemize}
@@ -183,6 +183,7 @@
     \item \textbf{Coordination complex}: A compound with a metal as the central atom or ion and some number of \textbf{ligands} bonded to it.
     \item \textbf{Ligand}: An anion or neutral molecule bonded to a central atom (frequently through \ce{N}, \ce{O}, or \ce{S}).
     \item \textbf{Organometallic complex}: A coordination complex where carbon (potentially bonded to other things) is one of the ligands.
+    \item There are multiple kinds of tetrahedral structures. There is the standard arrangement seen in molecules such as methane, but there is also a form that lacks a central atom, as in elemental phosphorous \ce{P4} (see Figure \ref{fig:tetrahedralNoCentral}).
     \begin{figure}[h!]
         \centering
         \footnotesize
@@ -190,7 +191,6 @@
         \caption{Tetrahedral geometry without a central atom.}
         \label{fig:tetrahedralNoCentral}
     \end{figure}
-    \item There are multiple kinds of tetrahedral structures. There is the standard arrangement seen in molecules such as methane, but there is also a form that lacks a central atom, as in elemental phosphorous \ce{P4} (see Figure \ref{fig:tetrahedralNoCentral}).
     \begin{itemize}
         \item Other atoms such as boron and carbon also form units that surround a central cavity (e.g., icosahedral \ce{B12} and buckyballs \ce{C60}).
     \end{itemize}
@@ -329,7 +329,7 @@
             \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
         \end{itemize}
         \item The first part describes the kinetic energy of the electron, its energy of motion.
-        \item The second part describes the potential energy of the electron, the result of the electrostatic attraction between it and the nucleus. It is commonly designated as $V(x,y,z)$.
+        \item The second part describes the potential energy of the electron, the result of the electrostatic attraction between it and the nucleus. It is commonly denoted by $V(x,y,z)$.
     \end{itemize}
     \item "Because $n$ varies from 1 to $\infty$, and every atomic orbital is described by a unique $\Psi$, there is no limit to the number of solutions of the Schr\"{o}dinger equation for an atom. Each $\Psi$ describes the wave properties of a given electron in a particular orbital" \parencite[15]{bib:MiesslerFischerTarr}.
     \item Electron density is proportional to $\Psi^2$.
@@ -340,12 +340,12 @@
         \item $\Psi$ must approach zero as $r\to\infty$: For large distances from the nucleus, the probability must grow smaller and smaller (the atom must be finite).
         \item The integral
         \begin{equation*}
-            \int\limits_\text{all space}\Psi_A{\Psi_A}^*\dd{\tau} = 1
+            \int\limits_\text{all space}\Psi_A\Psi_A^*\dd{\tau} = 1
         \end{equation*}
-        The total probability of an electron being somewhere in space must be 1. Applying this stipulation is called \textbf{normalizing} the wave function\footnote{${\Psi_A}^*$ denotes the complex conjugate of $\Psi_A$. This is necessary because wave functions may have imaginary values. However, in many cases, the wave functions are real and the integrand reduces to $\Psi_A^2$.}.
+        The total probability of an electron being somewhere in space must be 1. Applying this stipulation is called \textbf{normalizing} the wave function\footnote{$\Psi_A^*$ denotes the complex conjugate of $\Psi_A$. This is necessary because wave functions may have imaginary values. However, in many cases, the wave functions are real and the integrand reduces to $\Psi_A^2$.}.
         \item The integral
         \begin{equation*}
-            \int\limits_\text{all space}\Psi_A{\Psi_B}^*\dd{\tau} = 0
+            \int\limits_\text{all space}\Psi_A\Psi_B^*\dd{\tau} = 0
         \end{equation*}
         $\Psi_A$ and $\Psi_B$ are different orbitals within the same atom, and this stipulation reflects the fact that all orbitals in the same atom must be \textbf{orthogonal} to each other.
     \end{enumerate}
@@ -388,6 +388,7 @@
         \begin{equation*}
             \Psi(x) = \sqrt{\frac{2}{a}}\sin\frac{n\pi x}{a}
         \end{equation*}
+        \item The predicted probability densities for an electron at different energy levels (see Figure \ref{fig:particleInABox}) showcase a difference between classical mechanics' and quantum mechanics' predictions about the behavior of this particle: Classical predicts an equal probability at any point in the box, but the (quantum) wave nature of the particle predicts varied probabilities in different locations.
         \begin{figure}[h!]
             \centering
             \footnotesize
@@ -469,7 +470,6 @@
             \caption{Particle in a box: Wave functions and their squares at different energy levels.}
             \label{fig:particleInABox}
         \end{figure}
-        \item The predicted probability densities for an electron at different energy levels (see Figure \ref{fig:particleInABox}) showcase a difference between classical mechanics' and quantum mechanics' predictions about the behavior of this particle: Classical predicts an equal probability at any point in the box, but the (quantum) wave nature of the particle predicts varied probabilities in different locations.
         \begin{itemize}
             \item "The greater the square of the electron amplitude, the greater the probability of the electron being located at the specified coordinate when at the quantized energy defined by $\Psi$" \parencite[17]{bib:MiesslerFischerTarr}.
         \end{itemize}
@@ -492,7 +492,8 @@
                 $m_l$ & Magnetic & $0,\pm 1,\pm 2,\dots,\pm l$ & Describes orientation in space (angular momentum in the $z$-direction).\\
                 \rowcolor{grt}
                 $m_s$ & Spin & $\pm\frac{1}{2}$ & Describes orientation of the electron spin (magnetic moment) in space.\\
-                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+                \arrayrulecolor{grx}\hline
+                \noalign{\global\arrayrulewidth=0.4pt}
             \end{tabular}
             \caption{Quantum numbers and their properties.}
             \label{tab:quantumNumbers}
@@ -680,6 +681,7 @@
                 \filldraw [semithick,fill=grz,scale=1.4,rotate=-60] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
             } & $d_{xy}$\\
             \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \noalign{\global\arrayrulewidth=0.4pt}
         \end{tabular}
         \begin{tikzpicture}[remember picture,overlay]
             \draw [very thick,decorate,decoration=brace,xshift=-0.4cm,yshift=0.6cm] (0,0) -- (0,2.7);
@@ -715,6 +717,7 @@
             $3d$ &     & $2$ & $R_{3d}=\dfrac{1}{81\sqrt{15}}\left[ \dfrac{2Z}{a_0} \right]^{3/2}\sigma^2\e[-\sigma/3]$\rule{0pt}{7mm}\\[3.5mm]
             
             \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \noalign{\global\arrayrulewidth=0.4pt}
         \end{tabular}
         \caption{Hydrogen atom wave functions: Radial functions.}
         \label{tab:WaveFunctionsRadial-H}
@@ -749,9 +752,9 @@
             \dd{V} = \dd{x}\dd{y}\dd{z}
             = r^2\sin\theta\dd{\theta}\dd{\phi}\dd{r}
         \end{equation*}
-        \item The volume of the thin shell between $r$ and $r+\dd{r}$ is as follows\footnote{Errata: \textcite{bib:MiesslerFischerTarr} flips the bounds over which $\theta$ and $\phi$ should be evaluated, but I use the right ones.}, and is useful for describing the electron density as a function of distance from the nucleus.
+        \item The volume of the thin shell between $r$ and $r+\dd{r}$ is as follows, and is useful for describing the electron density as a function of distance from the nucleus.
         \begin{align*}
-            \int_0^{2\pi}\int_0^\pi1\, r^2\sin\theta\dd{\theta}\dd{\phi}\dd{r} &= \int_0^{2\pi}2r^2\dd{\phi}\dd{r}\\
+            \int_0^\pi\int_0^{2\pi}1\, r^2\sin\theta\dd{\theta}\dd{\phi}\dd{r} &= \int_0^{2\pi}2r^2\dd{\phi}\dd{r}\\
             &= 4\pi r^2\dd{r}
         \end{align*}
         \item $\Psi$ can be factored into a \textbf{radial component} $R$ and two \textbf{angular components} $\Theta$ and $\Phi$, which are sometimes combined into a single component $Y$:
@@ -1140,7 +1143,8 @@
             5 & \porbital{black}{black}{black}{black}{black}{white} & 1 & 2\\
             \rowcolor{grt}
             6 & \porbital{black}{black}{black}{black}{black}{black} & 0 & 1\\
-            \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+            \arrayrulecolor{grx}\hline
+            \noalign{\global\arrayrulewidth=0.4pt}
         \end{tabular}
         \caption{Hund's rule and multiplicity.}
         \label{tab:orbitalFilling}

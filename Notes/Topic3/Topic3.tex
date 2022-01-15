@@ -44,7 +44,7 @@
         \item Each $c_i$ is a coefficient, and the atomic orbitals form the basis set.
         \item Basically, we think of the wave function of a molecule as a linear combination of its atomic orbitals.
         \item $\phi$ is normalized, thus $\int\phi_i^2\dd{\tau}=1$ where $\dd{\tau}=\partial x\, \partial y\, \partial z$.
-        \item Continuing, we can calculate the expected value of $\hat{H}$:
+        \item Continuing, we can calculate the expected value of $\hat{H}$, i.e., the ground state energy:
         \begin{equation*}
             E = \frac{\int\Psi\hat{H}\Psi\dd{\tau}}{\int\Psi^2\dd{\tau}}
         \end{equation*}
@@ -62,8 +62,8 @@
         \end{itemize}
         \item If $S=\int_\tau\phi_1\phi_2\dd{\tau}$ or $\bra{\phi_1}\ket{\phi_2}$ is the overlap integral between two hydrogen $1s$ orbitals, we have bonding and antibonding orbitals:
         \begin{align*}
-            \Psi_b &= \frac{1}{\sqrt{2(1+s)}}(\phi_1+\phi_2)&
-                \Psi_a &= \frac{1}{\sqrt{2(1-s)}}(\phi_1-\phi_2)
+            \Psi_b &= \frac{1}{\sqrt{2(1+S)}}(\phi_1+\phi_2)&
+                \Psi_a &= \frac{1}{\sqrt{2(1-S)}}(\phi_1-\phi_2)
         \end{align*}
         \begin{itemize}
             \item The first orbital is $\sigma_g$ bonding.
@@ -95,8 +95,8 @@
         \end{equation*}
         so
         \begin{align*}
-            E_a &= \frac{\alpha-\beta}{1-s}&
-                E_b &= \frac{\alpha+\beta}{1+s}
+            E_a &= \frac{\alpha-\beta}{1-S}&
+                E_b &= \frac{\alpha+\beta}{1+S}
         \end{align*}
         \begin{itemize}
             \item Note that $\beta<0$ for atomic $s$-orbitals and $\beta>0$ for $p$-orbitals in $\sigma$-bonds.
@@ -145,7 +145,7 @@
         \end{itemize}
         \item A representation of a direct product, $\Gamma_c=\Gamma_a\times\Gamma_b$, will contain the totally symmetric representation only if the irreducible representations of $a$ and $b$ contain at least one common irreducible representation.
         \begin{itemize}
-            \item Continuing with the above example, $T_1\times T_2$ can be decomposed into $A_2+E+T_1+T_2$. Thus, by this theorem, if we take the product $\Gamma_c=E\times T_1\times T_2$, the representation will contain the totally symmetric representation $A_1$ (since $\Gamma_b=E$ and $\Gamma_a=T_1\times T_2$ contains $E$). Indeed, $E\times T_1\times T_2=(18,0,2,0,0)$.
+            \item Continuing with the above example, $T_1\times T_2$ can be decomposed into $A_2+E+T_1+T_2$. Thus, by this theorem, if we take the product $\Gamma_c=E\times T_1\times T_2$, the representation will contain the totally symmetric representation $A_1$ (since $\Gamma_b=E$ and $\Gamma_a=T_1\times T_2$ contains $E$). Indeed, the decomposition $E\times T_1\times T_2=(18,0,2,0,0)=A_1+A_2+2E+2T_1+2T_2$ contains $A_1$.
         \end{itemize}
         \item The value of any integral relating to a molecule $\int_V\Psi\dd{\tau}$ will be zero unless the integrand is invariant under all operations of the symmetry point group to which the molecule belongs. That is $\Gamma_\Psi$ must contain the totally symmetric irreducible representation.
         \begin{itemize}
@@ -468,7 +468,7 @@
             \item For diatomic molecules: $\Psi=c_a\Psi_a+c_b\Psi_b$.
         \end{itemize}
     \end{itemize}
-    \item There is no such think as a chemical bond (this model is only intuitively helpful), only molecular orbitals!
+    \item There is no such thing as a chemical bond (this model is only intuitively helpful), only molecular orbitals!
     \item \textbf{Bonding} (orbital): An orbital that has most of the electron density between the two nuclei.
     \item \textbf{Anti-bonding} (orbital): An orbital that has a node between the two nuclei.
     \item \textbf{Nonbonding} (orbital): An orbital that is essentially the same as if it was only one nuclei.
@@ -506,12 +506,12 @@
         \label{fig:PES-atomic}
     \end{figure}
     \begin{itemize}
-        \item A sample (solid, liquid, or gas) is impinged upon by to a focused beam of X-rays (say of $\SI{1.5}{\kilo\volt}$).
+        \item A sample (solid, liquid, or gas) is impinged upon by a focused beam of X-rays (say of $\SI{1.5}{\kilo\volt}$).
         \item When the sample is exposed to the X-rays, electrons fly out of the sample. The KE of these electrons can be measured.
         \item Essentially, $h\nu$ takes an electron from the core level to above the vacuum level. We know $h\nu$ and we measure $KE_\text{electron}$, allowing us to calculate the bonding energy of the electron: $h\nu=I_\text{BE}+E_\text{kinetic}$ (see Figure \ref{fig:PES-atomic}).
     \end{itemize}
     \item \textbf{X-ray photoelectron spectroscopy}: Using soft (200-2000 eV) x-ray excitation (photons in the x-ray energy range) to examine core levels. \emph{Also known as} \textbf{XPS}.
-    \item \textbf{Ultraviolet photoelectron spectroscopy}: Using vacuum UV (10-45 eV) radiation (photons is in UV energy range) from discharge lamps to examine valence levels. \emph{Also known as} \textbf{UPS}.
+    \item \textbf{Ultraviolet photoelectron spectroscopy}: Using vacuum UV (10-45 eV) radiation (photon is in UV energy range) from discharge lamps to examine valence levels. \emph{Also known as} \textbf{UPS}.
     \item If we apply PES to \ce{O2}, we get counts that correspond to molecular orbitals $\pi_g^*$, $\pi_u$, $\sigma_g$, and $\sigma_u^*$.
     \item Photoelectron spectrum of \ce{H2O}:
     \begin{itemize}
@@ -784,7 +784,7 @@
     \item What \emph{is} a direct product of representations?
     \begin{itemize}
         \item The direct product generates an $n\times m$ matrix?
-        \item Di has no idea what's going on, but he's gonna give me a link to his Advanced Inorganic Chemistry textbook.
+        \item Di doesn't have a great explanation, but he's gonna give me a link to his Advanced Inorganic Chemistry textbook.
     \end{itemize}
     \item Can you go over how to do problems IV and VI with direct product analysis?
     \begin{itemize}
@@ -1184,7 +1184,7 @@
         \end{figure}
         \begin{itemize}
             \item Since $2s(A_1)$ and $1s(A_1)$ are so far away energetically, their combination will have very low energy.
-            \item On the other hand, since the $1s(A_1)$ and $p_z(A_1)$ are close in energy, they have a lot of overlap.
+            \item On the other hand, since the $2s(A_1)$ and $p_z(A_1)$ are close in energy, they have a lot of overlap.
             \item We can't analytically calculate orbital energies at this level. Take an educated guess on the homework and explain your reasoning. Note that here, $e$ orbitals are more stabilizing because they are bigger and have larger overlap. Also, $\sigma$ bonds are stronger than $\pi$ bonds because there is a higher degree of overlap.
         \end{itemize}
         \item To see what these orbitals look like, we need to apply the projection operator.
@@ -1747,7 +1747,7 @@
         \item Linear combinations of these atomic orbitals that match the symmetries of the group's irreducible representations can be obtained via (1) multiplication of each outcome by the characters associated with each operation for these irreducible representations, followed by (2) addition of the results.
         \item Finding $\text{SALC}(A_1)=\frac{1}{\sqrt{3}}[\Psi(\ce{H}_a)+\Psi(\ce{H}_b)+\Psi(\ce{H}_c)]$ and $\text{SALC}(E)=\frac{1}{\sqrt{6}}[2\Psi(\ce{H}_a)-\Psi(\ce{H}_b)-\Psi(\ce{H}_c)]$ is easy.
         \item Now SALC($E$) has $y$ symmetry (note that this means that choosing the \ce{H_{$a$}} that we did in Figure \ref{fig:coordinates-NH3} [i.e., the one lying along a coordinate axis] has simplified calculations). Thus, the other SALC should have $x$ symmetry.
-        \item \ce{H_{$a$}} should not contribute to the new SALC because of the orthogonal node defined by the $yz$-plane (if it contributed, there would be no $yz$ node). Thus, only \ce{H_{$b$}} and \ce{H_{$c$}} can contribute, and we can deduce that their coefficients are $\frac{1}{\sqrt{2}}$ and $-\frac{1}{\sqrt{2}}$, respectively, to satisfy the normalization requirement whiile also leading to identical total contributions from all three $1s$ wave functions across the three group orbitals.
+        \item \ce{H_{$a$}} should not contribute to the new SALC because of the orthogonal node defined by the $yz$-plane (if it contributed, there would be no $yz$ node). Thus, only \ce{H_{$b$}} and \ce{H_{$c$}} can contribute, and we can deduce that their coefficients are $\frac{1}{\sqrt{2}}$ and $-\frac{1}{\sqrt{2}}$, respectively, to satisfy the normalization requirement while also leading to identical total contributions from all three $1s$ wave functions across the three group orbitals.
     \end{itemize}
     \item In the projection operator method, orbitals can become the inverses of other orbitals.
     \item \ce{BF3} example:

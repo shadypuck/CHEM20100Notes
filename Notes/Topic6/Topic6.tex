@@ -16,13 +16,13 @@
     \item The first attempt to understand and rationalize the electronic structure of transition metal complexes.
     \begin{itemize}
         \item Originally introduced to analyze crystals' electronic structure.
-        \item Since the coordination of a central atom in a crystalline closely mimics that of it in a coordination complex, the concepts of crystal field theory can easily be transferred to chemistry.
+        \item Since the coordination of a central atom in a crystalline lattice closely mimics that of it in a coordination complex, the concepts of crystal field theory can easily be transferred to chemistry.
     \end{itemize}
     \item Suggested reading: \textcite{bib:MiesslerFischerTarr} Section 10.2.
     \item Refresher on $d$-orbitals.
     \begin{itemize}
         \item There are four $d$-orbitals with four lobes and one strange $d_{z^2}$ orbital.
-        \item Higher energy level ones have lobes corresponding to the change in sign of the radial component..
+        \item Higher energy level ones have lobes corresponding to the change in sign of the radial component.
         \item The $d_{z^2}$ orbital is a linear combination of two four-lobed orbitals; it is created to reconcile mathematical theory with physical reality (the Pauli exclusion principle).
     \end{itemize}
     \item Crystal field theory describes an electrostatic (ionic) approach to bonding --- it is so named because it was first applied to crystalline substances.
@@ -44,7 +44,7 @@
         \item $d_{z^2}$ overlaps with the two axial ligands, and $d_{x^2-y^2}$ overlaps with the four equatorial ligands.
         \item None of $d_{xy}$, $d_{xz}$, and $d_{yz}$ overlap significantly with any ligands.
         \item Therefore, the five degenerate $d$-orbitals split into the \textbf{$\bm{t_{2g}}$ set} and the \textbf{$\bm{e_g}$ set}.
-        \item When the orbitals split, they maintain an energetic "center of mass," i.e., their combined energy as molecular orbitals must still be equal to their combined energy as degenerate, atomic orbitals. Thus, the stabilization energy of the three orbitals in the $t_{2g}$ set is $-\frac{2}{5}\Delta$ while the destabilization energy of the two orbbitals in the $e_g$ set is $\frac{3}{5}\Delta$, where $\Delta$ is the \textbf{crystal field splitting parameter}.
+        \item When the orbitals split, they maintain an energetic "center of mass," i.e., their combined energy as molecular orbitals must still be equal to their combined energy as degenerate, atomic orbitals. Thus, the stabilization energy of the three orbitals in the $t_{2g}$ set is $-\frac{2}{5}\Delta$ while the destabilization energy of the two orbitals in the $e_g$ set is $\frac{3}{5}\Delta$, where $\Delta$ is the \textbf{crystal field splitting parameter}.
     \end{itemize}
     \item \textbf{$\bm{t_{2g}}$ set}: The three orbitals that lie between the ligand donor atoms.
     \item \textbf{$\bm{e_g}$ set}: The two orbitals that lie along the Cartesian coordinates, and so are adjacent to the donor atoms of the ligands, raising the set in energy.
@@ -138,7 +138,7 @@
         \begin{itemize}
             \item I.e., accounts for the fact that ligands can be $\sigma$-donors, $\pi$-donors, $\pi$-acceptors, or sometimes multiple simultaneously.
         \end{itemize}
-        \item Can be used to explain spectrochemical series.
+        \item Can be used to explain the spectrochemical series.
         \item Better than valence-bond model or crystal field theory at explaining experimental data.
     \end{itemize}
     \item Octahedral $\sigma$-only MO diagram workflow:
@@ -714,7 +714,7 @@
     \end{itemize}
     \item Compressing a 1D crystal:
     \begin{itemize}
-        \item $a$ decreases, overlap increases, $\beta$ (interaction integral) increases, band width ($|4\beta$) increases.
+        \item $\alpha$ decreases, overlap increases, $\beta$ (interaction integral) increases, band width ($|4\beta$) increases.
         \item Effective mass: $\frac{1}{m^*}=\frac{1}{\hbar^2}(\pdv*[2]{E}{k})_{k=0}$.
     \end{itemize}
     \item Review reference materials; skim chapter 9; read over notes.
@@ -844,7 +844,7 @@
 
 \section[Module 35: Reflections on the Ligand Field Effects in \texorpdfstring{$O_h$}{TEXT} and \texorpdfstring{$T_d$}{TEXT} Complexes]{Module 35: Reflections on the Ligand Field Effects in \texorpdfstring{$\bm{O_h}$}{TEXT} and \texorpdfstring{$\bm{T_d}$}{TEXT} Complexes}
 \begin{itemize}
-    \item \marginnote{2/24:}Note that 2nd and 3rd row metals almost always low-spin, and 4th row transition metals often high-spin.
+    \item \marginnote{2/24:}Note that 2nd and 3rd row metals are almost always low-spin, and 4th row transition metals often high-spin.
     \item $T_d$ vs. $O_h$ splitting.
     \begin{figure}[H]
         \centering
@@ -981,9 +981,6 @@
         \item Thus, we add the coefficients in these rows to get $e_\sigma=(\frac{3}{4},\frac{9}{8},\frac{9}{8},0,0)$ and $e_\pi=(0,\frac{3}{2},\frac{3}{2},\frac{3}{2},\frac{3}{2})$, where the respective $d$-orbitals are $z^2,x^2-y^2,xy,xz,yz$.
         \item With these energies, we can now sum $e_\sigma+e_\pi$ to determine that the energies of the orbitals are $(\frac{3}{4},\frac{21}{8},\frac{21}{8},\frac{3}{2},\frac{3}{2})$.
         \item This gives us three sets of degenerate orbitals: Lowest energy ($d_{xz,yz}$), medium energy ($d_{z^2}$), and high energy ($d_{xy,x^2-y^2}$).
-        \begin{itemize}
-            \item How did we get these energy rankings?
-        \end{itemize}
         \item Assigning Mulliken symbols with the $D_{3h}$ character table, we have from lowest to highest energy: $e''<a_1'<e'$.
     \end{itemize}
     \item Note that $e_\sigma$ is always positive (because ligands are $\sigma$-donors), but $e_\pi$ can be negative (because ligands can be $\pi$-acceptors).
@@ -1005,7 +1002,74 @@
         \item Cu(II) with its $d^9$ configuration is degenerate and has J-T distortion.
     \end{itemize}
     \item Consider the two degenrate $e_g$ orbitals ($d_{x^2-y^2,z^2}$).
-    \emph{picture}
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \begin{scope}[yshift=3cm]
+                \draw [ultra thick]
+                    (-2.8,0.7) -- node[below]{$d_{x^2-y^2}$} node[above]{$\uparrow$} ++(0.5,0)
+                    (-3.5,0) -- ++(0.5,0)
+                    (-2.8,-0.7) -- node[below]{$d_{z^2}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                ;
+    
+                \draw [ultra thick] (-0.55,0) -- node[above]{$\uparrow\downarrow$} ++(0.5,0) node[below,xshift=3pt]{$e_g$} ++(0.1,0) -- node[above]{$\uparrow$} ++(0.5,0);
+    
+                \draw [ultra thick]
+                    (2.3,0.7) -- node[below]{$d_{z^2}$} node[above]{$\uparrow$} ++(0.5,0)
+                    (3,0) -- ++(0.5,0)
+                    (2.3,-0.7) -- node[below]{$d_{x^2-y^2}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                ;
+    
+                \draw [stealth-stealth,semithick] (3.25,-0.7) -- node[pos=0.25,right]{$\frac{1}{2}\delta$} node[pos=0.75,right]{$\frac{1}{2}\delta$} ++(0,1.4);
+                \draw [stealth-stealth,semithick] (-3.25,-0.7) -- node[pos=0.25,left]{$\frac{1}{2}\delta$} node[pos=0.75,left]{$\frac{1}{2}\delta$} ++(0,1.4);
+    
+                \draw [grx,thick,densely dashed]
+                    (-0.55,0) -- (-2.3,0.7)
+                    (-0.55,0) -- (-3,0)
+                    (-0.55,0) -- (-2.3,-0.7)
+                    (0.55,0)  -- (2.3,0.7)
+                    (0.55,0)  -- (3,0)
+                    (0.55,0)  -- (2.3,-0.7)
+                ;
+            \end{scope}
+            \begin{scope}
+                \draw [ultra thick]
+                    (-2.8,1) -- node[below]{$d_{xy}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                    (-3.5,0) -- ++(0.5,0)
+                    (-3.1,-0.5) -- node[below]{$d_{xz}$} node[above]{$\uparrow\downarrow$} ++(0.5,0) ++(0.1,0) -- node[below]{$d_{yz}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                ;
+    
+                \draw [ultra thick] (-0.85,0) -- node[above]{$\uparrow\downarrow$} ++(0.5,0) ++(0.1,0) -- node[below]{$t_{2g}$} node[above]{$\uparrow\downarrow$} ++(0.5,0) ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.5,0);
+    
+                \draw [ultra thick]
+                    (2,0.5) -- node[below]{$d_{xz}$} node[above]{$\uparrow\downarrow$} ++(0.5,0) ++(0.1,0) -- node[below]{$d_{yz}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                    (3,0) -- ++(0.5,0)
+                    (2.3,-1) -- node[below]{$d_{xy}$} node[above]{$\uparrow\downarrow$} ++(0.5,0)
+                ;
+    
+                \draw [stealth-stealth,semithick] (3.25,-1) -- node[pos=0.33,right]{$\frac{2}{3}\delta$} node[pos=0.83,right]{$\frac{1}{3}\delta$} ++(0,1.5);
+                \draw [stealth-stealth,semithick] (-3.25,-0.5) -- node[pos=0.17,left]{$\frac{1}{3}\delta$} node[pos=0.67,left]{$\frac{2}{3}\delta$} ++(0,1.5);
+    
+                \draw [grx,thick,densely dashed]
+                    (-0.85,0) -- (-2.3,1)
+                    (-0.85,0) -- (-3,0)
+                    (-0.85,0) -- (-2,-0.5)
+                    (0.85,0)  -- (2,0.5)
+                    (0.85,0)  -- (3,0)
+                    (0.85,0)  -- (2.3,-1)
+                ;
+            \end{scope}
+            \begin{scope}[yshift=1.5cm]
+                \node at (-5,0) {\chemfig{M(-L)(>:[1]L)(-[2,1.5]L)(-[4]L)(<[5]L)(-[6,1.5]L)}};
+                \node at (5,0) {\chemfig{M(-L)(>:[1]L)(-[2,0.7]L)(-[4]L)(<[5]L)(-[6,0.7]L)}};
+            \end{scope}
+            \node at (-2.55,-2) {Elongation};
+            \node at (2.55,-2) {Compression};
+        \end{tikzpicture}
+        \caption{Jahn-Teller elongation and compression.}
+        \label{fig:JTElongCompress}
+    \end{figure}
     \begin{itemize}
         \item Elongating the $z$-axis in an $O_h$ complex stabilizes the $d_{z^2}$ orbital and destabilizes the $d_{x^2-y^2}$ orbital.
         \item Vice versa for compressing the $z$-axis.
@@ -1025,6 +1089,7 @@
             High-spin Jahn-Teller & w & w & & s & & w & w & & s & \\
             Low-spin Jahn-Teller & w & w & & w & w & & s & & s & \\
             \hline
+            \noalign{\global\arrayrulewidth=0.4pt}
         \end{tabular}
         \caption{Jahn-Teller effects in various configurations.}
         \label{tab:JTconfigurations}
@@ -1105,7 +1170,7 @@
 \begin{itemize}
     \item First, a historical puzzle:
     \begin{itemize}
-        \item Copper (II) acetate has crystalizes with four \ce{O-CR-O} bridges joining two square pyramidal copper atoms that are also bonded to one aqua group, each.
+        \item Copper (II) acetate crystalizes with four \ce{O-CR-O} bridges joining two square pyramidal copper atoms that are also bonded to one aqua group, each.
         \item Copper is $d^9$, so $\mu=1.73$ in theory. However, we observe $\mu=1.4$.
         \item We resolve this conflict by noting that the copper atoms are not square pyramidal --- they bond to each other, giving both an octahedral geometry.
         \begin{itemize}
@@ -1130,7 +1195,7 @@
     \end{itemize}
     \item Cluster formation:
     \begin{itemize}
-        \item As mentioned above, odd electron occupancy of the $e_g$ orbitals ($O_h$) prompts ligand loss in order to destabilize $d_{z^2}$. Further stabilization occurs by metal-metal single bond formation. We can take limiting argument to explain cluster formation across the periodic table:
+        \item As mentioned above, odd electron occupancy of the $e_g$ orbitals ($O_h$) prompts ligand loss in order to stabilize $d_{z^2}$. Further stabilization occurs by metal-metal single bond formation. We can take limiting argument to explain cluster formation across the periodic table:
         \item In each case, the clusters assume an octahedral coordination as a result of burying 7 $d$-electrons in what are formally $t_{2g}$ orbitals. The system loses a number of \ce{CO}s equivalent to the number of electrons in \ce{M-L\sigma^*}; this permits maximum \ce{M-M} bond formation and thus maximum stabilization.
         \item Clusters can trimerize or form higher polymers.
         \item Clusters can act as super atoms, combinations of atoms that you can add and remove electrons from with similar effects to changing the oxidation state in one atom.
@@ -1146,10 +1211,10 @@
         \item The $d_{xz,yz}$ orbitals react the second most to form two $e_u$ $\pi$-bonds.
         \item The $d_{xy}$ orbitals react the third most to form one $b_{2g}$ $\delta$-bond.
         \item The eclipsed $D_{4h}$ structure is a result of the $\delta$ bond.
-        \item Adding up our 8 bonding and 0 antibonding electrons and diving by two gives us our first quadruple bond.
+        \item Adding up our 8 bonding and 0 antibonding electrons and dividing by two gives us our first quadruple bond.
     \end{itemize}
     \item Metal-metal bonding vs. configuration: Increases single to quadruple bond as $d^1\to d^4$; decreases triple to no bond as $d^5\to d^8$.
-    \item $f$ orbitals are deep within the core of the atom and not generally available form bonding, so we will not see higher bonding \emph{because} of $f$ orbitals in lanthanides and actinides.
+    \item $f$ orbitals are deep within the core of the atom and not generally available for bonding, so we will not see higher bonding \emph{because} of $f$ orbitals in lanthanides and actinides.
     \item The $d^8$ case:
     \begin{itemize}
         \item No bonding predicted, but\dots
@@ -1195,7 +1260,7 @@
         \ce{[Cd(H2O)6]^2+ + 2en -> [Cd(en)2(H2O)2]^2+ + 4H2O}\tag*{$K=\num{4.0e10}$}
     \end{gather*}
     \begin{itemize}
-        \item Differences in $\Delta S^\circ$ play the dominant role in the chelate effect. $\Delta H^\circ$ is similar for the above two reactions, but for the en substitution, we dramatically increase entropy by binding two en particles and liberate four \ce{H2O} particles, as opposed to conserving the number of particles in the methylamine reaction.
+        \item Differences in $\Delta S^\circ$ play the dominant role in the chelate effect. $\Delta H^\circ$ is similar for the above two reactions, but for the en substitution, we dramatically increase entropy by binding two en particles and liberating four \ce{H2O} particles, as opposed to conserving the number of particles as in the methylamine reaction.
     \end{itemize}
     \item \textbf{Magnetic susceptibility}: A molecule's attraction to or repulsion from a magnetic field. \emph{Also known as} $\bm{\chi}$.
     \item $\mu=2.828\sqrt{\chi T}$, where $2.828\approx\sqrt{3k/N}$.
@@ -1215,7 +1280,7 @@
         \item \ce{Fe^2+} is $3d^6$, so 4 unpaired $d$-electrons.
         \item \ce{Cr} is $4s^13d^5$, so 6 unpaired electrons (1 unpaired $s$-electron and 5 unpaired $d$-electrons).
         \item \ce{Cu} is $4s^13d^{10}$, so 1 unpaired $s$-electron.
-        \item \ce{Cu} is $3d^9$, so 1 unpaired $d$-electron.
+        \item \ce{Cu} is $4s^23d^9$, so 1 unpaired $d$-electron.
     \end{itemize}
     \item The unit symbol for Bohr magnetons is $\mu_B$, so we say, for instance, that the magnetic moment of copper is $\SI{1.73}{\mu_B}$.
     \item \textcite{bib:MiesslerFischerTarr} gives a full explanation of the Gouy method.
@@ -1236,10 +1301,9 @@
     \item \textbf{Angular overlap method}: This is a method of estimating the relative magnitudes of molecular orbital energies within coordination complexes. It explicitly takes into account the orbitals responsible for ligand binding as well as the relative orientation of the frontier orbitals.
     \item \textbf{Born-Oppenheimer approximation}: Atomic nuclei are in fixed positions in comparison with rapidly moving electrons.
     \item \textbf{Extended H\"{u}ckel theory}: The simplest approach to approximating the many-body problem of electronic movements.
-    \pagebreak
     \item Thoughts on CFT:
     \begin{itemize}
-        \item "When the $d$ orbitals of a metal ion are placed in an occtahedral field of ligand electron pairs, any electrons in these orbitals are repelled by the field. As a result, the $d_{x^2-y^2}$ and $d_{z^2}$ orbitals, which have $e_g$ symmetry, are directed at the surrounding ligands and are raised in energy. The $d_{xy}$, $d_{xz}$, and $d_{yz}$, orbitals ($t_{2g}$ symmetry), directed between the ligands, are relatively unaffected by the field" \parencite[364]{bib:MiesslerFischerTarr}.
+        \item "When the $d$ orbitals of a metal ion are placed in an octahedral field of ligand electron pairs, any electrons in these orbitals are repelled by the field. As a result, the $d_{x^2-y^2}$ and $d_{z^2}$ orbitals, which have $e_g$ symmetry, are directed at the surrounding ligands and are raised in energy. The $d_{xy}$, $d_{xz}$, and $d_{yz}$, orbitals ($t_{2g}$ symmetry), directed between the ligands, are relatively unaffected by the field" \parencite[364]{bib:MiesslerFischerTarr}.
         \item In $\Delta_o$, the $o$ stands for octahedral.
         \begin{figure}[h!]
             \centering
@@ -1338,7 +1402,7 @@
     \item "In octahedral coordination complexes, electrons from the ligands fill all six bonding molecular orbitals, and the metal valence electrons occupy the $t_{2g}$ and $e_g^*$ orbitals" \parencite[372]{bib:MiesslerFischerTarr}.
     \item Strong field ligands interact more strongly with metal orbitals, leading to greater stabilization of the $t_{2g}$ set, leading to a larger $\Delta_o$ and low-spin configurations.
     \begin{itemize}
-        \item Weak field ligands interact more weakly metal orbitals, leading to lesser stabilization of the $t_{2g}$ set, leading to a smaller $\Delta_o$ and low-spin configurations.
+        \item Weak field ligands interact more weakly with metal orbitals, leading to lesser stabilization of the $t_{2g}$ set, leading to a smaller $\Delta_o$ and low-spin configurations.
     \end{itemize}
     \item Recall that increases in $\Pi_c$ \emph{destabilize} the complex, whereas increases in $\Pi_e$ \emph{stabilize} the complex.
     \item Is there any case in which we would have a $d^5$ configuration with four $t_{2g}$ electrons and one ${e_g}^*$ electron?
@@ -1389,7 +1453,7 @@
             \Gamma_{\perp(z)} &= (4,0,0,-2,0,0,0,-4,2,0) = A_{2u}+B_{2u}+E_g
         \end{align*}
         \item For the $\sigma$-only case, the metal's $3d_{x^2-y^2}$, $4p_x$, and $4p_y$ orbitals primarily participate in bonding, with smaller contributions from the less directed $3d_{z^2}$ (see Figure \ref{fig:SALCs-MH6e}) and $4s$.
-        \item Combine orbitals by their symmetry:
+        \item Combine orbitals by their symmetry.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.47\linewidth]{../ExtFiles/orbitalDiagram-MH4-squarePlanar.png}
@@ -1401,7 +1465,7 @@
         \end{itemize}
         \item For the $\sigma+\pi$ case, the metal's $3d_{xy}$, $4p_x$, and $4p_y$ orbitals primarily participate in bonding with the $p_x(\pi_\parallel)$ ligand orbitals, and the metal's $3d_{xz}$, $3d_{yz}$, and $4p_z$ orbitals primarily participate in bonding with the $p_z(\pi_\perp)$ ligand orbitals.
         \item Combine orbitals by their symmetry:
-        \begin{figure}[h!]
+        \begin{figure}[H]
             \centering
             \includegraphics[width=0.7\linewidth]{../ExtFiles/orbitalDiagram-ML4-squarePlanar.png}
             \caption{Square planar \ce{ML4} orbital diagram.}
@@ -1514,7 +1578,8 @@
                 11 & 0 & $\frac{3}{4}$ & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{3}{4}$\\
                 \rowcolor{grt}
                 12 & 0 & $\frac{3}{4}$ & $\frac{1}{4}$ & $\frac{1}{4}$ & $\frac{3}{4}$\\
-                \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grx}\hline
+                \arrayrulecolor{grx}\hline
+                \noalign{\global\arrayrulewidth=0.4pt}
             \end{tabular}
             \caption{Pi interactions.}
             \label{tab:AOM-parametersb}
