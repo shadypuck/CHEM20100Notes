@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 8}
+\setcounter{section}{8}
 
 \begin{document}
 
@@ -126,10 +127,16 @@
     \begin{enumerate}
         \item What excited state is produced by $\SI{13000}{\per\centi\meter}$ light (give the molecular term symbol)?
         \begin{proof}[Answer]
-            From Table \ref{tab:opticalPumping-numbers}, we can read that $\SI{13000}{\per\centi\meter}$ light excites a ground state electron to the ${}^2E_g$ excited state.
+            From Table \ref{tab:opticalPumping-numbers}, we can read that $\SI{13000}{\per\centi\meter}$ light excites a ground state electron to the $\boxed{{}^2E_g}$ excited state.
         \end{proof}
         \item Assign the three transitions in the absorption spectrum of the optically pumped ion (and show your reasoning).
         \begin{proof}[Answer]
+            We have that
+            \begin{empheq}[box=\fbox]{align*}
+                a &= {}^2E_g\to{}^2A_{1g}\\
+                b &= {}^2E_g\to{}^2T_{1g},{}^2T_{2g}\\
+                c &= {}^2E_g\to{}^2E_g
+            \end{empheq}
             Consider a (gaseous) sample of \ce{K3Cr(NCS)6}. Before it is optically pumped, the electrons of the vast majority of the molecules in the sample lie in the ${}^4A_{2g}$ ground state. While the sample is being irradiated, the electrons' energy is raised (by $\SI{13000}{\per\centi\meter}$) to the ${}^2E_g$ excited state in the vast majority of molecules, essentially making ${}^2E_g$ a new "ground state." After the light is shut off, the molecules in the sample retain their excited state for a very short but measurable amount of time. In this window, we can irradiate the sample with different wavenumbers of light to explore the electronic transitions accessible to the complex if ${}^2E_g$ were its ground state, with electrons being excited from ${}^2E_g$ and falling back down to it.\par
             What we see in Figure \ref{fig:opticalPumping-spectrum} is the absorption spectrum of this optically pumped compound. It tells us things like, "if we have a sample of \ce{K3Cr(NCS)6} and raise its electrons' energy by $\SI{13000}{\per\centi\meter}$ to an excited state, this excited state will absorb significant quantities of photons with energy approximately equal to $\SI{18600}{\per\centi\meter}$, i.e., there is an energy level $\SI{18600}{\per\centi\meter}$ above the $\SI{13000}{\per\centi\meter}$-excited state to which electrons are excited and from which they fall back down to the $\SI{13000}{\per\centi\meter}$-excited state."\par
             With this understanding, we are now ready to interpret Figure \ref{fig:opticalPumping-spectrum}. Peak $a$ corresponds to an energy level approximately $\SI{18600}{\per\centi\meter}$ above the ${}^2E_g$ excited state. From the original reference frame, this means that peak $a$ corresponds to an energy level approximately $\SI{18600}{\per\centi\meter}+\SI{13000}{\per\centi\meter}=\SI{31600}{\per\centi\meter}$ above the ${}^4A_{2g}$ ground state. It follows from Table \ref{tab:opticalPumping-numbers} that the energy level being accessed by this transition is ${}^2A_{1g}$. Therefore, the assignment of this transition is ${}^2E_g\to{}^2A_{1g}$. The argument is symmetric for the other two peaks, so we know that peak $b$'s assigned transitions are ${}^2E_g\to{}^2T_{1g}$ and ${}^2E_g\to{}^2T_{2g}$, and peak $c$'s assigned transition is ${}^2E_g\to{}^2E_g$.
@@ -156,14 +163,14 @@
         \setcounter{enumii}{14}
         \item When the two isomers of \ce{Pt(NH3)2Cl2} react with thiourea [$\text{tu}=\ce{S=C(NH2)2}$], one product is \ce{[Pt(tu)4]^2+} and the other is \ce{[Pt(NH3)2(tu)2]^2+}. Identify the initial isomers and explain the results.
         \begin{proof}[Answer]
-            \emph{cis}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \ce{[Pt(tu)4]^2+}. Chloride has a strong trans-effect; thus, the amine groups are replaced first by thiourea groups. Since the thiourea groups, in turn, have a stronger trans-effect than chloride ($\ce{SR2}>\ce{Cl-}$ from \cite[460]{bib:MiesslerFischerTarr}), both chlorides are then replaced by thiourea groups. Alternatively, it is possible that one amine group is replaced, then the tu group (being very strong) replaces the chloride opposite it, and then the process repeats for the other chloride/amine pair.\par
-            \emph{trans}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \emph{trans}-\ce{[Pt(NH3)2(tu)2]^2+}. The strong trans-effect of the chlorides causes one to boot the other off. The stronger thiourea then boots off the other chloride, but nothing is able to kick out the amine groups.
+            \fbox{\emph{cis}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \ce{[Pt(tu)4]^2+}}. Chloride has a strong trans-effect; thus, the amine groups are replaced first by thiourea groups. Since the thiourea groups, in turn, have a stronger trans-effect than chloride ($\ce{SR2}>\ce{Cl-}$ from \cite[460]{bib:MiesslerFischerTarr})\footnote{\textcite{bib:MiesslerFischerTarr} only places \ce{SH2} into the trans-effect list, but so we have to assume that \ce{SR2} occupies an equivalent place.}, both chlorides are then replaced by thiourea groups. Alternatively, it is possible that one amine group is replaced, then the tu group (being very strong) replaces the chloride opposite it, and then the process repeats for the other chloride/amine pair.\par
+            \fbox{\emph{trans}-\ce{Pt(NH3)2Cl2} reacts with thiourea to form \emph{trans}-\ce{[Pt(NH3)2(tu)2]^2+}}. The strong trans-effect of the chlorides causes one to boot the other off. The stronger thiourea then boots off the other chloride, but nothing is able to kick out the amine groups.
         \end{proof}
         \newpage
         \setcounter{enumii}{19}
         \item Is the reaction \ce{[Co(NH3)6]^3+ + [Cr(H2O)6]^2+} likely to proceed by an inner-sphere or outer-sphere mechanism? Explain your answer.
         \begin{proof}[Answer]
-            The chromium complex is $d^4$ high spin, and would pursue an inner-sphere mechanism. However, the amine ligands of the cobalt complex have no occupied nonbonding or antibonding orbitals, making it a poor ligand for quantum tunneling, and necessitating an outer-sphere mechanism. Additionally, the cobalt complex is $d^6$ low spin, hence inert, meaning that it cannot transfer ligands; this further promotes the use of an outer-sphere mechanism.
+            The chromium complex is $d^4$ high spin, and would pursue an inner-sphere mechanism. However, the ammine ligands of the cobalt complex have no occupied nonbonding or antibonding orbitals, making it a poor ligand for quantum tunneling, and necessitating an outer-sphere mechanism. Additionally, the cobalt complex is $d^6$ low spin, hence inert, meaning that it cannot transfer ligands; this further promotes the use of an outer-sphere mechanism.
         \end{proof}
     \end{enumerate}
 \end{enumerate}

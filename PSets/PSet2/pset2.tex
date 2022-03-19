@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 2}
+\setcounter{section}{2}
 
 \begin{document}
 
@@ -16,7 +17,7 @@
         \begin{enumerate}[label={\textbf{\alph*.}}]
             \item Determine the order of the group.
             \begin{proof}[Answer]
-                $h=8$; count the number of symmetry elements.
+                $\boxed{h=8}$ --- count the number of symmetry elements.
             \end{proof}
             \item Verify that the $E$ irreducible representation is orthogonal to each of the other irreducible representations.
             \begin{proof}[Answer]
@@ -50,6 +51,7 @@
                     $\Gamma_1$ & 6 & 0 & 2 & 2 & 2\\
                     $\Gamma_2$ & 6 & 4 & 6 & 2 & 0\\
                     \hline
+                    \noalign{\global\arrayrulewidth=0.4pt}
                 \end{tabular}
                 \vspace{1em}
             \end{center}
@@ -67,7 +69,7 @@
                 \endgroup
                 Therefore, we know that
                 \begin{equation*}
-                    \Gamma_1 = 2A_1+B_1+B_2+E
+                    \boxed{\Gamma_1 = 2A_1+B_1+B_2+E}
                 \end{equation*}
                 For $\Gamma_2$:
                 \begin{align*}
@@ -79,7 +81,7 @@
                 \end{align*}
                 Therefore, we know that
                 \begin{equation*}
-                    \Gamma_2 = 3A_1+2A_2+B_1
+                    \boxed{\Gamma_2 = 3A_1+2A_2+B_1}
                 \end{equation*}
             \end{proof}
         \end{enumerate}
@@ -99,7 +101,7 @@
             \end{align*}
             Therefore, we know that
             \begin{equation*}
-                \Gamma = 2A_1'+E'+A_2''
+                \boxed{\Gamma = 2A_1'+E'+A_2''}
             \end{equation*}
         \end{proof}
         \item $D_{3h}$: $3,0,-1,-3,0,1$
@@ -114,21 +116,21 @@
             \end{align*}
             Therefore, we know that
             \begin{equation*}
-                \Gamma = A_2''+E''
+                \boxed{\Gamma = A_2''+E''}
             \end{equation*}
         \end{proof}
         \item $C_{2v}$: $4,0,0,0$
         \begin{proof}[Answer]
             We know the following by inspection.
             \begin{equation*}
-                \Gamma = A_1+A_2+B_1+B_2
+                \boxed{\Gamma = A_1+A_2+B_1+B_2}
             \end{equation*}
         \end{proof}
         \item $C_{2h}$: $5,1,1,1$
         \begin{proof}[Answer]
             We know the following by inspection.
             \begin{equation*}
-                \Gamma = 2A_g+B_g+A_u+B_u
+                \boxed{\Gamma = 2A_g+B_g+A_u+B_u}
             \end{equation*}
         \end{proof}
         \item $T_d$: $13,1,5,-3,-3$
@@ -142,12 +144,12 @@
             \end{align*}
             Therefore, we know that
             \begin{equation*}
-                \Gamma = 3A_2+2E+T_1+T_2
+                \boxed{\Gamma = 3A_2+2E+T_1+T_2}
             \end{equation*}
         \end{proof}
         \item $T_h$: $8,-1,-1,4,8,-1,-1,4$
         \begin{proof}[Answer]
-            With respect to the two doubly degenerate groups, we must add the two parts together and also double the order that we are dividing out. Note that $\varepsilon=\e[2\pi i/3]=\cos(\frac{2\pi}{3})+i\sin(\frac{2\pi}{3})=-0.5+i\frac{\sqrt{3}}{2}$ and, thus, $\varepsilon^*=-0.5+i\frac{\sqrt{3}}{2}$. It follows that $\varepsilon+\varepsilon^*=-1$.
+            With respect to the two doubly degenerate groups, we must add the two parts together and also double the order that we are dividing out. Note that $\varepsilon=\e[2\pi i/3]=\cos(\frac{2\pi}{3})+i\sin(\frac{2\pi}{3})=-0.5+i\frac{\sqrt{3}}{2}$ and, thus, $\varepsilon^*=-0.5-i\frac{\sqrt{3}}{2}$. It follows that $\varepsilon+\varepsilon^*=-1$.
             \begin{align*}
                 \hspace{-4em}a_{A_g} &= \frac{1}{24}\sum_{R_c}g_c\chi_\Gamma(R_c)\chi_{A_g}(R_c)\\
                 \hspace{-4em}&= \frac{1}{24}[(1)(8)(1)+(4)(-1)(1)+(4)(-1)(1)+(3)(4)(1)+(1)(8)(1)+(4)(-1)(1)+(4)(-1)(1)+(3)(4)(1)]\\
@@ -180,7 +182,7 @@
             \end{align*}
             Therefore, we know that
             \begin{equation*}
-                \Gamma = A_g+2\{E_g\}+T_g
+                \boxed{\Gamma = A_g+2E_g+T_g}
             \end{equation*}
         \end{proof}
     \end{enumerate}
@@ -334,27 +336,35 @@
     \end{proof}
     \newpage
     \item The molecule \ce{Co(CO)4(SiMe3)} has a structure based on a trigonal bipyramid. The infrared spectrum of \ce{Co(CO)4(SiMe3)} exhibits three $\nu(\ce{CO})$ stretching vibrations at 2100, 2041, and $\SI{2009}{\per\centi\meter}$. Draw the two possible structures based on the TBP geometry, assign their proper point groups, and use the infrared data to determine which is the correct structure.
-    \begin{proof}[Answer]
-        \begin{figure}[h!]
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.35\linewidth}
             \centering
-            \begin{subfigure}[b]{0.35\linewidth}
-                \centering
-                \footnotesize
-                \chemfig{Co(-[:105]OC)(-Si(<[::-60]CH_3)(>:[::-20]CH_3)(-[::60]CH_3))(-[:-105]OC)(>:[:160]OC)(<[:-150]OC)}
-                \caption{Equatorial trimethylsilyl group.}
-                \label{fig:structure-CoCO4SiMe3a}
-            \end{subfigure}
-            \begin{subfigure}[b]{0.35\linewidth}
-                \centering
-                \footnotesize
-                \chemfig{Co(-[:-16]CO)(-[2]Si(<[::-60]CH_3)(>:[::-20]CH_3)(-[::60]H_3C))(-[6]CO)(>:[:-170]OC)(<[:-135]OC)}
-                \caption{Axial trimethylsilyl group.}
-                \label{fig:structure-CoCO4SiMe3b}
-            \end{subfigure}
-            \caption{Structures of \ce{Co(CO)4(SiMe3)}.}
-            \label{fig:structure-CoCO4SiMe3}
-        \end{figure}
-        Note that for the sake of point group assignments, the \ce{CO} ligands will be treated as identical spheres. Additionally, the \ce{SiMe3} ligand will be treated as a sphere distinguishable from the \ce{CO} "spheres."\par\medskip 
+            \footnotesize
+            \chemfig{Co(-[:105]OC)(-Si(<[::-60]CH_3)(>:[::-20]CH_3)(-[::60]CH_3))(-[:-105]OC)(>:[:160]OC)(<[:-150]OC)}\\
+            \vspace{2em}
+            $\boxed{C_{2v}}$\\
+            \vspace{1em}
+            \fbox{Incorrect structure.}
+            \caption{Equatorial trimethylsilyl group.}
+            \label{fig:structure-CoCO4SiMe3a}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \footnotesize
+            \chemfig{Co(-[:-16]CO)(-[2]Si(<[::-60]CH_3)(>:[::-20]CH_3)(-[::60]H_3C))(-[6]CO)(>:[:-170]OC)(<[:-135]OC)}\\
+            \vspace{2em}
+            $\boxed{C_{3v}}$\\
+            \vspace{1em}
+            \fbox{Correct structure.}
+            \caption{Axial trimethylsilyl group.}
+            \label{fig:structure-CoCO4SiMe3b}
+        \end{subfigure}
+        \caption{Structures of \ce{Co(CO)4(SiMe3)}.}
+        \label{fig:structure-CoCO4SiMe3}
+    \end{figure}
+    \begin{proof}[Explanation]
+        Note that for the sake of point group assignments, the \ce{CO} ligands will be treated as identical point particles. Additionally, the \ce{SiMe3} ligand will be treated as a point particle distinguishable from the \ce{CO} point particles.\par\medskip 
         The structure in Figure \ref{fig:structure-CoCO4SiMe3a}: Not high or low symmetry. Has a $C_2$ axis. No perpendicular $C_2$ axes. No $\sigma_h$. Has two perpendicular $\sigma_v$ planes. Therefore, it is of the $C_{2v}$ point group.\par
         We can determine that $\Gamma_\nu=(4,0,2,2)=2A_1+B_1+B_2$ by counting how many $\overrightarrow{\ce{Co-CO}}$ vectors stay the same under each symmetry operation and decomposing by inspection. With four stretching modes that are all IR active, we can expect there to be four peaks in the infrared spectrum of \ce{Co(CO)4(SiMe3)}. Therefore, this is not the correct structure.\par\medskip
         The structure in Figure \ref{fig:structure-CoCO4SiMe3b}: Not high or low symmetry. Has a $C_3$ axis. No perpendicular $C_2$ axes. No $\sigma_h$. Has three $\sigma_v$ planes all offset by $\ang{60}$. Therefore, it is of the $C_{3v}$ point group.\par
@@ -365,16 +375,30 @@
     \begin{enumerate}[label={\alph*)}]
         \item \ce{H3PBH3}: with a staggered ethane-like geometry.
         \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \footnotesize
+                \chemfig{H-[:60]P(<:[:110]H)(<[:140]H)-B(-[:60]H)(<[:-70]H)(<:[:-40]H)}
+            \end{center}
             \ce{H3PBH3} has $3(8)-6=18$ normal vibrations.\par
             Not high or low symmetry. Has a $C_3$ axis. No perpendicular $C_2$ axes. No $\sigma_h$. Has three $\sigma_v$ planes all offset by $\ang{60}$. Therefore, \ce{H3PBH3} is of the $C_{3v}$ point group.\par
-            We can determine that $\Gamma_{x,y,z}=(3,0,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(8,2,4)$. Thus, $\Gamma_{3N}=(24,0,4)$. We can reduce this by inspection to $\Gamma_{3N}=6A_1+2A_2+8E$.\par
-            Since $\Gamma_\text{trans}=A_1+E$ and $\Gamma_\text{rot}=A_2+E$, we have by subtraction that $\Gamma_\text{vibs}=5A_1+A_2+6E$. Thus, of the 18 normal vibrations, 5 have symmetry $A_1$, 1 has symmetry $A_2$, and 12 have symmetry $E$ (note that these 12 modes pair up into 6 pairs of vibration modes of the same type).
+            It follows from the $C_{3v}$ character table that $\Gamma_{x,y,z}=(3,0,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(8,2,4)$. Thus, $\Gamma_{3N}=(24,0,4)$. We can reduce this by inspection to $\Gamma_{3N}=6A_1+2A_2+8E$.\par
+            Since $\Gamma_\text{trans}=A_1+E$ and $\Gamma_\text{rot}=A_2+E$ (again from the $C_{3v}$ character table), we have by subtraction that
+            \begin{equation*}
+                \boxed{\Gamma_\text{vibs} = 5A_1+A_2+6E}
+            \end{equation*}
+            Thus, of the 18 normal vibrations, 5 have symmetry $A_1$, 1 has symmetry $A_2$, and 12 have symmetry $E$ (note that these 12 modes pair up into 6 pairs of vibration modes of the same type).
         \end{proof}
         \item \ce{Zr2F13^5-}: Each \ce{Zr} is seven coordinate with monocapped trigonal prismatic geometry. The cap is a bridging \ce{F} (linear \ce{Zr-F-Zr} linkage) on the unique square face of the prism. The anionic complex has an eclipsed geometry about the bridging \ce{F}.
         \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \footnotesize
+                \chemfig{Zr(-[3]F)(<:[:45]F)(<[:75]F)(-[5]F)(<:[:-45]F)(<[:-75]F)-[,1.3]F-[,1.3]Zr(-[1]F)(<[:115]F)(<:[:95]F)(-[7]F)(<[:-115]F)(<:[:-95]F)}
+            \end{center}
             \ce{Zr2F13^5-} has $3(15)-6=39$ normal vibrations.\par
             Not high or low symmetry. Has a $C_2$ axis. Has 2 perpendicular $C_2$ axes. Has a $\sigma_h$ plane. Therefore, \ce{Zr2F13^5-} is of the $D_{2h}$ point group.\par
-            We can determine that $\Gamma_{x,y,z}=(3,-1,-1,-1,-3,1,1,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(15,3,1,1,1,1,7,3)$. Thus, $\Gamma_{3N}=(45,-3,-1,-1,-3,1,7,3)$. We can reduce this as follows.
+            It follows from the $D_{2h}$ character table that $\Gamma_{x,y,z}=(3,-1,-1,-1,-3,1,1,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(15,3,1,1,1,1,7,3)$. Thus, $\Gamma_{3N}=(45,-3,-1,-1,-3,1,7,3)$. We can reduce this as follows.
             \begin{align*}
                 \hspace{-4em}a_{A_g}    &= \frac{1}{8}\sum_{R_c}g_c\chi_{\Gamma_{3N}}(R_c)\chi_{A_g}(R_c)\\
                 \hspace{-4em}&= \frac{1}{8}[(1)(45)(1)+(1)(-3)(1)+(1)(-1)(1)+(1)(-1)(1)+(1)(-3)(1)+(1)(1)(1)+(1)(7)(1)+(1)(3)(1)]\\
@@ -415,7 +439,11 @@
                 \hspace{-4em}&= \frac{1}{8}[(1)(45)(1)+(1)(-3)(-1)+(1)(-1)(-1)+(1)(-1)(1)+(1)(-3)(-1)+(1)(1)(1)+(1)(7)(1)+(1)(3)(-1)]\\
                 \hspace{-4em}&= 7
             \end{align*}
-            Therefore, we know that $\Gamma_{3N}=6A_g+4B_{1g}+6B_{2g}+5B_{3g}+4A_u+7B_{1u}+6B_{2u}+7B_{3u}$. Since $\Gamma_\text{trans}=B_{1u}+B_{2u}+B_{3u}$ and $\Gamma_\text{rot}=B_{1g}+B_{2g}+B_{3g}$, we have by subtraction that $\Gamma_\text{vibs}=6A_g+3B_{1g}+5B_{2g}+4B_{3g}+4A_u+6B_{1u}+5B_{2u}+6B_{3u}$. Thus, of the 39 normal vibrations, 6 have symmetry $A_g$, 3 have symmetry $B_{1g}$, 5 have symmetry $B_{2g}$, 4 have symmetry $B_{3g}$, 4 have symmetry $A_u$, 6 have symmetry $B_{1u}$, 5 have symmetry $B_{2u}$, and 6 have symmetry $B_{3u}$.
+            Therefore, we know that $\Gamma_{3N}=6A_g+4B_{1g}+6B_{2g}+5B_{3g}+4A_u+7B_{1u}+6B_{2u}+7B_{3u}$. Since $\Gamma_\text{trans}=B_{1u}+B_{2u}+B_{3u}$ and $\Gamma_\text{rot}=B_{1g}+B_{2g}+B_{3g}$ (again from the $D_{2h}$ character table), we have by subtraction that
+            \begin{equation*}
+                \boxed{\Gamma_\text{vibs} = 6A_g+3B_{1g}+5B_{2g}+4B_{3g}+4A_u+6B_{1u}+5B_{2u}+6B_{3u}}
+            \end{equation*}
+            Thus, of the 39 normal vibrations, 6 have symmetry $A_g$, 3 have symmetry $B_{1g}$, 5 have symmetry $B_{2g}$, 4 have symmetry $B_{3g}$, 4 have symmetry $A_u$, 6 have symmetry $B_{1u}$, 5 have symmetry $B_{2u}$, and 6 have symmetry $B_{3u}$.
         \end{proof}
     \end{enumerate}
     \newpage
@@ -423,7 +451,7 @@
     \begin{enumerate}[label={\alph*)}]
         \item Assign the symmetry group.
         \begin{proof}[Answer]
-            Not high or low symmetry. Has a $C_6$ axis. Has 6 perpendicular $C_2$ axes. Has a $\sigma_h$ plane. Therefore, \ce{C6H6} is of the $D_{6h}$ point group.
+            Not high or low symmetry. Has a $C_6$ axis. Has 6 perpendicular $C_2$ axes. Has a $\sigma_h$ plane. Therefore, \ce{C6H6} is of the $\boxed{D_{6h}}$ point group.
         \end{proof}
         \item Determine the number and symmetries of the \ce{C-H} stretching modes in benzene.
         \begin{proof}[Answer]
@@ -524,7 +552,11 @@
                 \end{split}\\
                 ={}& 0
             \end{align*}
-            Therefore, we know that $\Gamma_\nu=A_{1g}+E_{2g}+B_{1u}+E_{1u}$. Thus, there are 6 \ce{C-H} stretching modes in benzene: 1 with symmetry $A_{1g}$, 2 with symmetry $E_{2g}$ (note that these 2 modes form a pair vibration modes of the same type), 1 with symmetry $B_{1u}$, and 2 with symmetry $E_{1u}$ (again, these pair up).
+            Therefore, we know that
+            \begin{equation*}
+                \boxed{\Gamma_\nu = A_{1g}+E_{2g}+B_{1u}+E_{1u}}
+            \end{equation*}
+            Thus, there are 6 \ce{C-H} stretching modes in benzene: 1 with symmetry $A_{1g}$, 2 with symmetry $E_{2g}$ (note that these 2 modes form a pair vibration modes of the same type), 1 with symmetry $B_{1u}$, and 2 with symmetry $E_{1u}$ (again, these pair up).
         \end{proof}
         \item Determine the Raman and infrared activities for each vibration.
         \begin{proof}[Answer]

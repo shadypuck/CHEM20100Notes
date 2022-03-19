@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 7}
+\setcounter{section}{7}
 
 \begin{document}
 
@@ -53,15 +54,15 @@
                     Sum: & 0 & 0 & 0 & 2 & 2\\
                 \end{tabular}
             \end{center}
-            Adding up the sums for each $d$ orbital reveals that the metal orbitals are destabilized by\footnote{Note that by $e_\sigma(\ce{NH3})$, for example, we mean the angular overlap parameter for a $\sigma$ bond formed in an \ce{MA2B4}-type complex containing amine groups as the \ce{B} ligands.}:
-            \begin{align*}
+            Adding up the sums for each $d$ orbital reveals that the metal orbitals are destabilized by\footnote{Note that by $e_\sigma(\ce{NH3})$, for example, we mean the angular overlap parameter for a $\sigma$ bond formed in an \ce{MA2B4}-type complex containing ammine groups as the \ce{B} ligands.}:
+            \begin{empheq}[box=\fbox]{align*}
                 E(d_{z^2}) &= 1e_\sigma(\ce{NH3})+2e_\sigma(\ce{Cl})\\
                 E(d_{x^2-y^2}) &= 3e_\sigma(\ce{NH3})\\
                 E(d_{xy}) &= 0\\
                 E(d_{xz}) &= 2e_\pi(\ce{Cl})\\
                 E(d_{yz}) &= 2e_\pi(\ce{Cl})
-            \end{align*}
-            If we now add up the values in the sum rows and divide by the corresponding number of orbitals, we'll get the stabilization energy contribution of each table to its orbitals. For example, the sum in the $\sigma(\ce{NH3})$ table is 4, and there are 4 \ce{NH3}($\sigma$) orbitals; thus, each \ce{NH3} ligand orbital is stabilized, at least in part, by $\frac{4}{4}=1e_\sigma(\ce{NH3})$. If we continue in this fashion for the other two, we'll eventually end up with four ligand orbitals stabilized by $1e_\sigma(\ce{NH3})$ and two ligand orbitals stabilized by $1e_\sigma(\ce{Cl})+2e_\pi(\ce{Cl})$.
+            \end{empheq}
+            If we now add up the values in the sum rows and divide by the corresponding number of orbitals, we'll get the stabilization energy contribution of each table to its orbitals. For example, the sum in the $\sigma(\ce{NH3})$ table is 4, and there are 4 \ce{NH3}($\sigma$) orbitals; thus, each \ce{NH3} ligand orbital is stabilized, at least in part, by $\frac{4}{4}=1e_\sigma(\ce{NH3})$. If we continue in this fashion for the other two, we'll eventually end up with four ligand orbitals stabilized by $\boxed{1e_\sigma(\ce{NH3})}$ and two ligand orbitals stabilized by $\boxed{1e_\sigma(\ce{Cl})+2e_\pi(\ce{Cl})}$.
         \end{proof}
         \newpage
         \item Consider a transition metal complex of formula \ce{ML4L}$'$. Using the angular overlap model and assuming trigonal-bipyramidal geometry, determine the energies of the $d$ orbitals\dots
@@ -90,13 +91,13 @@
                     \end{tabular}
                 \end{center}
                 With the sums for each $d$ orbital, we can determine that the metal orbitals are destabilized by\footnote{We don't distinguish between $e_\sigma(\ce{L})$ and $e_\sigma(\ce{L}')$ here because we are told that both ligands have comparable $\sigma$-donating abilities.}:
-                \begin{align*}
+                \begin{empheq}[box=\fbox]{align*}
                     E(d_{z^2}) &= \frac{11}{4}e_\sigma\\
                     E(d_{x^2-y^2}) &= \frac{9}{8}e_\sigma\\
                     E(d_{xy}) &= \frac{9}{8}e_\sigma\\
                     E(d_{xz}) &= 0\\
                     E(d_{yz}) &= 0
-                \end{align*}
+                \end{empheq}
             \end{proof}
             \item and considering \ce{L}$'$ as a $\pi$ acceptor as well. Consider \ce{L}$'$ in both
             \begin{enumerate}[label={(\arabic*)}]
@@ -107,7 +108,7 @@
                         \chemfig{M(-[2]\charge{[extra sep=5pt]90=\scriptsize${\color{grx}1}$}{L'})(-[6]\charge{[extra sep=5pt]-90=\scriptsize${\color{grx}6}$}{L})(-\charge{[extra sep=3.5pt]0=\scriptsize${\color{grx}2}$}{L})(>:[:160]\charge{[extra sep=5pt]160=\scriptsize${\color{grx}11}$}{L})(<[:-150]\charge{[extra sep=5pt]-150=\scriptsize${\color{grx}12}$}{L})}
                     \end{center}
                     \vspace{1em}
-                    The $\sigma$ contributions to the metal orbitals will be identical to the above. However, we now have to account for the $\pi$-acceptor contribution of the axial \ce{L}$'$ ligand. Since the rows in the table for positions 1 and 6 are equal, arbitrarily consider row 1:
+                    The $\sigma$ contributions to the metal orbitals will be identical to part (a). However, we now have to account for the $\pi$-acceptor contribution of the axial \ce{L}$'$ ligand. Since the rows in the table for positions 1 and 6 are equal, arbitrarily consider row 1:
                     \begin{center}
                         \small
                         \renewcommand{\arraystretch}{1.4}
@@ -119,17 +120,15 @@
                             Sum: & 0 & 0 & 0 & 1 & 1\\
                         \end{tabular}
                     \end{center}
-                    With the sums for each $d$ orbital, we can determine that three of the metal orbitals are destabilized by:
-                    \begin{align*}
+                    With the sums for each $d$ orbital, we can determine that three of the metal orbitals are destabilized by
+                    \begin{empheq}[box=\fbox]{align*}
                         E(d_{z^2}) &= \frac{11}{4}e_\sigma\\
                         E(d_{x^2-y^2}) &= \frac{9}{8}e_\sigma\\
                         E(d_{xy}) &= \frac{9}{8}e_\sigma\\
-                    \end{align*}
-                    and the other two are stabilized by
-                    \begin{align*}
-                        E(d_{xz}) &= e_\pi(\ce{L}')\\
-                        E(d_{yz}) &= e_\pi(\ce{L}')
-                    \end{align*}
+                        E(d_{xz}) &= -e_\pi(\ce{L}')\\
+                        E(d_{yz}) &= -e_\pi(\ce{L}')
+                    \end{empheq}
+                    Note that we subtract the $e_\pi(\ce{L}')$ contributions because for $\pi$-acceptor ligands, these contributions are stabilizing. Thus, they reduce the destabilization energy (they don't increase it).
                 \end{proof}
                 \item and an equatorial position.
                 \begin{proof}[Answer]
@@ -142,7 +141,7 @@
                         \chemfig{M(-[2]\charge{[extra sep=5pt]90=\scriptsize${\color{grx}1}$}{L})(-[6]\charge{[extra sep=5pt]-90=\scriptsize${\color{grx}6}$}{L})(-\charge{[extra sep=3.5pt]0=\scriptsize${\color{grx}2}$}{L})(>:[:160]\charge{[extra sep=5pt]160=\scriptsize${\color{grx}11}$}{L})(<[:-150]\charge{[extra sep=5pt]-150=\scriptsize${\color{grx}12}$}{L'})}
                     \end{center}
                     \vspace{1em}
-                    The $\sigma$ contributions to the metal orbitals will be identical to the above. However, we now have to account for the $\pi$-acceptor contribution of the equatorial \ce{L}$'$ ligand. Since the rows in the table for positions 2, 11, and 12 vary, we will average the three:
+                    The $\sigma$ contributions to the metal orbitals will be identical to part (a). However, we now have to account for the $\pi$-acceptor contribution of the equatorial \ce{L}$'$ ligand. Since the rows in the table for positions 2, 11, and 12 vary, we will average the three:
                     \begin{center}
                         \small
                         \renewcommand{\arraystretch}{1.4}
@@ -157,14 +156,14 @@
                         \end{tabular}
                     \end{center}
                     With the average contribution for each $d$ orbital, we can determine that the metal orbitals are destabilized by:
-                    \begin{align*}
+                    \begin{empheq}[box=\fbox]{align*}
                         E(d_{z^2}) &= \frac{11}{4}e_\sigma\\
                         E(d_{x^2-y^2}) &= \frac{9}{8}e_\sigma-\frac{1}{2}e_\pi(\ce{L}')\\
                         E(d_{xy}) &= \frac{9}{8}e_\sigma-\frac{1}{2}e_\pi(\ce{L}')\\
                         E(d_{xz}) &= -\frac{1}{2}e_\pi(\ce{L}')\\
                         E(d_{yz}) &= -\frac{1}{2}e_\pi(\ce{L}')
-                    \end{align*}
-                    Note that we subtract the $e_\pi(\ce{L}')$ contributions because for $\pi$-acceptor ligands, these contributions are stabilizing. Thus, they reduce the destabilization energy (they don't increase it).
+                    \end{empheq}
+                    As in part (b), we subtract the $e_\pi(\ce{L}')$ contributions because for $\pi$-acceptor ligands, these contributions are stabilizing and thus reduce the destabilization energy.
                 \end{proof}
             \end{enumerate}
             \item Based on the preceding answers, would you expect $\pi$-acceptor ligands to preferentially occupy axial or equatorial positions in five-coordinate complexes? What other factors should be considered in addition to angular overlap?
@@ -216,13 +215,14 @@
                             ;
                         \end{tikzpicture}
                         \caption{Equatorial \ce{L}'.}
-                        \label{fig:orbitalDiagram-ML4La}
+                        \label{fig:orbitalDiagram-ML4Lb}
                     \end{subfigure}
                     \caption{Axial and equatorial \ce{ML4L}' $d$-orbital digrams.}
                     \label{fig:orbitalDiagram-ML4L}
                 \end{figure}
-                The important factor to be considered in addition to angular overlap is electron configuration --- for $d^1$ to $d^7$ configurations, the axial complex is preferred; however, for $d^8$ to $d^{10}$ configurations, neither is preferred. We can determine this by calculating the energies of each configuration from Figure \ref{fig:orbitalDiagram-ML4L}. In the following equations, the axial energy is on the left and the equatorial on the right.
+                The important factor to be considered in addition to angular overlap is electron configuration --- for $d^1$ to $d^7$ configurations, the axial complex is preferred; however, for $d^8$ to $d^{10}$ and $d^0$ configurations, neither is preferred. We can determine this by calculating the energies of each configuration from Figure \ref{fig:orbitalDiagram-ML4L}. In the following equations, the axial energy is on the left and the equatorial on the right.
                 \begin{align*}
+                    0 &= 0\tag{$d^0$}\\
                     -1e_\pi &< -\frac{1}{2}e_\pi\tag{$d^1$}\\
                     -2e_\pi &< -1e_\pi\tag{$d^2$}\\
                     -3e_\pi &< -\frac{3}{2}e_\pi\tag{$d^3$}\\
@@ -249,8 +249,8 @@
             \begin{align*}
                 \varepsilon_\sigma(\ce{Cl}) &= \SI{5430}{\per\centi\meter}&
                 \varepsilon_\pi(\ce{Cl}) &= +\SI{1380}{\per\centi\meter}&
-                \varepsilon_\sigma(\ce{P}) &= \SI{3340}{\per\centi\meter}&
-                \varepsilon_\pi(\ce{P}) &= -\SI{310}{\per\centi\meter}
+                \varepsilon_\sigma(\ce{PPh3}) &= \SI{3340}{\per\centi\meter}&
+                \varepsilon_\pi(\ce{PPh3}) &= -\SI{310}{\per\centi\meter}
             \end{align*}
             We now add up
             \begin{center}
@@ -265,7 +265,7 @@
                 \end{tabular}\\[1em]
                 \hspace{-0.4pt}
                 \begin{tabular}{c|cccccc}
-                    $\sigma(\ce{P})$ & $z^2$ & $x^2-y^2$ & $xy$ & $xz$ & $yz$\\
+                    $\sigma(\ce{PPh3})$ & $z^2$ & $x^2-y^2$ & $xy$ & $xz$ & $yz$\\
                     \hline
                     8 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
                     9 & 0 & 0 & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\
@@ -282,7 +282,7 @@
                 \end{tabular}\\[1em]
                 \hspace{-0.4pt}
                 \begin{tabular}{c|cccccc}
-                    $\pi(\ce{P})$ & $z^2$ & $x^2-y^2$ & $xy$ & $xz$ & $yz$\\
+                    $\pi(\ce{PPh3})$ & $z^2$ & $x^2-y^2$ & $xy$ & $xz$ & $yz$\\
                     \hline
                     8 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
                     9 & $\frac{2}{3}$ & $\frac{2}{3}$ & $\frac{2}{9}$ & $\frac{2}{9}$ & $\frac{2}{9}$\\
@@ -295,22 +295,22 @@
             \begingroup
             \allowdisplaybreaks
             \begin{align*}
-                E(d_{z^2}) &= \frac{2}{3}\varepsilon_\pi(\ce{Cl})+2\varepsilon_\pi(\ce{P}) = \SI{300}{\per\centi\meter}\\
-                E(d_{x^2-y^2}) &= \frac{2}{3}\varepsilon_\pi(\ce{Cl})+2\varepsilon_\pi(\ce{P}) = \SI{300}{\per\centi\meter}\\
-                E(d_{xy}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{P})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{P}) = \SI{5250}{\per\centi\meter}\\
-                E(d_{xz}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{P})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{P}) = \SI{5250}{\per\centi\meter}\\
-                E(d_{yz}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{P})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{P}) = \SI{5250}{\per\centi\meter}
+                E(d_{z^2}) &= \frac{2}{3}\varepsilon_\pi(\ce{Cl})+2\varepsilon_\pi(\ce{PPh3}) = \SI{300}{\per\centi\meter}\\
+                E(d_{x^2-y^2}) &= \frac{2}{3}\varepsilon_\pi(\ce{Cl})+2\varepsilon_\pi(\ce{PPh3}) = \SI{300}{\per\centi\meter}\\
+                E(d_{xy}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{PPh3})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{PPh3}) = \SI{5250}{\per\centi\meter}\\
+                E(d_{xz}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{PPh3})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{PPh3}) = \SI{5250}{\per\centi\meter}\\
+                E(d_{yz}) &= \frac{1}{3}\varepsilon_\sigma(\ce{Cl})+1\varepsilon_\sigma(\ce{PPh3})+\frac{2}{9}\varepsilon_\pi(\ce{Cl})+\frac{2}{3}e_\pi(\ce{PPh3}) = \SI{5250}{\per\centi\meter}
             \end{align*}
             \endgroup
-            As to the ligand pairs, we must add up the values in the sum rows and divide by the corresponding number of orbitals (note that $\ce{L}_n$ corresponds to the ligand numbered $n$), as follows. For the chloride ligand, there is a simple stabilization of the combined $\sigma,\pi$-ligand orbital corresponding to a destabilization of every metal $d$ orbital. For the triphenylphosphine ligands, there is a stabilization of the $\sigma$-ligand orbitals corresponding to a destabilization of the metal $d_{xy,xz,yz}$ orbitals, and there is a destabilization of the $\pi$-ligand orbitals corresponding to a stabilization of the metal $d_{xy,xz,yz}$ orbitals.
+            As to the ligand pairs, we must add up the values in the sum rows and divide by the corresponding number of orbitals (note that $\ce{L}_n$ corresponds to the ligand numbered $n$), as follows. For the chloride ligand, there is a simple stabilization of the combined $\sigma,\pi$-ligand orbital corresponding to a destabilization of every metal $d$ orbital. For the triphenylphosphine ligands, there is a stabilization of the $\sigma$-ligand orbitals corresponding to a destabilization of the metal $d_{xy,xz,yz}$ orbitals, and there is a destabilization of the $\pi$-ligand orbitals corresponding to a stabilization of every metal orbital.
             \begin{align*}
-                E(\ce{L}_7) &= 1\varepsilon_\sigma(\ce{Cl})+2\varepsilon_\pi(\ce{Cl}) = \SI{8190}{\per\centi\meter}\\
-                E(\ce{L}_{8\sigma}) &= 1\varepsilon_\sigma(\ce{P}) = \SI{3340}{\per\centi\meter}\\
-                E(\ce{L}_{9\sigma}) &= 1\varepsilon_\sigma(\ce{P}) = \SI{3340}{\per\centi\meter}\\
-                E(\ce{L}_{10\sigma}) &= 1\varepsilon_\sigma(\ce{P}) = \SI{3340}{\per\centi\meter}\\
-                E(\ce{L}_{8\pi}) &= \frac{2}{3}\varepsilon_\pi(\ce{P}) = \SI{207}{\per\centi\meter}\\
-                E(\ce{L}_{9\pi}) &= \frac{2}{3}\varepsilon_\pi(\ce{P}) = \SI{207}{\per\centi\meter}\\
-                E(\ce{L}_{10\pi}) &= \frac{2}{3}\varepsilon_\pi(\ce{P}) = \SI{207}{\per\centi\meter}
+                E(\ce{L}_7) &= -1\varepsilon_\sigma(\ce{Cl})-2\varepsilon_\pi(\ce{Cl}) = \SI{-8190}{\per\centi\meter}\\
+                E(\ce{L}_{8\sigma}) &= -1\varepsilon_\sigma(\ce{PPh3}) = \SI{-3340}{\per\centi\meter}\\
+                E(\ce{L}_{9\sigma}) &= -1\varepsilon_\sigma(\ce{PPh3}) = \SI{-3340}{\per\centi\meter}\\
+                E(\ce{L}_{10\sigma}) &= -1\varepsilon_\sigma(\ce{PPh3}) = \SI{-3340}{\per\centi\meter}\\
+                E(\ce{L}_{8\pi}) &= 2\varepsilon_\pi(\ce{PPh3}) = \SI{620}{\per\centi\meter}\\
+                E(\ce{L}_{9\pi}) &= 2\varepsilon_\pi(\ce{PPh3}) = \SI{620}{\per\centi\meter}\\
+                E(\ce{L}_{10\pi}) &= 2\varepsilon_\pi(\ce{PPh3}) = \SI{620}{\per\centi\meter}
             \end{align*}
             Putting it all together, we have:
             \begin{center}
@@ -320,12 +320,12 @@
                 ]
                     \footnotesize
                     \draw [gry,ultra thick]
-                        (-0.85,15.207) coordinate (pl) -- node[below]{$L_{8\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{9\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{10\pi}$} ++(0.5,0) coordinate (pr)
-                        (-0.85,9.25) coordinate (dul) -- node[below=2mm]{$d_{xy}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xz}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{yz}$} node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (dur)
+                        (-0.85,15.62) coordinate (pl) -- node[below]{$L_{8\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{9\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{10\pi}$} ++(0.5,0) coordinate (pr)
+                        (-0.85,9.25) coordinate (dul) -- node[below=2mm]{$d_{xy}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xz}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{yz}$} node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (dur)
                         (-0.55,4.3) coordinate (dll) -- node[below=2mm]{$d_{z^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm,xshift=2mm]{$d_{x^2-y^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (dlr)
                         (-0.85,-3.34) coordinate (sul) -- node[below=2mm]{$L_{8\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$L_{9\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$L_{10\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (sur)
                         (-0.25,-8.19) coordinate (sll) -- node[below=2mm]{$L_7$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) coordinate (slr)
-                        (-5.9,4) -- node[below=2mm]{$d_{z^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=6mm]{$d_{x^2-y^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xy}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xz}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{yz}$} node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (d)
+                        (-5.9,4) -- node[below=2mm]{$d_{z^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=6mm]{$d_{x^2-y^2}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xy}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{xz}$} node{\Large$\upharpoonleft$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$d_{yz}$} node{\Large$\upharpoonleft$} ++(0.5,0) coordinate (d)
                         (3,15) coordinate (p) -- node[below]{$L_{8\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{9\pi}$} ++(0.5,0) ++(0.1,0) -- node[below]{$L_{10\pi}$} ++(0.5,0)
                         (3,0) coordinate (s) -- node[below=2mm]{$L_7$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$L_{8\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$L_{9\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.1,0) -- node[below=2mm]{$L_{10\sigma}$} node{\Large$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
                     ;
@@ -336,6 +336,7 @@
                         (d) -- (sul)
                         (d) -- (sll)
                         (p) -- (pr)
+                        (p) -- (dur)
                         (p) -- (dlr)
                         (s) -- (dur)
                         (s) -- (dlr)
@@ -357,12 +358,23 @@
                     \chemfig{Re(-[2]H)(<[:-100]H)(>:[:-75]H)(-[:-35]H)(<[:25]H)(>:[:50]H)(-[:-145]H)(<[:155]H)(>:[:130]H)}
                 \chemright{]^{2-}}
             \end{center}
-            Point group: $D_{3h}$.\par
+            Point group: $\boxed{D_{3h}}$.\par
             Construct a reducible representation and reduce it to its component irreducible representations:
             \begin{equation*}
-                \Gamma_{\ce{H}} = (9,0,1,3,0,3) = 2A_1'+2E'+A_2''+E''
+                \boxed{\Gamma_{\ce{H}} = (9,0,1,3,0,3) = 2A_1'+2E'+A_2''+E''}
             \end{equation*}
-            Rhenium's $6s$ orbital interacts with the $A_1'$ hydrogen group orbitals, its $5p$ orbitals interact with the $E'$ ($p_{x,y}$) and $A_2''$ ($p_z$) hydrogen group orbitals, and its $5d$ orbitals interact with the $A_1'$ ($d_{z^2}$), $E'$ ($d_{x^2-y^2,xy}$), and $E''$ ($d_{xz,yz}$) hydrogen group orbitals.
+            Orbital interactions (derived from the $D_{3h}$ character table):
+            \begin{center}
+                \renewcommand{\arraystretch}{1.2}
+                \begin{tabular}{|ll|}
+                    \hline
+                    $A_1'$ & $s$, $d_{z^2}$\\
+                    $E'$ & $(p_x,p_y)$, $(d_{x^2-y^2},d_{xy})$\\
+                    $A_2''$ & $p_z$\\
+                    $E''$ & $(d_{xz},d_{yz})$\\
+                    \hline
+                \end{tabular}
+            \end{center}
         \end{proof}
         \newpage
         \setcounter{enumii}{32}
@@ -373,7 +385,7 @@
         \begin{enumerate}[label={\textbf{\alph*.}}]
             \item What is point group of this ion?
             \begin{proof}[Answer]
-                $D_{4h}$.
+                $\boxed{D_{4h}}$.
             \end{proof}
             \item Assume that the platinums can potentially use $s$, $p$, and $d$ orbitals to interact with the central deuterium. If the $z$-axis is chosen to be collinear with the principal axis of rotation:
             \begin{enumerate}[label={\textbf{\arabic*.}}]

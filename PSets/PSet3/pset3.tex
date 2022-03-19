@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 3}
+\setcounter{section}{3}
 
 \begin{document}
 
@@ -24,7 +25,7 @@
         \begin{proof}[Answer]
             Point group: $D_{3h}$\par
             Basis functions: all three \ce{H} orbitals, \ce{N_{$2s$}}, \ce{N_{$2p_x$}}, \ce{N_{$2p_y$}}, and \ce{N_{$2p_z$}}.\par
-            Apply operations, generate reducible representations, and reduce to irreducible representations:
+            Apply operations, generate reducible representations, and reduce to irreducible representations (for orbitals of the center atom, read irreducible representations from the $D_{3h}$ character table):
             \begin{align*}
                 \Gamma_{\ce{H}} &= (3,0,1,3,0,1) = A_1'+E'\\
                 \Gamma_{\ce{N_{$2s$}}} &= A_1'\\
@@ -91,12 +92,28 @@
         \end{proof}
         \item What vibrational mode is responsible for the inversion?
         \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{figure}[H]
+                \centering
+                \vspace{1em}
+                \footnotesize
+                \chemfig{@{N1}N(-[:-150]@{H1a}H)(<[:-70]@{H1b}H)(<:[:-30]@{H1c}H)}
+                \chemmove{
+                    \draw [CF-,semithick,shorten <=2pt] (N1) -- ++(90:0.7);
+                    \draw [semithick,shorten <=2pt] (H1a) -- ++(110:0.7);
+                    \draw [-,ultra thick,white,shorten <=2pt] (H1b) -- ++(80:0.8);
+                    \draw [semithick,shorten <=2pt] (H1b) -- ++(80:0.8);
+                    \draw [semithick,shorten <=2pt] (H1c) -- ++(70:0.6);
+                }
+                \caption{The $\boxed{A_1}$ bending mode.}
+                \label{fig:NH3bend}
+            \end{figure}
             If any vibrational mode is responsible for the inversion, it certainly won't be a stretching mode since these have no effect on molecular geometry about the central atom. On the other hand, a bending mode could well achieve such a transition. Thus, we will find the bending modes in both pyramidal and planar \ce{NH3} and compare.\par\medskip
-            For pyramidal \ce{NH3}, we can determine that $\Gamma_{x,y,z}=(3,0,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(4,1,2)$. Thus, $\Gamma_{3N}=(12,0,2)$. We can decompose this by inspection to $\Gamma_{3N}=3A_1+A_2+4E$. Since $\Gamma_\text{trans}=A_1+E$ and $\Gamma_\text{rot}=A_2+E$, we have by subtraction that $\Gamma_\text{vibs}=2A_1+2E$.\par
+            For pyramidal \ce{NH3}, the $C_{3v}$ character table tells us that $\Gamma_{x,y,z}=(3,0,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(4,1,2)$. Thus, $\Gamma_{3N}=(12,0,2)$. We can decompose this by inspection to $\Gamma_{3N}=3A_1+A_2+4E$. Since $\Gamma_\text{trans}=A_1+E$ and $\Gamma_\text{rot}=A_2+E$ (again from the $C_{3v}$ character table), we have by subtraction that $\Gamma_\text{vibs}=2A_1+2E$.\par
             We can determine that $\Gamma_\nu=(3,0,1)$ by counting how many $\overrightarrow{\ce{N-H}}$ vectors stay the same under each symmetry operation. We can decompose this by inspection to $\Gamma_\nu=A_1+E$. Thus, we have by subtraction that $\Gamma_\delta=A_1+E$.\par\smallskip
-            For planar \ce{NH3}, we can determine that $\Gamma_{x,y,z}=(3,0,-1,1,-2,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(4,1,2,4,1,2)$. Thus, $\Gamma_{3N}=(12,0,-2,4,-2,2)$. We can decompose this by repeated applications of the reduction formula to $\Gamma_{3N}=A_1'+A_2'+3E'+2A_2''+E''$. Since $\Gamma_\text{trans}=E'+A_2''$ and $\Gamma_\text{rot}=A_2'+E''$, we have by subtraction that $\Gamma_\text{vibs}=A_1'+2E'+A_2''$.\par
+            For planar \ce{NH3}, the $D_{3h}$ character table tells us that $\Gamma_{x,y,z}=(3,0,-1,1,-2,1)$. We can also figure out that the number of atoms unmoved after applying each symmetry operation is $(4,1,2,4,1,2)$. Thus, $\Gamma_{3N}=(12,0,-2,4,-2,2)$. We can decompose this by repeated applications of the reduction formula to $\Gamma_{3N}=A_1'+A_2'+3E'+2A_2''+E''$. Since $\Gamma_\text{trans}=E'+A_2''$ and $\Gamma_\text{rot}=A_2'+E''$ (again by the $D_{3h}$ character table), we have by subtraction that $\Gamma_\text{vibs}=A_1'+2E'+A_2''$.\par
             We can determine that $\Gamma_\nu=(3,0,1,3,0,1)$ by counting how many $\overrightarrow{\ce{N-H}}$ vectors stay the same under each symmetry operation. We can decompose this by inspection to $\Gamma_\nu=A_1'+E'$. Thus, we have by subtraction that $\Gamma_\delta=E'+A_2''$.\par\medskip
-            Since the $E$ pyramidal bending modes transform into the analogous $E'$ planar bending modes, but the $A_1$ pyramidal bending mode has no planar analogue, it is the $A_1$ bending mode in pyramidal \ce{NH3} that causes the inversion.
+            Since the $E$ pyramidal bending modes transform into the analogous $E'$ planar bending modes, but the $A_1$ pyramidal bending mode has no planar analogue, it is the $A_1$ bending mode in pyramidal \ce{NH3} that causes the inversion. This derivation can be rationalized intuitively by noting that the movement that causes the inversion must look like the totally symmetric bending mode in Figure \ref{fig:NH3bend}.
         \end{proof}
     \end{enumerate}
     \newpage
@@ -106,7 +123,7 @@
         \begin{proof}[Answer]
             Point group: $O_h$\par
             Basis functions: all six \ce{F} orbitals, \ce{S_{$3s$}}, \ce{S_{$3p_x$}}, \ce{S_{$3p_y$}}, and \ce{S_{$3p_z$}}.\par
-            Apply operations, generate reducible representations, and reduce to irreducible representations:
+            Apply operations, generate reducible representations, and reduce to irreducible representations (for orbitals of the center atom, read irreducible representations from the $O_h$ character table):
             \begin{align*}
                 \Gamma_{\ce{F}} &= (6,0,0,2,2,0,0,0,4,2) = A_{1g}+E_g+T_{1u}\\
                 \Gamma_{\ce{S_{$3s$}}} &= A_{1g}\\
@@ -172,7 +189,10 @@
         \end{proof}
         \item Based on the MO diagram, comment on the number of bonding electrons in \ce{SF6} and the bond-order of each \ce{S-F} bond.
         \begin{proof}[Answer]
-            There are 8 bonding electrons (the two in the $1a_{1g}$ orbital, and the six in the degenerate $1t_{1u}$ orbitals; the four in the degenerate $1e_g$ orbitals are nonbonding and all anti-bonding orbitals are unfilled). Since the bond order is one half the number of bonding electrons divided by the number of bonds, we have $\text{B.O.}=\frac{2}{3}$.
+            There are \fbox{8 bonding electrons} (the two in the $1a_{1g}$ orbital, and the six in the degenerate $1t_{1u}$ orbitals; the four in the degenerate $1e_g$ orbitals are nonbonding and all anti-bonding orbitals are unfilled). Since the bond order is one half the number of bonding electrons divided by the number of bonds, we have
+            \begin{equation*}
+                \boxed{\text{B.O.} = \frac{2}{3}}
+            \end{equation*}
         \end{proof}
     \end{enumerate}
 \end{enumerate}

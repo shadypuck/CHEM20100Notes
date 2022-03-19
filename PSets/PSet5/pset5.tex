@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 5}
+\setcounter{section}{5}
 
 \begin{document}
 
@@ -156,7 +157,7 @@
         \stepcounter{enumii}
         \item Show structures for the following:
         \begin{enumerate}[label={\textbf{\alph*.}}]
-            \item \emph{cis}-Diamminebromocchloroplatinum(II).
+            \item \emph{cis}-Diamminebromochloroplatinum(II).
             \begin{proof}[Answer]
                 ${\color{white}hi}$
                 \begin{center}
@@ -174,7 +175,7 @@
             \begin{proof}[Answer]
                 ${\color{white}hi}$
                 \begin{center}
-                    \chemfig{Fe(-[:125]OC)(>:[:-155]OC)(<[:-110]OC)(<[:-57,2]\chembelow{C}{O}?[wedge])(>:[:-25]\chembelow{C}{O}?[dash])-[:45,1.5]\chemabove{C}{O}-[:-45,1.5]Fe?[wedge,4]?[dash,7](-[:55]CO)(>:[:-25]CO)(<[:-70]CO)}
+                    \chemfig{Fe?[MM](-[:-125]OC)(<[:155]OC)(>:[:110]OC)(<[:-57,2]\chembelow{C}{O}?[wedge])(>:[:-25]\chembelow{C}{O}?[dash])-[:45,1.5]\chemabove{C}{O}-[:-45,1.5]Fe?[wedge,4]?[dash,7]?[MM](-[:-55]CO)(>:[:25]CO)(<[:70]CO)}
                 \end{center}
             \end{proof}
         \end{enumerate}
@@ -296,7 +297,7 @@
                 };
             \end{tikzpicture}
             \begin{proof}[Answer]
-                This molecule is achiral (if we assume that the ring on the right side largely lies in the plane with quickly reversing buckling or puckering, a reasonable hypothesis given the light \ce{N} and \ce{C} atoms). It is chiral if we assume a rigid ring.
+                This molecule is achiral (if we assume that the ring on the right side largely lies in the plane with quickly reversing buckling or puckering, a reasonable hypothesis given the light \ce{N} and \ce{C} atoms). It is chiral if we assume a rigid ring in the pictured conformation.
             \end{proof}
             \item 
             \begin{tikzpicture}
@@ -314,13 +315,13 @@
         \setcounter{enumii}{22}
         \item When \emph{cis}-\ce{OsO2F4} is dissolved in \ce{SbF5}, the cation \ce{OsO2F3+} is formed. The \ce{^{19}F} NMR spectrum of this cation shows two resonances, a doublet and a triplet having relative intensities of $2:1$. What is the most likely structure of this ion? What is its point group? (See \cite{bib:pset5-923}.)
         \begin{proof}[Answer]
-            Since there are two resonances, there are two types of bonds. Additionally, the $2:1$ ratio tells us that the doublet bonds are twice as strong as the triplet bonds. Thus, the most likely structure is
+            From Bent's rule and sterics, we would predict the following structure, which has point group $\boxed{C_{2v}}$.
             \begin{center}
                 \chemleft{[}
-                    \chemfig{Os(-[6]F)(-F)(-[2]F)(=[:160]O)(=[:-150]O)}
+                    \chemfig{Os(-[:-75]F)(-F)(-[:75]F)(=[:160]O)(=[:-150]O)}
                 \chemright{]^+}
             \end{center}
-            Its point group is $C_{2v}$.
+            Moreover, this structure is supported by the \ce{^{19}F} NMR data, since we have two equivalent (axial) flourines on the same central atom as one nonequivalent fluorine (causing a doublet by the $n+1$ rule of relative intensity 2) and, reversing roles, one (equatorial) flourine on the same central atom as two separate but equivalent fluorines (causing a triplet by the $n+1$ rule of relative intensity 1).
         \end{proof}
     \end{enumerate}
     \newpage
@@ -331,7 +332,8 @@
     \newpage
     \item The complex \ce{UCl4(tmeda)2} (where tmeda is an abbreviation for \ce{Me2N-CH2CH2-NMe2}, which binds by chelation to metals through both \ce{N}-atoms) has been shown by X-ray crystallography to have almost perfect $D_{2d}$ symmetry. Carefully draw a stereochemically accurate picture of this 8-coordinate uranium complex based on what you know about geometrical preferences in 8-coordinate complexes.
     \begin{proof}[Answer]
-        ${\color{white}hi}$
+        The possible molecular geometries for an 8-coordinate species are dodecahedral and square antiprismatic. Assuming all identical, monodentate ligands, the geometries' respective point groups are $D_{2d}$ and $D_{4d}$. Based on this, dodecahedral might look more appealing, but since we have two bidentate chelating ligands, the $D_{4d}$ square anti-prismatic form provides the wiggle room we need for the "descent in symmetry" these ligands will inevitably cause.\par
+        As such, if we take a square antiprismatic geometry and place our bidentate ligands opposite each other, we will have constructed the following $D_{2d}$ molecule.
         \begin{center}
             \chemfig{U(-[3]Me_2N?[a])(>:[5]Me_2N?[b])(-[1]NMe_2-[:105,,,1]CH_2-[4]H_2C?[a])(<[7]NMe_2-[:-105,,,1]CH_2-[4]H_2C?[b])(<[:70]Cl)(>:[:110]Cl)(<[:-110]Cl)(>:[:-70]Cl)}
         \end{center}

@@ -10,8 +10,8 @@
 \usepackage{tocloft}
 \usepackage{siunitx}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{physics,mathtools,bm,nicematrix}
-\usepackage{mhchem,chemfig,chemmacros}
+\usepackage{physics,mathtools,bm,nicematrix,empheq}
+\usepackage{mhchem,chemfig}
 \usepackage{tikz,graphicx}
 \usepackage{subcaption,float}
 \usepackage{colortbl,multirow,tabularx}
@@ -39,6 +39,15 @@
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\DeclareSIUnit{\bohrmagneton}{B.M.}
+
+\DeclareMathOperator{\pH}{pH}
+\DeclareMathOperator{\pKa}{p\emph{K}_a}
+\DeclareMathOperator{\pKb}{p\emph{K}_b}
+\DeclareMathOperator{\Ka}{\emph{K}_a}
+\DeclareMathOperator{\Kb}{\emph{K}_b}
+\newcommand{\p}[1]{\,\text{p}{#1}\,}
 
 \setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
 \setcharge{extra sep=3pt}

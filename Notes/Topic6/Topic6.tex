@@ -1608,7 +1608,73 @@
     \item \ce{[M(CN)6]^n-} example:
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\linewidth]{../ExtFiles/orbitalDiagram-AOMpiAcc.png}
+        \footnotesize
+        \begin{tikzpicture}
+            % e_σ=0.7cm
+            % e_π=0.25cm
+            \draw [ultra thick]
+                (-5.4,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- node[below,text width=2cm]{$d$ Orbitals in uncoordinated metal} ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (d)
+                (3,2.7) coordinate (p) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) node[below,text width=2.5cm]{Ligand $\pi^*$ orbitals} -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                (3,-1.7) coordinate (s) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) node[below,text width=2.3cm]{Ligand $\sigma$ orbitals} -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+            ;
+            \draw [ultra thick]
+                (-1.45,3.2) coordinate (mpl) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (mpr)
+                (-0.45,2.1) coordinate (md2l) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (md2r) node[below right=-1mm,xshift=7pt]{$z^2$, $x^2-y^2$}
+                (-0.7,-1) coordinate (md1l) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (md1r) node[below right]{$xy$, $xz$, $yz$}
+                (-1.45,-2.4) coordinate (msl) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0) coordinate (msr)
+            ;
+
+            \draw [grx,thick,densely dashed]
+                (d) -- (mpl)
+                (d) -- (md2l)
+                (d) -- (md1l)
+                (d) -- (msl)
+                (s) -- (md2r)
+                (s) -- (msr)
+                (p) -- (mpr)
+                (p) -- (md1r)
+                (d) -- (md1r |- d)
+                (p) -- (mpl |- p)
+                (s) -- (msl |- s)
+            ;
+
+            \begin{scope}[
+                every path/.style={semithick,latex-latex,shorten <=1pt,shorten >=1pt}
+            ]
+                \draw (msr) -- node[right=-1pt]{$e_\sigma$} (msr |- s);
+                \draw (md1l) -- node[left]{$4e_\pi$} (md1l |- d);
+                \draw (md2l) -- node[left]{$3e_\sigma$} (md2l |- d);
+                \draw (mpr) -- node[right=-1pt]{$2e_\pi$} (mpr |- p);
+                \draw ($(md1l)!0.444!(md1r)$) coordinate (deltao) -- node[right]{$\Delta_o$} (md2l -| deltao);
+            \end{scope}
+        \end{tikzpicture}
         \caption{$\sigma$-donor, $\pi$-acceptor \ce{ML6} angular overlap model orbital diagram.}
         \label{fig:orbitalDiagram-AOMpiAcc}
     \end{figure}
@@ -1620,7 +1686,59 @@
     \item $\pi$-donor interactions are equivalent to $\pi$-acceptor interactions, except that the signs of the energy changes are reversed.
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.45\linewidth]{../ExtFiles/orbitalDiagram-AOMpiDon.png}
+        \footnotesize
+        \begin{tikzpicture}
+            \draw [ultra thick]
+                (-5.4,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- node[below,text width=2cm]{$d$ Orbitals in uncoordinated metal} ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (d)
+                (3,-1.3) coordinate (s) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) node[below,text width=2.3cm]{Ligand orbitals} -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+            ;
+            \draw [ultra thick]
+                (-0.45,2.1) coordinate (md2l) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (md2r) node[right]{$z^2$, $x^2-y^2$}
+                (-0.7,1) coordinate (md1l) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0)
+                    ++(0.1,0) -- ++(0.4,0) coordinate (md1r) node[right,fill=white]{$xy$, $xz$, $yz$}
+                (-1.45,-2.5) coordinate (msl) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0)
+                    ++(0.1,0) -- node[above]{$\uparrow\downarrow$} ++(0.4,0) coordinate (msr)
+            ;
+
+            \draw [grx,thick,densely dashed]
+                (d) -- (md2l)
+                (d) -- (md1l)
+                (d) -- (msl)
+                (s) -- (md1r)
+                (s) -- (msr)
+                (d) -- (md1r |- d)
+                (s) -- (msl |- s)
+                ([yshift=-7mm]msl |- s) -- ([yshift=-7mm]msr |- s)
+            ;
+            \begin{scope}[on background layer]
+                \draw [grx,thick,densely dashed] (s) -- (md2r);
+            \end{scope}
+
+            \begin{scope}[
+                every path/.style={semithick,latex-latex,shorten <=1pt,shorten >=1pt}
+            ]
+                \draw ([yshift=5mm]msr) -- node[right=-1pt]{$e_\sigma$} (msr |- s);
+                \draw (msr) -- node[right=1.2pt,fill=white,inner sep=1pt]{$2e_\pi$} ([yshift=5mm]msr);
+                \draw (md1l) -- node[left=-1pt]{$4e_\pi$} (md1l |- d);
+                \draw (md2l) -- node[pos=0.35,left=-2pt]{$3e_\sigma$} (md2l |- d);
+                \draw ($(md1l)!0.444!(md1r)$) coordinate (deltao) -- node[right]{$\Delta_o$} (md2l -| deltao);
+            \end{scope}
+        \end{tikzpicture}
         \caption{$\sigma,\pi$-donor \ce{ML6} angular overlap model orbital diagram.}
         \label{fig:orbitalDiagram-AOMpiDon}
     \end{figure}

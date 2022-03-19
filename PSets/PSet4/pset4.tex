@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 4}
+\setcounter{section}{4}
 
 \begin{document}
 
@@ -137,10 +138,7 @@
             \begin{proof}[Answer]
                 ${\color{white}hi}$
                 \begin{center}
-                    \chemfig{\ce{($t$-Bu)3}P-N=[:-30]N-O-[:-30]B}
-                    \begin{tikzpicture}[remember picture,overlay]
-                        \node at (0.5,-0.9) {\ce{(C6F5)3}};
-                    \end{tikzpicture}
+                    \chemfig{\ce{($t$-Bu)3}\charge{90:3pt=$\oplus$}{P}-N=[:-30]N-O-[:-30]\charge{90:3pt=$\ominus$}{B}{(}C_6F_5{)}_3}
                 \end{center}
             \end{proof}
         \end{enumerate}
@@ -159,13 +157,13 @@
         \end{proof}
         \newpage
         \setcounter{enumii}{36}
-        \item List the following acids in order of their acid strength when reacting with \ce{NH3}: \ce{BF3}, \ce{B(CH3)3}, \ce{B(C2H5)3}, and \ce{B[C6H2(CH3)3]3}.
+        \item List the following acids in order of their acid strength when reacting with \ce{NH3}: \ce{BF3}, \ce{B(CH3)3}, \ce{B(C2H5)3}, and \ce{B[C6H2(CH3)3]3}, where \ce{C6H2(CH3)3} is a mesityl (2,4,6-trimethylphenyl) group.
         \begin{proof}[Answer]
             We have
             \begin{equation*}
-                \ce{BF3} > \ce{B(CH3)3} > \ce{B(C2H5)3} > \ce{B[C6H2(CH3)3]3}
+                \boxed{\ce{BF3} > \ce{BMe3} > \ce{BEt3} > \ce{BMes3}}
             \end{equation*}
-            \ce{BF3} will be the strongest Lewis acid because it is the only one out of the collection that has electron-withdrawing groups as opposed to electron donating groups. Among the three compounds with electron-donating groups, we rank as stronger acids the ones with smaller groups, both because smaller groups donate less and the reduction in steric hindrance.
+            \ce{BF3} will be the strongest Lewis acid because it is the only one out of the collection that has electron-withdrawing groups as opposed to electron donating groups. Among the three compounds with electron-donating groups, we rank as stronger acids the ones with smaller alkyl groups, both because smaller groups donate less and steric hindrance is reduced.
         \end{proof}
     \end{enumerate}
 \end{enumerate}

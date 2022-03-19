@@ -2,6 +2,7 @@
 
 \pagestyle{main}
 \renewcommand{\leftmark}{Problem Set 6}
+\setcounter{section}{6}
 
 \begin{document}
 
@@ -22,7 +23,7 @@
                 \Gamma_{\ce{M}_{(n+l)p}} &= T_2\\
                 \Gamma_{\ce{M}_{(n+l)d}} &= E+T_2
             \end{align*}
-            Combine orbitals by their symmetry.
+            Combine orbitals by their symmetry, and fill in electrons for a $d^7$ metal\footnote{This electron configuration is randomly chosen just to illustrate the point.}.
             \begin{center}
                 \begin{tikzpicture}[
                     yscale=0.15,
@@ -84,7 +85,7 @@
                 \Gamma_{\ce{M}_{(n+l)p}} &= T_2\\
                 \Gamma_{\ce{M}_{(n+l)d}} &= E+T_2
             \end{align*}
-            Combine orbitals by their symmetry.
+            Combine orbitals by their symmetry, and fill in electrons for a $d^7$ metal.
             \begin{center}
                 \begin{tikzpicture}[
                     yscale=0.22,
@@ -223,7 +224,7 @@
         \begin{enumerate}[label={\textbf{\alph*.}}]
             \item A tetrahedral $d^6$ ion.
             \begin{proof}[Answer]
-                Tetrahedral means high spin and $t_2$ orbitals above $e$. Thus, there will be 4 unpaired electrons.
+                Tetrahedral means high spin and $t_2$ orbitals above $e$. Thus, there will be $\boxed{4}$ unpaired electrons.
                 \begin{center}
                     \begin{tikzpicture}[
                         every node/.prefix style={black}
@@ -237,7 +238,7 @@
             \end{proof}
             \item \ce{[Co(H2O)6]^2+}.
             \begin{proof}[Answer]
-                Octahedral cobalt with a $2+$ oxidation state means high spin. Thus, there will be 3 unpaired electrons.
+                Octahedral cobalt with a $2+$ oxidation state means high spin. Thus, there will be $\boxed{3}$ unpaired electrons.
                 \begin{center}
                     \begin{tikzpicture}[
                         every node/.prefix style={black}
@@ -251,7 +252,7 @@
             \end{proof}
             \item \ce{[Cr(H2O)6]^3+}.
             \begin{proof}[Answer]
-                High spin/low spin doesn't matter here; there will be 3 unpaired electrons, regardless.
+                High spin/low spin doesn't matter here; there will be $\boxed{3}$ unpaired electrons, regardless.
                 \begin{center}
                     \begin{tikzpicture}[
                         every node/.prefix style={black}
@@ -265,7 +266,7 @@
             \end{proof}
             \item A square-planar $d^7$ ion.
             \begin{proof}[Answer]
-                Square planar compounds have an orbital arrangement determined by the angular overlap model, and are low spin. Thus, there will be 1 unpaired electron.
+                Square planar compounds have an orbital arrangement determined by the angular overlap model, and are low spin. Thus, there will be $\boxed{1}$ unpaired electron.
                 \begin{center}
                     \begin{tikzpicture}[
                         yshift=0.6,
@@ -286,7 +287,7 @@
                 \begin{align*}
                     5.1 &= \sqrt{n(n+2)}\\
                     0 &= n^2+2n-5.1^2\\
-                    n &\approx 4
+                    \Aboxed{n &\approx 4}
                 \end{align*}
             \end{proof}
         \end{enumerate}
@@ -296,33 +297,57 @@
         \begin{enumerate}[label={\textbf{\alph*.}}]
             \item \ce{[Cr(H2O)6]^2+}.
             \begin{proof}[Answer]
-                We know that \ce{[Cr(H2O)6]^2+} has four unpaired electrons. Thus, $\mu=\sqrt{4(4+2)}=\sqrt{24}\approx 4.9$.
+                We know that \ce{[Cr(H2O)6]^2+} has four unpaired electrons. Thus,
+                \begin{align*}
+                    \mu &= \sqrt{4(4+2)} = \sqrt{24}\\
+                    \Aboxed{\mu &\approx \SI{4.90}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
             \item \ce{[Cr(CN)6]^4-}.
             \begin{proof}[Answer]
-                We know that \ce{[Cr(CN)6]^4-} has two unpaired electrons. Thus, $\mu=\sqrt{2(2+2)}=\sqrt{8}\approx 2.82$.
+                We know that \ce{[Cr(CN)6]^4-} has two unpaired electrons. Thus,
+                \begin{align*}
+                    \mu &= \sqrt{2(2+2)} = \sqrt{8}\\
+                    \Aboxed{\mu &\approx \SI{2.83}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
             \item \ce{[FeCl4]-}.
             \begin{proof}[Answer]
-                We know that \ce{[FeCl4]-} has five unpaired electrons. Thus, $\mu=\sqrt{5(5+2)}=\sqrt{15}\approx 5.92$.
+                We know that \ce{[FeCl4]-} has five unpaired electrons. Thus,
+                \begin{align*}
+                    \mu &= \sqrt{5(5+2)} = \sqrt{35}\\
+                    \Aboxed{\mu &\approx \SI{5.92}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
             \item \ce{[Fe(CN)6]^3-}.
             \begin{proof}[Answer]
-                We know that \ce{[Fe(CN)6]^3-} has one unpaired electron. Thus, $\mu=\sqrt{1(1+2)}=\sqrt{3}\approx 1.73$.
+                We know that \ce{[Fe(CN)6]^3-} has one unpaired electron. Thus,
+                \begin{align*}
+                    \mu &= \sqrt{1(1+2)} = \sqrt{3}\\
+                    \Aboxed{\mu &\approx \SI{1.73}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
             \item \ce{[Ni(H2O)6]^2+}.
             \begin{proof}[Answer]
-                We know that \ce{[Ni(H2O)6]^2+} has two unpaired electrons. Thus, $\mu=\sqrt{2(2+2)}=\sqrt{8}\approx 2.82$.
+                We know that \ce{[Ni(H2O)6]^2+} has two unpaired electrons. Thus,.
+                \begin{align*}
+                    \mu &= \sqrt{2(2+2)} = \sqrt{8}\\
+                    \Aboxed{\mu &\approx \SI{2.83}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
             \item \ce{[Cu(en)2(H2O)2]^2+}.
             \begin{proof}[Answer]
-                We know that \ce{[Cu(en)2(H2O)2]^2+} has one unpaired electron. Thus, $\mu=\sqrt{1(1+2)}=\sqrt{3}\approx 1.73$.
+                We know that \ce{[Cu(en)2(H2O)2]^2+} has one unpaired electron. Thus,
+                \begin{align*}
+                    \mu &= \sqrt{1(1+2)} = \sqrt{3}\\
+                    \Aboxed{\mu &\approx \SI{1.73}{\bohrmagneton}}
+                \end{align*}
             \end{proof}
         \end{enumerate}
         \newpage
         \item A compound with the empirical formula \ce{Fe(H2O)4(CN)2} has a magnetic moment corresponding to $2\frac{2}{3}$ unpaired electrons per iron. How is this possible? (Hint: Two octahedral \ce{Fe}(II) species are involved, each containing a single type of ligand.)
         \begin{proof}[Answer]
-            \ce{Fe(H2O)6} is a low spin complex with 4 unpaired electrons. \ce{Fe(CN)6} is a high spin complex with 0 unpaired electrons. If we take a weighted average of the spins, we find that the magnetic moment of \ce{Fe(H2O)4(CN)2} is $\mu=4\cdot\frac{4}{6}+0\cdot\frac{2}{6}=2\frac{2}{3}$.
+            \ce{[Fe(H2O)6]^2+} is a low spin complex with 4 unpaired electrons. \ce{[Fe(CN)6]^4-} is a high spin complex with 0 unpaired electrons. The compound \ce{[Fe(H2O)6]2[Fe(CN)6]} is the simplest combination of the two with empirical formula equal to \ce{Fe(H2O)4(CN)2}. Thus, since this compound has a total of 8 unpaired electrons for 3 \ce{Fe} atoms, its magnetic moment must correspond to $8/3=2\frac{2}{3}$ unpaired electrons.
         \end{proof}
         \newpage
         \item What are the possible magnetic moments of \ce{Co}(II) in tetrahedral, octahedral, and square-planar complexes?
@@ -339,6 +364,7 @@
                 \textcolor{white}{\textbf{Ligand}} & \textcolor{white}{\textbf{\ce{F-}}} & \textcolor{white}{\textbf{\ce{Cl-}}} & \textcolor{white}{\textbf{\ce{H2O}}} & \textcolor{white}{\textbf{\ce{NH3}}} & \textcolor{white}{\textbf{en}} & \textcolor{white}{\textbf{\ce{CN-}}}\\
                 $\Delta_o\ (\si{\per\centi\meter})$ & $\num{15200}$ & $\num{13200}$ & $\num{17400}$ & $\num{21600}$ & $\num{21900}$ & $\num{33500}$\\
                 \noalign{\global\arrayrulewidth=1pt}\arrayrulecolor{grt}\hline
+                \noalign{\global\arrayrulewidth=0.4pt}
             \end{tabular}
         \end{center}
         \begin{proof}[Answer]
@@ -434,12 +460,12 @@
         \end{figure}
         \item Determine the relative energies of \ce{Cr(CO)5} (based on orbital population) in these two geometries, and use this to predict the structure of \ce{Cr(CO)5}.
         \begin{proof}[Answer]
-            Assuming a high spin configuration since chromium is neutral and noting that chromium has a $d^4$ configuration, we have
+            Assuming a low spin configuration since carbonyl ligands are strong field ligands and noting that chromium has a $d^6$ configuration, we have
             \begin{align*}
-                E_\text{square pyramidal} &= 1(-4e_\pi)+2(-3e\pi)+2e_\sigma = 2e_\sigma-10e_\pi\\
-                E_\text{trigonal bipyramid} &= 2\left( -\frac{7}{2}e_\pi \right)+2\left( \frac{9}{8}e_\sigma-\frac{3}{2}e_\pi \right) = \frac{9}{4}e_\sigma-10e_\pi
+                E_\text{square pyramidal} &= 2(-4e_\pi)+4(-3e\pi) = -20e_\pi\\
+                E_\text{trigonal bipyramidal} &= 4\left( -\frac{7}{2}e_\pi \right)+2\left( \frac{9}{8}e_\sigma-\frac{3}{2}e_\pi \right) = \frac{9}{4}e_\sigma-17e_\pi
             \end{align*}
-            Since $E_\text{trigonal bipyramidal}>E_\text{square pyramidal}$, we know that \ce{Cr(CO)5} is square pyramidal.
+            Since $E_\text{square pyramidal}<E_\text{trigonal bipyramidal}$, we know that \ce{Cr(CO)5} is \fbox{square pyramidal}.
         \end{proof}
     \end{enumerate}
 \end{enumerate}
