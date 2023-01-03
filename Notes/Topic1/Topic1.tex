@@ -37,7 +37,7 @@
     \item G. N. Lewis predicts in 1916 (before Rutherford) that the atom has a positive \textbf{kernel} surrounded by a shell containing up to 8 electrons.
     \begin{itemize}
         \item Also orbital penetration.
-        \item He recommends that we read the full paper: \textcite{bib:Lewis}.
+        \item Talapin recommends that we read the full paper: \textcite{bib:Lewis}.
     \end{itemize}
 \end{itemize}
 
@@ -49,19 +49,22 @@
     \begin{enumerate}
         \item Draw a valid Lewis structure for a molecule.
         \item Place electron pairs in the valence shell as far away from each other as possible. Use the $\sigma$-bond framework first.
-        \item Add $\pi$-bonds to complete the molecule.
+        \item Add $\pi$ bonds to complete the molecule.
     \end{enumerate}
     \item Through the VSEPR approach, think of a molecule as arranged around a central atom $A$ by $m$ atoms or groups of atoms $X$ and $n$ lone electron pairs $E$.
     \item \textbf{Steric number}: The sum $n+m$ of groups and electron pairs around the central atom.
     \item Steric numbers correspond to geometries.
+    \begin{itemize}
+        \item For molecules with multiple bonds, ignore $\pi$ bonds.
+    \end{itemize}
     \item VSEPR is ok but it doesn't capture reality too well.
     \item Consider trimethyl boron (\ce{BMe3}).
     \begin{itemize}
         \item Trigonal planar ($D_{3h}$).
     \end{itemize}
-    \item Octahedral: $O_h$.
-    \item Bent: $C_{2v}$.
+    \item There also exist octahedral ($O_h$) and bent ($C_{2v}$) geometries. More on these symbols/shorthands later.
     \item \textbf{Order of the repulsive forces}: lone pair - lone pair $>$ lone pair - bonding pair $>$ bonding pair - bonding pair.
+    \item We now investigate how electron-pair geometry determines structure in several molecules.
     \item In \ce{SF4} (see-saw), will the lone pair be axial or equatorial?
     \begin{itemize}
         \item Equatorial --- $2\times\ang{120}$ and $2\times\ang{90}$ vs. $3\times\ang{90}$.
@@ -84,14 +87,14 @@
         \begin{subfigure}[b]{0.2\linewidth}
             \centering
             \chemfig{Br(-\Charge{0=\:}{})(-[2]F)(-[6]\Charge{90=\:}{})(>:[:160]F)(<[:-150]F)}
-            \caption{Cis lone pairs.}
+            \caption{\emph{cis}-lone pairs.}
             \label{fig:VSEPR-BrF3c}
         \end{subfigure}
         \caption{VSEPR structure of \ce{BrF3}.}
         \label{fig:VSEPR-BrF3}
     \end{figure}
     \begin{itemize}
-        \item T-shaped $\to$ Distorted T --- $4\times\ang{90}$ vs. $6\times\ang{90}$ or lone pairs in cis-position.
+        \item T-shaped $\to$ Distorted T --- $4\times\ang{90}$ vs. $6\times\ang{90}$ or lone pairs in \emph{cis}-position.
     \end{itemize}
     \item In ions such as \ce{ICl4-}, we get square planar ($D_{4h}$).
     \item With mixed substituents (such as \ce{PF2Cl3}):
@@ -102,23 +105,23 @@
         \label{fig:Lewis-PF2Cl3}
     \end{figure}
     \begin{itemize}
-        \item We need \textbf{Bent's rule}, which tells us that atoms share electrons from $p$- or $d$-orbitals to a greater extent than they do from $s$-orbitals.
+        \item We need \textbf{Bent's rule}, which tells us that atoms share electrons from $p$ or $d$ orbitals to a greater extent than they do from $s$ orbitals.
         \item Thus, when phosphorous excites $3s^23p^3$ to $3s^13p_x^13p_y^13p_z^13d_{z^2}^1$ and then rehybridizes to create three $sp^2$ orbitals (each composed of $s+p_x+p_y$) and two "$pd$" hybrid orbitals (each composed of $p_z+d_{z^2}$), the equatorial $sp^2$ orbitals bond to the more \textbf{electropositive} chlorines and the axial "$pd$" hybrid orbitals bond to the remaining more electronegative fluorines.
+        \begin{itemize}
+            \item To reiterate: By Bent's rule, $pd$ hybrid orbitals more readily share electron density. Thus, atoms that are more greedy for electrons (i.e., more electronegative) will preferentially bond to these $pd$ orbitals. In our example, fluorine is more electronegative than chlorine, so it will preferentially bond to the $pd$ hybrid orbitals, which happen to be located axially in this case. Therefore, the fluorines bond axially. The chlorines fill the remaining vacant positions.
+            \item We can also approach this problem from the perspective of the $s$ orbitals and chlorines. Indeed, orbitals with greater $s$ character are greedier/want more electron density. Thus, they will attract groups that more readily give up their electron density. In our specific example, chlorine gives up its electron density more readily than fluorine, so it will be attracted to the equatorial $sp^2$ hybrid orbitals.
+        \end{itemize}
         \item There is also sometimes a tendency for symmetry.
     \end{itemize}
-    \item \textbf{Bent's rule}: Atomic $s$-character concentrates in orbitals directed toward electropositive substituents.
+    \item \textbf{Bent's rule}: Atomic $s$ character concentrates in orbitals directed toward electropositive substituents.
     \item \textbf{Electropositive} (species): A species that has relatively lower electronegativity than another.
-    \item Counting the number of bonding electrons allows us to determine the steric number of a molecule, yielding information about its geometry.
-    \begin{itemize}
-        \item For molecules with multiple bonds, ignore $\pi$-bonds.
-    \end{itemize}
     \item Problems with VSEPR:
     \begin{itemize}
         \item \ce{XeF6} with 14 bonding electrons (7 pairs) is supposed to be pentagonal bipyramidal, but is actually octahedral (a known problem for \ce{14e-} systems).
         \item Heavy main group elements with no hybridization.
         \begin{itemize}
             \item \ce{H-C#C-H} is linear, but \ce{H-Si#Si-H} is not.
-            \item No $\sigma$-bond exists in the latter species --- it's all $\pi$-bonding interactions.
+            \item No $\sigma$ bond exists in the latter species; it's all $\pi$-bonding interactions.
         \end{itemize}
     \end{itemize}
     \item You maybe don't have to watch the modules and textbook \emph{and} attend class.
@@ -130,7 +133,7 @@
 \emph{From \textcite{bib:MiesslerFischerTarr}.}
 \begin{itemize}
     \item \marginnote{1/14:}\textbf{Hypervalent} (central atom): A central atom that has an electron count greater than the atom's usual requirement.
-    \item There are rarely more than 18 electrons around a central atom (2 for $s$, 6 for $p$, 10 for $d$). Even heavier atoms with energetically accessible $f$ orbitals usually don't have more surrounding electrons because of crowding.
+    \item There are rarely more than 18 electrons around a central atom (2 for $s$, 6 for $p$, 10 for $d$). Even heavier atoms with energetically accessible $f$ orbitals usually don't have more because of crowding.
     \item With \ce{BeF2}, instead of getting the predicted double-bonded Lewis structure, it forms a complex network with \ce{Be} having coordination number 4.
     \begin{itemize}
         \item \ce{BeCl2} dimerizes to a 3-coordinate structure in the vapor phase.
@@ -140,7 +143,7 @@
         \item It is also possible that the high polarity of \ce{B-X} bonds and the \textbf{ligand-close packing} (LCP) model account for the observed shorter bond length.
         \item Boron trihalides also act as Lewis acids.
     \end{itemize}
-    \begin{table}[h!]\marginnote{1/14:}
+    \begin{table}[h!]
         \centering
         \renewcommand{\arraystretch}{1.4}
         \small
@@ -187,11 +190,11 @@
     \item \marginnote{1/17:}The variety of structures means that one unified VSEPR theory will not likely\footnote{Errata: "unlikely."} work.
     \item \textbf{Not stereochemically active} (lone pair): "A lone pair that appears in the Lewis-dot structure but has no apparent effect on the molecular geometry" \parencite[54]{bib:MiesslerFischerTarr}.
     \item Double and triple bonds have slightly greater repulsive effects than single bonds in the VSEPR model.
-    \item \marginnote{1/17:}Multiple bonds tend to occupy the same positions as lone pairs.
+    \item Multiple bonds tend to occupy the same positions as lone pairs.
     \item Electronegativity varies for a given atom based on the neighboring atom to which it is bonded.
     \item "With the exception of helium and neon, which have large calculated electronegativities and no known stable compounds, fluorine has the largest value" \parencite[59]{bib:MiesslerFischerTarr}.
     \item Although usually classified with Group 1, hydrogen's chemistry is distinct from that of the alkali metals and actually all of the groups.
-    \item Some bond angle trends can be explained by electronegativity (see Table \ref{tab:electronegativityBondAngle}).
+    \item Some bond angle trends can be explained by electronegativity.
     \begin{table}[h!]
         \centering
         \renewcommand{\arraystretch}{1.4}
@@ -213,8 +216,8 @@
         \label{tab:electronegativityBondAngle}
     \end{table}
     \begin{itemize}
-        \item For instance, electronegative outer atoms pull electrons away from the central atom, allowing lone pairs to further push together such atoms.
-        \item Electronegative central atoms pull electrons toward the central atom, pushing bonding pairs farther apart.
+        \item For instance, electronegative outer atoms pull electrons away from the central atom (electron domains become more conical), allowing lone pairs to further push together such atoms.
+        \item Electronegative central atoms pull electrons toward the central atom (electron domains become more cylindrical), pushing bonding pairs farther apart.
     \end{itemize}
     \item Atomic size can also have effects on VSEPR predictions.
     \begin{itemize}

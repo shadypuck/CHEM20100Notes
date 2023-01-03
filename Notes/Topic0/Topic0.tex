@@ -235,7 +235,7 @@
     where $h$ is Planck's constant ($\SI{6.626e-34}{\joule\second}$), $c$ is the speed of light ($\SI{2.998e8}{\meter\per\second}$), $\nu$ is the frequency of the light, $\lambda$ is the wavelength of the light, and $\bar{\nu}$ is the \textbf{wavenumber} of the light.
     \item \textbf{Wavenumber}: The number of waves that exist between two points along the light's path a given distance apart. \emph{Units} waves per centimeter (SI: $\si{\per\centi\meter}$).
     \begin{itemize}
-        \item Wavenumber is proportional to energy. This is why $\si{\per\meter}$ or $\si{\per\centi\meter}$ can be used as an energy unit.
+        \item Wavenumber is directly proportional to energy. This is why $\si{\per\meter}$ or $\si{\per\centi\meter}$ can be used as an energy unit.
     \end{itemize}
     \item \textbf{Principal quantum number}: One of the quantities $n$ in Balmer's equation.
     \item Bohr's atomic theory first explained the phenomenon of Balmer's equation, positing that "electrons may absorb light of certain specific energies and be excited to orbits of higher energy; they may also emit light of specific energies and fall to orbits of lower energy" \parencite[11-12]{bib:MiesslerFischerTarr}.
@@ -249,8 +249,8 @@
             \item $\mu$ is the reduced mass of the electron/nucleus combination $\frac{1}{\mu}=\frac{1}{m_e}+\frac{1}{m_\text{nucleus}}$, where $m_e=\SI{9.11e-31}{\kilo\gram}$ is the mass of the electron and $m_\text{nucleus}$ is the mass of the nucleus.
             \item $Z$ is the nuclear charge.
             \item $e=\SI{1.602e-19}{\coulomb}$ is the charge of the electron.
-            \item $h$ is Planck's constant.
-            \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
+            \item $h=\SI{6.626e-34}{\joule\second}$ is Planck's constant.
+            \item $\varepsilon_0=\SI{8.85e-12}{\newton\meter\squared\per\coulomb\squared}$ is the permittivity of a vacuum.
         \end{itemize}
         \item Importantly, note that the Rydberg constant for hydrogen $R_H$ is not universal, and changes for the atom at hand based on factors like the mass of the nucleus.
         \item Also note that some of the terms cancel or can be written in terms of others, making the above equation equivalent to the one given in Chapter 7 of \textcite{bib:APChemNotes}.
@@ -309,26 +309,23 @@
         H\Psi = E\Psi
     \end{equation*}
     \begin{itemize}
-        \item In its simplest form, it is given by the above, where $H$ is the \textbf{Hamiltonian operator}, $E$ is the energy of the electron, and $\Psi$ is the \textbf{wave function}.
+        \item In its simplest form, it is given by the above, where $H$ is the \textbf{Hamiltonian operator}, $E$ is the energy of the electron, and $\Psi$ is the \textbf{wave function} of the electron.
     \end{itemize}
     \item \textbf{Wave function}: A function that describes an electron wave in space, i.e., an atomic orbital.
     \item Energy values are another way of describing the quantization introduced with the Bohr model; different orbitals, characterized by different wave functions, each have characteristic energies.
     \item \textbf{Operator}: "An instruction or set of instructions that states what to do with the function that follows it" \parencite[14]{bib:MiesslerFischerTarr}.
-    \item \textbf{Hamiltonian operator}: An operator including derivatives that transforms the wave function into a constant (the energy) times $\Psi$. \emph{Also known as} $\bm{\hat{H}}$.
+    \item \textbf{Hamiltonian operator}: An operator including derivatives that transforms the wave function $\Psi$ into a constant (the energy) times itself ($E\Psi$). \emph{Denoted by} $\bm{H}$, $\bm{\hat{H}}$.
     \begin{equation*}
         H = \frac{-h^2}{8\pi^2m}\left( \pdv[2]{x}+\pdv[2]{y}+\pdv[2]{z} \right)-\frac{Ze^2}{4\pi\varepsilon_0\sqrt{x^2+y^2+z^2}}
     \end{equation*}
     \begin{itemize}
         \item In the form used for calculating the energy levels of one-electron systems, it is given by the above, where\dots
         \begin{itemize}
-            \item $h$ is Planck's constant.
-            \item $m$ is the mass of the electron.
-            \item $e$ is the charge of the electron.
+            \item $h,Z,e,\varepsilon_0$ are defined as in Bohr's definition of the Rydberg constant, above.
+            \item $m=m_e$ is the mass of the electron, as defined above.
             \item $\sqrt{x^2+y^2+z^2}=r$ is the distance from the nucleus.
-            \item $Z$ is the charge of the nucleus.
-            \item $4\pi\varepsilon_0$ is the permittivity of a vacuum.
         \end{itemize}
-        \item The first part describes the kinetic energy of the electron, its energy of motion.
+        \item The first part describes the kinetic energy of the electron, i.e., its energy of motion.
         \item The second part describes the potential energy of the electron, the result of the electrostatic attraction between it and the nucleus. It is commonly denoted by $V(x,y,z)$.
     \end{itemize}
     \item "Because $n$ varies from 1 to $\infty$, and every atomic orbital is described by a unique $\Psi$, there is no limit to the number of solutions of the Schr\"{o}dinger equation for an atom. Each $\Psi$ describes the wave properties of a given electron in a particular orbital" \parencite[15]{bib:MiesslerFischerTarr}.
@@ -363,7 +360,7 @@
         \begin{equation*}
             \Psi(x) = A\sin rx+B\cos sx
         \end{equation*}
-        where $A,B,r,s$ are constants.
+        where $A,B,r,s$ are constants\footnote{It can be proven mathematically that this "ansatz" \emph{is} the (real) general solution to the given differential equation. See \textcite{bib:MATH27300Notes}.}.
         \item As seen in Problem 2.8a, substituting the above general solution into the wave equation allows us to solve for
         \begin{equation*}
             r = s = \sqrt{2mE}\cdot\frac{2\pi}{h}
@@ -764,10 +761,12 @@
         \begin{itemize}
             \item Refer to Table \ref{tab:WaveFunctionsAngular-H} for examples of $\Theta$ and $\Phi$, and Table \ref{tab:WaveFunctionsRadial-H} for examples of $R$.
             \item Note that in Table \ref{tab:WaveFunctionsAngular-H}, the shaded orbital lobes correspond to where the wave function is negative. Distinguishing regions of opposite signs is useful for bonding purposes.
+            \item The "Functions of $\theta$" in Table \ref{tab:WaveFunctionsAngular-H} are plots of the corresponding functions $\Theta$ using the coordinate system in Figure \ref{fig:sphericalCoords}.
         \end{itemize}
         \item The radial component can also be manipulated to give the \textbf{radial probability function} $4\pi r^2R^2$.
         \begin{itemize}
             \item $R$ is the radial function, so $R^2$ is the probability function (think $\Psi=RY$, so $\Psi^2=R^2Y^2$).
+            \item The true boundary surface diagrams (which are related to but are importantly \emph{not} the "Shapes" in Table \ref{tab:WaveFunctionsAngular-H}) are given implicitly by $\Psi^2(r,\theta,\phi)=c$ (recall that $\Psi^2:\mathbb{R}^3\to\mathbb{R}$).
         \end{itemize}
     \end{itemize}
     \begin{figure}[H]
@@ -1206,9 +1205,9 @@
     \begin{itemize}
         \item Three possible configurations: \porbital{black}{black}{black}{black}{white}{white}, \porbital{black}{black}{black}{white}{white}{black}, and \porbital{black}{black}{black}{white}{black}{white}.
         \item In the first one, we have two pairs of electrons (so $2\Pi_c$) and two possible exchanges (one for each pair of electrons with like spin, so $2\Pi_e$).
-        \item In the second one, we have one pair of electrons (so $1\Pi_c$) and two possible exchanges (one for each pair of electrons with like spin, so $2\Pi_e$).
-        \item In the third one, we have one pair of electrons (so $1\Pi_c$) and three possible exchanges (1-2, 1-3, and 2-3, so $3\Pi_e$).
-        \item Thus, the energies from greatest to least are 1, 2, 3, and indeed the three rules suggest that the third one is how we should put four electrons into a $p$ orbital.
+        \item In the second one, we have one pair of electrons (so $1\Pi_c$) and two possible exchanges (same reason as before, so $2\Pi_e$). Fewer Coulombic repulsions (fewer $\Pi_c$) means lower energy.
+        \item In the third one, we have one pair of electrons (so $1\Pi_c$) and three possible exchanges (1-2, 1-3, and 2-3, so $3\Pi_e$). More exchanges (more $\Pi_e$) also means lower energy.
+        \item Thus, the energies from greatest to least are $1>2>3$, and indeed the three rules suggest that the third one is how we should put four electrons into a $p$ orbital.
     \end{itemize}
     \item \textbf{Degenerate} (orbitals): Orbitals with the same energy.
     \item Energy minimization is the driving force determining the ground state, and this usually means that lower subshells are filled before higher ones.

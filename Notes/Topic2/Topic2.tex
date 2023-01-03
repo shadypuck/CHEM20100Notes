@@ -50,9 +50,9 @@
         \item By convention, the principal axis is assigned to the $z$-axis if we are using Cartesian coordinates.
     \end{itemize}
     \item \textbf{Reflection}: Exchanges one half of the object with the reflection of the other half.
-    \item \textbf{Vertical mirror plane}: A mirror plane that contains the principal axis. \emph{Also known as} $\bm{\sigma_v}$.
-    \item \textbf{Horizontal mirror plane}: A mirror plane that is perpendicular to the principal axis. \emph{Also known as} $\bm{\sigma_h}$.
-    \item \textbf{Dihedral mirror planes}: A special type of $\sigma_v$ that is between sides or planes. \emph{Also known as} $\bm{\sigma_d}$.
+    \item \textbf{Vertical mirror plane}: A mirror plane that contains the principal axis. \emph{Denoted by} $\bm{\sigma_v}$.
+    \item \textbf{Horizontal mirror plane}: A mirror plane that is perpendicular to the principal axis. \emph{Denoted by} $\bm{\sigma_h}$.
+    \item \textbf{Dihedral mirror plane}: A special type of $\sigma_v$ that is between sides or planes. \emph{Denoted by} $\bm{\sigma_d}$.
     \begin{itemize}
         \item For example, we might have vertical mirror planes in the $xz$- or $yz$-planes. In this case, the dihedral planes would contain the lines $y=\pm x$.
     \end{itemize}
@@ -172,11 +172,12 @@
     \item Local symmetry:
     \begin{itemize}
         \item Sometimes, rigorous math analysis needs to be adjusted to physical reality.
-        \item If a cyclopentane ring is bonded through the center to \ce{Mn(CO)3}, this molecule has only $C_s$ symmetry.
+        \item If a cyclopentadienyl ring (\ce{Cp} group) is bonded through the center to \ce{Mn(CO)3}, this molecule has only $C_s$ symmetry.
         \item However, spectroscopically, there is fast rotation about the \ce{Mn-Cp} bond. This means that the \ce{Mn(CO)3} fragment exhibits pseudo-$C_{3v}$ symmetry while the \ce{C5H5} ligand exhibits pseudo-$C_{5v}$ symmetry.
         \item Often, the absolute symmetry of a molecule is very low, but the interactions are far away from the centers of interest, and do not perturb them significantly.
-        \item If we have platinum as a central atom bonded to two chlorines and two \ce{P(Et)3} groups, this molecule technically has $C_1$ symmetry due to the orientations of atoms within \ce{R} groups (staggered), but IR spectroscopy is characteristic of highly symmetric species ($D_{2h}$).
+        \item If we have platinum as a central atom bonded to two chlorines and two \ce{P(Et)3} groups, this molecule technically has $C_1$ symmetry due to the orientations of atoms within \ce{R} groups (staggered), but its IR spectrum is characteristic of highly symmetric species ($D_{2h}$).
     \end{itemize}
+    \item Practice with identifying point groups: Otterbein University symmetry gallery (\href{https://symotter.org/gallery}{link}).
 \end{itemize}
 
 
@@ -192,7 +193,7 @@
     \item History:
     \begin{itemize}
         \item Early group theory was driven by the quest for solutions of polynomial equations of degree 5 and above.
-        \item Early 1800s: \'{E}variste Galois realized that the algebraic solution to a polynomial equation is related to the structure of a group of permutations associated with the roots of the polynomial, the Galois group of the polynomial.
+        \item Early 1800s: \'{E}variste Galois realized that the algebraic solution to a polynomial equation is related to the structure of a group of permutations associated with the roots of the polynomial (the \textbf{Galois group} of the polynomial).
         \begin{itemize}
             \item Link to Galois video \href{https://www.youtube.com/watch?v=Ct2fyigNgPY}{here}.
         \end{itemize}
@@ -305,9 +306,9 @@
         \label{tab:groupMultiplication-C3v}
     \end{table}
     \begin{itemize}
-        \item If $h=6$ (as in the $C_{3v}$ group), subgroup order can be $h={\color{red!50!blue}3},{\color{blue}2},{\color{red}1}$. Why only these?\footnote{See Lagrange's theorem.}
+        \item If $h=6$ (as in the $C_{3v}$ group), the subgroups can have $h={\color{red!50!blue}3},{\color{blue}2},{\color{red}1}$. Why only these?\footnote{Lagrange's theorem.}
         \item The order ${\color{red}1}$ and ${\color{red!50!blue}3}$ charts are subgroups.
-        \item The order ${\color{blue}2}$ chart is not a subgroup because ${C_3}^2$ is not an operation in the group (therefore, the subset is not closed).
+        \item The order ${\color{blue}2}$ chart is not a subgroup because ${C_3}^2$ is not an operation in the group (no closure).
     \end{itemize}
     \item We use subgroups because they can make complex problems simpler.
     \begin{itemize}
@@ -328,8 +329,9 @@
         \item $\sigma_{xz}(x,y,z)=(x,-y,z)$.
         \item $i(x,y,z)=(-x,-y,-z)$.
         \item $C_n$: Convention is a counterclockwise rotation of the point by $\theta=\frac{2\pi}{n}$ radians.
-        \item $S_n$: Convention is a clockwise rotation of the point $C_n$ followed by a $\sigma$ through a plane perpendicular to $C$.
+        \item $S_n$: Convention is a $C_n$ followed by a $\sigma_h$.
     \end{itemize}
+    \pagebreak
     \item Matrix forms of operations:
     \begin{itemize}
         \item Identity: $
@@ -854,6 +856,7 @@
         \end{align*}
         From this, we can determine that $\chi_3(C_3)=-1$ and $\chi_3(\sigma_v)=0$. Therefore, $\Gamma_i=(2,-1,0)$.
     \end{itemize}
+    \item General algebraic procedure: Apply Property 1, then 2, then 4, then 6. Check with 5.
 \end{itemize}
 
 

@@ -101,9 +101,9 @@
         \item What this means is that $z$-plane polarized light will be able to cause the desired electron transition, but $x$- and $y$-plane polarized light will not.
     \end{itemize}
     \item We can use the same procedure to prove that we can never promote an electron from $d_{xy}$ to $p_z$.
-    \item We can use the same procedure for octahedral complexes, except the calculations of the direct products are just a bit more difficult.
+    \item We can use the same procedure for octahedral complexes, except the calculations of the direct products are just a bit more difficult. For all of these, $\Gamma_\mu=\Gamma_{x,y,z}=T_{1u}$.
     \begin{itemize}
-        \item For a $d^1$ complex, we calculate $E_g\otimes T_{1u}\otimes T_{2g}$.
+        \item For a $d^1$ complex in an octahedral ligand field, the most likely excitation is for the one $d$ electron to jump from its ground state in the $t_{2g}$ set to the $e_g$ set. Thus, we calculate $E_g\otimes T_{1u}\otimes T_{2g}$.
         \item For a $d^6$ complex, we calculate $(T_{2g}\otimes E_g)\otimes T_{1u}\otimes A_{1g}=(T_{1g}+T_{2g})\otimes T_{1u}\otimes A_{1g}$.
         \begin{itemize}
             \item A low spin $d^6$ complex has $A_{1g}$ symmetry since electron pairs' symmetry cancels and all electrons are paired.
@@ -305,8 +305,20 @@
         \item Under a weak ligand field, the multielectron states split.
         \begin{itemize}
             \item From the $O_h$ character table, we can determine how each term transforms similarly to determining how each orbital transforms (however, we may need a character table with cubic, quartic, and beyond functions).
-            \item For example, $S$ terms transform as $A_{1g}$, $P$ as $T_{1g}$, $D$ as $T_{2g}+E_g$, $F$ as $T_{1g}+T_{2g}+A_{2g}$, and $G$ as $A_{1g}+E_g+T_{1g}+T_{2g}$.
         \end{itemize}
+        \item Example: Splitting of the ${}^1D$ states.
+        \begin{itemize}
+            \item In a similar fashion to the $d$ orbitals in an $O_h$ field, the $D$ states arising from groups of electrons have the same 5-fold degeneracy, so splitting will be the same.
+            \item Thus, we split ${}^1D$ into ${}^1E_g$ and ${}^1T_{2g}$.
+            \item Notice that the spin multiplicity is conserved under splitting. This is because the chemical environment does not directly interact with spin, so all the states into which a particular term is split have the same spin multiplicity as the parent term.
+        \end{itemize}
+        \item Example: Splitting of the ${}^3F$ states.
+        \begin{itemize}
+            \item $f$ orbitals transform as the cubic functions, i.e., as $a_{2u},t_{1u},t_{2u}$ (see Table \ref{tab:charTableOh}).
+            \item However, since this is a $d^n$ configuration and all $d$ orbitals have a center of symmetry, we change the $u$ to a $g$.
+            \item Thus, the splitting is ${}^3A_{2g}$, ${}^3T_{1g}$, and ${}^3T_{2g}$.
+        \end{itemize}
+        \item Further examples: $S$ as $A_{1g}$, $P$ as $T_{1g}$, and $G$ as $A_{1g}+E_g+T_{1g}+T_{2g}$.
         \item Under an infinitely strong field, we will return to our $t_{2g}$ / $e_g$ formalism with a low energy ${t_{2g}}^2$ state, a midlevel $t_{2g}e_g$ state (with one of the $d^2$ electrons in each level), and a high level ${e_g}^2$ state.
         \begin{itemize}
             \item From the $O_h$ group multiplication table, we can determine how each state splits under strong but finite ligand fields.
@@ -350,7 +362,7 @@
     \item Tanabe-Sugano diagrams are designed to intuitively interpret optical spectra and electron transitions in transition metal complexes.
     \item In a Tanabe-Sugano diagram, we make the lowest line in the corresponding correlation diagram the $x$-axis/ground state and calculate energies of every state above with respect to the gap between the ground state and the upper state.
     \item Tanabe-Sugano diagrams show:
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.35\linewidth]{../ExtFiles/tanabeSugano-d2.png}
         \caption{Tanabe-Sugano diagram for a $d^2$ system.}
