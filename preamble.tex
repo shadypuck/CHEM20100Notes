@@ -10,12 +10,13 @@
 \usepackage{tocloft}
 \usepackage{siunitx}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{colortbl,multirow,tabularx}
 \usepackage{physics,mathtools,bm,nicematrix,empheq}
 \usepackage{mhchem,chemfig}
 \usepackage{tikz,graphicx}
 \usepackage{subcaption,float}
-\usepackage{colortbl,multirow,tabularx}
 \usepackage[hidelinks]{hyperref}
+\usepackage{subfiles}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -35,7 +36,7 @@
 \deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
 \deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
 
-\addbibresource{../main.bib}
+\addbibresource{\subfix{../main.bib}}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
@@ -100,5 +101,3 @@
     \endtabularx
     \renewcommand{\arraystretch}{1}
 }
-
-\usepackage{subfiles}
